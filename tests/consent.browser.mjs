@@ -175,6 +175,35 @@ const choice = page => page.evaluate(() => localStorage.getItem('gds-consent-v1'
   await ctx.close();
 }
 
+// ------------------------------- 2b. focus, and no overlap with the tab bar
+{
+  const { ctx, page } = await boot({});
+  // app.js defers mountConsent by one task on purpose. Mounting inline let the
+  // hashchange re-render move focus into the view, stealing it from the banner.
+  const focused = await page.evaluate(() => document.activeElement?.id || '');
+  check('focus lands on the decline control, not stolen by the router',
+    focused === 'consent-no', `activeElement was "${focused}"`);
+
+  // The banner is fixed to the bottom, and so is the tab bar on mobile. If they
+  // overlap, the banner covers navigation and there is no way past it.
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.waitForTimeout(400);
+  const rects = await page.evaluate(() => {
+    const b = document.getElementById('consent-banner');
+    const tabs = document.querySelector('.tabs');
+    if (!b || !tabs) return null;
+    const br = b.getBoundingClientRect(), tr = tabs.getBoundingClientRect();
+    return { bBottom: br.bottom, bTop: br.top, tTop: tr.top, tBottom: tr.bottom, tH: tr.height };
+  });
+  check('the tab bar and the banner are both present at 390px', rects !== null);
+  if (rects) {
+    check('the banner sits above the tab bar rather than over it',
+      rects.bBottom <= rects.tTop + 0.5,
+      `banner bottom ${rects.bBottom.toFixed(2)} vs tab bar top ${rects.tTop.toFixed(2)} (bar height ${rects.tH.toFixed(2)})`);
+  }
+  await ctx.close();
+}
+
 // -------------------------------------------------------------- 3. decline
 {
   const { ctx, page, googleHits } = await boot({});

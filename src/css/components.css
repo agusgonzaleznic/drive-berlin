@@ -452,7 +452,7 @@ button.card { appearance: none; }
 /* A roadside notice board at the foot of the page rather than a modal: the
    question is real, but it is not important enough to block the app behind it.
    Flat --surface-2, not the .card gradient, so the body copy has one measurable
-   background. Measured against it: body --dim 8.12:1, title --gold-bright
+   background. Measured against it: body --dim 8.13:1, title --gold-bright
    10.6:1, the "what gets collected" link --gold 6.85:1. */
 .consent-banner {
   position: fixed; left: 0; right: 0; bottom: 0;
@@ -491,9 +491,15 @@ button.card { appearance: none; }
 
 @media (max-width: 720px) {
   /* The tab bar is fixed to the bottom edge on a phone, so the banner has to sit
-     on top of it: 48px of tap target plus the bar's own 6px top and bottom
-     padding, then the home-indicator inset it already reserves. */
-  .consent-banner { bottom: calc(60px + env(safe-area-inset-bottom)); padding-bottom: 13px; }
+     above it rather than over it. Its height is 48.89px of tap target plus 6px of
+     padding either side plus its 1px top border, MEASURED at 61.89px identically
+     at 390, 430, 600 and 719px wide. 64px rounds that up and keeps 2px of
+     clearance, so a font-metric change that grows the bar slightly cannot turn a
+     flush edge into an overlap. The bar already reserves the home-indicator
+     inset, so this banner must not add it a second time.
+     tests/consent.browser.mjs measures both rectangles and fails on any overlap,
+     which is what makes the number above maintainable rather than folklore. */
+  .consent-banner { bottom: calc(64px + env(safe-area-inset-bottom)); padding-bottom: 13px; }
   /* Stacked, with the buttons on their own full-width row: side by side at 390px
      they would each be squeezed under the 44px comfortable target. */
   .consent-copy, .consent-actions { flex: 1 1 100%; }
