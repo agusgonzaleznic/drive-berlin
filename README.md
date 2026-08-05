@@ -583,15 +583,15 @@ Three things help, in ascending order of effort:
   this exists.
 - **Open an issue when a number is wrong.** Fees, waiting times and provider prices drift constantly.
   A corrected figure *with its primary source* is the most useful contribution anyone can make here.
-- **Buy me a coffee, or sponsor on GitHub**, if this saved you a wasted trip to LABO. A coffee is a
-  one-off, GitHub Sponsors can be monthly, and both accept a custom amount. Re-verifying legal claims
+- **Drop a coffee on Ko-fi, or sponsor on GitHub**, if this saved you a wasted trip to LABO. Ko-fi
+  is a one-off, GitHub Sponsors can be monthly, and both accept a custom amount. Re-verifying legal claims
   against primary sources is the slow, recurring, genuinely unglamorous part of keeping a project like
   this honest.
 
 <div align="center">
 <br>
 
-[![buy me a coffee](https://img.shields.io/badge/buy_me_a_coffee-one--off-e0a82e?style=for-the-badge&labelColor=14161f&logo=buymeacoffee&logoColor=e0a82e)](https://buymeacoffee.com/agusgonzaleznic)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-one--off-e0a82e?style=for-the-badge&labelColor=14161f&logo=kofi&logoColor=e0a82e)](https://ko-fi.com/agusgonzaleznic)
 [![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-monthly-e0a82e?style=for-the-badge&labelColor=14161f&logo=githubsponsors&logoColor=e0a82e)](https://github.com/sponsors/agusgonzaleznic)
 <br>
 [![website](https://img.shields.io/badge/website-agusgonzaleznic.com-7c5cd6?style=for-the-badge&labelColor=14161f)](https://agusgonzaleznic.com)

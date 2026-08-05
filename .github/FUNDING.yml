@@ -1,8 +1,7 @@
 # Funding sources shown in the "Sponsor" button on the repository page.
 #
 # THESE KEYS TAKE A BARE USERNAME, NOT A FULL URL:
-#     buy_me_a_coffee: <username> → https://buymeacoffee.com/<username>
-#     ko_fi: <username>           → https://ko-fi.com/<username>
+#     ko_fi: <username> → https://ko-fi.com/<username>
 #
 # Docs: https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository
 
@@ -10,10 +9,12 @@
 # No tiers are defined, which is fine: the custom-amount path works without them.
 github: [agusgonzaleznic]
 
-# Live and verified: https://buymeacoffee.com/agusgonzaleznic. Also listed on
-# https://agusgonzaleznic.com/links, so the two stay consistent.
-buy_me_a_coffee: agusgonzaleznic
+# Ko-fi is the one-off channel: https://ko-fi.com/agusgonzaleznic
+# It replaced the previous one-off platform in August 2026.
+#
+# A note for anyone checking this link: Ko-fi sits behind Cloudflare and answers
+# automated requests with a challenge page, so curl reports HTTP 403 for every
+# Ko-fi URL, real or invented. Verify it in a browser. A 403 proves nothing.
+ko_fi: agusgonzaleznic
 
 custom: ["https://agusgonzaleznic.com"]
-
-# ko_fi:
