@@ -1,0 +1,100 @@
+[
+  {
+    "title": "Before you set off",
+    "emoji": "🚦",
+    "note": "The examiner explains how instructions will be given before the drive starts (Prüfungsrichtlinie Teil A Nr. 1.4.2). This is your moment to ask them to speak slowly — and to say you are NOT ortskundig (familiar with the area), so you get turn-by-turn instructions instead of just a destination. Note on these phrases: only the manoeuvre names are fixed by law (FeV Anlage 7). The rest are typical wordings gathered from driving-school and learner sources — the exam directive requires only that instructions be unambiguous, so expect variation and learn the pattern rather than the sentence.",
+    "items": [
+      { "de": "Sind Sie hier ortskundig?", "en": "Do you know this area?", "tip": "Answer \"Nein\" — then they must guide you junction by junction instead of naming a destination." },
+      { "de": "Können Sie bitte langsamer sprechen / das wiederholen?", "en": "Could you please speak more slowly / repeat that?", "tip": "Yours to say, not theirs. Asking is not a fault — misunderstanding an instruction is." },
+      { "de": "Fahren Sie bitte los. / Fahren Sie an.", "en": "Please drive off. / Pull away." },
+      { "de": "Stellen Sie den Sitz und die Spiegel ein.", "en": "Adjust your seat and mirrors." },
+      { "de": "Legen Sie den Sicherheitsgurt an.", "en": "Put your seatbelt on." }
+    ]
+  },
+  {
+    "title": "Steering you around town",
+    "emoji": "🧭",
+    "note": "Roughly 90% of what you will hear. Learn the key verbs and nouns rather than memorising whole sentences — the wording is not fixed by law, only the requirement that it be unambiguous.",
+    "items": [
+      { "de": "Fahren Sie geradeaus weiter.", "en": "Continue straight ahead." },
+      { "de": "Bitte biegen Sie an der nächsten Kreuzung rechts ab.", "en": "Please turn right at the next junction." },
+      { "de": "Biegen Sie links ab. / Biegen Sie rechts ab.", "en": "Turn left. / Turn right." },
+      { "de": "Nächste Straße links / rechts.", "en": "Next street on the left / right." },
+      { "de": "Halb links. / Halb rechts.", "en": "Bear half-left. / Bear half-right.", "tip": "Used at forks where the road splits at a shallow angle." },
+      { "de": "Folgen Sie der Vorfahrtstraße.", "en": "Follow the priority road.", "tip": "Meaning: stay on the yellow-diamond road even where it bends — a classic trap." },
+      { "de": "Fahren Sie nach Wegweisern Richtung …", "en": "Navigate by the direction signs towards …", "tip": "Expressly allowed by the exam directive: now you must read signs while driving safely." },
+      { "de": "Fahren Sie in Richtung Autobahn / Stadtzentrum / Kraftfahrstraße.", "en": "Head towards the motorway / city centre / expressway." },
+      { "de": "Ordnen Sie sich links ein. / Wechseln Sie auf den linken Fahrstreifen.", "en": "Move into the left lane. / Change to the left lane.", "tip": "Mirror, signal, shoulder check (Schulterblick) — in that order, visibly." },
+      { "de": "Bitte fahren Sie etwas schneller / langsamer.", "en": "Please drive a bit faster / slower.", "tip": "\"Schneller\" is a real hint: driving well under the limit without reason is itself a fault." }
+    ]
+  },
+  {
+    "title": "Roundabouts and exits",
+    "emoji": "🔄",
+    "items": [
+      { "de": "Fahren Sie in den Kreisverkehr ein.", "en": "Enter the roundabout.", "tip": "No indicator going in; indicate right only as you leave." },
+      { "de": "Nehmen Sie die erste / zweite / dritte Ausfahrt.", "en": "Take the first / second / third exit." },
+      { "de": "Verlassen Sie die Autobahn an der nächsten Ausfahrt.", "en": "Leave the motorway at the next exit." }
+    ]
+  },
+  {
+    "title": "The manoeuvres (Grundfahraufgaben)",
+    "emoji": "🅿️",
+    "note": "These names come straight from FeV Anlage 7 Nr. 2.1.4.2, so this wording really is official. You get three tasks: one reversing task plus two others.",
+    "items": [
+      { "de": "Parken Sie rückwärts ein. / Rückwärtsfahren in eine Parklücke (Längsaufstellung).", "en": "Reverse into a parking space (parallel parking)." },
+      { "de": "Fahren Sie rückwärts nach rechts in die Einmündung.", "en": "Reverse round to the right into the side road.", "tip": "Official task name; keep it slow and look over your shoulder, not only at mirrors." },
+      { "de": "Parken Sie quer / schräg ein.", "en": "Park in a bay (perpendicular / angled)." },
+      { "de": "Parken Sie hinter diesem Fahrzeug. / Parken Sie zwischen den beiden Fahrzeugen.", "en": "Park behind this vehicle. / Park between the two vehicles." },
+      { "de": "Wenden Sie. / Suchen Sie eine geeignete Stelle zum Wenden.", "en": "Turn the car around. / Find a suitable place to turn around.", "tip": "\"Geeignete Stelle\" is part of the test: choosing a bad spot fails the task before you move." },
+      { "de": "Machen Sie eine Gefahrbremsung. / Bremsen Sie mit höchstmöglicher Verzögerung.", "en": "Perform an emergency stop / brake as hard as you can.", "tip": "Genuinely hard — a timid stop fails. Let the ABS judder; keep both hands on the wheel." },
+      { "de": "Fahren Sie rückwärts nach links / nach rechts.", "en": "Reverse to the left / to the right." },
+      { "de": "Fahren Sie vorwärts nach links / nach rechts.", "en": "Move forward to the left / right." }
+    ]
+  },
+  {
+    "title": "Stopping and finishing",
+    "emoji": "🏁",
+    "items": [
+      { "de": "Halten Sie hier an. / Anhalten.", "en": "Stop here." },
+      { "de": "Fahren Sie rechts ran. / Halten Sie am rechten Fahrbahnrand an.", "en": "Pull over on the right. / Stop at the right-hand kerb.", "tip": "Check the mirror, indicate, and stop somewhere legal — not on a crossing or in front of a driveway." },
+      { "de": "Wir fahren jetzt zurück zur Prüfstelle.", "en": "We are now driving back to the test centre.", "tip": "Relax, but do not switch off — faults on the way back still count." },
+      { "de": "Sie haben die Prüfung bestanden.", "en": "You have passed the exam.", "tip": "The sentence you are working for. Result is given immediately, on the spot." },
+      { "de": "Sie haben die Prüfung nicht bestanden.", "en": "You have not passed the exam.", "tip": "Two weeks minimum before a retake (FeV § 18) — attempts are unlimited." }
+    ]
+  },
+  {
+    "title": "The safety check questions",
+    "emoji": "🔧",
+    "note": "For class B there is no full Abfahrtkontrolle, but the examiner samples a few safety checks (lights, tyres, fluids) before you drive.",
+    "items": [
+      { "de": "Zeigen Sie mir bitte die Profiltiefe / den Reifendruck.", "en": "Please show me the tread depth / the tyre pressure.", "tip": "Minimum tread is 1.6 mm; pressures are on the sticker in the driver's door frame or fuel flap." },
+      { "de": "Schalten Sie das Abblendlicht / Fernlicht / die Nebelschlussleuchte / die Warnblinkanlage ein.", "en": "Switch on the dipped beam / high beam / rear fog light / hazard warning lights." },
+      { "de": "Benennen Sie bitte diese Kontrollleuchte.", "en": "Please name this warning light." },
+      { "de": "Prüfen Sie den Motorölstand / das Kühlmittel / die Scheibenwaschflüssigkeit.", "en": "Check the engine oil level / the coolant / the washer fluid." },
+      { "de": "Prüfen Sie die Funktion der Betriebsbremse / der Feststellbremse.", "en": "Check that the service brake / the parking brake works." }
+    ]
+  },
+  {
+    "title": "Words worth more than whole sentences",
+    "emoji": "🔑",
+    "note": "The examiner's exact wording is NOT fixed by law — the exam directive only requires that instructions be unambiguous. So learn these building blocks and you will understand any phrasing they choose.",
+    "items": [
+      { "de": "abbiegen", "en": "to turn (off)" },
+      { "de": "geradeaus", "en": "straight ahead" },
+      { "de": "die Ausfahrt", "en": "the exit" },
+      { "de": "anhalten / halten", "en": "to stop" },
+      { "de": "rechts ran", "en": "pull over to the right" },
+      { "de": "einparken", "en": "to park (into a space)" },
+      { "de": "rückwärts / vorwärts", "en": "backwards / forwards" },
+      { "de": "wenden", "en": "to turn around" },
+      { "de": "der Kreisverkehr", "en": "the roundabout" },
+      { "de": "der Fahrstreifen / die Spur", "en": "the lane" },
+      { "de": "die Vorfahrtstraße", "en": "the priority road" },
+      { "de": "die Kreuzung / die Einmündung", "en": "the crossroads / the T-junction" },
+      { "de": "sich einordnen", "en": "to move into position / into a lane" },
+      { "de": "die Ampel", "en": "the traffic light" },
+      { "de": "bei der nächsten Möglichkeit", "en": "at the next opportunity" }
+    ]
+  }
+]

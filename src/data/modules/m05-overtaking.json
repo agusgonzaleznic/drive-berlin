@@ -1,0 +1,305 @@
+{
+  "id": "m05-overtaking",
+  "order": 5,
+  "title": "Overtaking, Turning & Manoeuvres",
+  "german": "Überholen & Abbiegen",
+  "icon": "🔄",
+  "category": "grund",
+  "lesson": {
+    "intro": "Almost every moment where a German theory exam — and a real Berlin street — gets serious involves moving sideways: pulling out to overtake (**Überholen**), swinging into a side street (**Abbiegen**), slotting into a lane that has just ended, or reversing out of a courtyard in Prenzlauer Berg. Driving straight is easy. Driving sideways means crossing somebody else's path, and the StVO has a rule for every single one of those crossings.\n\nThe good news: the logic is remarkably consistent. **Overtake on the left, look behind you twice, and give way to whoever you are cutting across.** Build those three instincts and the rest of this module is detail. The bad news for Berlin: the person you are most likely to cut across is on a bicycle, arriving faster than you expect — and since 2020 the law puts a hard number on the space you owe them.",
+    "sections": [
+      {
+        "heading": "Left, faster, and only if you can really see",
+        "body": "German law is refreshingly blunt: *Es ist links zu überholen* — you overtake on the left. That is the default, and the exceptions are a short, closed list (you will meet them two sections down).\n\nFirst, a definition the exam likes to test: overtaking means passing a vehicle that is *moving* in your direction (or has only stopped because of the traffic itself, e.g. in a queue). Slipping past a **parked** car, a skip or a broken-down van is not overtaking at all — that is **Vorbeifahren**, passing an obstacle, and it has its own rule: if you have to use the other side of the road, oncoming traffic goes first. The obstacle being on your side gives you no priority whatsoever.\n\nBefore you pull out to overtake, three boxes must be ticked:\n\n- **Clear view.** You must be able to see that oncoming traffic will not be hindered during the *whole* manoeuvre. Not \"probably\". Not \"if he brakes for me\".\n- **A real speed advantage.** You may only overtake if you are travelling at a *significantly* higher speed (**wesentlich höhere Geschwindigkeit**) than the vehicle ahead. Creeping past a lorry at 3 km/h more is not overtaking, it is loitering in the oncoming lane.\n- **Signals both ways.** Indicate when you pull out *and* when you move back in, then return to the right as soon as you can — without cutting up the driver you have just passed.\n\nTwo situations make overtaking flatly illegal. First, an **unklare Verkehrslage** (unclear traffic situation): you cannot tell what the driver in front intends, someone slows for no visible reason, a bend, a crest or a junction is coming up. That one costs 100 € and a point even without anything happening. Second, where a sign forbids it: **sign 276** bans overtaking for motor vehicles of all kinds (70 € and a point), **sign 277** bans it for vehicles over 3.5 t, and **sign 280** ends the ban. Zebra crossings (**Fußgängerüberweg**) carry a permanent ban of their own — no sign needed.\n\nOne heavy-vehicle rule worth knowing even as a car driver: any motor vehicle over 7.5 t permissible gross mass — lorry, coach or large motorhome — must not overtake at all when fog, snowfall or rain cuts visibility below 50 m.",
+        "sign_ids": ["no_overtaking", "end_no_overtaking", "pedestrian_crossing"],
+        "callout": {
+          "type": "rule",
+          "text": "Clear view + clear gap + clear speed advantage. If any one of the three is missing, the answer is always the same: stay behind."
+        }
+      },
+      {
+        "heading": "1.5 and 2: the two numbers Berlin cares about",
+        "body": "Since the 2020 StVO amendment, the side distance (**Seitenabstand**) a motor vehicle owes when overtaking is no longer a vague \"be careful\". It is a number:\n\n- **at least 1.5 m inside built-up areas** (innerorts)\n- **at least 2 m outside built-up areas** (außerorts)\n\nIt protects *three* groups, not just cyclists: people on foot at the roadside, people cycling, and people on e-scooters (**Elektrokleinstfahrzeuge**). Measure between the outermost points — your mirror to their handlebar or elbow, not to the middle of the bike.\n\nThe consequence is the part learners forget: on a narrow street with parked cars and oncoming traffic, **there is simply no legal overtake**. You stay behind, at the cyclist's speed, until the road genuinely opens up. Squeezing past with 80 cm is a 30 € ticket on a good day; add endangerment or a collision and you are into fines, points in Flensburg and a very awkward insurance conversation.\n\nDo not confuse this with the opposite manoeuvre. When a cyclist filters past *your* stationary queue at a red light, the cyclist is the one passing, on the right, at moderate speed — that is expressly allowed and no 1.5 m applies to them. Your duty arrives one second later, when the lights go green and you want to turn right across the space they are riding through.",
+        "sign_ids": ["bicycles_crossing", "bike_path"],
+        "callout": {
+          "type": "warning",
+          "text": "No room for 1.5 m? Then there is no overtake. Waiting eight seconds behind a cyclist on Bergmannstraße is not a moral defeat."
+        }
+      },
+      {
+        "heading": "When \"right\" is actually right",
+        "body": "The left-hand rule has exceptions, and the exam loves them.\n\n- **Trams (Straßenbahn) are overtaken on the right.** Only if the rails run so far to the right that there is no room may you pass on the left; and on a carriageway carrying traffic in one direction only, a tram may also be passed on the left. Very Berlin: the M4 grinding up Prenzlauer Allee is passed on the right.\n- **A vehicle that has signalled left and taken up position towards the centre must be overtaken on the right.** That is the side the law prescribes — not optional politeness.\n- **Queues.** When traffic is so dense that queues (**Fahrzeugschlangen**) have formed in the lanes for your direction, you may drive faster on the right than on the left. If the traffic on the left is standing still or crawling, you may pass it on the right — but only with *slightly* higher speed and the utmost care.\n- **Multi-lane roads in town.** Inside built-up areas, motor vehicles up to 3.5 t may choose their lane freely on a carriageway with several marked lanes for one direction, and may then also be faster on the right.\n- **Cyclists and moped riders** may pass waiting vehicles on the right at moderate speed and with particular care, where there is enough room. Expect it at every red light.\n\nStops are their own world. A tram or bus halted at a stop while passengers get on or off may be passed **on the right at walking pace only**, and only at a distance that rules out endangering those passengers — if that is impossible, you wait. A bus or school bus **approaching** a stop with its hazard lights flashing must not be overtaken at all; once it has stopped with hazard lights on, walking pace applies — and expressly to oncoming traffic on the same carriageway as well.",
+        "sign_ids": ["bus_lane", "one_way"],
+        "callout": {
+          "type": "tip",
+          "text": "Outside this list, passing on the right stays illegal — including on the Autobahn, however empty the right-hand lane looks."
+        }
+      },
+      {
+        "heading": "Being overtaken: do nothing, beautifully",
+        "body": "When somebody comes past you, your job is boring on purpose. **You must not increase your speed** — not to \"help them finish sooner\", not out of pride. Hold a steady speed, keep right, leave them room to come back in.\n\nIf you are the slow one — heavily loaded, towing, or a learner on a country road with a tailback — the law goes further: reduce speed at a suitable place, and wait if that is what it takes, so that several vehicles immediately behind you can get past. A queue of frustrated drivers is a queue of drivers about to overtake badly.\n\nAnd if somebody gives you a short flash of headlights on a rural road, do not take it personally: outside built-up areas an overtake may be announced with brief light or horn signals (without dazzling anyone). Inside towns, horn and headlight signals are only allowed when you or somebody else is in danger.",
+        "callout": {
+          "type": "tip",
+          "text": "Being overtaken badly is still safer than accelerating. Lift off, let them past, forget it."
+        }
+      },
+      {
+        "heading": "Turning: mirror, signal, shoulder — and then again",
+        "body": "Turning is a two-look manoeuvre. Announce it early and clearly with the indicator (**Fahrtrichtungsanzeiger**), then position: as far right as possible for a right turn, up to the centre for a left turn (as far left as possible on a one-way carriageway). If you have to wait on tram rails, you may not obstruct a tram.\n\nThe legally required rhythm is the **doppelte Rückschau** — you check the following traffic *before* you move into position and *again* immediately before you turn. In practice that second check is the **Schulterblick**: a glance over your shoulder into the blind spot no mirror covers. Mirror → signal → shoulder → turn.\n\n**Turning right:** you must let through people cycling, on e-scooters or on mopeds who are going straight ahead on or beside the carriageway, and buses in a marked special lane. Pedestrians crossing the road you are turning into get *special* consideration — if necessary, you wait. Lorries over 3.5 t must take an in-town right turn at walking pace (**Schrittgeschwindigkeit**, roughly 4–7 km/h) wherever straight-on cyclists or crossing pedestrians are to be expected.\n\n**Turning left:** oncoming traffic goes first — including an oncoming vehicle that wants to turn right. When two opposing cars both want to turn left, the standard is to turn **voreinander**: in front of one another, passing left side to left side. Only if the traffic situation or the layout of the junction demands it do you pass each other first and turn behind one another.",
+        "sign_ids": ["bike_path", "fahrradstrasse"],
+        "callout": {
+          "type": "danger",
+          "text": "The classic Berlin crash is the right hook: driver indicates, turns, and never sees the cyclist coming up the bike lane at 25 km/h. The shoulder glance is not a formality — it is the entire safety system."
+        }
+      },
+      {
+        "heading": "Zip, turn round, reverse",
+        "body": "**Reißverschlussverfahren (zipper merge).** Where a lane ends or is blocked, drivers in the blocked lane use their lane right up to the narrowing, and traffic on the continuing lane lets them in **one for one, immediately before the bottleneck**. Merging half a kilometre early feels polite and simply throws away usable road. Late and alternating is the legal method, not a cheat — and a lane change is only allowed when endangering others is ruled out, indicator on.\n\n**Wenden (turning round) and Rückwärtsfahren (reversing).** For these, and for turning into a property, the standard is stricter than \"give way\": endangering other road users must be *ruled out*. If you cannot see enough, you must have somebody guide you (**Einweiser**). So: slowly, at walking pace, one look all round the car before you move, and a helper for a blind courtyard exit. Reverse *into* a parking space and drive out forwards — you see far more that way.\n\nOn the Autobahn and on a Kraftfahrstraße, turning round and reversing are simply forbidden. Missing your exit costs you ten minutes; reversing on a slip road costs considerably more.",
+        "sign_ids": ["autobahn", "kraftfahrstrasse", "dead_end"],
+        "callout": {
+          "type": "rule",
+          "text": "Zip late and alternate. Reverse slowly, and get a guide when the view is gone. On the Autobahn: never turn round — drive to the next exit."
+        }
+      }
+    ],
+    "key_takeaways": [
+      "Overtake on the left — with a clear view, a clear gap and a significantly higher speed.",
+      "Passing a parked car is not overtaking; if you use the other side, oncoming traffic goes first.",
+      "1.5 m in town, 2 m out of town past cyclists, e-scooter riders and people on foot — no room, no overtake.",
+      "Trams are passed on the right — and so is a car that has signalled left and pulled to the centre.",
+      "Being overtaken: never accelerate; if you are the slow one, ease off and let the queue through.",
+      "Turning right: straight-on cyclists first, shoulder glance second, turn third.",
+      "Turning left: oncoming traffic first, including oncoming drivers turning right.",
+      "Zip at the very end of the lane, one car for one car."
+    ],
+    "german_terms": [
+      { "de": "Überholen", "en": "overtaking (passing a moving vehicle)" },
+      { "de": "Vorbeifahren", "en": "passing a stationary vehicle or obstacle" },
+      { "de": "Überholverbot", "en": "overtaking ban" },
+      { "de": "unklare Verkehrslage", "en": "unclear traffic situation" },
+      { "de": "Seitenabstand", "en": "side / lateral distance" },
+      { "de": "Elektrokleinstfahrzeug", "en": "e-scooter (small electric vehicle)" },
+      { "de": "Fahrzeugschlange", "en": "queue of vehicles" },
+      { "de": "Straßenbahn", "en": "tram" },
+      { "de": "Abbiegen", "en": "turning off" },
+      { "de": "Fahrtrichtungsanzeiger", "en": "indicator / turn signal" },
+      { "de": "doppelte Rückschau", "en": "the double look behind (before positioning, and again before turning)" },
+      { "de": "Schulterblick", "en": "shoulder glance (blind-spot check)" },
+      { "de": "Schrittgeschwindigkeit", "en": "walking pace (roughly 4-7 km/h)" },
+      { "de": "Reißverschlussverfahren", "en": "zipper merge" },
+      { "de": "Wenden", "en": "turning round / U-turn" },
+      { "de": "Rückwärtsfahren", "en": "reversing" },
+      { "de": "Einweiser", "en": "a person guiding you while manoeuvring" },
+      { "de": "Fußgängerüberweg", "en": "zebra crossing" }
+    ]
+  },
+  "questions": [
+    {
+      "id": "m05-overtaking-q01",
+      "type": "choice",
+      "text": "Which statements about overtaking are correct?",
+      "options": [
+        { "text": "As a general rule, overtaking is done on the left.", "correct": true },
+        { "text": "Passing a car parked at the kerb is not \"overtaking\" in the legal sense, but passing an obstacle (Vorbeifahren).", "correct": true },
+        { "text": "You may choose the side freely, as long as you indicate clearly before pulling out.", "correct": false }
+      ],
+      "points": 2,
+      "pool": "grund",
+      "explanation": "Two basics in one question. The StVO puts the general rule in a single sentence: overtaking happens on the left. And overtaking only means passing a vehicle that is moving in your direction (or has stopped because of the traffic, such as in a queue) — slipping past a parked car or a skip is Vorbeifahren, which has its own rule: if you need the other side of the road, oncoming traffic goes first. Indicating never buys you the right to pass on the wrong side.",
+      "rule_ref": "StVO §5(1), §6"
+    },
+    {
+      "id": "m05-overtaking-q02",
+      "type": "choice",
+      "text": "You are driving along a stretch marked with this sign. What applies?",
+      "sign": "no_overtaking",
+      "options": [
+        { "text": "You must not overtake another car or a delivery van here.", "correct": true },
+        { "text": "You may still overtake a cyclist, provided you keep the required side distance of at least 1.5 m in town.", "correct": true },
+        { "text": "The sign only applies to vehicles over 3.5 t, so cars may overtake freely.", "correct": false }
+      ],
+      "points": 3,
+      "pool": "grund",
+      "explanation": "Sign 276 forbids the overtaking of multi-track motor vehicles and motorcycles with sidecars — so cars, vans, lorries and tractors are off limits. Bicycles are not motor vehicles and are not covered, so passing a cyclist stays legal here as long as you can keep the full side distance (1.5 m in town, 2 m outside). The sign that targets heavy vehicles only is sign 277; sign 280 ends the general ban. Overtaking despite sign 276 costs 70 € and a point in Flensburg.",
+      "rule_ref": "StVO §5(3); Anlage 2 (Zeichen 276, 277, 280)"
+    },
+    {
+      "id": "m05-overtaking-q03",
+      "type": "number",
+      "text": "Inside a built-up area you overtake a cyclist with your car. What is the minimum side distance you must keep, in metres?",
+      "answer_number": 1.5,
+      "unit": "m",
+      "points": 4,
+      "pool": "grund",
+      "explanation": "Since the 2020 StVO amendment the side distance is a fixed figure, not a judgement call: at least 1.5 m inside built-up areas when a motor vehicle overtakes people cycling, walking or riding e-scooters (outside built-up areas it is 2 m). Measure between the outermost points — your mirror to their handlebar. If the street cannot offer that gap, the overtake is illegal and you stay behind.",
+      "rule_ref": "StVO §5(4)"
+    },
+    {
+      "id": "m05-overtaking-q04",
+      "type": "choice",
+      "text": "You are on a country road outside any built-up area and want to overtake a cyclist with your car. What is correct?",
+      "options": [
+        { "text": "You must keep a side distance of at least 2 m.", "correct": true },
+        { "text": "The same minimum distance applies when you pass a pedestrian at the roadside or an e-scooter rider.", "correct": true },
+        { "text": "About 1 m is enough outside town if you slow down to 30 km/h while passing.", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "Outside built-up areas the minimum is 2 m, because the speed difference — and the suction and buffeting that come with it — is far greater than in town. The rule protects three groups equally: people on foot, people cycling and e-scooter riders. Slowing down does not buy you a smaller gap: the distance is an absolute minimum, and if the road does not offer it, you wait behind until it does.",
+      "rule_ref": "StVO §5(4)"
+    },
+    {
+      "id": "m05-overtaking-q05",
+      "type": "choice",
+      "text": "Which conditions must be satisfied before you may begin an overtaking manoeuvre?",
+      "options": [
+        { "text": "You must be able to see that oncoming traffic will not be hindered at any point during the whole manoeuvre.", "correct": true },
+        { "text": "You must be travelling at a significantly higher speed than the vehicle you are passing.", "correct": true },
+        { "text": "A small speed difference is acceptable as long as you keep your indicator on throughout.", "correct": false }
+      ],
+      "points": 3,
+      "pool": "grund",
+      "explanation": "Two independent requirements have to be met. First, a complete view: you must be able to see the manoeuvre through to its end without hindering anyone coming the other way. Second, a real speed advantage — a long, slow crawl past a lorry blocks the oncoming lane for hundreds of metres. An indicator announces your intention; it creates neither the space nor the time you need. You must also signal again when you move back in, and return to the right as soon as possible.",
+      "rule_ref": "StVO §5(2), §5(4), §5(4a)"
+    },
+    {
+      "id": "m05-overtaking-q06",
+      "type": "choice",
+      "text": "Where or when is overtaking prohibited?",
+      "sign": "pedestrian_crossing",
+      "options": [
+        { "text": "At a zebra crossing (Fußgängerüberweg) — overtaking there is banned outright.", "correct": true },
+        { "text": "Whenever the traffic situation is unclear, for example when you cannot tell what the driver ahead is about to do.", "correct": true },
+        { "text": "Only where a sign expressly forbids it; without a sign, overtaking is always allowed.", "correct": false }
+      ],
+      "points": 5,
+      "pool": "grund",
+      "explanation": "The zebra crossing carries a permanent overtaking ban written into the law — no sign needed — because the overtaking car hides the pedestrian from the driver behind, and the pedestrian from the overtaking driver. The second ban is the unklare Verkehrslage: if you cannot read the situation ahead (a car slowing for no visible reason, a bend, a crest, a junction), the law removes your choice. Signs are only one of several sources of an overtaking ban.",
+      "rule_ref": "StVO §5(3), §26(3)"
+    },
+    {
+      "id": "m05-overtaking-q07",
+      "type": "choice",
+      "text": "A tram is running slowly along the middle of the road ahead of you in Berlin. What applies?",
+      "options": [
+        { "text": "As a rule you pass a tram on the right.", "correct": true },
+        { "text": "If the rails lie so far to the right that there is not enough room, you may pass on the left.", "correct": true },
+        { "text": "On a carriageway that carries traffic in one direction only, passing a tram on the left is never allowed.", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "Rail vehicles are the classic exception to \"overtake on the left\": you pass them on the right, because they cannot swerve and the space to their left is usually the oncoming side. Only where the rails run too far right to leave you room may you pass on the left — and on a carriageway used for one direction only, passing a tram on the left is expressly permitted. A tram halted at a stop is a different matter: while passengers board or alight you may pass on the right at walking pace only, and you wait if you cannot do so safely.",
+      "rule_ref": "StVO §5(7), §20(2)"
+    },
+    {
+      "id": "m05-overtaking-q08",
+      "type": "choice",
+      "text": "The car in front of you has signalled left and moved over towards the centre of the road to wait for a gap. How do you get past?",
+      "options": [
+        { "text": "If you pass it, you must do so on the right — that is the side the law prescribes here.", "correct": true },
+        { "text": "Passing on the right is forbidden here, so you must wait behind until it has turned.", "correct": false },
+        { "text": "You may pass on the left, using the oncoming lane while it waits.", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "A driver who has announced a left turn and taken up position is overtaken on the right — the law prescribes it, so both of you know what happens next. Squeezing past on the left would put you between the waiting car and the oncoming traffic, exactly where the left-turner is about to go. Pass on the right slowly and watch out: cyclists and pedestrians often use that same strip of road.",
+      "rule_ref": "StVO §5(7)"
+    },
+    {
+      "id": "m05-overtaking-q09",
+      "type": "choice",
+      "text": "In which situations may you legitimately travel faster on the right than on the left?",
+      "options": [
+        { "text": "Inside a built-up area, on a carriageway with several marked lanes for your direction, where a car up to 3.5 t may choose its lane freely.", "correct": true },
+        { "text": "When the traffic on the left is stationary or crawling — you may then pass it on the right with only slightly higher speed and the utmost care.", "correct": true },
+        { "text": "On the Autobahn whenever the right-hand lane happens to be emptier than the left.", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "Being faster on the right is allowed only in defined situations: free lane choice inside towns for motor vehicles up to 3.5 t on marked multi-lane carriageways; dense traffic where queues have formed in the lanes for your direction; and traffic on the left that is standing still or crawling, which you may pass on the right with only slightly higher speed and extreme care. An empty right-hand lane on the Autobahn is none of those — that is still an illegal right-hand overtake.",
+      "rule_ref": "StVO §7(2), §7(2a), §7(3)"
+    },
+    {
+      "id": "m05-overtaking-q10",
+      "type": "choice",
+      "text": "Another vehicle starts to overtake you on a rural road. What is correct?",
+      "options": [
+        { "text": "You must not increase your speed.", "correct": true },
+        { "text": "If you are driving a slow vehicle, you must reduce speed at a suitable place — and wait if necessary — so that several vehicles behind you can overtake.", "correct": true },
+        { "text": "You should accelerate briefly so the other driver finishes the manoeuvre sooner.", "correct": false }
+      ],
+      "points": 3,
+      "pool": "grund",
+      "explanation": "The overtaken driver has one duty above all others: do not speed up. Accelerating stretches the manoeuvre, keeps the other car in the oncoming lane for longer and is a frequent cause of head-on collisions. Drivers of slow vehicles have an additional, active duty: ease off at a suitable spot, or even stop, so that the traffic building up behind can get past instead of taking wilder and wilder risks.",
+      "rule_ref": "StVO §5(6)"
+    },
+    {
+      "id": "m05-overtaking-q11",
+      "type": "choice",
+      "text": "You want to turn right from a main road into a side street. There is a cycle lane beside you and people are walking towards the side street. What applies?",
+      "sign": "bike_path",
+      "options": [
+        { "text": "Cyclists and e-scooter riders going straight ahead on or beside the carriageway must be allowed to pass first.", "correct": true },
+        { "text": "Before you actually turn you must check again for traffic coming up behind you, including your blind spot.", "correct": true },
+        { "text": "Pedestrians already crossing the side street must give way to you, because a vehicle takes precedence over people on foot.", "correct": false }
+      ],
+      "points": 5,
+      "pool": "grund",
+      "explanation": "A right turn cuts across everybody travelling straight on beside you, so cyclists, e-scooter and moped riders — and buses in a marked special lane — go first, whether they are on the carriageway or on a cycle lane next to it. The law demands two looks behind: once before you move into position, and again immediately before turning, which in practice is the Schulterblick into the blind spot. Pedestrians crossing the road you turn into are owed special consideration; if necessary you stop and wait.",
+      "rule_ref": "StVO §9(1), §9(3)"
+    },
+    {
+      "id": "m05-overtaking-q12",
+      "type": "choice",
+      "text": "You are waiting at a junction to turn left. What is correct?",
+      "options": [
+        { "text": "You must let oncoming vehicles pass through.", "correct": true },
+        { "text": "An oncoming vehicle that wants to turn right goes before you.", "correct": true },
+        { "text": "Where two opposing vehicles both want to turn left, they must always drive past each other first and only then turn.", "correct": false }
+      ],
+      "points": 5,
+      "pool": "grund",
+      "explanation": "A left turn crosses the oncoming stream, so oncoming traffic always goes first — and an oncoming driver turning right is oncoming traffic too. Cyclists, e-scooter riders and trams coming towards you, or travelling in your own direction beside you, must also be let through. Where two opposing vehicles both turn left, the standard is to turn in front of one another (voreinander), left side to left side; only if the traffic situation or the layout of the junction requires it do you pass each other first and turn behind one another.",
+      "rule_ref": "StVO §9(3), §9(4)"
+    },
+    {
+      "id": "m05-overtaking-q13",
+      "type": "choice",
+      "text": "Your lane ends because of roadworks. How does the Reißverschlussverfahren (zipper merge) work?",
+      "options": [
+        { "text": "You use your lane right up to the narrowing and then merge alternately, one vehicle at a time.", "correct": true },
+        { "text": "Drivers on the continuing lane must let a blocked vehicle in immediately before the narrowing.", "correct": true },
+        { "text": "You are required to change lanes as early as possible, as soon as a sign warns that your lane ends.", "correct": false }
+      ],
+      "points": 3,
+      "pool": "grund",
+      "explanation": "The law puts the merge directly before the bottleneck, alternating one blocked vehicle after each vehicle on the continuing lane. That keeps both lanes in use for as long as they exist, so the queue is roughly half as long. Merging hundreds of metres early feels courteous but wastes usable road and creates a second queue — and the drivers who do use the ending lane are following the rules, not jumping in. Remember that the lane change itself is only allowed when endangering others is ruled out, indicator on.",
+      "rule_ref": "StVO §7(4), §7(5)"
+    },
+    {
+      "id": "m05-overtaking-q14",
+      "type": "choice",
+      "text": "What applies when you turn your car round (wenden) or reverse?",
+      "options": [
+        { "text": "You must behave so that endangering other road users is ruled out, and have somebody guide you if you cannot see enough.", "correct": true },
+        { "text": "On the Autobahn and on a Kraftfahrstraße, turning round and reversing are prohibited.", "correct": true },
+        { "text": "Reversing along a one-way street at normal driving speed is fine as long as your hazard warning lights are on.", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "For turning round, reversing and turning into a property the standard is higher than ordinary care: danger to others must be excluded — which in practice means walking pace, a look all round the car before you move, and a guide (Einweiser) wherever your view is blocked. On motorways and expressways both manoeuvres are banned outright; drive on to the next exit. Hazard lights warn other people, they never grant you speed or right of way.",
+      "rule_ref": "StVO §9(5), §18(7)"
+    },
+    {
+      "id": "m05-overtaking-q15",
+      "type": "number",
+      "text": "A motor vehicle with a permissible gross mass over 7.5 t must not overtake at all once fog, snowfall or rain reduces visibility to less than how many metres?",
+      "answer_number": 50,
+      "unit": "m",
+      "points": 3,
+      "pool": "grund",
+      "explanation": "Below 50 m of visibility any motor vehicle over 7.5 t — not just lorries, but coaches and big motorhomes too — may not overtake, and this ban applies on top of every other overtaking prohibition. The reason is arithmetic: a long, slow overtake needs several hundred metres of clear road, and with 50 m of sight you cannot know what is in them. The same figure is your cue as a car driver: with visibility under 50 m you may drive no faster than 50 km/h.",
+      "rule_ref": "StVO §5(3a), §3(1)"
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "id": "m11-berlin",
+  "order": 11,
+  "title": "Berlin Survival Pack",
+  "german": "Berlin-Spezial",
+  "icon": "🐻",
+  "category": "bonus",
+  "lesson": {
+    "intro": "Berlin does not do gentle. On one 500-metre stretch of Friedrichshain you can meet a tram gliding out of a bend, a bus lane you are not allowed to touch, a cycle lane painted green, an e-scooter ridden by someone reading their phone, and a delivery van parked in the second row with its door swinging open. None of this is special Berlin law — it is all plain **StVO**. Berlin simply serves the whole menu at once, at rush hour, with someone hooting behind you.\n\nThis is a bonus module, but every question in it is genuine exam material, because these are the paragraphs the examiner watches you obey on the practical drive too. Learn them here and two things happen: you pass the theory test, and you stop being the person the trams hate.",
+    "sections": [
+      {
+        "heading": "Trams: they cannot swerve, so you give way",
+        "body": "Berlin's trams (**Straßenbahn**) own the east — Prenzlauer Berg, Friedrichshain, Pankow, Köpenick — and a vehicle weighing tens of tonnes on steel rails cannot dodge you. So the StVO helps it out in *specific* situations. Note the word specific: a tram does **not** have blanket priority. At junctions it obeys traffic lights and priority signs exactly as you do.\n\n- **Driving along the rails**: vehicles travelling in the longitudinal direction of a tramway must let the tram through wherever possible (§2 Abs. 3).\n- **Turning**: before you turn you must let trams pass — oncoming ones, and also trams running in the *same* direction as you, on or beside your carriageway (§9 Abs. 3). While waiting to turn left you may move onto rails laid along the road only if no rail vehicle is obstructed (§9 Abs. 1).\n- **Overtaking**: rail vehicles are overtaken **on the right**. Only if you cannot do that, because the rails lie too far right, may you overtake on the left — and on a carriageway for one direction only, the left is allowed anyway (§5 Abs. 7).\n\nA turning tram sweeps a huge area with its rear end, far outside its own rails. Never try to slip through the gap between a turning tram and the kerb: the gap closes.\n\nOne asymmetry worth filing away: at a zebra crossing every vehicle must let pedestrians cross — *every vehicle except rail vehicles* (§26 Abs. 1). The tram rolling on through is not being rude, it is being legal.\n\n**The stop is where it gets serious.** A tram, line bus or marked school bus standing at a stop (Haltestelle, Zeichen 224) may only be passed **carefully** — and the law spells out that this includes oncoming traffic (§20 Abs. 1). Hundreds of Berlin tram stops have **no boarding island**: the tram halts mid-road and passengers walk straight across your lane to reach the pavement. The law is blunt about that moment — while passengers are getting on or off you may pass on the right only at **walking pace** (Schrittgeschwindigkeit, put by the courts at roughly 4–7 km/h) and only at a distance that rules out any danger to them (§20 Abs. 2). With people crossing in front of your bonnet, \"walking pace\" means *stop and wait*.\n\nParking near rails has its own logic: where rails lie along the right-hand side, and in one-way streets, you may stop and park on the **left** (§12 Abs. 4). Never so that a tram would be obstructed, obviously — that is the general duty in §1 Abs. 2.",
+        "callout": {
+          "type": "rule",
+          "text": "Tram at a Haltestelle, passengers stepping down, no island: walking pace, wide gap, and wait if there is the slightest doubt (StVO §20 Abs. 1 und 2)."
+        }
+      },
+      {
+        "heading": "Bus lanes and bus stops: read the plate, then let the bus win",
+        "body": "Zeichen 245 marks a **Bussonderfahrstreifen**. With no extra plate underneath, only line-service buses and vehicles that must carry the school-bus sign (school and disabled transport) may drive along it. Your car may not — however solid the jam in the lane beside it looks.\n\nWhat changes the rules is the small plate underneath (**Zusatzzeichen**): \"Taxi frei\", a bicycle symbol, sometimes electric vehicles, sometimes a time window such as \"Mo–Fr 6–10 h\". Read the plate before you believe your eyes — outside a signed time window the lane is simply an ordinary lane.\n\nWhere you genuinely have to get across a bus lane — to reach a driveway or turn into a side street — you cross it at the turning point and you cross it having checked that nobody using it is endangered (§7 Abs. 5, §1 Abs. 2). What you must never do is *drive along* it to shortcut the queue, and it is not a parking space or a \"two minutes only\" delivery bay either.\n\nBuses at stops get two extra rules that Berlin's M-lines will test on you daily:\n\n- A line bus or marked school bus **approaching** a stop with its hazard warning lights on **must not be overtaken** (§20 Abs. 3).\n- One **standing** at a stop with hazard lights on may be passed only at walking pace (§20 Abs. 4).\n- And a bus that wants to pull out of a marked stop **must be allowed to go** (§20 Abs. 5). Lift off, flash nothing, just let it out.",
+        "sign_ids": ["bus_lane"],
+        "callout": {
+          "type": "tip",
+          "text": "In Berlin many bus lanes are shared with taxis and cyclists. Find the plate before you nudge across — it tells you who else belongs there, and therefore who is about to appear in your mirror."
+        }
+      },
+      {
+        "heading": "Bikes, e-scooters and the deadly right turn",
+        "body": "Berlin has cycle infrastructure from every decade of the last forty years, and the types behave differently:\n\n- **Radweg** (Zeichen 237): a path of its own, compulsory for cyclists. Motor vehicles have no business on it at all.\n- **Radfahrstreifen**: a lane on the carriageway — bicycle sign plus a solid line (Zeichen 295). Reserved for cycles; do not drive along it, do not stop on it.\n- **Schutzstreifen** (broken guide line, Zeichen 340): motor vehicles may drive over it **only when needed**, for instance to give way to oncoming traffic, and never endangering a cyclist. **Stopping on it is prohibited.**\n- **Green paint**: colour is a visual aid, not a new rule. The sign and the marking decide what applies.\n- **Fahrradstraße** (Zeichen 244.1): cycles and e-scooters only, unless a plate such as \"Kfz frei\" or \"Anlieger frei\" lets others in. Maximum **30 km/h for all traffic**, cyclists may ride two abreast, and cycle traffic must not be obstructed.\n- **Contraflow cycling**: a one-way street (Zeichen 220) with a plate showing a bicycle and arrows both ways means cyclists legally ride *towards* you. At the far end the same street shows \"no entry\" with a \"Radverkehr frei\" plate. The plate releases bicycles, never your car.\n\nGood news for your nerves: since 2020 cyclists may generally ride **side by side** wherever they do not obstruct traffic (§2 Abs. 4) — so two abreast is not them being cheeky. **E-scooters** (Elektrokleinstfahrzeuge) are the opposite: they must ride **single file** (eKFV §11). Their other numbers: design speed at most 20 km/h, minimum age 14, one rider only, insurance sticker compulsory, no driving licence needed, footways and pedestrian zones off limits unless a sign releases them. Alcohol limits are the car limits — 0.5 ‰, and 0.0 ‰ for under-21s and anyone in the probationary period.\n\nThen the manoeuvre that kills people: **the right turn.** Cyclists and e-scooter riders travelling in the same direction have priority over your turn (§9 Abs. 3) — mirror, indicator, **Schulterblick** over your right shoulder, and only then the steering wheel. Lorries over 3.5 t must turn right inside towns at walking pace whenever straight-ahead cycle traffic or crossing pedestrians are to be expected (§9 Abs. 6). And remember: where there is room, cyclists and moped riders may legally filter past waiting vehicles on the right at moderate speed (§5 Abs. 8) — so your blind spot refills every few seconds while you sit at the light.",
+        "sign_ids": ["bike_path", "fahrradstrasse", "one_way", "no_entry"],
+        "callout": {
+          "type": "danger",
+          "text": "Indicate early, then look over your right shoulder — every right turn, every time. The mirror alone cannot show you the cyclist already level with your rear door."
+        }
+      },
+      {
+        "heading": "Green sticker, 30 zones and calmed streets",
+        "body": "Roughly everything inside the **S-Bahn ring** — about 88 km² — is Berlin's **Umweltzone**, signed with Zeichen 270.1. Inside such a zone motor traffic is banned; you get in only if your vehicle carries the emissions sticker (**Feinstaubplakette**) named on the plate under the sign, and in Berlin that has meant the **green** sticker (pollutant group 4) since 2010. The sticker must be stuck to the inside of the windscreen with your registration number written on it — one lying in the glovebox counts as none at all, and driving in without a valid one is a fineable offence.\n\nSpeeds are simple and constantly ignored. Inside a built-up area the default is **50 km/h** (§3 Abs. 3) — that is what Berlin's big radial roads are. Most side streets are **Tempo-30 zones** (Zeichen 274.1), and plenty of main roads carry 30 km/h only at certain hours or along one section, which is written on the plate under the sign. Inside a 30 zone the little junctions normally carry no priority signs at all, so **right-before-left** applies (§8 Abs. 1) — the classic newcomer's ticket.\n\nWhole courtyard blocks in Kreuzberg and Prenzlauer Berg are **traffic-calmed areas** (verkehrsberuhigter Bereich, Zeichen 325.1), and the sign carries a full package: drive at walking pace; neither endanger nor obstruct pedestrians and wait if necessary; pedestrians may use the street across its whole width and children may play anywhere; park only on marked areas, except to board or load. When you drive back out onto an ordinary road, §10 applies — you give way to everybody.\n\nCameras cluster exactly where the limit drops: the ends of 30-limited main-road sections, tunnel approaches, long downhill run-outs, school and hospital stretches. Rule of thumb — if a road feels \"too slow for how big it is\", that is precisely where somebody is measuring.",
+        "sign_ids": ["umweltzone", "zone30", "speed_50", "traffic_calmed"],
+        "callout": {
+          "type": "warning",
+          "text": "Borrowing or renting a car? Check the windscreen for the green sticker before you drive into the ring — the penalty follows the driver, not the owner."
+        }
+      },
+      {
+        "heading": "Cobblestones, rails and rain: the physics bit",
+        "body": "Berlin still has kilometres of **Kopfsteinpflaster** (cobblestones) and hundreds of kilometres of steel tram rails set into the asphalt. Wet granite and wet steel offer a fraction of the grip of dry tarmac, and they take that grip away exactly when you are braking or steering.\n\nThe numbers the exam wants anyway:\n\n- Reaction distance = (speed ÷ 10) × 3 → **15 m** at 50 km/h\n- Braking distance = (speed ÷ 10)² → **25 m** at 50 km/h\n- Stopping distance ≈ **40 m** at 50 km/h — and on a wet surface reckon with roughly double the braking distance\n\nSo cross tram rails at as steep an angle as you can manage, and do not brake or steer hard while your tyres are on the metal. Leave extra room on wet cobbles. And remember that the cyclist beside you has the same problem in a worse form: they need room to dodge the rails and the grooves beside them. That is one more reason for the legal minimum of **1.5 m** side clearance when you overtake pedestrians, cyclists or e-scooter riders inside a built-up area — **2 m** outside (§5 Abs. 4).",
+        "callout": {
+          "type": "rule",
+          "text": "Overtaking a cyclist inside town: at least 1.5 m of clear air. If the street is too narrow for that, you are not overtaking — you are waiting."
+        }
+      },
+      {
+        "heading": "Berlin manners: vans, doors and staying calm",
+        "body": "You will see behaviour you must not copy. Delivery vans stand in the second row with hazard lights on as though that legalised something — it does not. Hazard warning lights warn other people; they do not create an exemption from a stopping ban. Cars sit on cycle lanes \"only for a second\". Stopping on a Schutzstreifen is prohibited outright, and a Radfahrstreifen is not a lay-by either.\n\nDoors are the other Berlin classic. Anyone getting in or out must behave so that endangering other road users is **excluded** (§14 Abs. 1) — and after a dooring, no court cares that the cyclist \"came fast\". Before you open: mirror, then look back over your shoulder, then open with your far hand so your body turns towards the traffic.\n\nFinally, the local sport: impatience. You will be hooted at for stopping at a zebra crossing, tailgated for doing 30 in a 30 zone, and overtaken on the right by an e-scooter. None of that changes a single paragraph of the StVO, and none of it is your problem in the exam — you are being marked on keeping your distance, yielding when the law says yield, and staying calm. Let Berlin be Berlin behind you.",
+        "sign_ids": ["no_stopping", "no_parking", "pedestrian_crossing"],
+        "callout": {
+          "type": "tip",
+          "text": "The examiner's favourite sentence: \"Sie fahren, ich beobachte.\" Slow, deliberate and legal always scores better than fast and flustered."
+        }
+      }
+    ],
+    "key_takeaways": [
+      "Trams have no blanket priority — but you let them through when you drive along the rails and whenever you turn.",
+      "Rail vehicles are overtaken on the right; on the left only if the rails lie too far right, or on a one-direction carriageway.",
+      "Tram or bus at a stop: pass carefully, and only at walking pace with a safe gap while passengers board or alight.",
+      "Bus lane (Zeichen 245): line buses and school buses only — anyone else needs the plate underneath.",
+      "Bus with hazard lights approaching a stop: no overtaking. Bus pulling out of a stop: let it go.",
+      "Fahrradstraße: 30 km/h for everyone, cyclists may ride two abreast, and it is not automatically a priority road.",
+      "Right turn = mirror, indicator, shoulder check. Cyclists going straight on beat your turn, always.",
+      "Green sticker on the windscreen for everything inside the S-Bahn ring; wet cobbles and rails stretch every braking distance."
+    ],
+    "german_terms": [
+      { "de": "die Straßenbahn", "en": "tram" },
+      { "de": "die Haltestelle", "en": "public transport stop" },
+      { "de": "die Schrittgeschwindigkeit", "en": "walking pace (approx. 4–7 km/h)" },
+      { "de": "der Bussonderfahrstreifen", "en": "bus-only lane" },
+      { "de": "das Zusatzzeichen", "en": "supplementary plate under a sign" },
+      { "de": "der Radfahrstreifen", "en": "mandatory cycle lane on the carriageway (solid line)" },
+      { "de": "der Schutzstreifen", "en": "advisory cycle lane (broken line)" },
+      { "de": "die Fahrradstraße", "en": "bicycle street" },
+      { "de": "der Schulterblick", "en": "shoulder check into the blind spot" },
+      { "de": "die Umweltzone", "en": "low-emission zone" },
+      { "de": "die Feinstaubplakette", "en": "emissions sticker for the windscreen" },
+      { "de": "das Elektrokleinstfahrzeug", "en": "e-scooter (its legal vehicle class)" },
+      { "de": "das Kopfsteinpflaster", "en": "cobblestones" },
+      { "de": "in zweiter Reihe halten", "en": "to stop in the second row (double-park)" }
+    ]
+  },
+  "questions": [
+    {
+      "id": "m11-berlin-q01",
+      "type": "choice",
+      "text": "A tram has stopped at a stop (Haltestelle) in the middle of the road. There is no boarding island, and passengers are stepping down towards the pavement. What applies?",
+      "options": [
+        { "text": "You may pass on the right only at walking pace and only at a distance that rules out any danger to the passengers — if in doubt, you wait", "correct": true },
+        { "text": "Oncoming traffic may keep its normal speed, because the rule only applies to vehicles behind the tram", "correct": false },
+        { "text": "A short blast of the horn is allowed to get the passengers out of your lane more quickly", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "A tram, line bus or marked school bus standing at a stop may only be passed carefully — and the StVO says expressly that this applies \"also in oncoming traffic\", so option two is wrong. As soon as passengers are getting on or off, passing on the right is allowed only at walking pace and at a distance that excludes endangering them. With no boarding island the passengers have to cross your lane to reach the kerb, so in practice you stop and let them go. The horn is for warning of danger, never for hurrying pedestrians along.",
+      "rule_ref": "StVO §20 Abs. 1 und 2"
+    },
+    {
+      "id": "m11-berlin-q02",
+      "type": "choice",
+      "text": "You want to turn left off a main road with tram rails down the middle. A tram is coming towards you, and a second tram is running up behind you in the same direction. Which statements are correct?",
+      "options": [
+        { "text": "You must let the oncoming tram pass before you turn", "correct": true },
+        { "text": "You must also let the tram travelling in the same direction as you pass before you turn", "correct": true },
+        { "text": "Once you have signalled and moved onto the rails to wait, the tram behind you has to wait for you", "correct": false }
+      ],
+      "points": 5,
+      "pool": "grund",
+      "explanation": "Anyone turning must let oncoming vehicles through — and rail vehicles, mopeds, bicycles and e-scooters even when they are travelling in the *same* direction, on or beside the carriageway. So both trams go first. On top of that, you may move onto rails laid along the road while waiting to turn left only if no rail vehicle is obstructed: if the tram behind you would have to brake for you, you are standing in the wrong place.",
+      "rule_ref": "StVO §9 Abs. 1 und 3"
+    },
+    {
+      "id": "m11-berlin-q03",
+      "type": "choice",
+      "text": "Which statements about trams in city traffic are correct?",
+      "options": [
+        { "text": "Rail vehicles are overtaken on the right; you may pass on the left only where you cannot use the right because the rails lie too far over — on a carriageway for one direction only, the left is permitted as well", "correct": true },
+        { "text": "A tram turning off swings its rear body far outside its rails, so you must not try to squeeze through the gap beside it", "correct": true },
+        { "text": "At a zebra crossing a tram must let waiting pedestrians cross, exactly as a car must", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "Rail vehicles are the great exception to \"overtake on the left\": you pass them on the right, and go left only where the rails sit too far right to allow it (on a carriageway for one direction only, the left is permitted anyway). The zebra crossing is the other surprise — the duty to let pedestrians cross applies to all vehicles *except rail vehicles*, so the tram may legally roll on. And a turning tram overhangs a wide arc, which makes the gap beside it a trap: squeezing through would endanger you and the people around the tram, which the basic rule of care forbids.",
+      "rule_ref": "StVO §5 Abs. 7, §26 Abs. 1, §1 Abs. 2"
+    },
+    {
+      "id": "m11-berlin-q04",
+      "type": "choice",
+      "text": "The right-hand lane of the main road you are on is marked as a bus lane (Bussonderfahrstreifen). There is no additional plate under the sign. What applies?",
+      "sign": "bus_lane",
+      "options": [
+        { "text": "Only line-service buses and vehicles that must carry the school-bus sign may drive along it", "correct": true },
+        { "text": "Taxis, cyclists or electric cars may use it only if a supplementary plate (Zusatzzeichen) expressly allows them", "correct": true },
+        { "text": "While the other lanes are jammed you may use it as an ordinary lane, as long as you let buses past", "correct": false }
+      ],
+      "points": 3,
+      "pool": "grund",
+      "explanation": "The bus-lane sign reserves the lane: traffic other than line-service buses and vehicles required to display the school-bus sign for school or disabled transport must not use it. Everybody else needs the plate underneath — \"Taxi frei\", a bicycle symbol, an electric-vehicle symbol, sometimes limited to certain hours, in which case the lane is an ordinary lane outside those hours. A traffic jam beside you is never a permit. You may cross a bus lane where you have to, for example to turn into a side street or reach a driveway, but you may not drive along it.",
+      "rule_ref": "StVO §41 Abs. 1, Anlage 2, Zeichen 245"
+    },
+    {
+      "id": "m11-berlin-q05",
+      "type": "choice",
+      "text": "You are behind a Berlin line bus. Which statements are correct?",
+      "options": [
+        { "text": "A bus approaching a stop with its hazard warning lights switched on must not be overtaken", "correct": true },
+        { "text": "A bus standing at a stop with its hazard warning lights on may be passed only at walking pace", "correct": true },
+        { "text": "A bus indicating to pull out of a marked stop must wait for a gap, because moving traffic always has priority", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "Line buses and marked school buses get three protections at stops. First, one that is *approaching* a stop with hazard lights on must not be overtaken at all. Second, one *standing* at a stop with hazard lights on may only be passed at walking pace. Third — and this is the one people get wrong — a bus that wants to leave a marked stop must be *enabled* to do so, so you lift off and let it out instead of racing the gap. Passengers running for a bus are exactly the pedestrians you are least likely to see.",
+      "rule_ref": "StVO §20 Abs. 3, 4 und 5"
+    },
+    {
+      "id": "m11-berlin-q06",
+      "type": "choice",
+      "text": "You are turning right from a main road into a side street. A cycle lane runs along your right-hand side and a cyclist is going straight on. What applies?",
+      "sign": "bike_path",
+      "options": [
+        { "text": "The cyclist going straight on has priority over your turn — you must let them through", "correct": true },
+        { "text": "Before turning you must check the traffic behind you, which means the mirror plus a look over your right shoulder into the blind spot", "correct": true },
+        { "text": "A cyclist may not pass waiting vehicles on the right, so once you are stopped at the lights nobody can appear beside you", "correct": false }
+      ],
+      "points": 5,
+      "pool": "grund",
+      "explanation": "This is the classic fatal turn. Cyclists and e-scooter riders travelling in the same direction on or beside your carriageway must be let through before you turn, and the law also requires you to watch the traffic behind you — a mirror alone cannot show a cyclist who is already level with your rear door, which is why the shoulder check is part of the manoeuvre, not an optional extra. And the third option is exactly backwards: where there is enough room, cyclists and moped riders may pass waiting vehicles on the right at moderate speed and with particular care, so your blind spot keeps refilling while you wait.",
+      "rule_ref": "StVO §9 Abs. 1 und 3, §5 Abs. 8"
+    },
+    {
+      "id": "m11-berlin-q07",
+      "type": "choice",
+      "text": "You turn into a one-way street. Under the one-way sign there is a plate showing a bicycle with arrows pointing both ways. What does that tell you?",
+      "sign": "one_way",
+      "options": [
+        { "text": "Cyclists are allowed to ride towards you in this street, against the one-way direction", "correct": true },
+        { "text": "You must expect oncoming cyclists especially at narrow spots and keep well over to the right", "correct": true },
+        { "text": "The plate also lets you drive against the one-way direction, provided you go slowly", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "A one-way street may still only be driven in the direction of the arrow — the plate does nothing whatsoever for your car. What it does is release cycle traffic in the opposite direction, which is why the same street shows \"no entry\" plus a \"Radverkehr frei\" plate at the other end. Practically, in Berlin's side streets this means: hold well to the right, expect a bike head-on between the parked cars and the delivery vans, and look both ways before you swing across the street or open a door.",
+      "rule_ref": "StVO §42, Anlage 3, Zeichen 220 mit Zusatzzeichen \"Radverkehr in beiden Richtungen\""
+    },
+    {
+      "id": "m11-berlin-q08",
+      "type": "choice",
+      "text": "You are driving in a bicycle street (Fahrradstraße) that carries an extra plate permitting motor vehicles. What applies?",
+      "sign": "fahrradstrasse",
+      "options": [
+        { "text": "A maximum speed of 30 km/h applies in the bicycle street, and it applies to all traffic there — cyclists included", "correct": true },
+        { "text": "Cyclists may ride two abreast, and you must not obstruct cycle traffic", "correct": true },
+        { "text": "A bicycle street is automatically a priority road, so you have right of way over every side street that joins it", "correct": false }
+      ],
+      "points": 3,
+      "pool": "grund",
+      "explanation": "In a Fahrradstraße, traffic other than cycles and e-scooters is banned unless a supplementary plate lets it in; a maximum of 30 km/h applies to the traffic there; riding side by side on bicycles is expressly permitted; and cycle traffic must not be obstructed, so you drop well below 30 km/h when the street is busy rather than nudging along behind someone. Priority is not part of the package: the ordinary rules apply, so unless signs say otherwise, right-before-left governs the junctions.",
+      "rule_ref": "StVO §41 Abs. 1, Anlage 2, Zeichen 244.1"
+    },
+    {
+      "id": "m11-berlin-q09",
+      "type": "choice",
+      "text": "You are driving along a Kreuzberg street with a Schutzstreifen (advisory cycle lane marked by a broken line) on the right. Ahead of you a delivery van is standing in the second row with its hazard warning lights on. Which statements are correct?",
+      "options": [
+        { "text": "You may drive over the Schutzstreifen only when it is necessary, and only if no cyclist is endangered", "correct": true },
+        { "text": "Stopping on the Schutzstreifen itself is prohibited, and switching on hazard warning lights would not make it lawful", "correct": true },
+        { "text": "Because the van has its hazard lights on, you may pass it on the right using the footway if the gap on the left is too narrow", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "A Schutzstreifen is marked with a broken guide line, which means motor vehicles may cross onto it *only when needed* — typically to make room for oncoming traffic or to get past an obstacle — and never in a way that endangers cycle traffic. Stopping on it is forbidden outright. Hazard warning lights are a warning device, not a permit: they never suspend a stopping ban, which is why the double-parked vans you see every day in Berlin are committing an offence and not a role model. Footways are for pedestrians, full stop.",
+      "rule_ref": "StVO Anlage 3, Zeichen 340; StVO §2 Abs. 1, §16 Abs. 2"
+    },
+    {
+      "id": "m11-berlin-q10",
+      "type": "choice",
+      "text": "You want to drive into the area inside the Berlin S-Bahn ring, which is signed as a low-emission zone (Umweltzone). What applies?",
+      "sign": "umweltzone",
+      "options": [
+        { "text": "You may only drive in if your vehicle carries the emissions sticker named on the plate under the sign — in Berlin the green one", "correct": true },
+        { "text": "The sticker has to be displayed on the inside of the windscreen; one lying in the glovebox is not enough", "correct": true },
+        { "text": "The restriction applies only on weekdays during business hours", "correct": false }
+      ],
+      "points": 2,
+      "pool": "grund",
+      "explanation": "The Umweltzone sign bans motor traffic inside the zone; you are exempt only if your vehicle carries the emissions sticker (Feinstaubplakette) shown on the plate underneath, and for Berlin's zone — roughly everything inside the S-Bahn ring — that has been the green sticker since 2010. The sticker is a windscreen sticker with your registration number on it, so an unattached one counts as no sticker at all. There is no time window: the zone applies around the clock, and driving in without a valid sticker is a fineable offence.",
+      "rule_ref": "StVO §41 Abs. 1, Anlage 2, Zeichen 270.1; 35. BImSchV"
+    },
+    {
+      "id": "m11-berlin-q11",
+      "type": "number",
+      "text": "You are driving at 50 km/h on a dry road. Using the standard rule of thumb, how many metres is the braking distance (Bremsweg) on its own?",
+      "answer_number": 25,
+      "unit": "m",
+      "points": 4,
+      "pool": "grund",
+      "explanation": "Braking distance = (speed ÷ 10) × (speed ÷ 10), so 5 × 5 = 25 m. Add the reaction distance of (speed ÷ 10) × 3 = 15 m and the whole stopping distance at 50 km/h is about 40 m — roughly ten car lengths, at the standard speed for Berlin's main roads. On wet cobblestones or across wet tram rails reckon with about double the braking distance, which is exactly why the law makes you adapt your speed to the road surface and the visibility rather than to the number on the sign.",
+      "rule_ref": "Faustformel Bremsweg; StVO §3 Abs. 1"
+    },
+    {
+      "id": "m11-berlin-q12",
+      "type": "number",
+      "text": "An e-scooter that counts as an Elektrokleinstfahrzeug may have a maximum design speed of how many km/h?",
+      "answer_number": 20,
+      "unit": "km/h",
+      "points": 2,
+      "pool": "grund",
+      "explanation": "The e-scooter regulation (eKFV) only covers small electric vehicles with a maximum design speed of 20 km/h; anything faster is a different class of motor vehicle needing registration and a licence. Other facts worth knowing about the ones swarming Berlin: minimum age 14, one rider only, insurance sticker compulsory, no driving licence needed, footways and pedestrian zones off limits unless a sign releases them, and — unlike cyclists — riders must go single file. Their alcohol limits are the car limits: 0.5 ‰, and 0.0 ‰ for under-21s and drivers in the probationary period.",
+      "rule_ref": "eKFV §1, §3, §8, §10, §11"
+    }
+  ]
+}

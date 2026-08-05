@@ -1,0 +1,461 @@
+{
+  "_comment": "Task content is derived from verified research in docs/knowledge-base/. Fees, deadlines and legal bases are sourced; see rules.json and the knowledge base for citations.",
+  "verified_on": "2026-08-04",
+  "paths": {
+    "convert": [
+      {
+        "title": "Know where you stand",
+        "subtitle": "Understand the rules before you spend a euro",
+        "emoji": "⚖️",
+        "tasks": [
+          {
+            "id": "c-verdict",
+            "title": "Understand your legal position",
+            "german": "Umschreibung aus einem Drittstaat",
+            "emoji": "⚖️",
+            "xp": 100,
+            "time": "15 min reading",
+            "badge": null,
+            "summary": "Argentina is **not** listed in Anlage 11 FeV — the annex naming countries whose licences convert with reduced requirements. No Latin American country is on that list. That single fact decides your whole route.\n\nUnder **FeV § 31 Abs. 2**, converting a licence from a non-Anlage-11 country waives exactly one thing: *die Vorschriften über die Ausbildung sind nicht anzuwenden* — the rules on formal driving-school training do not apply. So you owe **both the theory and the practical exam**, but **no mandatory lesson quota**: no 12 theory sessions, no 12 Sonderfahrten, no minimum driving hours. That is a large saving over a first-time licence.\n\nAnyone who tells you an Argentine licence converts exam-free is confusing it with an EU or Anlage 11 licence.",
+            "why": "Three independent researchers read the consolidated Anlage 11 text and each found no mention of Argentina; the requirement was cross-checked against ADAC, LABO Berlin and two other German licensing authorities.",
+            "steps": [
+              "Accept the two exams as fixed costs — theory (€24.99) and practical (€129.83).",
+              "Take the win: no mandatory training hours. You choose how many refresher lessons you need.",
+              "Note that you *do* still need an eye test and a first-aid course — those are only waived for EU and Anlage 11 conversions, not for yours.",
+              "Plan to sit the theory exam in **Spanish, Italian or English** — all three are legally available to you."
+            ],
+            "tips": [
+              "Your Italian passport does real work here: as an EU citizen you need no residence permit, and the passport alone satisfies the ID requirement. Your Argentine nationality is irrelevant to the paperwork — only the *licence* being Argentine matters.",
+              "Because training is waived, you are not tied to an expensive full course. You need a driving school mainly to register you for the practical exam and to provide the exam car."
+            ],
+            "pitfalls": [
+              "Do **not** use the EU conversion page (service.berlin.de/dienstleistung/121598) — wrong service for an Argentine licence.",
+              "Several expat blogs claim the theory exam must be taken in German. That is wrong: FeV Anlage 7 Nr. 1.3 lists English, Spanish and Italian among the permitted languages. Only the *practical* exam is German-only.",
+              "**The \"convert it in Italy instead\" idea is a dead end.** The durable barrier is **FeV § 28 Abs. 4 Satz 1 Nr. 8**, which denies the right to drive in Germany to anyone who was already ordinarily resident here when the third-country licence behind an EU licence was issued. **Nr. 7** currently adds a second bar for EU licences obtained by exam-free exchange of a non-Anlage-11 licence — though a pending amendment (BR-Drs. 318/26) would delete part of it, which is exactly why Nr. 8 is the one that matters. Either way, you'd also have to genuinely move your residence to Italy first. Don't spend money chasing this."
+            ],
+            "links": [
+              { "url": "https://www.gesetze-im-internet.de/fev_2010/anlage_11.html", "label": "FeV Anlage 11 — the official country list", "note": "search it for \"Argentin\": zero matches" },
+              { "url": "https://www.gesetze-im-internet.de/fev_2010/__31.html", "label": "FeV § 31 — conversion of third-country licences" },
+              { "url": "https://service.berlin.de/dienstleistung/327537/", "label": "Berlin: conversion of a non-EU/EEA licence", "note": "the correct service page (German only)" }
+            ]
+          },
+          {
+            "id": "c-clock",
+            "title": "Work out your six-month deadline",
+            "german": "Anerkennungsfrist § 29 FeV",
+            "emoji": "⏳",
+            "xp": 150,
+            "time": "10 min",
+            "validity": "6 months from residence",
+            "summary": "**FeV § 29 Abs. 1:** *\"Begründet der Inhaber einer in einem anderen Staat erteilten Fahrerlaubnis einen ordentlichen Wohnsitz im Inland, besteht die Berechtigung noch sechs Monate.\"* Once you establish ordinary residence in Germany, your Argentine licence keeps you legal for **six more months**. After that, driving is not a fine — it is a criminal offence under **StVG § 21**, punishable by up to a year's imprisonment or a fine, with your car's owner equally liable and comprehensive insurance typically refusing to pay.\n\nThe clock starts when you *actually* took up residence (FeV § 7 Abs. 1: your centre of interests plus 185+ days a year), not when you registered. LABO normally uses the Anmeldung date, but a late Anmeldung does not reset the clock — so count from the **earlier** of the two.\n\nThe good news that almost every blog gets wrong: there is **no deadline for applying** for the conversion. LABO says it plainly — *Es gibt keine Frist, in der dieser Antrag gestellt werden muss.* The famous \"three-year rule\" does not exist in German law.",
+            "why": "Missing this is the one mistake with criminal consequences, and it also blocks your German licence: a court can impose an isolated ban (isolierte Sperre) of six months to five years.",
+            "steps": [
+              "Find your exact Anmeldung date on your Meldebescheinigung and enter it on the Journey screen so the app tracks the countdown for you.",
+              "Count six months forward. Write that date somewhere you will see it.",
+              "Accept the likely reality: with a ~7-week authority backlog plus two exams, a gap where you may not drive is close to unavoidable unless you started early. Plan public transport for it.",
+              "Do not bother applying for the § 29 extension — it needs proof your stay will stay under twelve months, which contradicts living here."
+            ],
+            "tips": [
+              "Filing the application does **not** extend your right to drive. Only the German licence, or a valid provisional proof after your practical exam, restores it (FeV § 22 Abs. 4).",
+              "Driving-school lessons and exam drives stay lawful even after your six months expire (StVG § 2 Abs. 15) — you can keep training legally with an instructor beside you."
+            ],
+            "pitfalls": [
+              "The six months run from when you **actually** established residence (FeV § 7 Abs. 1), not from your Anmeldung. LABO normally uses the Anmeldung date, but registering late does **not** reset the clock — and they can check the Melderegister (FeV § 22 Abs. 1). Count from whichever date is earlier.",
+              "If your Argentine licence **expires** before you apply, the conversion route closes completely — § 31 FeV has no rescue clause for expired third-country licences, unlike § 30 Abs. 2 for EU ones. Check its expiry date today.",
+              "A licence obtained *after* you were already ordinarily resident in Germany is never recognised or convertible (**FeV § 29 Abs. 3 Nr. 2**), and for third-country licences there is no student or stay-abroad exception — that escape clause exists only for EU/EEA licences."
+            ],
+            "links": [
+              { "url": "https://www.gesetze-im-internet.de/fev_2010/__29.html", "label": "FeV § 29 — recognition of foreign licences" },
+              { "url": "https://www.gesetze-im-internet.de/stvg/__21.html", "label": "StVG § 21 — driving without a licence" }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Gather your documents",
+        "subtitle": "Four errands, and two of them combine",
+        "emoji": "📋",
+        "tasks": [
+          {
+            "id": "c-translation",
+            "title": "Get your licence translated and classified",
+            "german": "Übersetzung und Klassifizierung",
+            "emoji": "📜",
+            "xp": 150,
+            "cost": "€35–70 translation only",
+            "time": "5–7 working days by post",
+            "badge": "translated",
+            "where": "ADAC branch, sworn translator, or online",
+            "summary": "Berlin's rule is conditional: *\"Eine Übersetzung ist immer erforderlich, wenn der Führerschein nicht in deutscher oder englischer Sprache ausgestellt ist\"* — a translation is always required unless the licence is in German **or English**. Yours is in Spanish, so you need one.\n\nAccepted sources are German automobile clubs (ADAC), court-sworn translators (*vereidigte Übersetzer*), and official bodies of the issuing state — the Argentine consulate qualifies. No apostille or legalisation is required; nothing in Berlin's checklist or FeV §§ 29–31 asks for it.\n\nTiming is gentler than you'd fear: Berlin requests the translation *during processing*, not at your appointment.",
+            "why": "Without a German translation the authority cannot read what your licence entitles you to drive.",
+            "steps": [
+              "Order a translation — ADAC (in person at Alexanderstr. 1 or online, 5–7 working days by post) or a court-sworn Spanish–German translator, often faster at €35–70.",
+              "You do **not** need it for the Bürgeramt appointment. Supplying it early simply avoids stalling the ~8-week queue when they ask.",
+              "Keep your original licence — you surrender it only at the very end, when the German one is issued.",
+              "**Get proof of your ORIGINAL issue date.** Argentine licences carry a fresh issue date at each roughly five-yearly renewal, and LABO may need to see that the licence predates your move to Germany (FeV § 29 Abs. 3 Nr. 2). Argentina's ANSV issues a free *Certificado de Legalidad Internacional* online via TAD — but note its limits: it covers only the **national** licence (LNC), excludes provincial and municipal licences outright, and certifies nothing issued before 2010. If yours is provincial or pre-2010, ANSV directs you to the *Centro Emisor de Licencia Nacional* that issued it."
+            ],
+            "tips": [
+              "You also need a translation (or a 1949-Geneva International Driving Permit issued in Argentina) simply to **drive legally** here during your six months. Germany waived that requirement for only a handful of countries, and Argentina is not among them.",
+              "Being caught driving without the translation is a mere €10 *Ordnungswidrigkeit* (FeV § 75 Nr. 4) — annoying, not criminal. Very different from driving after your six months expire.",
+              "**Don't buy the \"Klassifizierung\" on the assumption Berlin demands it.** That word appears nowhere on Berlin's checklist — it is ADAC's own add-on framing. ADAC charges roughly €65 for translation *plus* classification against €25 for classification alone; ask what a plain translation costs before paying for the bundle."
+            ],
+            "pitfalls": [
+              "An International Driving Permit replaces the translation only when carried **together with** your national Argentine licence — never on its own."
+            ],
+            "links": [
+              { "url": "https://www.adac.de/services/uebersetzungen/", "label": "ADAC licence translation service" }
+            ]
+          },
+          {
+            "id": "c-firstaid",
+            "title": "First aid + eye test + photos, in one morning",
+            "german": "Erste-Hilfe-Kurs, Sehtest, Passfoto",
+            "emoji": "⛑️",
+            "xp": 200,
+            "cost": "€72.99 online (€82.99 cash)",
+            "time": "One day, ~7.5 h (9 × 45 min)",
+            "validity": "Eye test: max 2 years old",
+            "badges": ["lifesaver", "eagle-eye", "model"],
+            "where": "Erste Hilfe Station, Frankfurter Allee 96 (Friedrichshain)",
+            "location_types": ["first-aid", "eye-test", "photo"],
+            "summary": "Three checklist items, one session, one venue. The **Erste Hilfe Station** on Frankfurter Allee runs its first-aid course **in English** and includes the **eye test** and **biometric photos** free. It costs **€72.99 booked online** — or €82.99 if you pay cash on the day, so book ahead.\n\nBoth items are legally required for you: the first-aid course (**FeV § 19**, nine units of 45 minutes) and the eye test (**FeV § 12 Abs. 2**) are waived only for EU and Anlage 11 conversions — not for third-country ones.",
+            "why": "This is the single most misreported fact about conversions. The shortcut \"first aid is only for first-time licences\" is true for EU and Anlage 11 licences and false for yours.",
+            "steps": [
+              "Book the English-language course **online** at Erste Hilfe Station, Frankfurter Allee 96 — a few U5 stops away. English dates run Thursday to Sunday.",
+              "Confirm when booking that the eye test and photos are included in your slot.",
+              "Bring your Italian passport for the certificate details.",
+              "**Photograph or scan your first-aid certificate before you hand it in** — the Bürgeramt keeps the original, and a replacement copy from the provider costs €29.99.",
+              "Keep the eye-test certificate safe: it must be under two years old when you apply.",
+              "If you need glasses to pass, expect code 01 on your German licence — you must then wear them when driving."
+            ],
+            "tips": [
+              "The first-aid certificate genuinely never needs renewing for licence purposes — **FeV § 19 Abs. 2 Satz 2** says no new proof is needed for a later extension or re-issue. (Workplace first-aider certificates are a different regime and do expire; don't confuse the two.)",
+              "Shop around if you like: verified English courses in Berlin run about €55–83, with ANB Berlin the cheapest at €55. But it won't bundle the eye test and photos, so compare totals.",
+              "Already have a recent eye-doctor report? **FeV § 12 Abs. 4** lets you skip the Sehtest entirely by submitting an ophthalmologist's certificate confirming you meet Anlage 6 Nr. 1.1.",
+              "For a standalone eye test, Fielmann does it free of charge — including the branch on Frankfurter Allee."
+            ],
+            "pitfalls": [
+              "A short *Sofortmaßnahmen am Unfallort* briefing is **not** accepted — it must be the full nine-unit course.",
+              "A €59.99 price for this course circulates widely online. It is a stale banner figure; the real online price is €72.99."
+            ],
+            "links": [
+              { "url": "https://www.erste-hilfe-station.de/", "label": "Erste Hilfe Station — English courses in Berlin" },
+              { "url": "https://www.gesetze-im-internet.de/fev_2010/__19.html", "label": "FeV § 19 — first-aid requirement" }
+            ]
+          },
+          {
+            "id": "c-school",
+            "title": "Pick a driving school and its test centre",
+            "german": "Fahrschule und Prüfstelle wählen",
+            "emoji": "🏫",
+            "xp": 150,
+            "cost": "Presentation fee ~€150–300",
+            "time": "A few calls",
+            "badge": "enrolled",
+            "location_types": ["driving-school", "exam-center"],
+            "summary": "You must name **both your driving school and your examination centre** on the application form, because LABO sends the Prüfauftrag (examination order) directly to that centre. Choose before your Bürgeramt appointment or the application stalls.\n\nSince training is waived, you are buying two things: registration for the exams (*Vorstellungsentgelt*, roughly €150–300 in Berlin) and however many refresher lessons you actually want, at about €45–90 per 45 minutes.",
+            "why": "You cannot book the exams yourself — the driving school books both against the Prüfauftrag. No school, no exams.",
+            "steps": [
+              "Shortlist schools that teach in English or Spanish and are used to conversion candidates.",
+              "Ask each: do you work with **TÜV or DEKRA**? Write down the centre's exact name and address.",
+              "Ask for a conversion package price — presentation fee plus a handful of lessons — not a full beginner course.",
+              "Ask whether they will do an honest assessment drive first, so you buy only the lessons you need.",
+              "Get the school's exact legal name and address in writing for the form."
+            ],
+            "tips": [
+              "Say clearly that you are an experienced driver converting a third-country licence and need **no Ausbildung**. Some schools will otherwise quote you a full beginner course.",
+              "Book a couple of lessons before deciding: an instructor who cannot explain German priority rules in a language you share is worth nothing to you."
+            ],
+            "pitfalls": [
+              "Once the Prüfungszulassung has been issued, you can no longer freely change examination centre — choose carefully now.",
+              "Published prices are often out of date. Confirm the presentation fee and lesson rate in writing before signing."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "File the application",
+        "subtitle": "One appointment, then a long wait",
+        "emoji": "🏛️",
+        "tasks": [
+          {
+            "id": "c-apply",
+            "title": "Apply in person at a Bürgeramt",
+            "german": "Antrag auf Umschreibung stellen",
+            "emoji": "🏛️",
+            "xp": 300,
+            "cost": "€45.10 + ~€3.30 register check",
+            "time": "~20 min appointment",
+            "badge": "paper-trail",
+            "where": "Any Berlin Bürgeramt — nearest: Frankfurter Allee 35/37",
+            "location_types": ["authority"],
+            "summary": "Applications are taken in at a **Bürgeramt** (LABO's own FAQ says conversion applications are to be filed there), but the deciding authority is the **LABO Fahrerlaubnisbehörde**, which processes your file and issues the Prüfauftrag. Personal attendance is required — there is no postal or online route for you.\n\nThe fee is **€45.10** (the *with examination* rate; the €37.50 you may read about is the EU/Anlage 11 rate). Add €5.31 to have the finished card posted to you.\n\nYour nearest office is **Bürgeramt 3 Friedrichshain, Frankfurter Allee 35/37** — but any Berlin Bürgeramt may take the application, and outer districts usually have far better availability.",
+            "why": "Filing early matters more than filing perfectly: missing documents can be submitted afterwards (nachreichen), but the ~7-week queue only starts when your application is in.",
+            "steps": [
+              "Book through the *Termin buchen* button on the official service page, using the **Berlin-wide** calendar rather than one office. Phone 115 can book for you.",
+              "Take: Italian passport · original Argentine licence · ADAC translation + classification · first-aid certificate · eye-test certificate · one biometric photo · your driving school's and test centre's name and address. Bring the Meldebescheinigung too, belt and braces.",
+              "Pay by card, Apple Pay, Google Pay or girocard — all accepted at Bürgeramt 3.",
+              "Ask at the counter how long your Prüfauftrag stays valid, and get the answer in writing if you can.",
+              "Budget a few euros of extra *Auslagen*: **FeV § 22 Abs. 2** makes the driving-fitness and licence register enquiries chargeable to you (about €3.30 for the Fahreignungsregister check)."
+            ],
+            "tips": [
+              "Refresh the Berlin-wide booking page between 07:30 and 08:30 — that is when offices release slots and cancellations surface. Spandau, Marzahn, Reinickendorf and Bohnsdorf often have short-notice slots.",
+              "Book the appointment even if a document is still missing — you can hand it in later, and your queue position is what matters.",
+              "The translation in particular does **not** need to be ready for this appointment: Berlin requests it later during processing (*\"Die Übersetzung wird dann bei der Bearbeitung des Antrages nachgefordert\"*). Having it early just avoids stalling the queue."
+            ],
+            "pitfalls": [
+              "**Bring a paper photo.** The service page says *\"1 aktuelles, biometrisches Passfoto auf Papier — Bitte bringen Sie ein Foto mit. Vor Ort werden keine Papierfotos gedruckt.\"* Bürgeramt 3's €6 on-site photo uses a mobile device that produces a *digital* image for passports and ID cards — it does not satisfy this service. The free photos from your first-aid course do.",
+              "Do not choose Direktversand expecting it to deliver your licence. For a conversion, issuance runs exclusively through the Fahrerlaubnisbehörde at a later appointment — see the final phase.",
+              "service.berlin.de lists LABO Puttkamerstr. among the 59 bookable locations, while LABO's own FAQ says conversion applications go *exclusively* to a Bürgeramt. Booking a Bürgeramt satisfies both readings — do that."
+            ],
+            "links": [
+              { "url": "https://service.berlin.de/dienstleistung/327537/", "label": "Official service page + appointment booking", "note": "German only; no English version exists" },
+              { "url": "https://www.berlin.de/115/", "label": "Berlin service line 115", "note": "can book on your behalf; some English support" }
+            ]
+          },
+          {
+            "id": "c-wait",
+            "title": "Survive the wait productively",
+            "german": "Bearbeitungszeit überbrücken",
+            "emoji": "⏱️",
+            "xp": 100,
+            "time": "~8 weeks (check live figure)",
+            "summary": "Third-country conversions are the **slowest queue in all of Berlin** — slower even than first-time licences. As of the table dated **4 August 2026**, LABO had reached applications received on **11 June**: a 54-day backlog, roughly **eight weeks**. For comparison, Anlage 11 conversions stood about five days behind and EU conversions about four weeks.\n\nLABO publishes this as a live table giving the *receipt date reached*, not a duration — so your wait is that date subtracted from the snapshot date. The figures moved measurably in the week we were researching, so read the live page rather than trusting this number.",
+            "why": "This queue, not the appointment, is the real bottleneck — and it is why applying immediately beats getting everything else perfect first.",
+            "steps": [
+              "Check the Bearbeitungsstände page every week or two and recompute the backlog.",
+              "Use the time: work through this app's theory school and mock exams.",
+              "Book refresher driving lessons now — they are lawful even after your six months run out.",
+              "Decide which language you will sit the theory exam in and study the current catalogue in that language."
+            ],
+            "tips": [
+              "The official page warns it *does not permit any conclusions about a collection date* — treat the backlog as a planning estimate, not a promise.",
+              "Realistic end-to-end: **3–5 months** from your first appointment to the card, if you pass both exams first time."
+            ],
+            "links": [
+              { "url": "https://www.berlin.de/labo/mobilitaet/aktuelles/aktuelle-bearbeitungsstaende-736453.php", "label": "LABO live processing status", "note": "the only official live indicator" }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Pass the exams",
+        "subtitle": "Theory in your language, practical in German",
+        "emoji": "🎯",
+        "tasks": [
+          {
+            "id": "c-theory",
+            "title": "Pass the theory exam",
+            "german": "Theoretische Prüfung",
+            "emoji": "📝",
+            "xp": 400,
+            "cost": "€24.99",
+            "time": "~30–45 min",
+            "validity": "Valid 12 months for the practical",
+            "badge": "quiz-champion",
+            "where": "DEKRA or TÜV Rheinland, Berlin",
+            "location_types": ["exam-center"],
+            "summary": "Thirty questions on a touchscreen: 20 general (Grundstoff) and 10 class-B-specific (Zusatzstoff), 110 points in total. You may collect at most **10 error points** — and you fail if **two 5-point questions** are wrong, even when that lands you on exactly 10.\n\nYou may sit it in **Spanish, Italian or English** (FeV Anlage 7 Nr. 1.3) at no extra cost. Your driving school books it against the Prüfauftrag once you are admitted; the result appears immediately.",
+            "why": "The two-fives rule is what catches people who think 10 points is a safe target. Treat 5-pointers — right of way and serious-risk questions — as must-gets.",
+            "steps": [
+              "Tell your driving school which language you want when the exam is booked — it is your right, not a favour.",
+              "Grind this app's mock exams until you pass comfortably, not marginally.",
+              "Bring photo ID on the day.",
+              "Read every question twice: several answers are correct on many questions, and partial selections score zero.",
+              "If you fail, you may retake after 14 days (FeV § 18), unlimited attempts, full fee each time."
+            ],
+            "tips": [
+              "The official translations are widely criticised as poor. Consider studying in English *and* Spanish so a clumsy sentence in one language does not cost you points.",
+              "Headphone audio support exists in German only, and no interpreter is allowed — so your reading language choice is the whole game.",
+              "The exam fee must **reach DEKRA at least 10 days before** your exam date, with \"FE\" plus your 10-digit applicant number and your name as the payment reference. A payment they cannot match to you means the exam does not take place."
+            ],
+            "pitfalls": [
+              "Pass the theory within 12 months of admission, and the practical within **12 months** of the theory — **FeV § 18 Abs. 2** makes that a hard, self-executing loss of validity, not a soft target. Miss it and you re-apply and pay again.",
+              "The same paragraph sets a second deadline almost nobody mentions: no more than **two years** between the exam and the handover of your Führerschein, or the *entire* exam becomes invalid. Since issuance needs its own authority appointment, don't let that drift.",
+              "Some expat sites claim the theory must be in German. Wrong — FeV Anlage 7 Nr. 1.3 says otherwise."
+            ]
+          },
+          {
+            "id": "c-phrases",
+            "title": "Learn the examiner's German",
+            "german": "Prüferanweisungen verstehen",
+            "emoji": "🗣️",
+            "xp": 200,
+            "time": "A few short sessions",
+            "summary": "The practical exam is **German only**. The foreign-language right covers the theory exam alone, and your instructor may **not** translate the examiner's instructions while you drive — attempting it can fail you outright (FeV Anlage 7 Nr. 2.5.3).\n\nThe reassuring part: the vocabulary is small and predictable. Learn about thirty phrases and you will understand everything that matters.",
+            "why": "Misunderstanding \"biegen Sie rechts ab\" at the wrong junction reads to the examiner as a driving error, not a language one.",
+            "steps": [
+              "Work through the Exam German list in this app, then drill it until the phrases are automatic.",
+              "At the start of the exam, tell the examiner you are **not ortskundig** — then instructions come turn by turn instead of as a destination.",
+              "Practise asking *Können Sie das bitte wiederholen?* — asking is free, guessing is not.",
+              "Have your instructor use only these German phrases during your last few lessons."
+            ],
+            "tips": [
+              "The examiner's exact wording is not fixed by law — only the requirement that instructions be unambiguous. Learn the key verbs and nouns, not a script.",
+              "You may also ask them to speak more slowly before you set off. Do it: it costs nothing and buys clarity."
+            ],
+            "links": [
+              { "url": "#/phrases", "label": "Open the Exam German list in this app" }
+            ]
+          },
+          {
+            "id": "c-practical",
+            "title": "Pass the practical exam",
+            "german": "Praktische Prüfung",
+            "emoji": "🚗",
+            "xp": 500,
+            "cost": "€129.83",
+            "time": "55 min (30 min driving)",
+            "badge": "key-master",
+            "location_types": ["exam-center", "driving-school"],
+            "summary": "About **55 minutes** in total with **30 minutes of actual driving** (FeV Anlage 7). The examiner samples a few safety checks, sets you three manoeuvres (*Grundfahraufgaben*) — one reversing task plus two others — and otherwise watches you drive Berlin traffic. The result comes immediately, with a written feedback sheet.\n\nYou need no minimum lesson count, but experienced foreign drivers routinely fail on habits that are unremarkable at home: a missed shoulder check, hesitating at *rechts vor links*, indicating into a roundabout, or squeezing past a cyclist.",
+            "why": "Right-of-way and shoulder-check errors are instant fails, not point deductions. Everything else can often be compensated by otherwise good driving.",
+            "steps": [
+              "Take enough refresher lessons to make the German-specific habits automatic — especially the visible Schulterblick.",
+              "Drill the three manoeuvre families until they are boring: reverse into a bay, parallel park, emergency stop, turning around.",
+              "Learn the cyclist passing distances: **1.5 m** in town, **2 m** outside (StVO § 5) — Berlin examiners watch this closely.",
+              "Practise *rechts vor links* on unmarked side streets, which Friedrichshain has in abundance.",
+              "On the day: get your provisional proof **before** you drive away (see the next task)."
+            ],
+            "tips": [
+              "Make your mirror and shoulder checks deliberate enough for the examiner to see. An unseen check counts as no check.",
+              "Berlin specifics that catch people: trams, contraflow cyclists in one-way streets, and bus lanes you must not enter.",
+              "Failed? Two weeks minimum, unlimited attempts (FeV § 18). You pay the exam fee and the presentation fee again."
+            ],
+            "pitfalls": [
+              "If you take the exam on an automatic without the B197 arrangement, your licence is restricted to automatics (code 78). Discuss this with your school *before* the exam."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Get the card",
+        "subtitle": "Mind the gap where you may not drive",
+        "emoji": "🪪",
+        "tasks": [
+          {
+            "id": "c-provisional",
+            "title": "Do NOT drive yet — book the authority appointment",
+            "german": "Vorläufige Fahrberechtigung bei der Fahrerlaubnisbehörde",
+            "emoji": "🚫",
+            "xp": 150,
+            "time": "A separate appointment, days later",
+            "where": "LABO Fahrerlaubnisbehörde, Puttkamerstr. 16-18",
+            "location_types": ["authority"],
+            "summary": "**Passing the practical exam does not make you legal.** The examiner hands you a *Prüfbescheinigung* (exam certificate) — and for a third-country conversion that document is **not a driving entitlement**.\n\nWhat you actually need is a *vorläufige Fahrberechtigung* (provisional driving permission), and only the **Fahrerlaubnisbehörde** issues it. LABO's own FAQ spells out the procedure: book an appointment on **(030) 90269-2300** or 115 or via the contact form, and bring **both the original Prüfbescheinigung and your original Argentine licence**.\n\nSo there is a real **gap** between passing your exam and being allowed to drive — days, possibly longer depending on appointment availability. Driving in that gap is *Fahren ohne Fahrerlaubnis* under **StVG § 21**.",
+            "why": "This is the trap at the finish line. An earlier draft of this guide got it wrong in the reassuring direction, and a fact-check against LABO's FAQ caught it — after everything you did to stay legal, do not lose it here.",
+            "steps": [
+              "**Book the Fahrerlaubnisbehörde appointment as early as you can** — ideally before your practical exam, so the gap is as short as possible.",
+              "Do not drive home from your exam. Plan public transport for the day you pass.",
+              "Take to the appointment: the **original** Prüfbescheinigung, your **original** Argentine licence, and photo ID.",
+              "Expect to surrender the Argentine licence at this appointment (FeV § 31 Abs. 4).",
+              "Only once the *vorläufige Fahrberechtigung* is physically in your hand may you drive. Carry it with photo ID."
+            ],
+            "tips": [
+              "Ask your driving school and the examiner on the day to confirm the current procedure — but plan for the LABO appointment, because that is what the authority's own FAQ describes.",
+              "Provisional permission of this kind is normally valid inside Germany only. Do not plan a trip abroad on it."
+            ],
+            "pitfalls": [
+              "Do not assume the *Prüfbescheinigung* alone lets you drive. For third-country conversions it does not — that is the single most dangerous misunderstanding on this route."
+            ],
+            "links": [
+              { "url": "https://www.berlin.de/labo/mobilitaet/fahrerlaubnisse-personen-und-gueterbefoerderung/artikel.911946.php", "label": "LABO FAQ — what to do after passing the exam", "note": "the authoritative source for this step" }
+            ]
+          },
+          {
+            "id": "c-card",
+            "title": "Receive your German licence",
+            "german": "Kartenführerschein erhalten",
+            "emoji": "🪪",
+            "xp": 500,
+            "cost": "included",
+            "time": "~10 working days after the LABO appointment",
+            "where": "Posted to your registered address",
+            "badge": "licensed",
+            "summary": "For a conversion, licence issuance is handled **exclusively by the Fahrerlaubnisbehörde** — LABO's FAQ is explicit: *\"Zuständig ist ausschließlich die Fahrerlaubnisbehörde.\"* Not the Bürgeramt, and not by choosing postal dispatch at application time.\n\nAt the same appointment where you receive your provisional permission, you surrender the Argentine licence (**FeV § 31 Abs. 4**). The card itself then follows: *\"Der Kartenführerschein wird Ihnen in der Regel anschließend innerhalb von 10 Werktagen postalisch an Ihre Meldeadresse zugestellt\"* — posted to your registered address within about ten working days.",
+            "why": "This is the document that finally restores your right to drive without conditions — and ends the six-month problem for good.",
+            "steps": [
+              "**Photograph and photocopy your Argentine licence before the appointment** — you are handing over the original and will not get it back.",
+              "Watch for the card in the post; there is no separate readiness notification.",
+              "Tell the authority if your address changes: your registered address is not synced automatically, and the card goes to whatever address they hold.",
+              "Check the card for licence codes (01 for glasses, 78 for automatic-only) and query anything unexpected immediately."
+            ],
+            "tips": [
+              "Your probation should be shortened by credit for the years you already held the Argentine licence (**StVG § 2a Abs. 1 Satz 2**) — ask LABO how much *Probezeit*, if any, applies to you.",
+              "Going back to Argentina to drive? Check whether you need an International Driving Permit for your German licence before you travel."
+            ],
+            "pitfalls": [
+              "Ignore advice — including from driving schools — that the card is collected at your district Bürgeramt or arrives by Direktversand you selected at application. That is how other Berlin licence procedures work, not this one."
+            ],
+            "links": [
+              { "url": "https://www.berlin.de/labo/mobilitaet/fahrerlaubnisse-personen-und-gueterbefoerderung/artikel.911946.php", "label": "LABO FAQ — how the licence is handed over after a conversion" }
+            ]
+          }
+        ]
+      }
+    ],
+    "eu": [
+      {
+        "title": "You are already legal",
+        "subtitle": "An EU/EEA licence needs no exams",
+        "emoji": "🇪🇺",
+        "tasks": [
+          {
+            "id": "eu-status",
+            "title": "Understand why you need do nothing",
+            "german": "Anerkennung nach § 28 FeV",
+            "emoji": "✅",
+            "xp": 100,
+            "time": "5 min",
+            "summary": "Under **FeV § 28**, a valid licence from an EU or EEA country entitles you to drive in Germany with no time limit, no exchange and no exams. Exchange becomes necessary mainly when the document itself expires, is lost or stolen, or for professional C/D categories.",
+            "steps": [
+              "Check your licence's own expiry date — that, not German law, is your real deadline.",
+              "Keep your address registration up to date.",
+              "If it is lost, stolen or about to expire, treat exchange in Berlin as the next step."
+            ],
+            "tips": [
+              "This path does not apply to an Argentine licence. If you hold one, switch to the conversion path in Progress → settings."
+            ],
+            "links": [
+              { "url": "https://www.gesetze-im-internet.de/fev_2010/__28.html", "label": "FeV § 28 — recognition of EU/EEA licences" },
+              { "url": "https://service.berlin.de/dienstleistung/121598/", "label": "Berlin: exchange of an EU/EEA licence" }
+            ]
+          }
+        ]
+      }
+    ],
+    "new": [
+      {
+        "title": "Starting from zero",
+        "subtitle": "The full first-licence route",
+        "emoji": "🆕",
+        "tasks": [
+          {
+            "id": "n-overview",
+            "title": "Understand the first-licence route",
+            "german": "Ersterteilung Klasse B",
+            "emoji": "🎓",
+            "xp": 100,
+            "cost": "€45.90 application",
+            "time": "Read: 10 min",
+            "summary": "A first German licence means a driving school, **mandatory training** — 12 theory double-lessons plus 2 class-specific ones, and **12 Sonderfahrten** (5 country road, 4 Autobahn, 3 night) — and both exams. Berlin's application fee is €45.90, filed at any Bürgeramt or digitally through a participating driving school.\n\nRealistic all-in cost in Berlin in 2026 runs into the low thousands, mostly driving lessons; most people need 33–45 lessons.",
+            "steps": [
+              "Enrol with a driving school and get its name plus its examination centre.",
+              "Do the eye test and first-aid course.",
+              "Apply at a Bürgeramt with passport, photo, and both certificates.",
+              "Complete the mandatory theory lessons and Sonderfahrten.",
+              "Pass theory, then practical."
+            ],
+            "tips": [
+              "Everything in this app's theory school applies to you unchanged — the exam is identical.",
+              "A reform expected around early 2027 may cut the Sonderfahrten sharply and allow online theory. Worth asking your school about timing."
+            ],
+            "links": [
+              { "url": "https://service.berlin.de/dienstleistung/121627/", "label": "Berlin: apply for a first driving licence" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

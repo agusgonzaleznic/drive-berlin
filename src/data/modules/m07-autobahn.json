@@ -1,0 +1,303 @@
+{
+  "id": "m07-autobahn",
+  "order": 7,
+  "title": "Autobahn & Country Roads",
+  "german": "Autobahn & Landstraße",
+  "icon": "🛣️",
+  "category": "grund",
+  "lesson": {
+    "intro": "In Berlin you spend most of your driving life at 30 or 50 km/h, negotiating trams, cargo bikes and double-parked delivery vans. Then one day you take the slip road onto the **A100**, put your foot down, and everything starts happening three times faster. Good news: the Autobahn (*die Autobahn*) is statistically the **safest** road type in Germany, precisely because the rules are strict, unromantic and known by everybody.\n\nThe bad news is the road you probably think of as harmless. Most German road deaths happen out of town on ordinary country roads (*Landstraßen*) — the pretty tree-lined ones in Brandenburg with a tractor over the next crest and a wild boar in the ditch. This module teaches you both: how to join, share and leave a motorway without drama, and how to survive the deceptively quiet stuff in between.",
+    "sections": [
+      {
+        "heading": "Getting on and getting off",
+        "body": "The Autobahn (sign 330.1) and the Kraftfahrstraße (*die Kraftfahrstraße*, \"motor road\", sign 331.1) sell the same entry ticket: your vehicle's **design top speed** (*bauartbedingte Höchstgeschwindigkeit*) must be **more than 60 km/h** — and if you tow a trailer, the same applies to the trailer. So no bicycles, no e-scooters (*E-Scooter*, capped at 20 km/h), no 45 km/h mopeds, no 40 km/h tractor. Vehicle plus load may not exceed 4 m in height or 2.55 m in width (2.60 m for refrigerated vehicles).\n\nOn an Autobahn you may only join at a marked junction (*Anschlussstelle*); a Kraftfahrstraße may also have ordinary crossroads and T-junctions, so treat it as motorway rules on a non-motorway layout. On the merging lane (*Einfädelungsstreifen*, often called the *Beschleunigungsstreifen*) the law is blunt: **traffic on the through carriageway has priority**. Nobody owes you a gap. Use the whole length of the lane, get up to the speed of the flow, indicate, check mirror *and* shoulder, then slot in. This is one of the very few places where the law expressly allows you to drive **faster** than the traffic on the through lanes (StVO §7a(2)), precisely so that you can match their speed and find your gap.\n\nLeaving is the mirror image. Indicate early, move onto the deceleration lane (*Ausfädelungsstreifen*), and do your braking **there** — heavy braking on the through carriageway is how motorway pile-ups start. On the exit lane you must **not** drive faster than the through traffic; the single exception is when the through lanes are crawling or standing, and then only at moderate speed and with particular care.\n\nThe hard shoulder (*Seitenstreifen*) is **not part of the carriageway**. It is not a bonus lane, not an overtaking lane and not a shortcut to a queuing exit. You may drive on it only where a sign or an overhead gantry signal releases it as a running lane, or where the police direct you onto it.",
+        "sign_ids": ["autobahn", "kraftfahrstrasse", "end_autobahn"],
+        "callout": {
+          "type": "tip",
+          "text": "Berlin's inner-city slip roads (A100, A103, the AVUS on the A115) are short and often uphill. Start accelerating the moment you are on the ramp, not halfway along it — merging at 60 into traffic doing 100 is far more dangerous than merging briskly."
+        }
+      },
+      {
+        "heading": "The three absolute noes",
+        "body": "On an Autobahn and on a Kraftfahrstraße, three things are simply forbidden — no exceptions, no \"just for a second\":\n\n- **No stopping** (*Halten*) — including on the hard shoulder.\n- **No reversing** (*Rückwärtsfahren*).\n- **No turning round** (*Wenden*).\n\nMissed your exit? Carry on to the next one. It costs you ten minutes. A U-turn on the through carriageway costs **200 €, two points in Flensburg and a one-month driving ban** — and can cost infinitely more, because traffic arriving at 130 km/h expects nothing of the kind. Turning or reversing on the hard shoulder or a side carriageway is still 130 € and a point, and it is an offence even inside an entry or exit slip road (75 €) — the U-turn has to happen on the ordinary road network beyond the junction. Parking on a motorway is 70 € and a point; even a short unlawful stop is a fine.\n\nA special trap: **running out of fuel or charge**. That is not a breakdown, because it was entirely avoidable. Your empty tank does not excuse you, so you are simply a vehicle stopped illegally on a motorway — fine, plus heavy liability if anyone runs into you. Plan your fuel and charging stops before you set off.\n\nEqually, do not creep. Without a compelling reason you may not drive so slowly that you obstruct the flow of traffic. There is no posted minimum speed, but a vehicle that cannot comfortably hold motorway pace has no business being there.",
+        "callout": {
+          "type": "danger",
+          "text": "An empty tank on the Autobahn is legally your fault, not bad luck. Refuel at half a tank on a long trip: service areas can be tens of kilometres apart, and the next one is always further than you hope."
+        }
+      },
+      {
+        "heading": "Rettungsgasse: the lane that saves lives",
+        "body": "The emergency corridor (*die Rettungsgasse*) is the rule German drivers get most emotional about, and rightly so — minutes decide outcomes at a crash site.\n\n**When:** as soon as vehicles on an Autobahn, or on an out-of-town road with at least two lanes in one direction, are only moving at walking pace or have come to a standstill. You do **not** wait until you hear a siren. By the time the sirens arrive, the corridor must already exist.\n\n**Where:** always between the **leftmost lane** and the lane immediately to its right.\n\n- Two lanes per direction: left lane pulls **left**, right lane pulls **right**.\n- Three or four lanes: leftmost lane pulls **left**, *all* the others pull **right**.\n\nKeep the corridor free until the road clears — and never drive through it yourself. Failing to form one costs 200 €, two points and a one-month driving ban; obstructing the emergency services, or using the corridor to get ahead, costs 240 € to 320 € with points and a ban.\n\nBlue lights follow the same logic of getting out of the way early. **Blue flashing light together with the siren** (*Blaulicht und Einsatzhorn*) means all other road users must clear the way **immediately** — indicate, move into whatever space exists, stop if that is what it takes, and never accelerate along in front of them. **Blue light on its own** — typically at an incident site or on a vehicle being escorted — grants no right of way; it is a warning to slow down and pay attention.",
+        "callout": {
+          "type": "rule",
+          "text": "Leftmost lane goes left. Everyone else goes right. Always, whatever the number of lanes — and from the moment traffic slows to walking pace, not when you see blue lights."
+        }
+      },
+      {
+        "heading": "When it goes wrong: the breakdown drill",
+        "body": "If your vehicle stops where it cannot be seen in time, the law wants you visible, fast. Learn this sequence in order:\n\n- **Hazard warning lights** (*Warnblinklicht*) on immediately, while you are still rolling if possible.\n- Coast onto the hard shoulder, wheels straight, as far right as you can.\n- **High-visibility vest** (*Warnweste*) on **before** you open the door — every car must carry at least one, and wearing it is the difference between being a person and being an obstacle.\n- Get out on the **passenger side**, away from the traffic.\n- Take the **warning triangle** (*Warndreieck*), walk **behind the crash barrier** (*Schutzplanke*) facing the traffic, and set the triangle up well back: the StVO asks for roughly 100 m where traffic is fast, and on the Autobahn **150 m or more** is the sensible reading. Marker posts (*Leitpfosten*) stand 50 m apart on straight sections, so three posts back is about right.\n- Then wait **behind the barrier**. Never in the car, never on the hard shoulder, never on the carriageway.\n- Call for help: **112** from your phone is the fastest route. The small black arrow on the marker posts points towards the nearest emergency telephone (*Notrufsäule*) where a stretch still has one.\n\nOne more use of the hazard lights that most newcomers miss: as you approach the tail of a traffic jam (*Stauende*) at speed, switch them on for a few seconds to warn the drivers behind you. The StVO names exactly this situation, and it prevents rear-end crashes.",
+        "callout": {
+          "type": "warning",
+          "text": "Your car must carry a warning triangle, a first-aid kit (*Verbandkasten*) and at least one high-vis vest. Buy a vest for every seat and keep them in the door pockets, not the boot — the boot is on the traffic side."
+        }
+      },
+      {
+        "heading": "Forty tonnes, blind spots and elephant races",
+        "body": "Lorries over 3.5 t are limited to **80 km/h** on the Autobahn, and above 50 km/h they must keep a minimum distance of **50 m**. Their drivers cannot stop quickly, cannot see much and cannot swerve.\n\nWhen you overtake one, remember that you may only begin an overtake at all if you are travelling at a **significantly higher speed** (*wesentlich höhere Geschwindigkeit*) than the vehicle ahead. That is exactly why the *Elefantenrennen* (\"elephant race\") — one lorry crawling past another at 2 km/h more, blocking both lanes for a kilometre — is unlawful as well as infuriating, and why many stretches carry a lorry overtaking ban.\n\nApply the same principle to yourself: overtake decisively and return to the right. Never cruise alongside a lorry's cab or trailer — that is the **blind spot** (*der tote Winkel*), and the driver genuinely cannot see you. Expect spray in the rain, and expect a shove of crosswind the instant you emerge past the trailer.\n\n**Tunnels** are their own small world. Switch on your **dipped headlights** (*Abblendlicht*) before you enter — the tunnel sign (Zeichen 327) orders exactly that, and the same sign **bans turning round** inside. In a tunnel on an Autobahn or Kraftfahrstraße reversing is banned as well (StVO §18(7)), and in any tunnel it is indefensible: an enclosed tube gives nobody an escape route. Take your sunglasses off before the portal, keep a generous distance, listen to traffic radio, and if traffic stops, switch the engine off and leave a gap to the car in front. In case of fire, leave the vehicle with the key in it and walk to the nearest marked emergency exit.",
+        "callout": {
+          "type": "warning",
+          "text": "If you can see the lorry driver's face in their mirror, they can see you. If you cannot, assume you are invisible — and get out of that position."
+        }
+      },
+      {
+        "heading": "Country roads: pretty and lethal",
+        "body": "Past the town-exit sign (*Ortsausgangsschild*), cars and other vehicles up to 3.5 t may drive **100 km/h** unless a sign says otherwise. With a trailer or caravan it is **80 km/h**. One exception catches people out: the 100 km/h limit falls away only where the carriageways for the two directions are **structurally separated** — by a central reservation (*Mittelstreifen*) or another physical divider. Two lanes in your direction with nothing but paint between you and the oncoming traffic still means 100. On the separated roads, and on Autobahnen, no general limit applies to cars; instead there is the **advisory speed** (*Richtgeschwindigkeit*) of 130 km/h. Advisory means no fine for exceeding it — but a court can hold it against you in the liability arithmetic after a crash.\n\nKeep your distance with the **half-the-speedometer rule** (*halber Tacho*): 100 km/h means about 50 m — conveniently, exactly the gap between two marker posts.\n\nThree specific country-road killers:\n\n- **Farm vehicles.** A tractor may be doing 25 or 32 km/h, may be wider than its lane, and may swing into a field without indicating. Overtaking one needs a genuinely long, clear view — never at a crest, never in a bend, and never \"just about\".\n- **Vulnerable road users.** Outside built-up areas you must leave at least **2 m** of lateral distance when passing people on foot, on bicycles or on e-scooters (in town it is 1.5 m). If the road is too narrow for that, you wait.\n- **Trees and wildlife.** Avenues of trees (*Allee*) forgive nothing, so stay off the verge. Where you see the wildlife warning sign, or at dawn and dusk in spring and autumn, lift off the accelerator, dip your high beam, sound the horn and be ready to brake hard **in a straight line**. Where one deer crossed, three more are coming.",
+        "sign_ids": ["town_exit", "speed_100", "no_overtaking", "danger"],
+        "callout": {
+          "type": "danger",
+          "text": "Never swerve for an animal. A controlled collision with a deer is survivable; a tree or an oncoming car at 100 km/h is not. Brake straight, hold the wheel, keep your lane."
+        }
+      }
+    ],
+    "key_takeaways": [
+      "Autobahn and Kraftfahrstraße: only vehicles whose design top speed exceeds 60 km/h — trailers included.",
+      "Merging traffic has no priority; the through carriageway does. Match the speed, find the gap.",
+      "Never stop, reverse or turn round on a motorway — and the hard shoulder is not a lane.",
+      "An empty tank is avoidable, so being stranded for it is a punishable stop, not a breakdown.",
+      "Rettungsgasse at walking pace, not at the first siren: leftmost lane left, everyone else right.",
+      "Blue light plus siren means clear the way at once; blue light alone is only a warning.",
+      "Breakdown drill: hazards, vest, out on the passenger side, triangle 150 m back, wait behind the barrier.",
+      "Country roads: 100 km/h, half-the-speedometer gap, 2 m past cyclists, and never swerve for wildlife."
+    ],
+    "german_terms": [
+      { "de": "die Autobahn", "en": "motorway" },
+      { "de": "die Kraftfahrstraße", "en": "motor road with motorway-style rules (sign 331.1)" },
+      { "de": "die bauartbedingte Höchstgeschwindigkeit", "en": "design top speed of a vehicle" },
+      { "de": "der Einfädelungsstreifen / Beschleunigungsstreifen", "en": "merging / acceleration lane" },
+      { "de": "der Ausfädelungsstreifen", "en": "deceleration lane, exit lane" },
+      { "de": "der Seitenstreifen", "en": "hard shoulder" },
+      { "de": "die Rettungsgasse", "en": "emergency corridor for rescue vehicles" },
+      { "de": "das Blaulicht und Einsatzhorn", "en": "blue flashing light and siren" },
+      { "de": "das Warnblinklicht", "en": "hazard warning lights" },
+      { "de": "das Warndreieck", "en": "warning triangle" },
+      { "de": "die Warnweste", "en": "high-visibility vest" },
+      { "de": "die Schutzplanke", "en": "crash barrier" },
+      { "de": "der Leitpfosten", "en": "roadside marker post (50 m apart)" },
+      { "de": "das Stauende", "en": "the tail end of a traffic jam" },
+      { "de": "der tote Winkel", "en": "blind spot" },
+      { "de": "die Richtgeschwindigkeit", "en": "advisory (non-binding) speed of 130 km/h" },
+      { "de": "der Wildwechsel", "en": "wildlife crossing" },
+      { "de": "halber Tacho", "en": "half-the-speedometer safe following distance" }
+    ]
+  },
+  "questions": [
+    {
+      "id": "m07-autobahn-q01",
+      "type": "choice",
+      "text": "Which of these may legally use an Autobahn?",
+      "sign": "autobahn",
+      "options": [
+        { "text": "A motorcycle whose design top speed is 100 km/h", "correct": true },
+        { "text": "A car towing a trailer, where car and trailer are both approved for more than 60 km/h", "correct": true },
+        { "text": "A tractor whose design top speed is 40 km/h", "correct": false }
+      ],
+      "points": 3,
+      "pool": "grund",
+      "explanation": "Motorways and Kraftfahrstraßen may only be used by motor vehicles whose design top speed (bauartbedingte Höchstgeschwindigkeit) is more than 60 km/h, and if a trailer is towed the same requirement applies to the trailer. A 40 km/h tractor therefore never belongs there, and neither do bicycles, e-scooters or 45 km/h mopeds. What counts is the vehicle's built-in maximum, not how fast you happen to be driving.",
+      "rule_ref": "StVO §18(1)"
+    },
+    {
+      "id": "m07-autobahn-q02",
+      "type": "choice",
+      "text": "You are on the merging lane (Einfädelungsstreifen) of an Autobahn entry. What is correct?",
+      "sign": "autobahn",
+      "options": [
+        { "text": "Traffic on the through carriageway has priority, so you must fit into a gap", "correct": true },
+        { "text": "On the merging lane you may drive faster than the traffic on the through lanes in order to match their speed and find a gap", "correct": true },
+        { "text": "Vehicles on the through carriageway must brake or change lanes so that you can join", "correct": false }
+      ],
+      "points": 5,
+      "pool": "grund",
+      "explanation": "Priority here runs one way only: the through carriageway has it, so joining traffic must adapt. Drivers already on the motorway often move over as a courtesy, but they are under no obligation to brake or change lanes for you, and forcing your way in is both an offence and a classic cause of crashes. The law does help you, though — on the merging lane you are expressly allowed to travel faster than the through traffic, which is how you reach their speed and slot into a gap instead of arriving 40 km/h too slow.",
+      "rule_ref": "StVO §18(3), §7a(2)"
+    },
+    {
+      "id": "m07-autobahn-q03",
+      "type": "choice",
+      "text": "How do you leave an Autobahn correctly?",
+      "options": [
+        { "text": "Indicate, move onto the deceleration lane in good time, and do your braking there rather than on the through carriageway", "correct": true },
+        { "text": "On the deceleration lane you may accelerate past the traffic on the through lanes, just as you may on the merging lane", "correct": false },
+        { "text": "If the exit is already queuing, drive along the hard shoulder to reach it", "correct": false }
+      ],
+      "points": 3,
+      "pool": "grund",
+      "explanation": "The deceleration lane (Ausfädelungsstreifen) exists so that you can lose speed away from the fast traffic; braking hard on the through carriageway is a standard trigger for rear-end collisions. The two lanes are opposites in law: on the merging lane you may drive faster than the through traffic, on the exit lane you may not — the only exception is when the through lanes are crawling or standing, and then only at moderate speed with particular care. The hard shoulder is never a queue-jumping lane: using it to get ahead costs 75 € and a point.",
+      "rule_ref": "StVO §7a(2), §7a(3)"
+    },
+    {
+      "id": "m07-autobahn-q04",
+      "type": "choice",
+      "text": "What applies to the hard shoulder (Seitenstreifen) of an Autobahn?",
+      "options": [
+        { "text": "It is not part of the carriageway, so it is not an extra lane", "correct": true },
+        { "text": "You may drive on it where a sign or an overhead gantry signal releases it as a running lane", "correct": true },
+        { "text": "In heavy traffic you may use it to pass a queue of vehicles", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "By law the hard shoulder is expressly not part of the carriageway, which is why it appears in no lane count and no overtaking rule. Busy stretches sometimes have a temporary hard-shoulder release, signposted or shown on the overhead gantries, and only then does it become a lane you may use. Taking it on your own initiative to pass a queue is an offence (75 € and a point) and it blocks the route ambulances, fire engines and recovery vehicles depend on.",
+      "rule_ref": "StVO §2(1), §18(8)"
+    },
+    {
+      "id": "m07-autobahn-q05",
+      "type": "choice",
+      "text": "You are on the Autobahn and realise you have just passed your exit. What is correct?",
+      "options": [
+        { "text": "Carry on to the next exit, leave the motorway there and use the junction to rejoin in the opposite direction", "correct": true },
+        { "text": "Running out of fuel is avoidable, so being stranded on the motorway with an empty tank counts as a prohibited stop and can be fined", "correct": true },
+        { "text": "Reversing along the hard shoulder to the exit is allowed if you switch on your hazard warning lights", "correct": false }
+      ],
+      "points": 5,
+      "pool": "grund",
+      "explanation": "Turning round and reversing are both flatly prohibited on motorways and Kraftfahrstraßen, and hazard lights change nothing — the whole danger is that traffic arriving at 130 km/h cannot possibly anticipate it. A U-turn on the through carriageway costs 200 €, two points and a one-month ban; turning or reversing on the hard shoulder or a side carriageway still costs 130 € and a point, and it is an offence even inside an entry or exit slip road (75 €) — so you leave at the next junction and turn round on the ordinary road network. Stopping is likewise banned, hard shoulder included, and an empty tank is no defence: because it was avoidable, it is treated as an unlawful stop rather than a genuine breakdown.",
+      "rule_ref": "StVO §18(7), §18(8)"
+    },
+    {
+      "id": "m07-autobahn-q06",
+      "type": "number",
+      "text": "You are driving at 100 km/h on the Autobahn and have to make an emergency stop (Gefahrbremsung). Using the standard driving-school formulas, what is your total stopping distance in metres?",
+      "answer_number": 80,
+      "unit": "m",
+      "points": 4,
+      "pool": "grund",
+      "explanation": "Work it in two steps. Reaction distance = (speed ÷ 10) × 3 = 10 × 3 = 30 m, the ground you cover in the second before you even touch the pedal. Normal braking distance = (speed ÷ 10)² = 10 × 10 = 100 m, and an emergency stop halves that to 50 m. Total = 30 + 50 = 80 m. That is why the 'half the speedometer' gap of 50 m at 100 km/h is a bare minimum, not a comfort zone.",
+      "rule_ref": "StVO §3(1), §4(1)"
+    },
+    {
+      "id": "m07-autobahn-q07",
+      "type": "choice",
+      "text": "What is correct about the emergency corridor (Rettungsgasse)?",
+      "options": [
+        { "text": "It must be formed as soon as vehicles are only crawling at walking pace or have come to a standstill", "correct": true },
+        { "text": "It runs between the leftmost lane and the lane immediately to its right: the leftmost lane moves left, all the other lanes move right", "correct": true },
+        { "text": "It is a minor matter, punished with a warning fine of about 10 €", "correct": false }
+      ],
+      "points": 5,
+      "pool": "grund",
+      "explanation": "The duty starts the moment traffic on an Autobahn — or on an out-of-town road with at least two lanes in your direction — slows to walking pace or stops. You do not wait for sirens: by the time the emergency vehicles arrive, the corridor has to be there. It always runs between the leftmost lane and the next lane to the right, so on a three-lane carriageway the left lane pulls left while the middle and right lanes pull right. This is anything but trivial: failing to form one costs 200 €, two points and a one-month driving ban, rising to between 240 € and 320 € if rescue vehicles are actually obstructed — and the same range applies if you drive through the corridor yourself.",
+      "rule_ref": "StVO §11(2)"
+    },
+    {
+      "id": "m07-autobahn-q08",
+      "type": "choice",
+      "text": "How must you react to blue flashing lights?",
+      "options": [
+        { "text": "Blue flashing light together with the siren: you must clear the way immediately", "correct": true },
+        { "text": "Blue flashing light alone, for example at an accident scene, gives no right of way but warns you to slow down and pay attention", "correct": true },
+        { "text": "You only have to make way for police vehicles, not for ambulances or fire engines", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "Blue light plus siren is the combination that creates a duty: every other road user must clear the way at once — indicate, move over, stop if that is what it takes, and never race along in front of the emergency vehicle. Blue light on its own is used to warn at accident and incident sites or when escorting vehicles; it grants no priority, but it tells you something is wrong ahead. The duty applies to every authorised emergency vehicle, police, fire service and ambulance alike.",
+      "rule_ref": "StVO §38(1), §38(2)"
+    },
+    {
+      "id": "m07-autobahn-q09",
+      "type": "choice",
+      "text": "Your car breaks down on the Autobahn and you manage to coast onto the hard shoulder. What do you do?",
+      "options": [
+        { "text": "Switch on the hazard warning lights immediately", "correct": true },
+        { "text": "Put on the high-visibility vest, then walk behind the crash barrier and set up the warning triangle well back — about 100 m is the legal yardstick for fast traffic, and on the Autobahn 150 m or more is safer", "correct": true },
+        { "text": "Stay seated in the car with your seatbelt on and wait there for the recovery service", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "Hazard lights come first, because the danger is a stationary vehicle nobody recognises in time. Your car must carry a warning triangle and at least one high-visibility vest: put the vest on before you open the door, get out on the passenger side, then walk back behind the crash barrier facing the traffic and place the triangle at a sufficient distance — the StVO names roughly 100 m where traffic is fast, and on the Autobahn 150 m or more is the safer reading, which is three marker posts at 50 m spacing. Then wait behind the barrier: sitting in a car parked on the hard shoulder is one of the most dangerous places on the entire network.",
+      "rule_ref": "StVO §15, StVZO §53a"
+    },
+    {
+      "id": "m07-autobahn-q10",
+      "type": "choice",
+      "text": "You see this sign. What applies on this road?",
+      "sign": "kraftfahrstrasse",
+      "options": [
+        { "text": "The same access rule as on the Autobahn: only motor vehicles with a design top speed of more than 60 km/h", "correct": true },
+        { "text": "Pedestrians may walk along the edge of the carriageway here as long as they face the oncoming traffic", "correct": false },
+        { "text": "Because it is not an Autobahn, turning round and reversing are permitted", "correct": false }
+      ],
+      "points": 3,
+      "pool": "grund",
+      "explanation": "The Kraftfahrstraße sign switches on the motorway rulebook on an ordinary road. The design-speed requirement of more than 60 km/h applies exactly as on an Autobahn, so bicycles, e-scooters and 45 km/h mopeds are excluded. Pedestrians may not walk along a Kraftfahrstraße at all — they may only cross it at junctions or at places specially provided for it. The bans on turning round, reversing and stopping apply here too. The real differences lie elsewhere: a Kraftfahrstraße may have ordinary crossroads and T-junctions, and unless the carriageways are structurally separated your car is limited to 100 km/h.",
+      "rule_ref": "StVO §18(1), §18(2), §18(7), §18(9)"
+    },
+    {
+      "id": "m07-autobahn-q11",
+      "type": "number",
+      "text": "No speed limit is signposted on the Autobahn. What advisory speed (Richtgeschwindigkeit) applies to your car in km/h?",
+      "answer_number": 130,
+      "unit": "km/h",
+      "points": 2,
+      "pool": "grund",
+      "explanation": "The Richtgeschwindigkeit is 130 km/h, and it applies on Autobahnen and on other roads whose carriageways for each direction are structurally separated. It is a recommendation, not a limit: exceeding it is not an offence and brings neither fine nor points. But it is far from meaningless — if you crash above it, a court can assign you a share of the liability on the grounds that the accident would have been avoidable at 130. And it only ever applies 'under the most favourable conditions': rain, fog, darkness, heavy traffic or worn tyres all mean less.",
+      "rule_ref": "Autobahn-Richtgeschwindigkeit-V §1; StVO §3(3)"
+    },
+    {
+      "id": "m07-autobahn-q12",
+      "type": "choice",
+      "text": "You want to overtake a lorry on the Autobahn. What is correct?",
+      "options": [
+        { "text": "You may only begin the overtake if your speed is significantly higher than that of the vehicle you are overtaking", "correct": true },
+        { "text": "Lorries over 3.5 t are limited to 80 km/h on the Autobahn, so plan for a long overtake and return to the right afterwards", "correct": true },
+        { "text": "It is harmless to stay alongside the lorry for a while, because the driver can see you in the mirrors at all times", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "Overtaking is only permitted with a significantly higher speed than the vehicle being overtaken — which is precisely why the 'elephant race' (Elefantenrennen), where one lorry inches past another and blocks both lanes, is unlawful as well as maddening. Heavy goods vehicles over 3.5 t are limited to 80 km/h on the motorway and above 50 km/h must keep a 50 m minimum distance, so passing one takes real distance and planning. Lingering alongside puts you in the blind spot (toter Winkel), where the driver genuinely cannot see you: overtake decisively, then move back to the right.",
+      "rule_ref": "StVO §5(2), §18(5), §4(3)"
+    },
+    {
+      "id": "m07-autobahn-q13",
+      "type": "choice",
+      "text": "You are approaching a road tunnel. What applies?",
+      "options": [
+        { "text": "You must drive through with dipped headlights", "correct": true },
+        { "text": "Turning round inside the tunnel is prohibited", "correct": true },
+        { "text": "Daytime running lights or sidelights are sufficient inside a tunnel", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "The tunnel sign (Zeichen 327) carries two orders: drive through with dipped headlights (Abblendlicht) and do not turn round inside. Daytime running lights or sidelights do not satisfy that — they are far too weak, and they leave the interior of your car unlit for everyone behind you. In a tunnel on an Autobahn or Kraftfahrstraße reversing is banned as well, and in any tunnel it is madness: nobody has an escape route in an enclosed tube. Practical extras: take your sunglasses off before the portal, keep a generous gap, and if traffic stops, switch the engine off, leave space to the car in front and follow the traffic radio.",
+      "rule_ref": "StVO Anlage 3, Zeichen 327; §18(7)"
+    },
+    {
+      "id": "m07-autobahn-q14",
+      "type": "choice",
+      "text": "You have just passed this sign and are on a country road with one lane in each direction and no central barrier. What applies?",
+      "sign": "town_exit",
+      "options": [
+        { "text": "Unless signs say otherwise, cars and other vehicles up to 3.5 t may drive up to 100 km/h", "correct": true },
+        { "text": "When you overtake a cyclist here you must leave at least 2 m of lateral distance", "correct": true },
+        { "text": "A slow tractor may be overtaken on a blind crest as long as you sound your horn first", "correct": false }
+      ],
+      "points": 3,
+      "pool": "grund",
+      "explanation": "The town-exit sign ends the 50 km/h zone, and outside built-up areas cars and other vehicles up to 3.5 t may do 100 km/h unless a sign, the weather or the road says less — with a trailer it is 80 km/h. Passing distances grow out here too: at least 2 m of lateral clearance for people on foot, on bicycles or on e-scooters, against 1.5 m in town. And no horn ever makes an overtake legal: overtaking demands a clear view for the whole manoeuvre, so a crest or a bend rules it out completely, however slow the tractor is.",
+      "rule_ref": "StVO §3(3), §5(2), §5(4)"
+    },
+    {
+      "id": "m07-autobahn-q15",
+      "type": "choice",
+      "text": "It is dusk on a country road through woodland and a deer runs across in front of you. How should you behave?",
+      "options": [
+        { "text": "Lift off the accelerator, dip your headlights if you are on high beam, and sound the horn", "correct": true },
+        { "text": "Slow right down and keep expecting more animals, because they rarely travel alone", "correct": true },
+        { "text": "Swerve into the oncoming lane to drive round the animal", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "High beam dazzles wild animals and roots them to the spot, so dip it and use the horn to move them on while you slow early. Deer and wild boar travel in groups: the one you saw is usually the first of several, so hold your reduced speed for a while instead of accelerating away. Above all, do not swerve. Braking hard in a straight line inside your own lane may cost you a wing; steering into the oncoming lane or the tree line at 100 km/h costs far more. If you do hit an animal, secure the scene, switch on the hazard lights and call the police — and never take the animal with you.",
+      "rule_ref": "StVO §3(1), §16(1)"
+    }
+  ]
+}

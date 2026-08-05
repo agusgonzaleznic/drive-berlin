@@ -1,0 +1,496 @@
+/* ============================================================================
+   Führerschein Hero — components
+   Roadbook plates on a dark ground. Sharp corners, hairline borders, gold used
+   only where it means "this is the thing to do next".
+   ========================================================================== */
+
+/* ---------- plates ---------- */
+.card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .022), transparent 60%),
+    var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-card);
+  padding: clamp(15px, 2.4vw, 21px);
+}
+.card.flat { box-shadow: none; background: var(--surface-2); }
+.card.clickable { cursor: pointer; transition: border-color .14s ease, transform .12s ease, box-shadow .14s ease; }
+.card.clickable:hover {
+  transform: translateY(-1px);
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow-pop);
+}
+/* :hover cannot fire on a touchscreen, so without :active a tap on a phone gave
+   no feedback at all — the only affordance was the one the device can't trigger. */
+.card.clickable:active { transform: scale(.99); box-shadow: var(--shadow-card); }
+
+/* Interactive cards are real <a>/<button> elements so they are keyboard-operable.
+   These rules strip the element defaults without losing the semantics. */
+a.card, button.card {
+  display: block; width: 100%; text-align: left;
+  font: inherit; color: inherit; text-decoration: none;
+}
+a.card:hover, button.card:hover { text-decoration: none; }
+button.card { appearance: none; }
+
+/* The featured plate: gold border plus a solid gold band naming why it matters.
+   Used for the next task and the weakest topic — never more than once a screen. */
+.card.featured { border-color: var(--gold-dark); box-shadow: var(--glow-gold), var(--shadow-card); }
+.plate-band {
+  display: block; margin: -21px -21px 14px; padding: 6px 16px;
+  background: var(--gold); color: #14161f;
+  font-family: var(--font-display); font-weight: 700; font-size: .7rem;
+  letter-spacing: .16em; text-transform: uppercase;
+  border-radius: var(--r-lg) var(--r-lg) 0 0;
+}
+
+/* The hero plate: the road ahead, seen through the windscreen at night. */
+.hero {
+  position: relative; overflow: hidden;
+  border: 1px solid var(--line-strong);
+  background:
+    /* headlight wash low and centre — the road surface just ahead */
+    radial-gradient(560px 200px at 50% 112%, rgba(224, 168, 46, .22), transparent 70%),
+    /* the asphalt itself, darker toward the horizon */
+    linear-gradient(180deg, #1b2030 0%, #151925 58%, #0f121a 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05), var(--shadow-card);
+}
+/* A dashed centre line running away toward the horizon, fading as it goes.
+   Opt-in via .hero.road: on a short hero (the Progress or Exam header) there is
+   no room for it to recede and it reads as a stray artefact. */
+.hero.road::before {
+  content: ''; position: absolute; bottom: 0; left: 50%; width: 3px; height: 66%;
+  transform: translateX(-50%);
+  background: repeating-linear-gradient(
+    to top, rgba(245, 217, 138, .55) 0 9px, transparent 9px 24px);
+  -webkit-mask-image: linear-gradient(to top, #000 0%, transparent 92%);
+  mask-image: linear-gradient(to top, #000 0%, transparent 92%);
+  pointer-events: none;
+}
+.hero::after {
+  content: ''; position: absolute; inset: auto 0 0 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-dark), transparent);
+  opacity: .7;
+}
+.hero > * { position: relative; z-index: 1; }
+.hero h1, .hero h2 { color: var(--gold-bright); text-shadow: 0 2px 18px rgba(0, 0, 0, .6); }
+.hero p { color: var(--dim); }
+.hero .muted, .hero small { color: var(--muted); }
+
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font-weight: 700; font-size: .92rem;
+  border: 1px solid transparent; border-radius: var(--r-sm); padding: 12px 22px;
+  cursor: pointer; user-select: none; text-decoration: none !important;
+  transition: transform .07s ease, box-shadow .07s ease, filter .14s ease, border-color .14s ease;
+}
+/* Never dim a button with opacity: it composites label AND fill toward the page
+   and measured 2.78:1 on the gold plaque. An explicit disabled skin holds 4.95:1
+   — which matters most here, because the disabled label is the text that explains
+   why tapping does nothing. */
+.btn:disabled {
+  cursor: not-allowed;
+  background: var(--surface-2) !important;
+  color: var(--muted-2) !important;
+  border-color: var(--line-strong) !important;
+  box-shadow: none !important;
+  text-shadow: none;
+  filter: none;
+}
+
+/* The signature plaque: a signed board lit from the front. Keeps the 4px
+   underside from the old design, because pressing it felt genuinely good — it
+   just reads as struck metal now rather than a soft toy. */
+.btn-amber {
+  background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+  color: #17130a;                       /* 8.4:1 on the gold — white would be 2.1:1 */
+  border-color: var(--gold-bright);
+  box-shadow: 0 4px 0 var(--gold-deep), 0 0 26px -6px var(--gold-glow);
+  font-family: var(--font-display); letter-spacing: .1em; text-transform: uppercase;
+  font-size: .84rem;
+}
+.btn-primary {
+  background: var(--primary-dark); color: #fff;   /* 5.32:1 */
+  border-color: #2b9160; box-shadow: 0 4px 0 var(--primary-deep);
+}
+.btn-blue {
+  background: var(--blue-dark); color: #fff;      /* 4.82:1 */
+  border-color: #3f74d1; box-shadow: 0 4px 0 var(--blue-deep);
+}
+.btn-danger {
+  background: var(--red-btn); color: #fff;        /* 5.39:1 */
+  border-color: #d1585b; box-shadow: 0 4px 0 var(--red-deep);
+}
+/* Ghost: a plate edge, not a button-shaped blob. */
+.btn-ghost {
+  background: var(--surface-2); color: var(--ink);
+  border: 1px solid var(--line-control); box-shadow: 0 3px 0 #171b28;
+}
+.btn-ghost:hover { border-color: var(--gold-dark); color: var(--gold-bright); }
+.btn:not(:disabled):hover { filter: brightness(1.08); }
+.btn:not(:disabled):active { transform: translateY(4px); box-shadow: 0 0 0 transparent; }
+/* Small buttons are still touch targets: 44px keeps them thumb-safe. */
+.btn.small { padding: 8px 14px; font-size: .8rem; min-height: 44px; }
+/* Uppercase display type with .1em tracking is illegible below ~12px. */
+.btn.small.btn-amber { font-size: .8rem; }
+.btn.block { width: 100%; }
+
+/* ---------- pills ---------- */
+.pill {
+  display: inline-flex; align-items: center; gap: 5px;
+  border-radius: var(--r-pill); padding: 3px 10px;
+  font-size: .73rem; font-weight: 500; letter-spacing: .01em;
+  background: var(--surface-2); border: 1px solid var(--line); color: var(--muted);
+  white-space: nowrap;
+}
+.pill.green { background: var(--primary-soft); color: var(--primary); border-color: #245c3c; }
+.pill.blue  { background: var(--blue-soft); color: var(--blue); border-color: #2a3f66; }
+.pill.amber { background: var(--amber-soft); color: var(--gold); border-color: #4a3c14; }
+.pill.red   { background: var(--red-soft); color: var(--red); border-color: #5a2c2f; }
+.pill.purple{ background: var(--purple-soft); color: var(--purple); border-color: #3b3358; }
+
+/* ---------- the route: phases as legs, tasks as waypoints ---------- */
+.phase-header { display: flex; align-items: center; gap: 13px; margin: 30px 0 14px; }
+.phase-header .ph-emoji {
+  width: 44px; height: 44px; flex: 0 0 auto; display: grid; place-items: center;
+  font-size: 1.3rem;
+  background: var(--surface-2); border: 1px solid var(--line-strong);
+  border-radius: var(--r-md);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05);
+}
+.phase-header h2 { color: var(--ink); }
+.phase-header small { display: block; color: var(--muted); font-size: .78rem; }
+
+/* A continuous route spine threads the waypoints of a leg together. */
+.task-list { display: flex; flex-direction: column; gap: 10px; position: relative; }
+.task-list::before {
+  content: ''; position: absolute; left: 19px; top: 8px; bottom: 8px; width: 2px;
+  background: repeating-linear-gradient(to bottom, var(--line-strong) 0 6px, transparent 6px 12px);
+  z-index: 0;
+}
+.task-card { display: flex; gap: 14px; align-items: flex-start; position: relative; z-index: 1; }
+.task-status {
+  flex: 0 0 auto; width: 40px; height: 40px; margin-top: 2px;
+  border-radius: 50%; display: grid; place-items: center;
+  font-size: 1rem; font-weight: 700;
+  background: var(--bg); border: 2px solid var(--line-strong); color: var(--muted-2);
+}
+/* Done reads as a stamped waypoint, not a greyed-out row. */
+.task-card.done .task-status {
+  background: var(--primary-soft); border-color: var(--primary-dark); color: var(--primary);
+}
+.task-card.next .task-status {
+  background: var(--plaque); border-color: var(--gold); color: var(--gold-bright);
+  box-shadow: 0 0 20px -2px var(--gold-glow);
+  animation: pulse 2.2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(224, 168, 46, .45), 0 0 20px -2px var(--gold-glow); }
+  50% { box-shadow: 0 0 0 9px rgba(224, 168, 46, 0), 0 0 20px -2px var(--gold-glow); }
+}
+/* min-width:0 lets this flex child shrink below its min-content width. Without
+   it a single long nowrap pill inside forces the card wider than a phone viewport. */
+.task-card .card { flex: 1; min-width: 0; padding: 14px 16px; }
+.task-card.next .card { border-color: var(--gold-dark); box-shadow: var(--glow-gold), var(--shadow-card); }
+.task-card.done .card { background: var(--surface-2); border-style: dashed; }
+.task-card.done .task-title { color: var(--muted); }
+/* Card titles stay in DM Sans: the display face is inscriptional and eats
+   horizontal space, which forces two-line titles on a phone. Keeping Cinzel for
+   headings only is also what makes it feel special. */
+.task-title { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--ink);
+  font-size: .97rem; letter-spacing: 0; line-height: 1.35; }
+.task-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+/* Metadata pills carry sentences, not one-word labels, so they must be allowed to
+   wrap — unlike the short status pills elsewhere, which stay on one line. */
+.task-meta .pill { white-space: normal; }
+
+/* ---------- facts & callouts ---------- */
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(132px, 1fr)); gap: 10px; margin: 14px 0; }
+.fact {
+  background: var(--surface-2); border: 1px solid var(--line);
+  border-left: 2px solid var(--gold-dark);
+  border-radius: var(--r-sm); padding: 9px 12px;
+}
+.fact b { display: block; font-size: .64rem; text-transform: uppercase; letter-spacing: .14em; color: var(--muted-2);
+  font-family: var(--font-display); font-weight: 700; }
+.fact span { font-weight: 500; font-size: .92rem; color: var(--ink); }
+
+.callout {
+  border-radius: var(--r-sm); padding: 12px 14px 12px 44px; position: relative; margin: 12px 0;
+  font-size: .92rem; border: 1px solid var(--line); background: var(--surface-2); color: var(--dim);
+  border-left-width: 3px;
+}
+/* Markers are masked SVG rather than emoji: they inherit each callout's accent
+   colour, render identically on every platform, and are invisible to screen
+   readers (which used to announce "light bulb" before the tip text). */
+.callout::before {
+  content: ''; position: absolute; left: 13px; top: 13px;
+  width: 17px; height: 17px;
+  background-color: currentColor;
+  -webkit-mask: var(--mark) center / contain no-repeat;
+  mask: var(--mark) center / contain no-repeat;
+}
+.callout.tip     { border-left-color: var(--primary); background: #16241c; color: var(--primary);
+  --mark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5'/%3E%3Cpath d='M9 18h6'/%3E%3Cpath d='M10 22h4'/%3E%3C/svg%3E"); }
+.callout.warning { border-left-color: var(--gold); background: #262013; color: var(--gold);
+  --mark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3'/%3E%3Cpath d='M12 9v4'/%3E%3Cpath d='M12 17h.01'/%3E%3C/svg%3E"); }
+.callout.rule    { border-left-color: var(--blue); background: #181f30; color: var(--blue);
+  --mark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 12h-5'/%3E%3Cpath d='M15 8h-5'/%3E%3Cpath d='M19 17V5a2 2 0 0 0-2-2H4'/%3E%3Cpath d='M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3'/%3E%3C/svg%3E"); }
+.callout.danger  { border-left-color: var(--red); background: #2b1719; color: var(--red);
+  --mark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10.7 3a2 2 0 0 0-2 1.8l-1.6 12A2 2 0 0 0 9 19h6a2 2 0 0 0 2-2.2l-1.6-12A2 2 0 0 0 13.4 3z'/%3E%3Cpath d='M12 8v4'/%3E%3C/svg%3E"); }
+/* The accent colour is only for the marker; body copy stays legible. */
+.callout > * { color: var(--dim); }
+.callout b, .callout strong { color: var(--ink); }
+.callout b { color: var(--ink); }
+
+.checklist { list-style: none; padding: 0; margin: 8px 0; }
+.checklist li { display: flex; gap: 11px; align-items: flex-start; padding: 10px 4px; border-bottom: 1px solid var(--line); }
+.checklist li:last-child { border-bottom: none; }
+/* 24px box inside a 44px-tall row, and the whole label is clickable. */
+.checklist input[type="checkbox"] { width: 24px; height: 24px; margin-top: 1px; accent-color: var(--gold); flex: 0 0 auto; cursor: pointer; }
+.checklist li { min-height: 44px; }
+.checklist li.checked label { text-decoration: line-through; color: var(--muted-2); }
+.checklist label { cursor: pointer; color: var(--dim); }
+
+/* ---------- learn ---------- */
+.module-card { display: flex; flex-direction: column; gap: 9px; }
+.module-top { display: flex; align-items: flex-start; gap: 12px; }
+/* Without min-width:0 the title column cannot shrink and every title wraps.
+   :not(.module-icon) matters — the icon is a div too, and flex:1 stretched it. */
+.module-top > div:not(.module-icon) { min-width: 0; flex: 1 1 auto; }
+.module-icon {
+  width: 44px; height: 44px; flex: 0 0 auto; display: grid; place-items: center;
+  font-size: 1.35rem; border-radius: var(--r-md);
+  background: var(--surface-2); border: 1px solid var(--line-strong);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05);
+}
+/* Scoped to .module-top, not .module-card: a bare `.module-card b` also matched
+   the <b> inside "0/15 mastered" and display:block split it onto two lines. */
+.module-top b { font-size: .95rem; letter-spacing: 0; line-height: 1.3; display: block; }
+.module-card .de-term { font-size: .78rem; }
+.bar { height: 7px; border-radius: var(--r-pill); background: #10131c; overflow: hidden; border: 1px solid var(--line); }
+.bar i { display: block; height: 100%; border-radius: var(--r-pill);
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary)); transition: width .4s ease; }
+.bar.amber i { background: linear-gradient(90deg, var(--gold-dark), var(--gold)); }
+.bar.blue i { background: linear-gradient(90deg, var(--blue-dark), var(--blue)); }
+
+.lesson-body { color: var(--dim); }
+.lesson-body h3 { margin-top: 1.5em; color: var(--gold-bright); }
+.lesson-body ul { padding-left: 22px; }
+.lesson-body strong { color: var(--ink); }
+.sign-figure { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; margin: 8px 12px 8px 0; text-align: center; }
+.sign-figure svg { height: 84px; width: auto; filter: drop-shadow(0 4px 10px rgba(0, 0, 0, .7)); }
+.sign-figure figcaption { font-size: .7rem; font-weight: 500; color: var(--muted); max-width: 112px; }
+.sign-row { display: flex; flex-wrap: wrap; align-items: flex-start; }
+
+/* German terms run to 50 characters ("der Einfädelungsstreifen /
+   Beschleunigungsstreifen"), so nowrap here forced the whole lesson page to
+   scroll sideways on a phone. Wrap by default and let the table scroll on its
+   own if a row still cannot fit. */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.terms-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+.terms-table td { padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--dim); }
+.terms-table td:first-child {
+  font-weight: 700; color: var(--gold);
+  overflow-wrap: break-word; letter-spacing: 0;
+}
+
+/* ---------- quiz ---------- */
+.quiz-progress { display: flex; gap: 4px; margin-bottom: 16px; }
+.quiz-progress i { flex: 1; height: 6px; border-radius: 2px; background: #212636; }
+.quiz-progress i.done { background: var(--primary); }
+.quiz-progress i.wrong { background: var(--red); }
+.quiz-progress i.current { background: var(--gold); box-shadow: 0 0 10px -1px var(--gold-glow); }
+
+.q-text { font-size: 1.08rem; font-weight: 500; margin-bottom: 8px; color: var(--ink); line-height: 1.45; }
+.q-points { margin-bottom: 13px; }
+.q-sign { margin: 8px 0 14px; }
+.q-sign svg { height: 108px; filter: drop-shadow(0 6px 16px rgba(0, 0, 0, .75)); }
+
+.options { display: flex; flex-direction: column; gap: 9px; margin: 14px 0; }
+.option {
+  display: flex; align-items: center; gap: 12px; text-align: left;
+  background: var(--surface-2); border: 1px solid var(--line-control); border-radius: var(--r-md);
+  padding: 13px 15px; font: inherit; font-weight: 500; cursor: pointer; color: var(--dim);
+  transition: border-color .1s, background .1s, color .1s;
+  width: 100%;
+}
+.option:hover { border-color: var(--line-strong); background: var(--surface-3); color: var(--ink); }
+.option .box {
+  width: 22px; height: 22px; flex: 0 0 auto; border-radius: var(--r-sm);
+  border: 1px solid var(--line-strong); display: grid; place-items: center;
+  font-size: .78rem; font-weight: 700; color: #14161f; background: transparent;
+}
+.option.selected { border-color: var(--gold); background: #221c10; color: var(--ink); }
+.option.selected .box { background: var(--gold); border-color: var(--gold-bright); }
+.option.reveal-correct { border-color: var(--primary); background: #16281d; color: var(--ink); }
+.option.reveal-correct .box { background: var(--primary); border-color: var(--primary); }
+.option.reveal-wrong { border-color: var(--red); background: #2a1719; color: var(--ink); }
+.option.reveal-wrong .box { background: var(--red); border-color: var(--red); }
+.option:disabled { cursor: default; }
+
+.num-answer { display: flex; align-items: center; gap: 10px; margin: 14px 0; }
+.num-answer input {
+  width: 132px; padding: 12px 14px; font: inherit; font-weight: 700; font-size: 1.05rem;
+  background: var(--bg); color: var(--ink);
+  border: 1px solid var(--line-control); border-radius: var(--r-md);
+}
+/* Border colour alone is a colour-only signal; the ring keeps focus visible. */
+.num-answer input:focus-visible { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(224, 168, 46, .3); }
+
+.explain { margin-top: 15px; }
+.verdict { font-weight: 700; font-size: 1.02rem; display: flex; align-items: center; gap: 8px;
+  font-family: var(--font-display); letter-spacing: .02em; color: var(--ink); }
+
+/* ---------- exam ---------- */
+.exam-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(42px, 1fr)); gap: 6px; margin: 13px 0; }
+.exam-grid button {
+  /* 44px tall so the 30 cells are comfortable thumb targets on a phone. */
+  min-height: 44px; padding: 9px 0; border-radius: var(--r-sm);
+  border: 1px solid var(--line-control); background: var(--surface-2); color: var(--dim);
+  font-weight: 700; cursor: pointer; font-size: .8rem;
+}
+.exam-grid button:focus-visible { outline-offset: -3px; }
+/* A cell can be both current and answered. `current` wins the fill, and a dot
+   preserves the answered information that used to be lost on the current cell. */
+.exam-grid button { position: relative; }
+.exam-grid button.answered.current::after {
+  content: ''; position: absolute; left: 50%; bottom: 3px; transform: translateX(-50%);
+  width: 4px; height: 4px; border-radius: 50%; background: #14161f;
+}
+.exam-grid button.answered { background: var(--blue-soft); border-color: var(--blue-dark); color: var(--blue); }
+.exam-grid button.current, .exam-grid button.answered.current {
+  background: var(--gold); border-color: var(--gold-bright); color: #14161f; }
+.exam-grid button.res-ok { background: var(--primary-soft); border-color: var(--primary-dark); color: var(--primary); }
+.exam-grid button.res-bad { background: var(--red-soft); border-color: var(--red-dark); color: var(--red); }
+
+.result-banner { text-align: center; padding: 28px 18px; }
+.result-banner .score { font-size: 2.5rem; font-weight: 700; font-family: var(--font-display); letter-spacing: .02em; }
+
+/* ---------- badges as route stamps ---------- */
+.badge-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(128px, 1fr)); gap: 12px; }
+.badge-card {
+  text-align: center; padding: 15px 9px;
+  border: 1px solid var(--gold-dark);
+  background: radial-gradient(circle at 50% 22%, rgba(224, 168, 46, .12), transparent 66%), var(--surface-2);
+}
+.badge-card .b-emoji { font-size: 2rem; display: block; margin-bottom: 5px;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, .6)); }
+/* Grayscale + .45 opacity dropped the caption to ~1.85:1. Grey the artwork, keep
+   the words readable. */
+.badge-card.locked { background: var(--surface-2); border-color: var(--line); border-style: dashed; }
+.badge-card.locked .b-emoji { opacity: .3; filter: grayscale(1); }
+.badge-card.locked b { color: var(--muted); }
+.badge-card b { font-size: .78rem; display: block; font-family: var(--font-display); letter-spacing: .02em; color: var(--gold-bright); }
+.badge-card small { font-size: .66rem; line-height: 1.35; display: block; color: var(--muted); }
+.badge-progress { margin-top: 7px; }
+
+/* ---------- stat tiles ---------- */
+.tile { text-align: center; padding: 16px 10px; }
+.tile .t-num { font-size: 1.75rem; font-weight: 700; line-height: 1.1; font-family: var(--font-display);
+  color: var(--gold-bright); letter-spacing: .01em; }
+.tile .t-label { font-size: .66rem; font-weight: 700; text-transform: uppercase; letter-spacing: .13em; color: var(--muted-2);
+  font-family: var(--font-display); }
+
+/* ---------- map ---------- */
+.map-box { height: 380px; border-radius: var(--r-md); border: 1px solid var(--line-strong); overflow: hidden; z-index: 1;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, .5); }
+.map-box.small { height: 260px; }
+.leaflet-container { font-family: var(--font); background: var(--surface-2); }
+/* Tame the daylight tiles so the map sits in the same night as everything else. */
+.leaflet-tile-pane { filter: brightness(.72) saturate(.72) contrast(1.06); }
+.poi-item { display: flex; justify-content: space-between; gap: 10px; align-items: baseline;
+  padding: 11px 4px; border-bottom: 1px solid var(--line); }
+.poi-item:last-child { border-bottom: none; }
+.poi-item b { color: var(--ink); }
+.filter-chips { display: flex; gap: 8px; flex-wrap: wrap; margin: 11px 0; }
+.filter-chips button {
+  border: 1px solid var(--line-control); background: var(--surface-2); border-radius: var(--r-pill);
+  padding: 7px 14px; font-weight: 500; font-size: .78rem; cursor: pointer; color: var(--dim);
+  min-height: 44px;
+}
+.filter-chips button.on { background: var(--plaque); color: var(--gold-bright); border-color: var(--gold-dark); font-weight: 700; }
+
+/* ---------- glossary ---------- */
+.glossary-search {
+  width: 100%; padding: 13px 16px; font: inherit; font-weight: 500;
+  background: var(--bg); color: var(--ink);
+  border: 1px solid var(--line-control); border-radius: var(--r-md); margin-bottom: 14px;
+}
+.glossary-search::placeholder { color: var(--muted-2); }
+.glossary-search:focus-visible { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(224, 168, 46, .3); }
+.gloss-item { padding: 13px 4px; border-bottom: 1px solid var(--line); color: var(--dim); }
+.gloss-item b { font-size: .98rem; color: var(--gold); }
+
+/* ---------- modal & toast ---------- */
+.modal-backdrop {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(8, 9, 13, .72); backdrop-filter: blur(4px);
+  display: grid; place-items: center; padding: 18px;
+  animation: fadeIn .15s ease;
+}
+.modal-card {
+  background: var(--surface); border: 1px solid var(--line-strong);
+  border-radius: var(--r-lg); box-shadow: var(--shadow-pop);
+  max-width: 560px; width: 100%; max-height: 86vh; overflow: auto;
+  padding: 24px; animation: popIn .18s ease;
+}
+@keyframes fadeIn { from { opacity: 0; } }
+@keyframes popIn { from { opacity: 0; transform: scale(.96) translateY(8px); } }
+
+.toast {
+  position: fixed; left: 50%; bottom: 84px; transform: translateX(-50%);
+  z-index: 150; background: var(--plaque); color: var(--gold-bright);
+  border: 1px solid var(--gold-dark);
+  padding: 12px 20px; border-radius: var(--r-sm); font-weight: 500; font-size: .9rem;
+  box-shadow: var(--shadow-pop), 0 0 26px -8px var(--gold-glow);
+  display: flex; gap: 9px; align-items: center;
+  animation: toastIn .25s ease; max-width: min(92vw, 480px);
+}
+@keyframes toastIn { from { opacity: 0; transform: translate(-50%, 14px); } }
+.toast.leaving { transition: opacity .3s, transform .3s; opacity: 0; transform: translate(-50%, 10px); }
+
+/* ---------- onboarding ---------- */
+.onboard { max-width: 620px; margin: 0 auto; }
+.path-choice { display: grid; gap: 12px; margin: 16px 0; }
+.path-choice .card { border-color: var(--line-strong); }
+.path-choice .card:hover { border-color: var(--gold-dark); box-shadow: var(--glow-gold); }
+.path-choice h3 { color: var(--ink); }
+
+@media (max-width: 720px) {
+  .toast { bottom: 108px; }
+  .map-box { height: 300px; }
+  .plate-band { margin: -15px -15px 12px; }
+  /* Stacked on a phone the hero has no empty column, so the centre line would
+     run straight through the copy. The headlight wash carries the motif alone. */
+  .hero.road::before { display: none; }
+}
+
+
+/* ---------- icons ---------- */
+/* Inline SVG line icons (Lucide, ISC — see src/assets/icons/LICENSE.lucide).
+   They inherit currentColor, so an icon is always the colour of the text it
+   accompanies and needs no per-context override. */
+.ico { display: inline-block; vertical-align: -0.16em; flex: 0 0 auto; }
+h1 .ico, h2 .ico, h3 .ico { vertical-align: -0.12em; color: var(--gold); }
+.hero h1 .ico, .hero h2 .ico { color: var(--gold-bright); }
+.btn .ico { vertical-align: -0.14em; }
+.pill .ico { vertical-align: -0.18em; }
+.big-ico { display: block; margin: 0 auto 10px; color: var(--gold); opacity: .9; }
+.task-ico { color: var(--gold); }
+.task-card.done .task-ico { color: var(--muted-2); }
+.task-status .ico { color: inherit; }
+.stat-chip .ico { vertical-align: -0.2em; }
+.tab-ico { display: inline-flex; align-items: center; }
+.tab-ico .ico { vertical-align: 0; }
+.emblem { display: block; }
+.brand .emblem { filter: drop-shadow(0 0 10px rgba(224, 168, 46, .28)); }
+.onboard .emblem { margin: 0 auto 8px; }
+.flag { display: inline-block; vertical-align: -0.12em; border-radius: 1px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .14); }
+/* The module/phase tiles hold a single icon, centred. */
+.module-icon .ico, .ph-emoji .ico { color: var(--gold); }
+.badge-card .b-emoji .ico { color: var(--gold-bright); }
+.badge-card.locked .b-emoji .ico { color: var(--muted-2); }

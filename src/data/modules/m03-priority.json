@@ -1,0 +1,319 @@
+{
+  "id": "m03-priority",
+  "order": 3,
+  "title": "Right of Way & Intersections",
+  "german": "Vorfahrt & Kreuzungen",
+  "icon": "🚦",
+  "category": "grund",
+  "lesson": {
+    "intro": "Berlin decides who goes first roughly forty times on every commute, and almost never by eye contact. A crossroads in Prenzlauer Berg with no signs at all. A tram (Straßenbahn) sliding out of Warschauer Straße. The roundabout at Ernst-Reuter-Platz. A small green arrow bolted to the pole beside a red light. Every one of those is settled by a **rule** that was decided long before you arrived.\n\nThis is the module the theory exam loves most, and the one where it hides its heaviest questions. The good news: German priority law is a short decision tree. Learn the chain of command — **police officer, then lights, then signs, then right before left** — and most junctions answer themselves while you are still approaching.",
+    "sections": [
+      {
+        "heading": "The chain of command",
+        "body": "Germany settles every junction — a crossroads (Kreuzung) or a T-junction (Einmündung) — with a strict hierarchy. Work down the list and stop at the first item that applies:\n\n- **A police officer's signals and instructions** (Zeichen und Weisungen der Polizeibeamten). They must be followed and they take precedence over all other orders and rules — a green light included.\n- **Traffic lights** (Lichtzeichen). While they are signalling, they override the priority rules and the priority signs (StVO §37).\n- **Priority signs** (Vorfahrtzeichen): give way, stop, priority road.\n- **Right before left** (rechts vor links) — the fallback when nothing else speaks.\n\nKeep two German words apart, because the exam uses both. *Vorfahrt* is priority where roads meet. *Vorrang* is precedence everywhere else: rail traffic at a level crossing, a bus leaving its stop, the driver already on the road while you nose out of a driveway.\n\nThe law also tells you *how* to give way (StVO §8). You must show early, through a moderate speed (mäßige Geschwindigkeit), that you intend to wait, and you may only continue once you can see that you will neither endanger nor substantially obstruct the vehicle with priority. When a hedge, a delivery van or a Berlin building line kills your view, you are allowed to feel your way in — *hineintasten* — creeping forward until you can genuinely see, never rolling out on faith.\n\nPolice arm signals are worth ten seconds of memorising. One arm, or both, held out **sideways across your direction of travel** means \"halt before the junction\" — the traffic to the officer's sides is the traffic being released. **One arm raised** means \"wait in front of the junction for the next signal\": the human version of amber.",
+        "callout": {
+          "type": "rule",
+          "text": "Police beat lights, lights beat signs, signs beat rechts vor links. If an officer waves you across a red light, you go — and that is not a red-light offence (StVO §36). Their signals still do not release you from your ordinary duty of care."
+        }
+      },
+      {
+        "heading": "Rechts vor links — and the traps built into it",
+        "body": "At a junction with no lights, no priority signs and no priority markings, **whoever comes from the right has priority** (StVO §8). It does not matter which road is wider, smoother, busier or feels more like the \"main\" one. It does not matter who arrived first. It applies to cars, cyclists, e-scooters and everyone else, and in Berlin's side streets people genuinely do stop for one another.\n\nThe exam earns its marks on the cases where right-before-left does *not* decide:\n\n- **Signs or working lights are present** — then they decide, full stop.\n- **A field or forest track** (Feld- oder Waldweg) joining a normal road: whoever comes off the track gives way, even when coming from the right.\n- **Coming out of a property, a pedestrian zone, a traffic-calmed area** (verkehrsberuhigter Bereich) **or over a lowered kerb** — that is not a junction at all. Under StVO §10 you must indicate, and you must behave so that endangering other road users is *ruled out*; in practice you wait for everybody, cyclists and pedestrians on the pavement included.\n- **Priority is never permission to force your way.** If traffic is stop-and-go, you must not enter the junction even with priority or a green light when you would have to wait on the junction itself (StVO §11).\n\nSight lines are why parking near junctions is restricted: no parking within **5 m** before and after the junction, measured from where the kerb edges intersect — and **8 m before** the junction where a structurally built cycle path (baulich angelegter Radweg) runs to the right of the carriageway in your direction of travel, a 2020 change you will meet on half of Berlin's corners.",
+        "callout": {
+          "type": "warning",
+          "text": "A plain right-of-way violation is 25 EUR. Endanger somebody with it and it is 100 EUR plus a point in Flensburg; bend metal and it is 120 EUR plus a point. In the Probezeit both of those point-bearing versions count as an A-offence."
+        }
+      },
+      {
+        "heading": "The five signs that decide everything",
+        "body": "**Vorfahrt gewähren (Zeichen 205)** — the upside-down triangle. Give way to the road you are joining. It stands immediately before the junction. You do **not** have to stop if the way is genuinely clear; you have to be able to see, and you must not obstruct anyone.\n\n**Halt! Vorfahrt gewähren (Zeichen 206)** — the octagon. You must come to a **complete standstill**, at the stop line (Haltlinie, Zeichen 294) if one is marked, otherwise at the point where you can see into the other road. Empty street at three in the morning? Still a standstill. If the line sits well back behind a hedge, you effectively stop twice: at the line, then again where you can see. Rolling through costs 10 EUR — and 70 EUR plus a point in Flensburg the moment you endanger somebody, 85 EUR plus a point if you bend metal.\n\n**Vorfahrt (Zeichen 301)** — triangle with a broad upright bar: you have priority **at the next junction only**. One junction, then it is spent.\n\n**Vorfahrtstraße (Zeichen 306)** — the yellow diamond: you are on a priority road and you keep priority at every junction along it. The sign is repeated as you go.\n\n**Ende der Vorfahrtstraße (Zeichen 307)** — the same diamond crossed out: priority is over. Unless a new sign says otherwise, rechts vor links is back in charge — which is *not* the same as having to give way to everybody.\n\n**Abknickende Vorfahrtstraße (Zeichen 306 with a bent-line plate)** — the priority road turns a corner at the junction, and the thick line on the plate shows where it goes. This one catches everyone:\n\n- Following the bend? You keep priority **and you must indicate**, because you are changing direction (StVO §9).\n- Carrying straight on, leaving the priority road? Do **not** indicate — and give way to the traffic that follows the bend.\n- Coming out of a side arm? You give way to both arms of the priority road.",
+        "sign_ids": ["yield", "stop", "priority_next", "priority_road", "end_priority_road"],
+        "callout": {
+          "type": "tip",
+          "text": "Exam shortcut for the bend: the thick line on the plate *is* the priority road. Whoever travels along the thick line goes first — and whoever changes direction, priority or not, indicates."
+        }
+      },
+      {
+        "heading": "Lights, arrows and the famous Grünpfeil",
+        "body": "German lights run **green – amber – red – red and amber together – green**.\n\n- **Green** (Grün) means \"traffic is released\". It does not hand you the junction: you still turn by the turning rules below.\n- **Amber** (Gelb) orders: \"wait in front of the junction for the next signal\". It is not an invitation to accelerate.\n- **Red** (Rot) orders: \"halt before the junction\".\n- **Red and amber together** simply announces that green is next. Red is still showing, so you still wait — release the handbrake, not the clutch.\n\nA **green arrow in the signal head** means \"traffic is released only in the direction of the arrow\", and no stopping is required. A green arrow shown to the **left, beyond the junction**, tells you the oncoming traffic is being held on red: the protected left turn.\n\nThe **Grünpfeil** is a completely different animal: a green arrow on a **black plate**, screwed to the right of the red light. It permits a right turn while the light is red, but only\n\n- **after you have come to a complete stop**, and\n- **from the right-hand lane**, and\n- if you can rule out obstructing or endangering anybody — above all the pedestrians and cyclists crossing the road you are turning into, who have green.\n\nSince the 2020 amendment there is also a green arrow plate **for cyclists only** (Zeichen 721); it does nothing for car drivers.\n\nWhen a signal head is **dark** it is not regulating anything: the signs at the junction decide, and if there are none, rechts vor links. A **flashing amber light** is a warning of danger (StVO §38), not a grant of priority — same answer, plus slow down.",
+        "callout": {
+          "type": "danger",
+          "text": "Treating the Grünpfeil plate like a green light — turning right on red without a full stop — costs 70 EUR and a point; endanger a pedestrian or cyclist and it is 100 EUR and a point. A red light itself is 90 EUR and a point, and 200 EUR, two points and a month's ban if it had been red for at least a second."
+        }
+      },
+      {
+        "heading": "Turning: who lets whom through",
+        "body": "Most junction crashes are not arguments about signs, they are somebody turning across somebody else. StVO §9 is short and absolute:\n\n- **Announce it early and clearly with the indicator**, and take up position: as far right as possible for a right turn, towards the middle for a left turn (as far left as possible on a one-way street). Check the traffic behind you before moving over and again before turning.\n- **Turning at all:** let oncoming vehicles through. Rail vehicles, mopeds, bicycles and e-scooters (Elektrokleinstfahrzeuge) also when they are travelling **in the same direction as you**, on or beside the carriageway. That is the rule protecting the cyclist coming up your right side while you turn right — in Berlin, assume there is always one.\n- **Pedestrians** get particular consideration; if necessary you wait.\n- **Two oncoming left-turners:** as a rule you turn **in front of each other**, left side to left side — unless the traffic situation or the layout of the junction requires you to pass each other and turn behind one another.\n- **Left-turner versus oncoming right-turner:** the right-turner goes first, you wait.\n- **Lorries over 3.5 t** must turn right at walking pace in built-up areas whenever straight-ahead cyclists or crossing pedestrians are to be expected.\n\nTwo Berlin specials. If you are **driving along tram rails**, in the tram's direction, you must let the rail vehicle through wherever possible (StVO §2) — a tram cannot swerve around you. And a tram does **not** get blanket priority at junctions: signs, lights and rechts vor links apply to it as well; its protection is the turning rule, the rails you are sharing, and the level crossing.\n\nYou may also waive your own priority to untangle a mess — but the other driver is only allowed to rely on that once you have actually made yourselves understood (StVO §11). A vague hand-wave is how two polite people crash.",
+        "callout": {
+          "type": "warning",
+          "text": "A green light does not beat a tram. You may only turn left across the rails if the rail vehicle is not obstructed — 40 tonnes of Straßenbahn needs far more room to stop than you do."
+        }
+      },
+      {
+        "heading": "Roundabouts and level crossings",
+        "body": "A German roundabout signed with **Kreisverkehr (Zeichen 215) above Vorfahrt gewähren (Zeichen 205)** works like this:\n\n- Traffic already on the circular carriageway **has priority**; you give way when entering.\n- Entering, using the indicator is **not allowed** — you cannot honestly announce anything yet, and a left blink would be a lie.\n- Leaving, you **indicate right**, because you are changing direction.\n- You follow the prescribed direction around the island, you must not drive over the island, and **stopping on the circular carriageway is prohibited**.\n- A mini-roundabout with **no** Zeichen 205 is not a special case at all: the ordinary rules apply, so rechts vor links decides — and there the indicator ban does not apply either.\n\n**Level crossings** (Bahnübergang) are the one place where the answer never depends on you. The St Andrew's cross (Andreaskreuz, Zeichen 201) means: **rail vehicles have priority**, always. Approach at a moderate speed. You must wait in front of the cross when a rail vehicle is approaching, when a red flashing light or amber or red lights show, when the barriers are coming down or are closed, when a railway employee signals stop, or when you hear a warning signal such as an approaching train's whistle. From the level-crossing warning sign onwards, up to and including the crossing itself, you must not overtake motor vehicles. And never roll onto the tracks unless you can clear them without stopping.",
+        "sign_ids": ["roundabout", "railroad", "danger"],
+        "callout": {
+          "type": "danger",
+          "text": "The train always wins. A regional train needs up to a kilometre to stop and cannot steer around you. If the barriers are lowering, that decision has already been made for you."
+        }
+      }
+    ],
+    "key_takeaways": [
+      "Chain of command: police officer, then lights, then priority signs, then rechts vor links.",
+      "No signs, no lights? Whoever comes from the right goes first — width, surface and traffic volume are irrelevant.",
+      "Zeichen 206 means a real standstill: at the stop line, otherwise where you can see — even at 3 a.m. on an empty street.",
+      "Zeichen 301 = priority at the next junction only; Zeichen 306 = priority until Zeichen 307 cancels it, after which rechts vor links returns.",
+      "Bending priority road: follow the bend and you keep priority but must indicate; carry straight on and you give way without indicating.",
+      "The Grünpfeil plate is a stop sign with a bonus: full stop, right lane, give way to everything with green, then turn right.",
+      "Dark signal or flashing amber: the signs decide, otherwise rechts vor links — and slow down.",
+      "Roundabout with 215 + 205: give way entering, no indicator entering, indicate right leaving; at an Andreaskreuz the rail vehicle always wins."
+    ],
+    "german_terms": [
+      { "de": "die Vorfahrt", "en": "right of way / priority where roads meet" },
+      { "de": "der Vorrang", "en": "precedence (outside junction priority, e.g. rail traffic)" },
+      { "de": "rechts vor links", "en": "right before left — the default rule at unmarked junctions" },
+      { "de": "die Kreuzung / die Einmündung", "en": "crossroads / T-junction" },
+      { "de": "Vorfahrt gewähren", "en": "give way (Zeichen 205)" },
+      { "de": "Halt! Vorfahrt gewähren", "en": "stop and give way (Zeichen 206)" },
+      { "de": "die Haltlinie", "en": "stop line (Zeichen 294)" },
+      { "de": "die Vorfahrtstraße", "en": "priority road (yellow diamond, Zeichen 306)" },
+      { "de": "die abknickende Vorfahrtstraße", "en": "bending priority road" },
+      { "de": "mäßige Geschwindigkeit", "en": "moderate speed — how you must show that you will wait" },
+      { "de": "sich hineintasten", "en": "to edge forward carefully until you can see" },
+      { "de": "der Grünpfeil", "en": "green arrow plate allowing a right turn on red after stopping" },
+      { "de": "der Kreisverkehr", "en": "roundabout (Zeichen 215)" },
+      { "de": "der Fahrtrichtungsanzeiger / der Blinker", "en": "indicator" },
+      { "de": "das Andreaskreuz", "en": "St Andrew's cross at a level crossing (Zeichen 201)" },
+      { "de": "das Schienenfahrzeug", "en": "rail vehicle (tram or train)" }
+    ]
+  },
+  "questions": [
+    {
+      "id": "m03-priority-q01",
+      "type": "choice",
+      "text": "You reach a crossroads in a Berlin side street. There are no traffic lights, no priority signs and no priority markings. Who has priority?",
+      "options": [
+        { "text": "Whoever approaches from the right.", "correct": true },
+        { "text": "Whoever is on the wider, better-surfaced road.", "correct": false },
+        { "text": "Whoever reached the junction first.", "correct": false }
+      ],
+      "points": 5,
+      "pool": "grund",
+      "explanation": "Where nothing else regulates the junction, the basic rule applies: priority belongs to whoever comes from the right (rechts vor links). Road width, surface quality, traffic volume and the order of arrival play no part whatsoever — a common and expensive misunderstanding among new drivers. The rule applies to every vehicle, including bicycles and e-scooters.",
+      "rule_ref": "StVO §8(1)"
+    },
+    {
+      "id": "m03-priority-q02",
+      "type": "choice",
+      "text": "Which of these road users must give way to you, even though they are approaching from your right?",
+      "options": [
+        { "text": "A car coming out of a forest track (Waldweg) onto the road you are driving on.", "correct": true },
+        { "text": "A car leaving a petrol station forecourt across a lowered kerb.", "correct": true },
+        { "text": "A cyclist on an unmarked side street to your right.", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "Rechts vor links only applies where two roads meet as a junction. A vehicle coming off a field or forest track is expressly excluded from the rule, and a vehicle entering the carriageway from a property, a pedestrian zone, a traffic-calmed area or across a lowered kerb is not at a junction at all — under §10 it must rule out endangering anybody, so it waits for you. A cyclist on a normal unmarked side street to your right, by contrast, is a full participant in rechts vor links and has priority.",
+      "rule_ref": "StVO §8(1), §10"
+    },
+    {
+      "id": "m03-priority-q03",
+      "type": "choice",
+      "text": "You are approaching this sign at 3 a.m. and the crossing road is completely empty. What must you do?",
+      "sign": "stop",
+      "options": [
+        { "text": "Come to a complete standstill, even though there is no other traffic.", "correct": true },
+        { "text": "If no stop line is marked, stop at the point where you can see into the other road.", "correct": true },
+        { "text": "Rolling through slowly is enough, as long as you can see that the other road is clear.", "correct": false }
+      ],
+      "points": 5,
+      "pool": "grund",
+      "explanation": "Zeichen 206 orders two separate things: halt, and give way. The standstill is unconditional — an empty street at night changes nothing. You stop at the stop line (Haltlinie, Zeichen 294) if there is one; if there is none, you stop where the other road can actually be seen. Where the line sits far back behind a hedge you will end up stopping twice: once at the line, then again at the sight line. Rolling through costs 10 EUR, and 70 EUR plus a point in Flensburg once you endanger somebody (85 EUR if there is damage).",
+      "rule_ref": "StVO §41, Anlage 2 Zeichen 206"
+    },
+    {
+      "id": "m03-priority-q04",
+      "type": "choice",
+      "text": "This sign stands immediately before a junction. Which statements are correct?",
+      "sign": "yield",
+      "options": [
+        { "text": "You must show early, by driving at a moderate speed, that you are going to wait.", "correct": true },
+        { "text": "If parked vans block your view, you may edge carefully forward into the junction until you can see.", "correct": true },
+        { "text": "You must always come to a complete standstill, exactly as at a stop sign.", "correct": false }
+      ],
+      "points": 3,
+      "pool": "grund",
+      "explanation": "Zeichen 205 orders you to give way, not to stop. The law says how: signal your intention to wait early through a moderate speed, and only continue once you can see that you will neither endanger nor substantially obstruct the traffic with priority. Where the junction is genuinely blind, you are allowed to feel your way in (sich hineintasten) until you have a view. If the priority road is truly clear you may roll on — the compulsory standstill belongs to Zeichen 206.",
+      "rule_ref": "StVO §8(2), Anlage 2 Zeichen 205"
+    },
+    {
+      "id": "m03-priority-q05",
+      "type": "choice",
+      "text": "How long does the priority given by this sign last?",
+      "sign": "priority_next",
+      "options": [
+        { "text": "It gives priority at the next junction only.", "correct": true },
+        { "text": "The priority road sign (Zeichen 306) instead gives priority at every junction until it is cancelled by Zeichen 307.", "correct": true },
+        { "text": "After the end-of-priority-road sign (Zeichen 307) you must give way to every road you cross.", "correct": false }
+      ],
+      "points": 3,
+      "pool": "grund",
+      "explanation": "Zeichen 301 (Vorfahrt) is a one-shot: priority at the very next crossroads or T-junction, then it is used up. Zeichen 306 (Vorfahrtstraße), the yellow diamond, keeps working junction after junction and is repeated along the route until Zeichen 307 ends it. Ending a priority road does not turn you into a permanent give-way driver, though: from Zeichen 307 onwards the ordinary rule applies again, so unless new signs appear it is rechts vor links.",
+      "rule_ref": "StVO §8(1), §42, Anlage 3 Zeichen 301, 306, 307"
+    },
+    {
+      "id": "m03-priority-q06",
+      "type": "choice",
+      "text": "You are on a priority road that bends to the left at the junction ahead (abknickende Vorfahrtstraße), and you want to follow the bend. What applies?",
+      "options": [
+        { "text": "You must indicate left, even though you have priority.", "correct": true },
+        { "text": "You keep priority over traffic on the road that continues straight ahead.", "correct": true },
+        { "text": "Because you have priority, you may follow the bend without using the indicator.", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "On a bending priority road the plate underneath the yellow diamond shows the course of the priority road with a thick line — and whoever travels along that thick line keeps priority, including around the corner. Priority does not excuse you from the indicator: anyone changing direction must announce it early and clearly, so a left blink is compulsory here. Mirror image: a driver who carries straight on is leaving the priority road, so they do not indicate but must give way to the traffic following the bend.",
+      "rule_ref": "StVO §9(1), §42, Anlage 3 Zeichen 306 with Zusatzzeichen"
+    },
+    {
+      "id": "m03-priority-q07",
+      "type": "choice",
+      "text": "What do these traffic light signals order?",
+      "options": [
+        { "text": "Amber: wait in front of the junction for the next signal.", "correct": true },
+        { "text": "Red and amber together: green is coming next, but you must still wait.", "correct": true },
+        { "text": "Green: the junction belongs to you, so you may turn left without letting oncoming traffic through.", "correct": false }
+      ],
+      "points": 3,
+      "pool": "grund",
+      "explanation": "The German phase order is green, amber, red, red-and-amber together, green. Amber is not an invitation to hurry: it orders you to wait in front of the junction. Red and amber only announces the coming green — the red is still lit, so the vehicle stays put. And green means no more than \"traffic is released\": all the turning duties remain, so a left turn still waits for oncoming vehicles, cyclists and pedestrians.",
+      "rule_ref": "StVO §37(2)"
+    },
+    {
+      "id": "m03-priority-q08",
+      "type": "choice",
+      "text": "A green arrow on a black plate (Grünpfeil) is fixed to the right of the red light. What does it allow you to do?",
+      "options": [
+        { "text": "Turn right on red, but only after coming to a complete stop.", "correct": true },
+        { "text": "Turn right only from the right-hand lane, and only if you obstruct and endanger nobody — pedestrians and cyclists crossing with green included.", "correct": true },
+        { "text": "Treat it like a green light and turn right without stopping whenever nothing is coming.", "correct": false }
+      ],
+      "points": 5,
+      "pool": "grund",
+      "explanation": "The Grünpfeil plate is best understood as a stop sign with a bonus. The turn on red is only permitted after the vehicle has genuinely stopped, it must be made from the right-hand lane, and you must be able to rule out obstructing or endangering the traffic that has green — above all people on foot and on bikes crossing the road you are turning into. Sailing through without stopping costs 70 EUR and a point; endangering someone makes it 100 EUR and a point. Since 2020 there is also a version restricted to cyclists (Zeichen 721), which gives car drivers nothing.",
+      "rule_ref": "StVO §37(2), Zeichen 720"
+    },
+    {
+      "id": "m03-priority-q09",
+      "type": "choice",
+      "text": "You approach a junction where the traffic light is dark, or is showing a flashing amber light. What applies?",
+      "options": [
+        { "text": "The priority signs at the junction decide; if there are none, rechts vor links.", "correct": true },
+        { "text": "A flashing amber light is a warning of danger and does not grant anybody priority.", "correct": true },
+        { "text": "A flashing amber light means your road is now temporarily the priority road.", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "Traffic lights only override priority signs and priority rules while they are actually signalling. A dark signal head regulates nothing, so you fall back to the next level of the hierarchy: the signs at the junction, and where there are none, rechts vor links. A flashing amber light is a warning of danger, not a signal that hands out priority — it tells you to slow down and be ready to give way, exactly as if the light were not there.",
+      "rule_ref": "StVO §37(1), §38(3), §8"
+    },
+    {
+      "id": "m03-priority-q10",
+      "type": "choice",
+      "text": "You are entering a roundabout signed with Kreisverkehr (Zeichen 215) above a give-way sign (Zeichen 205). Which statements are correct?",
+      "sign": "roundabout",
+      "options": [
+        { "text": "You must give way to the traffic already on the circular carriageway.", "correct": true },
+        { "text": "You must not use the indicator when entering, but you indicate right when leaving.", "correct": true },
+        { "text": "Parking on the circular carriageway is allowed if the roundabout is wide enough.", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "This sign combination is the whole rule set in two plates: circulating traffic has priority, so you wait at the entry. Using the indicator on the way in is expressly prohibited — you cannot yet announce anything useful, and a left blink would actively mislead. On the way out you are changing direction, so you indicate right. Zeichen 215 also orders you to follow the prescribed direction around the island, forbids driving over the island and forbids stopping on the circular carriageway, so parking there is out of the question. A mini-roundabout without Zeichen 205 is a different animal: there the ordinary rules, including rechts vor links, apply.",
+      "rule_ref": "StVO §8(1a), Anlage 2 Zeichen 215"
+    },
+    {
+      "id": "m03-priority-q11",
+      "type": "choice",
+      "text": "You want to turn left at a junction. A car coming towards you is also indicating left. What is correct?",
+      "options": [
+        { "text": "As a rule the two of you turn in front of each other, left side passing left side.", "correct": true },
+        { "text": "If the traffic situation or the layout of the junction requires it, you pass each other first and turn behind one another.", "correct": true },
+        { "text": "The oncoming left-turner must always let you go first because you are coming from their right.", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "Two oncoming left-turners have equal rights, so the law prescribes the geometry rather than an order: they turn in front of each other (voreinander), passing left side to left side, which keeps both of them out of the middle of the junction. Only where the traffic situation or the shape of the junction demands it — a tram track, a raised island, a staggered layout — do they pass each other and turn behind one another (hintereinander). The idea that one of them has rechts vor links priority is simply wrong: rechts vor links deals with roads meeting, not with two drivers facing each other.",
+      "rule_ref": "StVO §9(4)"
+    },
+    {
+      "id": "m03-priority-q12",
+      "type": "choice",
+      "text": "You are turning right out of a Berlin main road into a side street. Which duties apply?",
+      "options": [
+        { "text": "You must let a cyclist who is going straight on, on or beside the carriageway to your right, pass first.", "correct": true },
+        { "text": "You must take particular care of pedestrians crossing the side street, and wait if necessary.", "correct": true },
+        { "text": "A cyclist travelling in the same direction as you loses priority as soon as you have indicated.", "correct": false }
+      ],
+      "points": 5,
+      "pool": "grund",
+      "explanation": "When you turn, you must let oncoming vehicles through — and rail vehicles, mopeds, bicycles and e-scooters also when they are travelling in the same direction as you, on or beside the carriageway. That is the rule that protects the cyclist rolling up your right-hand side, and in Berlin you should simply assume one is there. Pedestrians crossing the road you are turning into get particular consideration; if necessary you wait. Indicating announces your intention, it does not transfer anybody's priority to you. Lorries over 3.5 t must even take the right turn at walking pace in built-up areas where straight-ahead cyclists or crossing pedestrians are to be expected.",
+      "rule_ref": "StVO §9(3), §9(6)"
+    },
+    {
+      "id": "m03-priority-q13",
+      "type": "choice",
+      "text": "You are driving along a Berlin street with tram rails in it. What is correct about the tram (Straßenbahn)?",
+      "options": [
+        { "text": "Driving in the tram's direction along its rails, you must let the rail vehicle through wherever possible.", "correct": true },
+        { "text": "Before turning you must let rail vehicles through, including a tram running in the same direction as you.", "correct": true },
+        { "text": "Being a rail vehicle, a tram has priority at every junction, even against a priority road.", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "Trams get two specific protections rather than blanket priority. First, vehicles travelling in the longitudinal direction of a tram line must let the rail vehicle pass wherever possible — it cannot steer around you. Second, anyone turning must let rail vehicles through, whether they come towards you or run in your own direction. Away from those situations a tram is bound by lights, priority signs and rechts vor links like everybody else, so a tram emerging from a side street with a give-way sign has to wait. The true \"always wins\" case is the level crossing.",
+      "rule_ref": "StVO §2(3), §9(3)"
+    },
+    {
+      "id": "m03-priority-q14",
+      "type": "choice",
+      "text": "You are approaching a level crossing marked with the St Andrew's cross (Andreaskreuz). Which statements are correct?",
+      "sign": "railroad",
+      "options": [
+        { "text": "Rail vehicles have priority, and you may only approach at a moderate speed.", "correct": true },
+        { "text": "You must wait in front of the cross if the barriers are coming down, if a red light shows or flashes, or if you hear an approaching train's whistle.", "correct": true },
+        { "text": "Between the level-crossing warning sign and the rails you may overtake a slow lorry if the road ahead is clear.", "correct": false }
+      ],
+      "points": 5,
+      "pool": "grund",
+      "explanation": "At a level crossing the priority question is never open: rail vehicles have precedence, and you must approach at a moderate speed. You wait in front of the Andreaskreuz whenever a rail vehicle is approaching, when a red flashing light or amber or red lights show, when barriers are lowering or closed, when a railway employee signals stop, or when you hear a warning signal such as a whistle. Overtaking motor vehicles is prohibited from the level-crossing warning sign right up to and including the crossing itself — and you never roll onto the rails unless you can clear them without stopping.",
+      "rule_ref": "StVO §19(1), §19(2)"
+    },
+    {
+      "id": "m03-priority-q15",
+      "type": "choice",
+      "text": "A police officer is directing traffic at a junction. What is correct?",
+      "options": [
+        { "text": "An arm held out sideways across your direction of travel means: halt before the junction.", "correct": true },
+        { "text": "One arm raised means: wait in front of the junction for the next signal.", "correct": true },
+        { "text": "If the officer's signal contradicts the traffic light, the traffic light wins.", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "The signals and instructions of police officers must be followed, and they take precedence over all other orders and rules — lights and signs included. So if an officer waves you across a red light, you go, and it is not a red-light offence. Learn the two arm positions: an arm (or both arms) stretched out sideways across your direction of travel means halt before the junction, while the traffic to the officer's sides is being released; one arm raised means wait in front of the junction for the next signal, which is exactly what amber orders.",
+      "rule_ref": "StVO §36"
+    },
+    {
+      "id": "m03-priority-q16",
+      "type": "number",
+      "text": "Within how many metres before and after a junction is parking prohibited, measured from the point where the kerb edges intersect (ordinary case, with no cycle path alongside)?",
+      "answer_number": 5,
+      "unit": "m",
+      "points": 3,
+      "pool": "grund",
+      "explanation": "Parking is banned within 5 m before and after a crossroads or T-junction, measured from where the edges of the carriageways intersect. The reason is pure geometry: a car parked in the corner hides exactly the cyclist or child you most need to see. Since 2020 the distance is 8 m before the junction wherever a structurally built cycle path runs to the right of the carriageway in your direction of travel — worth remembering in Berlin, where such cycle paths are everywhere.",
+      "rule_ref": "StVO §12(3) Nr. 1"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- viewport-fit=cover is required for env(safe-area-inset-*) to resolve on iOS;
+     without it the fixed bottom tab bar sits in the home-indicator gesture strip. -->
+<!-- Content-Security-Policy. script-src is strict because this app has NO inline
+     script — the only JS is js/app.js as a module plus Leaflet from unpkg — so an
+     injected <script> cannot execute even if markup escaping were ever bypassed.
+     style-src needs 'unsafe-inline' because the views use style="" attributes
+     throughout; style injection is far lower severity than script injection.
+     img-src needs data: for the CSS mask-image icons and the inline noise texture. -->
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self' https://unpkg.com;
+  style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com;
+  font-src 'self' https://fonts.gstatic.com;
+  img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org;
+  connect-src 'self';
+  object-src 'none';
+  base-uri 'none';
+  form-action 'none'">
+<!-- frame-ancestors cannot be set from a <meta> tag; add this response header at
+     deploy time to stop the app being framed:
+       Content-Security-Policy: frame-ancestors 'none'
+       X-Frame-Options: DENY -->
+<!-- Do not leak the page we came from to the German authority sites we link out to. -->
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14161f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Führerschein">
+<title>Führerschein Hero · Berlin</title>
+<meta name="description" content="Gamified English-language guide to getting your German class B driving licence in Berlin.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Cinzel: inscriptional display face for headings and primary calls to action.
+     DM Sans: the workhorse. Both degrade to a local stack if the CDN is blocked. -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H"
+  crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<!-- SRI pins the exact bytes: a compromised CDN cannot swap in hostile JS. -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer
+  integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH"
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+<div class="flag-stripe" aria-hidden="true"></div>
+<header class="app-header">
+  <a class="brand" href="#/journey">
+    <span class="brand-emoji" id="brand-mark"></span>
+    <span class="brand-text"><strong>Führerschein Hero</strong><small>Berlin · Klasse B</small></span>
+  </a>
+  <div class="header-stats" id="header-stats"></div>
+</header>
+<nav class="tabs" id="tabs" aria-label="Main navigation">
+  <a href="#/journey" data-route="journey"><span class="tab-ico" data-icon="route"></span><em>Journey</em></a>
+  <a href="#/learn" data-route="learn"><span class="tab-ico" data-icon="book-open"></span><em>Learn</em></a>
+  <a href="#/exam" data-route="exam"><span class="tab-ico" data-icon="clipboard-check"></span><em>Exam</em></a>
+  <a href="#/map" data-route="map"><span class="tab-ico" data-icon="map-pin"></span><em>Places</em></a>
+  <a href="#/stats" data-route="stats"><span class="tab-ico" data-icon="trophy"></span><em>Progress</em></a>
+  <a href="#/glossary" data-route="glossary"><span class="tab-ico" data-icon="languages"></span><em>Glossary</em></a>
+</nav>
+<main id="view" class="view" tabindex="-1"></main>
+<div id="modal-root"></div>
+<div id="toast-root" aria-live="polite"></div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+{
+  "id": "m09-parking",
+  "order": 9,
+  "title": "Parking, Stopping & Securing",
+  "german": "Halten & Parken",
+  "icon": "🅿️",
+  "category": "grund",
+  "lesson": {
+    "intro": "Standing still is a legal act in Germany, and the law gives it two names. **Stopping** (*Halten*) is a short, supervised pause: you are still behind the wheel and could move off at once. **Parking** (*Parken*) begins the moment you either leave the vehicle or stand still for longer than three minutes. Almost everything in this module hangs on that one line, because German traffic law is full of places that allow the first and forbid the second.\n\nBerlin turns the theory into sport. Trams that cannot swerve around you, cycle lanes painted along half the city, *Ordnungsamt* staff on foot with a printer, and paid-parking zones stretching well beyond the Ringbahn. The good news: the rules live almost entirely in **StVO §12** plus a small family of signs. Learn the three-minute rule, learn which bans are absolute, and this becomes one of the easiest exam blocks you will meet."
+    ,
+    "sections": [
+      {
+        "heading": "Three minutes, or one open door",
+        "body": "The definition is one sentence long: *\"Wer sein Fahrzeug verlässt oder länger als drei Minuten hält, der parkt.\"* Whoever leaves their vehicle, **or** stands still longer than three minutes, is parking.\n\nNotice that there are two triggers and either one is enough on its own:\n\n- **The clock.** Over three minutes at the kerb is parking, even if you never unbuckle your seatbelt.\n- **The door.** Step away from the car and you are parking immediately, because you can no longer drive off when someone needs the space. Twenty seconds in the *Spätkauf* counts.\n\nSo *Halten* is dropping a passenger off, waiting for a gap, handing a crate through the window — with you in the driver's seat, engine running or not. Everything else is *Parken*.\n\nThere is a third thing that looks like stopping but legally is not: **traffic-forced standing still** (*verkehrsbedingtes Halten*), at a red light, in a jam, behind a turning lorry. That is not *Halten* in the sense of §12 at all, and it stays lawful even inside a no-stopping zone. You can never be fined for obeying a traffic light.",
+        "callout": {
+          "type": "rule",
+          "text": "Two triggers, one result: leave the vehicle OR stand still more than three minutes, and you are parking. There is no \"I was only a minute\" defence once you have walked away."
+        }
+      },
+      {
+        "heading": "Places where even stopping is forbidden",
+        "body": "These are the absolute bans. No three-minute grace, no unloading, no hazard lights as a magic pass. **StVO §12(1)** names five of them:\n\n- **Narrow and blind stretches** (*an engen und an unübersichtlichen Straßenstellen*) — which includes just over the crest of a hill (*Kuppe*), where the driver behind sees you far too late.\n- **In the area of sharp bends** (*im Bereich von scharfen Kurven*).\n- **On merging and exit lanes** (*Einfädelungs- und Ausfädelungsstreifen*) at slip roads.\n- **On level crossings** (*auf Bahnübergängen*).\n- **In front of and inside officially marked fire service accesses** (*Feuerwehrzufahrten*).\n\nFive more absolute stopping bans come from other corners of the rulebook and are exam favourites:\n\n- **Zebra crossings** (Zeichen 293): no stopping on the crossing and none **within 5 m before** it, so that following drivers can still see who is waiting at the kerb. Overtaking there is banned too.\n- **Motorways and expressways** (*Autobahn*, *Kraftfahrstraße*): stopping is prohibited, **hard shoulder included**. That strip is for genuine emergencies only.\n- **Cycle protective strips** (*Schutzstreifen*) — the cycle lane bordered by a **broken** white line. Stopping there is forbidden outright, not merely parking. Berlin has painted these along hundreds of streets.\n- **Zigzag boundary markings** (*Grenzmarkierung*, Zeichen 299) — the wavy white lines you see at bus stops and across fire accesses. Inside them, neither stopping nor parking is allowed.\n- **The path of a tram** (*im Fahrraum von Schienenfahrzeugen*). A tram cannot steer around your car and needs a long way to stop. Staying in the driver's seat changes nothing.\n\nOne more with a number worth remembering: you must not stop **within 10 m in front of a St Andrew's cross** (*Andreaskreuz*, Zeichen 201) if your vehicle would hide the sign from other drivers.",
+        "sign_ids": ["pedestrian_crossing", "railroad", "autobahn", "kraftfahrstrasse", "no_stopping"],
+        "callout": {
+          "type": "danger",
+          "text": "A blocked Feuerwehrzufahrt is the one parking offence that kills people. If engines are actually held up you are looking at a three-figure fine, a point in Flensburg and an immediate tow."
+        }
+      },
+      {
+        "heading": "Places where you may stop but not park",
+        "body": "**StVO §12(3)** is the softer list. A brief supervised pause is lawful; walking away is not.\n\n- **Junctions**: no parking **5 m before and 5 m after** a crossroads or T-junction, measured from the points where the **carriageway edges** intersect — the corner, not the middle of the road. Where a cycle path is **structurally built** alongside the right-hand side of the carriageway in your direction of travel, the protected zone **in front of** the junction grows to **8 m**. A car in the corner is exactly what hides a cyclist going straight on from a turning driver.\n- **Marked bays**: not in a way that prevents marked parking areas from being used — no straddling two bays, no blocking the entrance to one.\n- **Driveways** (*Grundstücksein- und -ausfahrten*): never in front of one, and on **narrow** carriageways not opposite one either, because a car coming out needs room to swing.\n- **Manhole covers**: narrower than most people assume. The ban on parking over covers and other closures applies **where pavement parking is permitted** by Zeichen 315 or a bay marking — utility crews have to be able to open them.\n- **Dropped kerbs** (*Bordsteinabsenkungen*): the lowered kerb is a ramp for wheelchairs, rollators and buggies. Parking across one shuts that ramp.\n\nThree more parking bans arrive with signs and markings:\n\n- **Bus stops** (Zeichen 224): no parking **15 m before and 15 m after** the sign, so a bus can pull in flush to the kerb.\n- **Level crossings** (Zeichen 201): no parking within **5 m** of the St Andrew's cross inside a built-up area, and within **50 m** of it outside one.\n- **Solid lane-boundary lines** (*Fahrstreifenbegrenzung*, Zeichen 295): you must not park on the carriageway if less than **3 m** of lane would remain between your car and the line.\n\nAnd two that only affect big vehicles, but do get examined: lorries over **7.5 t** and trailers over **2 t** may not regularly park in residential, spa and clinic areas between **22:00 and 06:00** or on Sundays and public holidays, and a **trailer left without its towing vehicle** may not stand for longer than **two weeks**.",
+        "sign_ids": ["parking", "no_parking", "railroad"],
+        "callout": {
+          "type": "tip",
+          "text": "Number sheet: junction 5 m (8 m in front where a cycle path runs alongside) · bus stop sign 15 m either side · zebra crossing 5 m before · level crossing 5 m in town, 50 m out of town · 3 m of lane must stay clear beside a solid line."
+        }
+      },
+      {
+        "heading": "Which side, which surface, how tidy",
+        "body": "**Right side, as a rule.** You park on the right-hand verge or parking strip if it is firm enough, otherwise pull in to the right-hand edge of the carriageway — and the same applies when you only want to stop. Two situations let you use the **left**: where **rails lie on the right-hand side**, and in **one-way streets**, where stopping and parking on the left is expressly allowed. (Taxis anywhere in Germany get a small extra privilege in the same paragraph: they may let passengers in and out alongside vehicles already standing at the kerb when traffic permits.)\n\n**Pavements are not car parks.** Parking on the *Gehweg* is lawful only where a sign (Zeichen 315) or a bay marking says so, and only for vehicles up to **2.8 t** — and then you must use the **right-hand** pavement (either side in a one-way street). \"There was still room for pedestrians\" is not a legal test; it is a guess, and it fails as soon as someone arrives with a pram and a toddler.\n\n**Cycle infrastructure is off limits.** Cycle paths and cycle lanes are not for motor vehicles at all, and the dashed *Schutzstreifen* is a no-stopping zone. In Berlin this is the single most enforced parking offence: 55 € for parking there, 70 € if you obstruct someone — and that is where the **point in Flensburg** appears — 70 € if the car stands for over an hour, and 80 € plus a point for both together.\n\n**No second row.** Double-parking beside cars already at the kerb breaks the keep-right rule and is fined in its own right. Hazard warning lights are a warning device, not a permit.\n\n**Leave room to pass.** Your own car can turn an ordinary street into a legally \"narrow stretch\", where stopping is banned outright. The working figure is around **3 m** of clear lane — a lorry may be 2.55 m wide, and a fire engine that cannot get through turns a whole street into a dead end.\n\n**Two closing manners rules.** Park **space-savingly** (*platzsparend parken*), so the next car still fits. And at a free space, priority belongs to **whoever reaches it first directly** — a priority you keep while you drive past it and reverse in, or shunt back and forth to get in. The driver who noses in from the other direction is in the wrong.",
+        "sign_ids": ["one_way", "bike_path", "pedestrian_path"],
+        "callout": {
+          "type": "warning",
+          "text": "Reversing into a space is not surrendering it. §12(5) protects your claim while you manoeuvre — but indicate early, or the other driver will genuinely believe you drove past."
+        }
+      },
+      {
+        "heading": "Two signs, one stripe apart — and the P family",
+        "body": "Both no-stopping signs are blue discs with a red border. The number of red bars is the whole exam question.\n\n**Absolutes Haltverbot** (Zeichen 283) — **two** bars crossed in an X. Stopping on the carriageway is forbidden, which means parking is too. No three minutes, no loading, no quick handover. Only traffic-forced halts remain lawful.\n\n**Eingeschränktes Haltverbot** (Zeichen 286) — a **single** diagonal bar. Parking is banned, but you may:\n\n- stop for **up to three minutes**, and\n- let people **get in or out** and **load or unload**, even if that takes longer than three minutes, provided the job is done without dawdling.\n\nBoth apply on the **side of the road where the sign stands**, and run until the next junction or a sign that ends them. Supplementary plates with arrows tell you whether you are at the start, in the middle or at the end of the restricted stretch, and whole-area versions (*Halteverbotszone*) exist. So do the folding signs that appear overnight when a neighbour is moving flat — legally valid, and they are the reason your car vanished.\n\nOn the friendly side, plain white-on-blue **P** (Zeichen 314) permits parking, and **Zeichen 314.1** opens a whole **paid-parking zone** (*Parkraumbewirtschaftungszone*) in which you may only park with a ticket (*Parkschein*) or a parking disc (*Parkscheibe*). Always read the small plates underneath the P: they carry the real conditions — a disc and a maximum duration, ticket hours, or *Bewohner mit Parkausweis* for residents only.\n\nFinally, the **traffic-calmed area** (*verkehrsberuhigter Bereich*, Zeichen 325.1), a Berlin favourite in *Kiez* side streets: walking pace, children may play everywhere, and **parking is allowed only on the marked areas** — with an exception for boarding, alighting, loading and unloading.",
+        "sign_ids": ["no_stopping", "no_parking", "parking", "traffic_calmed"],
+        "callout": {
+          "type": "tip",
+          "text": "Memory hook: one stripe, one thing banned (parking). Two stripes, both banned (stopping and parking)."
+        }
+      },
+      {
+        "heading": "Getting out, locking up, paying up",
+        "body": "**StVO §14** covers the last thirty seconds, and it is stricter than it looks. Anyone getting in or out must do so without endangering others, and the driver leaving a vehicle must take **the measures necessary to prevent accidents or obstruction** — motor vehicles must additionally be **secured against unauthorised use**. In practice:\n\n- **Parking brake** (*Feststellbremse*) firmly on. A lazy handbrake on a slope is not \"secured\".\n- **Engage a gear** — first facing uphill, reverse facing downhill — or **P** in an automatic.\n- **Wheels turned in towards the kerb** on a hill, so that if anything does let go, the car rolls into the kerb instead of into the traffic.\n- **Engine off.** Letting it idle unnecessarily is separately forbidden as avoidable noise and exhaust nuisance.\n- **Lock it, take the key**, and don't leave the vehicle documents inside.\n- **Look before you open the door.** In Berlin a cyclist is always closer than you think, and the liability for a *dooring* collision sits with the person opening the door.\n\n**Lights.** Outside built-up areas a stopped or parked vehicle must be lit by its own light source. Inside a town it is enough to make the side facing the carriageway visible — parking lights or another permitted means — which on a well-lit Berlin street usually means nothing to do at all. Hazard warning lights are for warning of danger, not for overnight parking.\n\n**And then you pay.** Large parts of inner Berlin sit inside numbered *Parkraumbewirtschaftung* zones: buy a *Parkschein* from the machine, lay it face-up on the dashboard, and check the plate for the hours — evenings and Saturdays are often included. Registered residents can apply for a *Bewohnerparkausweis* for a modest fee at their district office; it frees them from the meter in their own zone but reserves them precisely nothing. Enforcement is on foot and relentless, and if you block a driveway, a tram, a cycle lane or a fire access, the tow truck does not wait for you to be found. A *Knöllchen* under the wiper spoils an afternoon. *Abschleppen* — fine, relocation fee and storage, comfortably into three figures — spoils the week.",
+        "callout": {
+          "type": "warning",
+          "text": "The classic towing triggers are all obstruction, not overstaying: driveways, tram tracks, cycle lanes, fire accesses, bus stops and disabled bays."
+        }
+      }
+    ],
+    "key_takeaways": [
+      "Leave the vehicle, or stand still over three minutes, and you are parking — not stopping.",
+      "Traffic-forced halts (red light, jam) are never illegal stopping, even in a no-stopping zone.",
+      "No stopping at all: narrow or blind spots, sharp bends, slip lanes, level crossings, fire accesses, zebra crossings plus 5 m before, motorways including the hard shoulder, Schutzstreifen, tram paths.",
+      "No parking: 5 m each side of a junction (8 m in front where a cycle path runs alongside), driveways, dropped kerbs, marked bays you would block, 15 m either side of a bus stop sign.",
+      "Park on the right; left is allowed only in one-way streets or where rails occupy the right-hand side.",
+      "Pavement and cycle-lane parking is illegal unless a sign or marking allows it — and in Berlin it is the offence most likely to be ticketed.",
+      "Zeichen 283 (two bars) bans stopping and parking; Zeichen 286 (one bar) allows 3 minutes plus boarding and loading.",
+      "Securing means parking brake, gear or P, wheels to the kerb on hills, engine off, locked — and about 3 m of lane left free for everyone else."
+    ],
+    "german_terms": [
+      { "de": "das Halten", "en": "stopping — a pause of up to 3 minutes with the driver staying with the vehicle" },
+      { "de": "das Parken", "en": "parking — leaving the vehicle, or standing still longer than 3 minutes" },
+      { "de": "verkehrsbedingtes Halten", "en": "traffic-forced standing still (red light, queue) — not 'stopping' in law" },
+      { "de": "absolutes Haltverbot", "en": "absolute no-stopping zone (Zeichen 283, two red bars)" },
+      { "de": "eingeschränktes Haltverbot", "en": "restricted no-stopping zone — parking banned (Zeichen 286, one red bar)" },
+      { "de": "die enge Straßenstelle", "en": "narrow stretch of road — stopping prohibited" },
+      { "de": "die Grundstückseinfahrt", "en": "private driveway / property access" },
+      { "de": "die Bordsteinabsenkung", "en": "dropped kerb" },
+      { "de": "die Feuerwehrzufahrt", "en": "fire service access route" },
+      { "de": "der Bahnübergang", "en": "level crossing" },
+      { "de": "das Andreaskreuz", "en": "St Andrew's cross (level crossing sign)" },
+      { "de": "der Fußgängerüberweg", "en": "zebra crossing" },
+      { "de": "der Schutzstreifen", "en": "cycle protective strip (broken white line) — no stopping" },
+      { "de": "der Fahrraum der Schienenfahrzeuge", "en": "the space a tram needs — never stop in it" },
+      { "de": "der Gehweg", "en": "pavement / sidewalk" },
+      { "de": "die Parklücke", "en": "parking space / gap between parked cars" },
+      { "de": "platzsparend parken", "en": "to park space-savingly" },
+      { "de": "die Feststellbremse", "en": "parking brake / handbrake" },
+      { "de": "die Parkraumbewirtschaftung", "en": "managed (paid) parking scheme" },
+      { "de": "der Bewohnerparkausweis", "en": "residents' parking permit" },
+      { "de": "das Abschleppen", "en": "towing away" }
+    ]
+  },
+  "questions": [
+    {
+      "id": "m09-parking-q01",
+      "type": "choice",
+      "text": "You pull in at the kerb in Kreuzberg, stay in the driver's seat with the engine running and wait about five minutes for a friend to come down. What is your legal position?",
+      "options": [
+        { "text": "You are parking: standing still for more than three minutes counts as parking even if you never leave your seat", "correct": true },
+        { "text": "Either exceeding three minutes or leaving the vehicle is enough on its own to turn stopping into parking", "correct": true },
+        { "text": "You are only stopping, because you could drive off immediately at any moment", "correct": false }
+      ],
+      "points": 2,
+      "pool": "grund",
+      "explanation": "The law defines parking with two independent triggers: leaving the vehicle, or standing still longer than three minutes. Five minutes in the seat trips the second one, so this is parking — which matters enormously, because a long list of places allow a short supervised stop but forbid parking. Being ready to drive off only helps you inside the three minutes.",
+      "rule_ref": "StVO §12 Abs. 2"
+    },
+    {
+      "id": "m09-parking-q02",
+      "type": "choice",
+      "text": "At which of these places may you still stop briefly, but never park?",
+      "options": [
+        { "text": "Directly in front of a private driveway", "correct": true },
+        { "text": "In front of a dropped kerb (Bordsteinabsenkung)", "correct": true },
+        { "text": "On a level crossing", "correct": false }
+      ],
+      "points": 3,
+      "pool": "grund",
+      "explanation": "Driveways and dropped kerbs are on the parking-ban list in §12(3): a short supervised stop is lawful, walking away is not. On narrow carriageways the driveway ban even extends to the space opposite, because a car coming out needs room to swing. A level crossing belongs to the other list — §12(1) forbids stopping there at all, and for good reason: a train cannot brake for you.",
+      "rule_ref": "StVO §12 Abs. 1 und 3"
+    },
+    {
+      "id": "m09-parking-q03",
+      "type": "choice",
+      "text": "Where is even a brief stop (Halten) prohibited, not just parking?",
+      "options": [
+        { "text": "On the merging or exit lane (Einfädelungs- oder Ausfädelungsstreifen) of a slip road", "correct": true },
+        { "text": "In the area of a sharp bend", "correct": true },
+        { "text": "Within 15 m of a bus stop sign, when no bus is being obstructed", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "Slip-road lanes and sharp bends are two of the five absolute stopping bans in §12(1), together with narrow or blind stretches (a hill crest counts), level crossings and marked fire service accesses. What they share is that nobody sees you in time. The 15 m zone around a bus stop sign, by contrast, is only a parking ban — so a supervised stop is lawful there as long as no bus needs the kerb.",
+      "rule_ref": "StVO §12 Abs. 1; Anlage 2, Zeichen 224"
+    },
+    {
+      "id": "m09-parking-q04",
+      "type": "choice",
+      "text": "You are looking for a space near a zebra crossing (Fußgängerüberweg). What applies?",
+      "sign": "pedestrian_crossing",
+      "options": [
+        { "text": "You must not stop on the crossing, nor within 5 m before it", "correct": true },
+        { "text": "The cleared space exists so that drivers behind you can still see pedestrians waiting at the kerb", "correct": true },
+        { "text": "Parking on the crossing is acceptable for up to three minutes if you switch on your hazard warning lights", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "The sign rule for a Fußgängerüberweg forbids stopping on the crossing and for 5 m in front of it. The reason is sight lines: a parked car hides a waiting child completely, and the driver behind you has no idea why you are slowing. Overtaking at the crossing is banned for the same reason. Hazard warning lights never convert an illegal place into a legal one.",
+      "rule_ref": "StVO Anlage 2, Zeichen 293; §26 Abs. 3"
+    },
+    {
+      "id": "m09-parking-q05",
+      "type": "number",
+      "text": "On an ordinary street with no cycle path alongside: within how many metres of the points where the carriageway edges intersect — both before and after a junction — is parking prohibited?",
+      "answer_number": 5,
+      "unit": "m",
+      "points": 3,
+      "pool": "grund",
+      "explanation": "Parking is banned for 5 m on each side of a crossroads or T-junction. Measure from the corner where the carriageway edges cross, not from the centre of the road, so the protected area is larger than it looks from the driver's seat. Everything here is about sight lines for turning drivers, cyclists and anyone crossing on foot.",
+      "rule_ref": "StVO §12 Abs. 3 Nr. 1"
+    },
+    {
+      "id": "m09-parking-q06",
+      "type": "number",
+      "text": "A bus stop sign (Zeichen 224) stands at the kerb. Within how many metres before and after the sign is parking prohibited?",
+      "answer_number": 15,
+      "unit": "m",
+      "points": 3,
+      "pool": "grund",
+      "explanation": "A 15 m zone on each side of the stop sign keeps enough kerb free for a bus to pull in straight and let passengers step onto the pavement rather than into the road. Stopping there is still allowed — but only with you in the vehicle and only while no bus needs the space.",
+      "rule_ref": "StVO Anlage 2, Zeichen 224"
+    },
+    {
+      "id": "m09-parking-q07",
+      "type": "choice",
+      "text": "In your direction of travel a cycle path is structurally built alongside the right-hand side of the carriageway. How does that change the no-parking zone at the junction ahead?",
+      "sign": "bike_path",
+      "options": [
+        { "text": "The zone in front of the junction grows from 5 m to 8 m", "correct": true },
+        { "text": "The extra metres exist so that turning drivers can see cyclists riding straight on", "correct": true },
+        { "text": "The wider zone only applies if a no-parking sign additionally confirms it", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "Since the 2020 StVO amendment, the no-parking zone in front of junctions is 8 m instead of 5 m wherever a cycle path is built alongside the carriageway on the right. Turning drivers kept overlooking cyclists coming from behind a parked car, and the extra three metres buy exactly the sight line that was missing. Like every rule in §12(3), it applies by law — no sign is needed.",
+      "rule_ref": "StVO §12 Abs. 3 Nr. 1"
+    },
+    {
+      "id": "m09-parking-q08",
+      "type": "choice",
+      "text": "A blue disc with a red border and two crossed red bars applies on your side of the road. What does it mean?",
+      "sign": "no_stopping",
+      "options": [
+        { "text": "Stopping on the carriageway is prohibited — and therefore parking is too", "correct": true },
+        { "text": "Only parking is prohibited; stopping for up to three minutes remains allowed", "correct": false },
+        { "text": "Only parking is prohibited; loading and unloading remain allowed without a time limit", "correct": false }
+      ],
+      "points": 2,
+      "pool": "grund",
+      "explanation": "Two bars mean the absolute version (absolutes Haltverbot, Zeichen 283): stopping on the carriageway is banned, and since parking is a longer form of standing still, that is out as well. The three-minute allowance and the loading exception belong to the single-bar sign. Standing still because the traffic forces you to — a queue, a red light — is not 'stopping' in this sense and stays lawful.",
+      "rule_ref": "StVO Anlage 2, Zeichen 283"
+    },
+    {
+      "id": "m09-parking-q09",
+      "type": "choice",
+      "text": "A blue disc with a red border and one diagonal red bar applies. Which of these are permitted there?",
+      "sign": "no_parking",
+      "options": [
+        { "text": "Stopping on the carriageway for up to three minutes", "correct": true },
+        { "text": "Letting passengers get in or out, and loading or unloading, even if that takes longer than three minutes", "correct": true },
+        { "text": "Leaving the car for ten minutes to collect a parcel, as long as it stands neatly at the kerb", "correct": false }
+      ],
+      "points": 3,
+      "pool": "grund",
+      "explanation": "One bar is the restricted version (eingeschränktes Haltverbot, Zeichen 286): it bans parking only. You may stop for up to three minutes, and boarding, alighting, loading and unloading are expressly excepted from that limit as long as the job is carried out without delay. Walking off to collect a parcel is parking — you have left the vehicle — and that is precisely what this sign forbids.",
+      "rule_ref": "StVO Anlage 2, Zeichen 286"
+    },
+    {
+      "id": "m09-parking-q10",
+      "type": "choice",
+      "text": "A Berlin street has tram rails running along the right-hand side of the carriageway. What applies to you?",
+      "options": [
+        { "text": "You must not stop anywhere in the space a tram needs (Fahrraum der Schienenfahrzeuge)", "correct": true },
+        { "text": "Because rails occupy the right-hand side, you may stop and park on the left-hand side here", "correct": true },
+        { "text": "Standing on the rails is acceptable as long as you stay in the car and could move off at once", "correct": false }
+      ],
+      "points": 5,
+      "pool": "grund",
+      "explanation": "A tram cannot steer around an obstacle and needs a long distance to stop, so the ban on standing in its path is absolute — remaining in the driver's seat changes nothing, because by the time the driver sounds the bell it is already too late. In exchange, the keep-right rule is lifted: where rails lie on the right, and in one-way streets, stopping and parking on the left are allowed.",
+      "rule_ref": "StVO §12 Abs. 4"
+    },
+    {
+      "id": "m09-parking-q11",
+      "type": "choice",
+      "text": "Saturday evening in Prenzlauer Berg, no space anywhere. Which statements are correct?",
+      "options": [
+        { "text": "Parking on the pavement is only allowed where a sign or bay marking permits it, and then on the right-hand pavement (either side in a one-way street)", "correct": true },
+        { "text": "Even a brief stop on a cycle protective strip marked with a broken line is prohibited", "correct": true },
+        { "text": "Double-parking in the second row is acceptable with hazard warning lights on, provided you stay in the car", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "Pavements belong to pedestrians unless a sign or marking says otherwise, and where pavement parking is allowed the law still tells you which pavement to use. Stopping on a Schutzstreifen has been banned outright since the 2020 amendment, because drivers used to invoke the three-minute rule and push cyclists into moving traffic. Second-row parking breaks the duty to keep to the right-hand edge, and hazard lights are a warning device, not a permit.",
+      "rule_ref": "StVO §12 Abs. 4 und 4a; Anlage 3, Zeichen 340"
+    },
+    {
+      "id": "m09-parking-q12",
+      "type": "choice",
+      "text": "On the Autobahn you would like to pull over briefly to sort out your navigation. What applies?",
+      "sign": "autobahn",
+      "options": [
+        { "text": "Stopping is prohibited on motorways and expressways, including on the hard shoulder", "correct": true },
+        { "text": "The hard shoulder may only be used in a genuine emergency, such as a breakdown", "correct": true },
+        { "text": "A stop of up to three minutes on the hard shoulder is allowed, because it is not part of the carriageway", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "The ban is explicit and names the hard shoulder, because traffic arriving at 130 km/h has almost no time to register a stationary car. Emergencies are the only exception, and then hazard lights, high-visibility waistcoat and warning triangle go with it. For anything voluntary — navigation, a phone call, a sandwich — take the next exit, service area or rest area.",
+      "rule_ref": "StVO §18 Abs. 8"
+    },
+    {
+      "id": "m09-parking-q13",
+      "type": "choice",
+      "text": "The only gap in your street is directly in front of an officially marked fire service access (Feuerwehrzufahrt). Your neighbours park there all the time. What applies?",
+      "options": [
+        { "text": "You must not even stop there — the ban is absolute", "correct": true },
+        { "text": "If your car actually keeps emergency vehicles from getting through, expect a heavy fine, a point in Flensburg and to be towed", "correct": true },
+        { "text": "It is acceptable at night and at weekends, because nobody is working in the building then", "correct": false }
+      ],
+      "points": 5,
+      "pool": "grund",
+      "explanation": "A marked fire service access is one of the five absolute stopping bans, and it does not keep office hours — fires and heart attacks happen at three in the morning. Because the obstruction is what matters, the authorities tow without waiting to trace the driver, and the sanction rises steeply once appliances are genuinely held up. What the neighbours do is not a legal argument.",
+      "rule_ref": "StVO §12 Abs. 1 Nr. 5"
+    },
+    {
+      "id": "m09-parking-q14",
+      "type": "choice",
+      "text": "You park on a steep street facing downhill and are about to leave the car. Which measures are required or sensible?",
+      "options": [
+        { "text": "Apply the parking brake firmly and engage a gear — reverse when facing downhill — or select P in an automatic", "correct": true },
+        { "text": "Turn the front wheels in towards the kerb, so that a rolling car is caught by the kerb instead of the traffic", "correct": true },
+        { "text": "Leave the engine idling so the car stays warm while you are away", "correct": false }
+      ],
+      "points": 4,
+      "pool": "grund",
+      "explanation": "When you leave a vehicle you must take the measures needed to prevent accidents and obstruction, and secure the vehicle against unauthorised use. On a slope that means brake plus gear (first uphill, reverse downhill, or P) and wheels steered into the kerb as a second line of defence. An idling engine is a separate offence — avoidable noise and exhaust nuisance — and an unattended running car is an open invitation to a thief.",
+      "rule_ref": "StVO §14 Abs. 2; §30 Abs. 1"
+    },
+    {
+      "id": "m09-parking-q15",
+      "type": "choice",
+      "text": "You have driven up to a free space and stopped just past it, ready to reverse in. A driver coming the other way now wants the same space. Who has priority?",
+      "options": [
+        { "text": "You do — you reached the space first directly, and you keep that priority while you reverse in", "correct": true },
+        { "text": "The other driver, because they can drive in forwards and would block traffic for less time", "correct": false },
+        { "text": "Whichever vehicle happens to be closer to the kerb at that moment", "correct": false }
+      ],
+      "points": 3,
+      "pool": "grund",
+      "explanation": "Priority at a parking space belongs to whoever reaches it first directly, and §12(5) expressly preserves that priority while you drive past the space to reverse in, or make any other extra manoeuvre to get into it. (The statute stops there; the courts apply the same reasoning to a driver who is already waiting for a space that is just being vacated.) Nosing in from the other direction creates no better claim. Indicate early so your intention is obvious, and once you are in, park space-savingly so the next car still fits.",
+      "rule_ref": "StVO §12 Abs. 5 und 6"
+    }
+  ]
+}
