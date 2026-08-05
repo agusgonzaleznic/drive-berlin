@@ -35,7 +35,7 @@ This MIT License covers the SOFTWARE in this repository:
     package.json
 
 The EDITORIAL CONTENT is licensed separately, under Creative Commons
-Attribution 4.0 International (CC BY 4.0) — see LICENSE-CONTENT:
+Attribution 4.0 International (CC BY 4.0). See LICENSE-CONTENT:
 
     docs/**
     src/data/**
@@ -43,7 +43,7 @@ Attribution 4.0 International (CC BY 4.0) — see LICENSE-CONTENT:
 THIRD-PARTY MATERIAL is NOT covered by either license and remains under its
 own terms. Nothing here relicenses it:
 
-    src/assets/icons/**   Lucide icons — ISC License
+    src/assets/icons/**   Lucide icons, ISC License
                           see src/assets/icons/LICENSE.lucide
     Leaflet 1.9.4         BSD-2-Clause (loaded from CDN, not vendored)
     Cinzel, DM Sans       SIL Open Font License 1.1 (loaded from CDN)

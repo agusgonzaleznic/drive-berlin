@@ -48,7 +48,7 @@ await page.waitForTimeout(600);
 
 // Must match the `routes` map in src/js/app.js. app.js falls back to `journey`
 // for anything unknown (`routes[route] || journey`), so a typo here produces a
-// screenshot of the wrong page *silently* — which is exactly how an earlier run
+// screenshot of the wrong page *silently*, which is exactly how an earlier run
 // shipped a "quiz" shot that was really the journey view. Validated below.
 const KNOWN_ROUTES = ['journey', 'task', 'learn', 'lesson', 'practice', 'exam',
                       'stats', 'glossary', 'map', 'welcome', 'phrases'];
@@ -90,8 +90,8 @@ for (const [name, hash, act] of SHOTS) {
   console.log('wrote', name + '.jpg');
 }
 
-// Guard 2: two identical files means two hashes rendered the same view — the
-// symptom a wrong route produces even when the route name itself looks valid.
+// Guard 2: two identical files means two hashes rendered the same view. That is
+// the symptom a wrong route produces even when the route name itself looks valid.
 const seen = new Map();
 let dupes = 0;
 for (const [name, path] of written) {
