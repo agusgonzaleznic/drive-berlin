@@ -1,0 +1,82 @@
+# Publishes the static site in src/ to GitHub Pages.
+#
+# WHY EVERY ACTION IS PINNED TO A FULL 40-CHARACTER COMMIT SHA
+# Tags such as v4 are mutable git refs. Anyone who controls an action's
+# repository, or anyone who steals a maintainer's credentials, can move a tag to
+# point at different code. A workflow that trusts a tag therefore runs whatever
+# that tag points at today, not the code that was reviewed when it was adopted.
+# Because these jobs run with a GITHUB_TOKEN and can publish this site, a
+# repointed tag would be arbitrary code execution inside our release path. A
+# commit SHA is content-addressed and immutable, so pinning to one freezes the
+# exact bytes that run. The trailing comment records the human-readable release
+# the SHA was resolved from. When bumping, re-resolve the SHA from the API and
+# update the comment with it: never hand-edit either half on its own.
+#
+# WHY PERMISSIONS START EMPTY
+# The default GITHUB_TOKEN can be granted broad write access to the repository.
+# This repository is public, so any action in the graph, including transitive
+# ones we did not audit, inherits whatever the token holds. Top-level
+# `permissions: {}` denies every scope, then each job re-grants only what it
+# genuinely needs. If a step ever tries to reach beyond that, it fails loudly
+# instead of succeeding quietly.
+
+name: Deploy to Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Deny all by default. Scopes are granted per job below.
+permissions: {}
+
+# A Pages deployment replaces the whole live site, so two overlapping runs can
+# interleave and leave a half-updated site published. Queue them rather than
+# cancelling: cancel-in-progress would abandon a deploy partway through, which
+# is the exact corruption this guards against.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Package src/
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # Do not leave the token in .git/config for later steps to pick up.
+          # Nothing here needs to push.
+          persist-credentials: false
+
+      - name: Configure Pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+
+      # There is no build step. The app is plain HTML, CSS and ES modules, so
+      # src/ is uploaded exactly as it sits in the repository.
+      - name: Upload src/ as the Pages artifact
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: src
+
+  deploy:
+    name: Deploy to Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: read
+      # Create and publish the Pages deployment.
+      pages: write
+      # Mint the OIDC token that deploy-pages exchanges for its deploy
+      # credential. Without this the deployment cannot authenticate.
+      id-token: write
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0

@@ -1,0 +1,50 @@
+# Supply-chain hygiene.
+#
+# This project has ZERO runtime dependencies. The only npm package is playwright-core,
+# a dev dependency used to drive system Chrome for the browser test suites. So the npm
+# ecosystem here is small, and an update to it can only affect contributors running the
+# tests, never a visitor loading the app.
+#
+# GitHub Actions is the surface that actually matters. Actions run with access to the
+# repository and to the Pages deployment, so a hijacked tag in a third-party action is
+# a real supply-chain risk.
+#
+# IMPORTANT: pin every action to a full 40-character commit SHA, never to a tag or a
+# major version. A tag is mutable and can be repointed at hostile code by whoever
+# controls the upstream repository; a SHA cannot. Dependabot understands SHA pins and
+# will bump the SHA for you, keeping the human-readable version in a trailing comment:
+#
+#     uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8  # v5.0.1
+#
+# Dependabot updates the SHA and the comment. A HUMAN must still review what changed
+# between the two commits before merging, because the whole point of the SHA pin is
+# that we approve specific bytes rather than trusting a moving label.
+
+version: 2
+
+updates:
+  # Dev tooling. Root package.json, currently playwright-core only.
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(deps)"
+    labels:
+      - "dependencies"
+
+  # Workflow actions, including the GitHub Pages deployment workflow.
+  # Read the diff between the old and new SHA before merging these.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(actions)"
+    labels:
+      - "dependencies"
+      - "github-actions"

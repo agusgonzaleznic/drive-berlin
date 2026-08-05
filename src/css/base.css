@@ -9,6 +9,91 @@
    Every colour pair below carries its MEASURED WCAG contrast ratio. Dark themes
    are forgiving, so there is no excuse for missing 4.5:1 on body text.
    ========================================================================== */
+
+/* ============================================================================
+   Fonts, served from this origin and nowhere else
+   ----------------------------------------------------------------------------
+   These faces used to be fetched from fonts.googleapis.com. That request hands
+   every visitor's IP address to Google before a single glyph is drawn, which
+   LG München I held unlawful without consent (3 O 17493/20, January 2022), and
+   it flatly contradicts the promise this app makes that nothing is uploaded
+   anywhere. Self-hosting also deletes an origin whose compromise could have
+   served hostile CSS.
+
+   Only the faces the stylesheets actually select are here:
+     Cinzel  700           headings, the wordmark, .eyebrow, .btn-amber
+     DM Sans 400 to 700    body text, and every font-weight the views set inline
+     DM Sans italic 400    the <em> that md() in js/ui.js builds from *text*
+   DM Sans ships as one variable file per subset, so a single face spans 400 to
+   700 (measured: 400, 500 and 700 render at three different widths from that
+   one file). Cinzel 400 and 900 are deliberately absent because no rule in this
+   project selects them, and inline font-weight:800/900 resolves to 700 under
+   the CSS font-matching rules, exactly as it did before.
+
+   The subset split is the one Google publishes, and unicode-range keeps it
+   honest. Every German character this app renders (ä ö ü Ä Ö Ü ß) sits in the
+   latin file, verified glyph by glyph rather than assumed, so latin-ext is only
+   fetched when a visitor types a name that needs it.
+
+   font-display: swap paints text immediately in the fallback stack, so a slow
+   font can never blank an exam question. The stacks in --font and --font-display
+   below stay intact and remain the real fallback.
+   ========================================================================== */
+/* latin-ext */
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../assets/fonts/cinzel-700-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../assets/fonts/cinzel-700-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('../assets/fonts/dm-sans-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('../assets/fonts/dm-sans-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/dm-sans-italic-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/dm-sans-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
   /* --- ground & surfaces --- */
   --bg: #14161f;          /* deep asphalt */

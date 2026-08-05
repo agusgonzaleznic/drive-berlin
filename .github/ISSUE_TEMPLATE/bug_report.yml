@@ -1,0 +1,97 @@
+name: Bug report
+description: Something in the app is broken, crashes, or behaves unexpectedly.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this.
+
+        Two things this form is **not** for:
+
+        * **Wrong legal information, fees, deadlines or procedures.** That is a content bug and it
+          matters a great deal, but it needs a source. Please use the
+          **Content accuracy** template instead.
+        * **Security vulnerabilities.** Never report those in a public issue. See
+          [SECURITY.md](https://github.com/agusgonzaleznic/german-driving-school/blob/main/SECURITY.md)
+          for the private reporting route.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the actual behaviour you saw.
+      placeholder: The exam navigator stopped responding after I answered question 12.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen instead?
+      placeholder: Tapping a numbered cell should jump to that question.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Number them, and include the route in the address bar if you know it.
+      placeholder: |
+        1. Open http://localhost:4173/#/exam
+        2. Start a mock exam
+        3. Answer 12 questions
+        4. Tap cell 3 in the navigator
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and operating system
+      description: Include version numbers, and mention if you are on a phone.
+      placeholder: Firefox 141 on macOS 15.6, or Chrome 139 on Android 15
+    validations:
+      required: true
+
+  - type: dropdown
+    id: cleared-storage
+    attributes:
+      label: Does it still happen after clearing localStorage?
+      description: |
+        This matters a lot. All state lives in your own browser, so corrupt or outdated saved
+        progress is a real failure mode and it points at a completely different bug from a broken
+        view.
+
+        **Export your progress first if you want to keep it.** Then clear storage from your
+        browser devtools, under Application or Storage, and reload.
+      options:
+        - "Yes, it still happens with completely fresh state"
+        - "No, clearing localStorage fixed it"
+        - "I have not tried clearing it"
+    validations:
+      required: true
+
+  - type: textarea
+    id: console
+    attributes:
+      label: Console errors
+      description: |
+        Open your browser devtools, go to the Console tab, reload, and paste anything red.
+        This is usually the single most useful field in the whole form. Paste the full stack trace
+        if there is one.
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else
+      description: |
+        Screenshots, a redacted progress export, screen width if it looks like a layout problem, or
+        whether you have `prefers-reduced-motion` enabled.
+    validations:
+      required: false

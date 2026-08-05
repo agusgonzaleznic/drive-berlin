@@ -1,0 +1,74 @@
+name: Feature request
+description: Suggest new functionality or an improvement to something existing.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea. Before filling this in, please note the project's **hard non-goals**.
+        These are architectural commitments rather than a backlog, so a proposal that needs any of
+        them will be declined regardless of how good it is:
+
+        * **No backend and no server-side state.** Local-first is the privacy guarantee.
+        * **No accounts, no sign-in and no cloud sync.**
+        * **No build step, no bundler and no runtime dependencies.** The app must keep running
+          unbuilt, straight from a static file server.
+
+        Also out of scope: a German-language UI, since English-language access is the entire point,
+        and the official question catalogue, which is licensed.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: |
+        Describe the situation you were in, not the solution. Who is stuck, and on what? Concrete
+        beats abstract.
+      placeholder: |
+        I could not tell which of the two exams I still had left to book, because the Journey view
+        shows both tasks in the same phase with the same styling.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: What should the app do instead? Sketch the screen or the behaviour.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+      description: |
+        Including doing nothing. If an existing feature nearly covers this, say which one and why it
+        falls short.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: non-goals
+    attributes:
+      label: Non-goal check
+      description: Please confirm each of these about your proposal.
+      options:
+        - label: This does not require a backend, a server, or any state stored outside the visitor's own browser.
+          required: true
+        - label: This does not require an account, a login, or cloud sync.
+          required: true
+        - label: This does not require a build step, a bundler, or a new runtime dependency.
+          required: true
+
+  - type: checkboxes
+    id: accuracy-check
+    attributes:
+      label: Does this add or change factual content?
+      options:
+        - label: >-
+            If this feature would state any legal fact, fee, deadline or procedure, I understand a
+            primary source is required for each one, and that the app shows nothing rather than an
+            unsourced number.
+          required: false

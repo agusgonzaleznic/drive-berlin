@@ -1,0 +1,115 @@
+name: Content accuracy (wrong legal fact, fee, deadline or procedure)
+description: A legal claim, fee, deadline, address or procedure in the app is wrong or out of date.
+title: "[Accuracy]: "
+labels: ["accuracy", "content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This is the most valuable kind of report this project receives. Thank you.**
+
+        This app tells people about statutory deadlines where being wrong can cost them the right to
+        drive, and driving without a valid licence in Germany is a criminal offence under
+        **§ 21 StVG**. A wrong number here is not cosmetic.
+
+        Because of that, **this form requires a source**. The rule for the whole project is: assume
+        freely about implementation, never about content. A claim that cannot be traced to a primary
+        source does not ship, and the app is built to show nothing rather than an unsourced number.
+
+        Source hierarchy, highest first:
+
+        | Tier | Source |
+        |:--:|---|
+        | **1** | Primary law on gesetze-im-internet.de: FeV, StVG, StVO, GebOSt and their annexes |
+        | **2** | Official Berlin sources: service.berlin.de, LABO |
+        | **3** | Examining organisations and motoring bodies: DEKRA, TÜV, ADAC |
+        | **4** | Commercial or journalistic sources. **Weak evidence, and not sufficient on its own** |
+
+  - type: textarea
+    id: wrong-claim
+    attributes:
+      label: Which claim is wrong?
+      description: Quote the text as it currently appears, as exactly as you can.
+      placeholder: |
+        The app says the first-aid course costs €59.99.
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Where does it appear?
+      description: |
+        A file path, a screen, or both. For example `src/data/rules.json`, or
+        `docs/knowledge-base/prerequisites.md`, or "the Journey view, phase 2, first-aid task".
+      placeholder: src/data/rules.json, or the Journey view, phase 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: correct-info
+    attributes:
+      label: What is the correct information?
+      description: |
+        State the correct value precisely. For a statutory claim, please quote the German text
+        verbatim rather than paraphrasing it, and cite the *Absatz* rather than guessing a sentence
+        number.
+      placeholder: |
+        €72.99 online, or €82.99 paid in cash on the day.
+    validations:
+      required: true
+
+  - type: input
+    id: primary-source
+    attributes:
+      label: Primary source URL
+      description: |
+        **Required.** A direct link to the highest-tier source you can reach, ideally the
+        consolidated law on gesetze-im-internet.de or the official Berlin page. Link to the specific
+        provision or page, not a site homepage.
+      placeholder: https://www.gesetze-im-internet.de/fev_2010/__29.html
+    validations:
+      required: true
+
+  - type: input
+    id: date-read
+    attributes:
+      label: Date you read that source
+      description: |
+        Every document in this repository is stamped with the date its sources were read, because
+        fees and waiting times change constantly. Format as YYYY-MM-DD.
+      placeholder: "2026-08-05"
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra-sources
+    attributes:
+      label: Any further sources
+      description: |
+        Additional links, and please flag which tier each one is. If a source is commercial or
+        journalistic, say so.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: source-acknowledgement
+    attributes:
+      label: Source acknowledgement
+      options:
+        - label: >-
+            I understand that commercial or journalistic sources alone are not sufficient for a
+            legal claim, a deadline or a statutory fee, and that a tier 4 source will be marked as
+            unverified where it is used.
+          required: true
+        - label: >-
+            I have linked to the specific provision or page rather than a site homepage, and the
+            source actually states the corrected value.
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        If you cannot find a primary source but you are fairly sure something is wrong, please open
+        a **Bug report** describing the doubt instead, rather than leaving the source field filled
+        in with a guess. Flagging an uncertain claim is useful on its own.

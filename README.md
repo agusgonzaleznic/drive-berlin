@@ -6,8 +6,9 @@
 
 ### Get a German driving licence in Berlin. In English. Without guessing.
 
-**A gamified, offline-capable study and logistics companion for converting a non-EU driving licence
-into a German one, and for passing the class B theory exam.**
+**A gamified, offline-capable study and logistics companion for converting a foreign driving licence
+in Germany.** It walks the full *Umschreibung* step by step and teaches the German class B theory
+exam (*Klasse B*) in English, grounded in Berlin where the appointments actually happen.
 No build step. No backend. No accounts. No tracking. Every legal claim sourced.
 
 <br>
@@ -24,7 +25,7 @@ No build step. No backend. No accounts. No tracking. Every legal claim sourced.
 
 <br>
 
-**[Quick start](#-quick-start) · [Features](#-whats-inside) · [Accuracy](#-accuracy-the-part-that-actually-matters) · [Security](#-security--privacy) · [Testing](#-testing) · [Architecture](#-architecture) · [Deployment](#-deployment)**
+**[Quick start](#-quick-start) · [Features](#-whats-inside) · [Accuracy](#-accuracy-the-part-that-actually-matters) · [Security](#-security--privacy) · [Testing](#-testing) · [Architecture](#architecture) · [Deployment](#-deployment) · [Support](#-support-this-project)**
 
 <br>
 
@@ -52,7 +53,7 @@ English so the exam isn't the thing that stops you.
 > [!IMPORTANT]
 > This is a **study and planning aid, not legal advice**. Fees, waiting times and provider prices
 > change. Always confirm your own case with LABO Berlin before spending money. See the
-> [legal disclaimer](#-legal-disclaimer).
+> [legal disclaimer](#legal-disclaimer).
 
 ### Who it's for
 
@@ -329,11 +330,13 @@ locally rather than committed, so the documents cite those filenames as provenan
 
 ## 🔒 Security & privacy
 
-The full audit is in **[`docs/security.md`](docs/security.md)**.
-
 There is no backend, no account, no analytics, no cookies and no error reporting. All state lives in
 `localStorage`. That removes most of the usual attack surface, though not all of it, because the app
 has an import button and builds every view from template literals.
+
+Every finding below was reproduced before it was fixed, and each fix is pinned by an assertion in
+`tests/security.test.mjs`. To report something new, read **[`SECURITY.md`](SECURITY.md)** first: it
+sets out what is in scope, what is not, and what response to expect.
 
 | Finding | Severity | Fix |
 |---|---|---|
@@ -363,11 +366,11 @@ and both fonts still load.
 - **`style-src 'unsafe-inline'` is still needed**, because the views use `style=""` attributes
   throughout. Style injection cannot execute script under this CSP, so the payoff for removing it is
   low.
-- **The audit had one pair of eyes.** The five adversarial agent lenses intended for it failed twice
+- **The review had one pair of eyes.** The five adversarial agent lenses intended for it failed twice
   on API capacity errors, so it was done directly instead: a mechanical sweep of all 475 template
   interpolations reaching `innerHTML`, plus a manual review of the import path, the network surface
-  and the third-party dependency. `docs/security.md` says so at the top rather than implying more
-  rigour than it had.
+  and the third-party dependency. That is worth stating plainly rather than implying more rigour than
+  the review actually had.
 - **Your exported progress file contains what you typed**, meaning your name, *Anmeldung* date and
   licence country, and the same data sits in `localStorage`. On a shared computer, anyone with the
   browser profile can read it. That is inherent to a local-first design.
@@ -426,6 +429,8 @@ Each of these shipped once and is now pinned by an assertion:
 
 ---
 
+<a id="architecture"></a>
+
 ## 🏗️ Architecture
 
 Deliberately boring: no framework, no build, no state library. The whole app is **3,131 lines of JS
@@ -460,7 +465,6 @@ src/
 └── assets/icons/           # 84 local Lucide SVGs plus licence
 docs/
 ├── knowledge-base/         # 8 sourced documents (~59.5k words)
-├── security.md  design-review.md  lessons-learned.md  assets-provenance.md
 └── assets/screenshots/
 tests/                      # 5 unit suites, 6 browser suites
 scripts/                    # gen-icons.mjs, gen-screenshots.mjs
@@ -489,10 +493,7 @@ control borders clear 3:1 (WCAG 1.4.11).
 | Document | What it is |
 |---|---|
 | [`docs/knowledge-base/`](docs/knowledge-base/) | The sourced research: 8 documents, ~59.5k words, with the methodology and per-claim verifier coverage recorded inline |
-| [`docs/security.md`](docs/security.md) | Threat model, findings, fixes, what was *not* fixed and why, and the required deploy headers |
-| [`docs/design-review.md`](docs/design-review.md) | UX and UI review with measured before and after |
-| [`docs/lessons-learned.md`](docs/lessons-learned.md) | What worked and what proved expensive across the whole build |
-| [`docs/assets-provenance.md`](docs/assets-provenance.md) | Every asset, its source and its licence |
+| [`SECURITY.md`](SECURITY.md) | Security policy: what is in scope, how to report a vulnerability, and what response to expect |
 
 <details>
 <summary><b>Knowledge-base contents</b></summary>
@@ -554,11 +555,46 @@ The publish root is **`src/`**. `npm run build` exists only to say there is noth
 |---|---|
 | EU and first-licence routes are signposts, not full guides | Non-EU conversion is the built-out route |
 | 3 research files have no independent verifier pass | Marked ⚠️ unverified at each point of use |
-| The security audit had a single pair of eyes | Documented at the top of `docs/security.md` |
+| The security review had a single pair of eyes | Stated plainly under [security & privacy](#-security--privacy) rather than glossed over |
 | Bottom tab targets are 40×49 px | Clears WCAG 2.5.8 (24 px), below the 44 px comfort guideline |
 | Light theme | 14 hardcoded values block a clean token flip, and sign colours must never be tokenised |
 
 ---
+
+## 💛 Support this project
+
+It is free, it stays free, and there is nothing to upsell: no ads, no accounts, no tracking. I built
+it because I needed it, and the research underneath took considerably longer than the code did.
+
+Three things help, in ascending order of effort:
+
+- **Star the repo.** It is the only signal that tells the next person in this situation that any of
+  this exists.
+- **Open an issue when a number is wrong.** Fees, waiting times and provider prices drift constantly.
+  A corrected figure *with its primary source* is the most useful contribution anyone can make here.
+- **Buy me a coffee via GitHub Sponsors**, if this saved you a wasted trip to LABO. Re-verifying legal
+  claims against primary sources is the slow, recurring, genuinely unglamorous part of keeping a
+  project like this honest.
+
+<div align="center">
+<br>
+
+[![buy me a coffee](https://img.shields.io/badge/buy_me_a_coffee-GitHub_Sponsors-e0a82e?style=for-the-badge&labelColor=14161f&logo=githubsponsors&logoColor=e0a82e)](https://github.com/sponsors/agusgonzaleznic)
+[![website](https://img.shields.io/badge/website-agusgonzaleznic.com-7c5cd6?style=for-the-badge&labelColor=14161f)](https://agusgonzaleznic.com)
+<br>
+[![GitHub](https://img.shields.io/badge/GitHub-agusgonzaleznic-1d2130?style=for-the-badge&labelColor=14161f&logo=github&logoColor=white)](https://github.com/agusgonzaleznic)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-agusgonzaleznic-7cb0ff?style=for-the-badge&labelColor=14161f&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/agusgonzaleznic)
+
+<br>
+
+<sub>Built in Berlin by <b>Agustin Gonzalez Nicolini</b>. I work on engineering leadership and write
+about it at <a href="https://agusgonzaleznic.com">agusgonzaleznic.com</a>.</sub>
+
+</div>
+
+---
+
+<a id="legal-disclaimer"></a>
 
 ## ⚖️ Legal disclaimer
 

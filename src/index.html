@@ -4,17 +4,25 @@
 <meta charset="utf-8">
 <!-- viewport-fit=cover is required for env(safe-area-inset-*) to resolve on iOS;
      without it the fixed bottom tab bar sits in the home-indicator gesture strip. -->
-<!-- Content-Security-Policy. script-src is strict because this app has NO inline
-     script — the only JS is js/app.js as a module plus Leaflet from unpkg — so an
-     injected <script> cannot execute even if markup escaping were ever bypassed.
-     style-src needs 'unsafe-inline' because the views use style="" attributes
-     throughout; style injection is far lower severity than script injection.
-     img-src needs data: for the CSS mask-image icons and the inline noise texture. -->
+<!-- Content-Security-Policy.
+     script-src is 'self' with NO external origin at all. Every byte of script
+     this page can run is in this repository: js/app.js as a module, plus the
+     Leaflet build vendored under assets/vendor/leaflet/. There is no inline
+     script, so an injected <script> cannot execute even if markup escaping were
+     ever bypassed, and there is no CDN left whose compromise could substitute
+     hostile JS. That is why the old integrity/crossorigin attributes are gone:
+     SRI existed to pin bytes we did not control, and now we control them.
+     style-src still needs 'unsafe-inline' because the views set style="" on 127
+     elements; style injection is far lower severity than script injection.
+     font-src is 'self': the two families are vendored under assets/fonts/.
+     img-src needs data: for the CSS mask-image icons and the inline noise
+     texture, and the two OSM hosts for map tiles, which are the only remaining
+     third-party requests this app makes. -->
 <meta http-equiv="Content-Security-Policy" content="
   default-src 'self';
-  script-src 'self' https://unpkg.com;
-  style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com;
-  font-src 'self' https://fonts.gstatic.com;
+  script-src 'self';
+  style-src 'self' 'unsafe-inline';
+  font-src 'self';
   img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org;
   connect-src 'self';
   object-src 'none';
@@ -33,20 +41,16 @@
 <title>Führerschein Hero · Berlin</title>
 <meta name="description" content="Gamified English-language guide to getting your German class B driving licence in Berlin.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Cinzel: inscriptional display face for headings and primary calls to action.
-     DM Sans: the workhorse. Both degrade to a local stack if the CDN is blocked. -->
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H"
-  crossorigin="anonymous" referrerpolicy="no-referrer">
+<!-- Cinzel (inscriptional display face) and DM Sans (the workhorse) are vendored
+     under assets/fonts/ and declared in css/base.css. They used to come from
+     fonts.googleapis.com, which sent every visitor's IP address to Google before
+     a glyph was drawn. Both still degrade to a local stack if a file is missing. -->
+<link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/components.css">
-<!-- SRI pins the exact bytes: a compromised CDN cannot swap in hostile JS. -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer
-  integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH"
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- Leaflet 1.9.4, vendored from the npm tarball and byte-verified against the
+     sha384 hashes this file used to pin. See docs/assets-provenance.md. -->
+<script src="assets/vendor/leaflet/leaflet.js" defer></script>
 </head>
 <body>
 <div class="flag-stripe" aria-hidden="true"></div>

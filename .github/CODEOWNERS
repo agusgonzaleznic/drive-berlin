@@ -1,0 +1,46 @@
+# Code owners for Führerschein Hero.
+#
+# Later rules override earlier ones, so the catch-all comes first and the paths where a
+# wrong change is actually dangerous come last. GitHub requests review from the owner of
+# the most specific matching rule only.
+#
+# Docs: https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for everything in the repository.
+*                           @agusgonzaleznic
+
+# ---------------------------------------------------------------------------
+# Legal content. A wrong value here can cost someone the right to drive.
+#
+# rules.json holds every statutory period the deadline clock depends on, and the
+# knowledge base is the sourced research the whole app rests on. Changes need a
+# primary source and a re-read of the law, not just a passing review.
+# ---------------------------------------------------------------------------
+/src/data/                  @agusgonzaleznic
+/docs/knowledge-base/       @agusgonzaleznic
+
+# ---------------------------------------------------------------------------
+# Security posture. These two files ARE the app's defences.
+#
+# security.js holds sanitizeState() and safeUrl(), the import sanitiser and the URL
+# scheme allowlist. index.html carries the Content-Security-Policy and the referrer
+# policy. The CSP has no external origin in script-src or font-src because Leaflet
+# and both fonts are vendored under src/assets/; re-adding a CDN would widen it
+# again. A one-line edit to either file can silently remove a protection without
+# failing anything visible.
+# ---------------------------------------------------------------------------
+/src/js/security.js         @agusgonzaleznic
+/src/index.html             @agusgonzaleznic
+
+# ---------------------------------------------------------------------------
+# Licensing. The dual licence is what makes attribution enforceable, and the split
+# between MIT code and CC BY 4.0 content is load-bearing. Never change without intent.
+# ---------------------------------------------------------------------------
+/LICENSE*                   @agusgonzaleznic
+
+# ---------------------------------------------------------------------------
+# Supply chain. Workflows run with repository and Pages deployment access, so a
+# change here can exfiltrate secrets or publish arbitrary content. Every action must
+# stay pinned to a full commit SHA.
+# ---------------------------------------------------------------------------
+/.github/workflows/         @agusgonzaleznic
