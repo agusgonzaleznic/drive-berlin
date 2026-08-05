@@ -19,37 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-=======================================================================
-
-SCOPE OF THIS LICENSE
-
-This MIT License covers the SOFTWARE in this repository:
-
-    src/index.html
-    src/favicon.svg
-    src/css/**
-    src/js/**
-    scripts/**
-    tests/**
-    package.json
-
-The EDITORIAL CONTENT is licensed separately, under Creative Commons
-Attribution 4.0 International (CC BY 4.0). See LICENSE-CONTENT:
-
-    docs/**
-    src/data/**
-
-THIRD-PARTY MATERIAL is NOT covered by either license and remains under its
-own terms. Nothing here relicenses it:
-
-    src/assets/icons/**   Lucide icons, ISC License
-                          see src/assets/icons/LICENSE.lucide
-    Leaflet 1.9.4         BSD-2-Clause (loaded from CDN, not vendored)
-    Cinzel, DM Sans       SIL Open Font License 1.1 (loaded from CDN)
-    OpenStreetMap tiles   © OpenStreetMap contributors, ODbL
-
-German statutory text quoted throughout (FeV, StVG, StVO, GebOSt) is an
-official work under § 5 UrhG and is not subject to copyright.
-
-See README.md for the full attribution list.

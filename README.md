@@ -103,14 +103,17 @@ and blocks `fetch()` of the JSON data files.
 <details>
 <summary><b>Does it work offline?</b></summary>
 
-Almost entirely. All content, logic, icons and road-sign artwork are local. Three things reach the
-network, and each degrades gracefully instead of breaking:
+Almost entirely. All content, logic, icons, road-sign artwork, fonts and the Leaflet build are
+local. Exactly **one** thing reaches the network, and it degrades gracefully instead of breaking:
 
 | Resource | Host | If blocked |
 |---|---|---|
 | Map tiles | `tile.openstreetmap.org` | The map area shows a fallback. The place list, addresses and links still work |
-| Leaflet 1.9.4 | `unpkg.com` (SRI-pinned) | `renderMap()` detects the missing global and renders the list-only view |
-| Cinzel + DM Sans | `fonts.gstatic.com` | Every rule has a local fallback stack |
+
+Leaflet 1.9.4 is vendored in `src/assets/vendor/leaflet/`, and Cinzel and DM Sans in
+`src/assets/fonts/`, so neither a CDN nor Google Fonts is contacted. If a font file is ever missing,
+every rule still carries a local fallback stack. If Leaflet fails to load, `renderMap()` detects the
+missing global and renders the list-only view.
 
 No content, progress or personal data is ever fetched or sent.
 
@@ -345,20 +348,28 @@ sets out what is in scope, what is not, and what response to expect.
 | **`javascript:` URLs** in data-driven `href`s. `esc()` escapes quotes but does not neutralise a URL scheme | Medium | `safeUrl()` scheme allowlist, which strips control characters first so `java\nscript:` cannot slip past |
 | **Partial escaping** in `icon()`, `emblem()`, `flag()` and `glyph()` | Medium | Full `&<>"'` escaping in all four rendering primitives |
 | **No CSP** | Medium | Strict policy. The app has *zero* inline `<script>`, so `script-src` is genuinely tight |
-| **No SRI on Leaflet** | Medium | `sha384` hashes computed from the actual 1.9.4 bytes |
+| **Third-party code from a CDN.** Leaflet came from `unpkg.com`, so a compromise there was arbitrary script in every visitor's browser. SRI pinned the bytes, but it could not remove the dependency | Medium | Leaflet 1.9.4 vendored into `src/assets/vendor/leaflet/`, byte-verified against the `sha384` hashes that used to pin it. `script-src` no longer names any external origin |
+| **Google Fonts disclosed every visitor's IP address** to Google before a glyph was drawn, which LG München I held unlawful without consent (3 O 17493/20, January 2022), and which contradicted this app's own promise that nothing is uploaded anywhere | Medium | Cinzel and DM Sans vendored into `src/assets/fonts/` as woff2 subsets, so `font-src` is `'self'` |
 | **Referrer leakage** to authority sites | Low | `no-referrer` document-wide, plus `rel="noopener noreferrer"` on every external link |
 
 ```
 Content-Security-Policy:
-  default-src 'self'; script-src 'self' https://unpkg.com;
-  style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com;
-  font-src 'self' https://fonts.gstatic.com;
+  default-src 'self'; script-src 'self';
+  style-src 'self' 'unsafe-inline';
+  font-src 'self';
   img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org;
   connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'
 ```
 
-A dedicated test verifies this: **0 CSP violations**, Leaflet still initialises, tiles still fetch,
-and both fonts still load.
+`style-src` keeps `'unsafe-inline'` because the views set `style=""` on 127 elements; style injection
+is far lower severity than script injection. Everything else is `'self'` or `'none'`, and the only
+external origin left in the whole policy is the map tile host.
+
+Two layers of test verify this. `tests/csp.mjs` drives real Chrome: **0 CSP violations**, Leaflet
+initialises, tiles fetch, both font families load from this origin, and the only third-party origin
+contacted is `tile.openstreetmap.org`. Because that suite needs system Chrome and therefore cannot
+run in CI, `tests/security.test.mjs` re-asserts the same property by reading the files, so a
+re-introduced CDN fails a pull request.
 
 <details>
 <summary><b>Three caveats worth reading</b></summary>
@@ -387,12 +398,12 @@ by assertion to the contract in `src/js/security.js`.
 
 | Suite | What it covers | Result |
 |---|---|:--:|
-| `npm test` | Exam scoring, deadline maths, progress engine, data integrity, security primitives | **73 passed** |
+| `npm test` | Exam scoring, deadline maths, progress engine, data integrity, security primitives, first-party loading surface | **81 passed** |
 | `test:browser` | All routes in real Chrome, a full mock exam, failing on any console error | **32 checks, 0 errors** |
 | `test:course` | End-to-end walkthrough of the entire course | **~480 checks** |
 | `test:a11y` | Keyboard navigation and `prefers-reduced-motion` | **8 passed** |
 | `test:contrast` | Measured WCAG 1.4.3 ratios and touch-target sizes on every screen | all text passes |
-| `test:csp` | CSP violations, SRI integrity, tile and font loading | **0 violations** |
+| `test:csp` | CSP violations, vendored Leaflet and fonts, tile loading, third-party origins | **0 violations** |
 | `emojiscan` | Asserts no emoji leaked back into the rendered UI | clean |
 
 ```bash
@@ -438,7 +449,7 @@ across 23 modules**, **810 lines of CSS** and a **74-line** HTML shell.
 
 ```mermaid
 flowchart TD
-  H["index.html<br/>CSP · SRI · shell"] --> APP["app.js<br/>hash router"]
+  H["index.html<br/>CSP · shell"] --> APP["app.js<br/>hash router"]
   APP --> V["views/ ×10<br/>journey · learn · quiz · exam<br/>task · stats · map · glossary<br/>phrases · onboarding"]
   V --> E["engine/<br/>scoring · deadline · progress"]
   V --> ST["state.js<br/>XP · levels · badges · streak"]
@@ -449,7 +460,7 @@ flowchart TD
 
 ```
 src/
-├── index.html              # single entry: CSP, SRI, fonts, app shell
+├── index.html              # single entry: CSP, vendored asset links, app shell
 ├── css/  base.css          # design tokens, ground, type, chrome
 │         components.css    # cards, buttons, pills, tables, exam grid
 ├── js/   app.js            # hash router, chrome, scroll + focus memory
@@ -478,8 +489,8 @@ scripts/                    # gen-icons.mjs, gen-screenshots.mjs
 | State | `localStorage`, one key | No account, no server, no sync |
 | Icons | [Lucide](https://lucide.dev), 84 SVGs, vendored | ISC licensed, local, no CDN |
 | Signs | 36 hand-drawn inline SVGs | Real German sign colours, never tokenised |
-| Type | Cinzel and DM Sans | Display face restricted to headings, since German compounds wrap badly |
-| Maps | Leaflet 1.9.4 with OSM tiles | SRI-pinned, degrades to a list |
+| Type | Cinzel and DM Sans, vendored woff2 | Self-hosted, so no Google Fonts request. Display face restricted to headings, since German compounds wrap badly |
+| Maps | Leaflet 1.9.4, vendored, with OSM tiles | No CDN, degrades to a list |
 | Tests | `node --test` and `playwright-core` | One dev dependency, total |
 
 **Accessibility is measured, not claimed.** Contrast ratios and touch-target sizes are computed in a
@@ -524,7 +535,7 @@ X-Content-Type-Options: nosniff
 ```
 
 A `<meta>` tag cannot set `frame-ancestors` by design, which is why it isn't in the document CSP.
-**Serve over HTTPS** so that the CSP and SRI cannot be stripped in transit.
+**Serve over HTTPS** so that the CSP cannot be stripped in transit.
 
 | Host | Headers? | Notes |
 |---|:--:|---|
@@ -642,6 +653,8 @@ Changes were made.
 > disclaim all warranties. Shipping a stale deadline to someone who then loses the right to drive is
 > the failure mode this project was built to avoid.
 
+See [`NOTICE`](NOTICE) for the authoritative per-path breakdown.
+
 ### Third-party material
 
 The following is not covered by either licence above. It keeps its own terms, and nothing here
@@ -650,8 +663,8 @@ relicenses it:
 | Asset | Licence |
 |---|---|
 | [Lucide](https://lucide.dev) icons (84 vendored SVGs) | ISC, see [`src/assets/icons/LICENSE.lucide`](src/assets/icons/LICENSE.lucide) |
-| [Cinzel](https://fonts.google.com/specimen/Cinzel), [DM Sans](https://fonts.google.com/specimen/DM+Sans) | SIL Open Font License 1.1 |
-| [Leaflet](https://leafletjs.com) 1.9.4 | BSD-2-Clause |
+| [Cinzel](https://fonts.google.com/specimen/Cinzel), [DM Sans](https://fonts.google.com/specimen/DM+Sans), vendored woff2 | SIL Open Font License 1.1, see [`src/assets/fonts/`](src/assets/fonts/) |
+| [Leaflet](https://leafletjs.com) 1.9.4, vendored | BSD-2-Clause, see [`src/assets/vendor/leaflet/LICENSE.leaflet`](src/assets/vendor/leaflet/LICENSE.leaflet) |
 | Map tiles | © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors, ODbL |
 | Emblem, road signs, all other artwork | Original to this project |
 

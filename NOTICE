@@ -1,0 +1,62 @@
+Führerschein Hero
+Copyright (c) 2026 Agustin Gonzalez Nicolini
+
+This repository is dual-licensed. Which licence applies depends on which part of
+the repository a file belongs to.
+
+-----------------------------------------------------------------------
+SOFTWARE, under the MIT License (see LICENSE)
+-----------------------------------------------------------------------
+
+    src/index.html
+    src/favicon.svg
+    src/css/**
+    src/js/**
+    scripts/**
+    tests/**
+    package.json
+
+-----------------------------------------------------------------------
+EDITORIAL CONTENT, under Creative Commons Attribution 4.0 International
+(CC BY 4.0) (see LICENSE-CONTENT)
+-----------------------------------------------------------------------
+
+    docs/**
+    src/data/**
+
+This covers the written research, the lesson prose, the exam-style questions,
+the glossary, the phrasebook and the location data. CC BY 4.0 requires you to
+credit the creator, link the licence, and state whether you made changes.
+LICENSE-CONTENT carries a ready-to-paste attribution notice.
+
+-----------------------------------------------------------------------
+THIRD-PARTY MATERIAL, under its own terms
+-----------------------------------------------------------------------
+
+Neither licence above applies to the following, and nothing in this repository
+relicenses it. All of it is vendored locally rather than fetched from a CDN, so
+the licence text ships alongside each one.
+
+    src/assets/icons/**              Lucide icons, ISC License
+                                     see src/assets/icons/LICENSE.lucide
+
+    src/assets/vendor/leaflet/**     Leaflet 1.9.4, BSD-2-Clause
+                                     see src/assets/vendor/leaflet/LICENSE.leaflet
+
+    src/assets/fonts/**              Cinzel and DM Sans,
+                                     SIL Open Font License 1.1
+                                     see src/assets/fonts/LICENSE.cinzel
+                                     and src/assets/fonts/LICENSE.dm-sans
+
+OpenStreetMap map tiles are fetched at runtime from tile.openstreetmap.org and
+remain (c) OpenStreetMap contributors, licensed ODbL. They are the only
+third-party request the application makes.
+
+-----------------------------------------------------------------------
+GERMAN STATUTORY TEXT
+-----------------------------------------------------------------------
+
+German law quoted throughout (FeV, StVG, StVO, GebOSt and their annexes) is an
+official work under § 5 UrhG and is not subject to copyright.
+
+See README.md for the full attribution list.
