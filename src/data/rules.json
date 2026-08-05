@@ -4,20 +4,20 @@
   "law_version": "FeV as last amended by Art. 7 G v. 12.5.2026, BGBl. 2026 I Nr. 142",
   "non_eu": {
     "recognition_months": 6,
-    "recognition_starts": "the FACTUAL establishment of your ordinary residence (ordentlicher Wohnsitz) under FeV § 7 Abs. 1 — personal or occupational ties plus at least 185 days a year — NOT your Anmeldung date. LABO normally treats the Anmeldung date as that date, but if you actually moved in months before registering you may already have burned part of the six months, and the authority can check the Melderegister under FeV § 22 Abs. 1. A late Anmeldung does not reset the clock. Use the earlier of the two dates.",
-    "legal_basis": "FeV § 29 Abs. 1 — recognition of a non-EU licence lasts six months after you establish residence",
+    "recognition_starts": "the FACTUAL establishment of your ordinary residence (ordentlicher Wohnsitz) under FeV § 7 Abs. 1 (personal or occupational ties plus at least 185 days a year), NOT your Anmeldung date. LABO normally treats the Anmeldung date as that date, but if you actually moved in months before registering you may already have burned part of the six months, and the authority can check the Melderegister under FeV § 22 Abs. 1. A late Anmeldung does not reset the clock. Use the earlier of the two dates.",
+    "legal_basis": "FeV § 29 Abs. 1: recognition of a non-EU licence lasts six months after you establish residence",
     "legal_basis_note": "The verbatim text is agreed by every source: 'Begründet der Inhaber einer in einem anderen Staat erteilten Fahrerlaubnis einen ordentlichen Wohnsitz im Inland, besteht die Berechtigung noch sechs Monate.' Two independent verification passes cited it as Satz 3 and Satz 4 respectively, so this app cites the paragraph rather than guessing the sentence number.",
     "conversion_deadline_months": null,
-    "conversion_deadline_note": "There is NO deadline for filing the conversion application. LABO Berlin states plainly: 'Es gibt keine Frist, in der dieser Antrag gestellt werden muss.' The widely repeated 'three-year rule' does not exist in German law. What does expire is your right to DRIVE (6 months) — and the conversion route closes entirely if your Argentine licence itself expires, because § 31 FeV has no rescue clause for expired third-country licences (unlike § 30 Abs. 2 for EU ones).",
+    "conversion_deadline_note": "There is NO deadline for filing the conversion application. LABO Berlin states plainly: 'Es gibt keine Frist, in der dieser Antrag gestellt werden muss.' The widely repeated 'three-year rule' does not exist in German law. What does expire is your right to DRIVE (6 months), and the conversion route closes entirely if your Argentine licence itself expires, because § 31 FeV has no rescue clause for expired third-country licences (unlike § 30 Abs. 2 for EU ones).",
     "extension_months": 6,
-    "extension_note": "FeV § 29 Abs. 1 Satz 5: the authority *kann* (may) extend the period on application by up to six further months — it is discretionary and capped, not an entitlement — and only where you can credibly show your stay in Germany will not exceed twelve months in total. It is therefore unavailable to anyone settling here permanently.",
-    "after_expiry": "Driving becomes Fahren ohne Fahrerlaubnis under StVG § 21 Abs. 1 Nr. 1 — a criminal offence (Straftat), not a fine: up to one year imprisonment or a fine; up to six months or 180 daily rates if merely negligent (Abs. 2 Nr. 1). The vehicle's owner is equally liable for letting you drive. A court may impose an isolierte Sperre blocking your German licence for six months to five years — or INDEFINITELY, because StGB § 69a Abs. 1 Satz 2 allows a permanent ban where the statutory maximum would not suffice to avert the danger. Vehicle confiscation is narrower than often claimed: it applies only in the specific StVG § 21 Abs. 3 cases. Compulsory third-party insurance still pays the injured party (VVG § 117) but can recover up to €5,000 from you (KfzPflKV § 5); comprehensive cover typically refuses outright.",
+    "extension_note": "FeV § 29 Abs. 1 Satz 5: the authority *kann* (may) extend the period on application by up to six further months, but only where you can credibly show your stay in Germany will not exceed twelve months in total. The extension is discretionary and capped, not an entitlement. It is therefore unavailable to anyone settling here permanently.",
+    "after_expiry": "Driving becomes Fahren ohne Fahrerlaubnis under StVG § 21 Abs. 1 Nr. 1, a criminal offence (Straftat), not a fine: up to one year imprisonment or a fine; up to six months or 180 daily rates if merely negligent (Abs. 2 Nr. 1). The vehicle's owner is equally liable for letting you drive. A court may impose an isolierte Sperre blocking your German licence for six months to five years, or even INDEFINITELY, because StGB § 69a Abs. 1 Satz 2 allows a permanent ban where the statutory maximum would not suffice to avert the danger. Vehicle confiscation is narrower than often claimed: it applies only in the specific StVG § 21 Abs. 3 cases. Compulsory third-party insurance still pays the injured party (VVG § 117) but can recover up to €5,000 from you (KfzPflKV § 5); comprehensive cover typically refuses outright.",
     "driving_resumes_when": "Your entitlement revives only when the German licence is handed over, or when the Fahrerlaubnisbehörde issues you a vorläufige Fahrberechtigung (provisional driving permission). CRITICAL: on a third-country conversion the Prüfbescheinigung the examiner gives you after the practical exam is NOT itself a driving entitlement. LABO's FAQ requires a separate appointment at the Fahrerlaubnisbehörde, bringing the original Prüfbescheinigung and the original foreign licence, to obtain the provisional permission. Expect an unavoidable gap between passing and driving. Filing the application buys no extra driving time. Driving-school lessons and exam drives remain lawful throughout (StVG § 2 Abs. 15).",
-    "exams_required_basis": "FeV § 31 Abs. 1 Satz 1 lists five things that fall away for Anlage 11 states: 1. § 11 Abs. 9 and § 12 Abs. 6, 2. § 12 Abs. 2 (Sehtest), 3. § 15 (Befähigungsprüfung, per Anlage 11), 4. § 19 (Erste Hilfe), 5. the training rules. FeV § 31 Abs. 2 — which governs Argentina — disapplies ONLY item 5. So both exams (§ 15), the eye test (§ 12 Abs. 2) and the first-aid course (§ 19) are FEDERAL statutory requirements on this route, not local Berlin add-ons. They apply in every Bundesland and cannot be negotiated away."
+    "exams_required_basis": "FeV § 31 Abs. 1 Satz 1 lists five things that fall away for Anlage 11 states: 1. § 11 Abs. 9 and § 12 Abs. 6, 2. § 12 Abs. 2 (Sehtest), 3. § 15 (Befähigungsprüfung, per Anlage 11), 4. § 19 (Erste Hilfe), 5. the training rules. FeV § 31 Abs. 2, which governs Argentina, disapplies ONLY item 5. So both exams (§ 15), the eye test (§ 12 Abs. 2) and the first-aid course (§ 19) are FEDERAL statutory requirements on this route, not local Berlin add-ons. They apply in every Bundesland and cannot be negotiated away."
   },
   "eu": {
     "recognition_months": null,
-    "legal_basis": "FeV § 28 — a valid EU/EEA licence is recognised in Germany without any time limit and without exchange; conversion is voluntary in most cases."
+    "legal_basis": "FeV § 28: a valid EU/EEA licence is recognised in Germany without any time limit and without exchange; conversion is voluntary in most cases."
   },
   "exam": {
     "questions_total": 30,
@@ -26,35 +26,35 @@
     "points_total": 110,
     "max_error_points": 10,
     "fail_on_two_five_point_wrong": true,
-    "legal_basis": "FeV Anlage 7 — class B: 30 questions, 110 points, 10 permitted error points, and a fail if two questions worth 5 points are answered wrongly",
+    "legal_basis": "FeV Anlage 7, class B: 30 questions, 110 points, 10 permitted error points, and a fail if two questions worth 5 points are answered wrongly",
     "practical_minutes_total": 55,
     "practical_minutes_driving": 30,
     "retake_wait_days": 14,
-    "retake_legal_basis": "FeV § 18 — a failed exam may not be retaken before an appropriate period, as a rule at least two weeks. Attempts are unlimited. If you are caught cheating the authority may set the retake date up to nine months away.",
+    "retake_legal_basis": "FeV § 18: a failed exam may not be retaken before an appropriate period, as a rule at least two weeks. Attempts are unlimited. If you are caught cheating the authority may set the retake date up to nine months away.",
     "theory_valid_months": 12,
     "admission_valid_months": 12,
-    "validity_legal_basis": "FeV § 18 Abs. 2 makes this a HARD, self-executing loss of validity — not merely the discretionary 'soll' addressed to the examining body in § 22 Abs. 5: 'Die praktische Prüfung muss innerhalb von zwölf Monaten nach Bestehen der theoretischen Prüfung abgelegt werden. Andernfalls verliert die theoretische Prüfung ihre Gültigkeit.' Miss it and you re-apply and pay again.",
+    "validity_legal_basis": "FeV § 18 Abs. 2 makes this a HARD, self-executing loss of validity, not merely the discretionary 'soll' addressed to the examining body in § 22 Abs. 5: 'Die praktische Prüfung muss innerhalb von zwölf Monaten nach Bestehen der theoretischen Prüfung abgelegt werden. Andernfalls verliert die theoretische Prüfung ihre Gültigkeit.' Miss it and you re-apply and pay again.",
     "outer_deadline_years": 2,
-    "outer_deadline_note": "A second hard deadline almost nobody mentions, also FeV § 18 Abs. 2: no more than TWO YEARS may pass between the exam and the handover of the Führerschein, or the ENTIRE exam loses validity. Relevant here because licence issuance needs a separate Fahrerlaubnisbehörde appointment — do not let that appointment drift.",
+    "outer_deadline_note": "A second hard deadline almost nobody mentions, also FeV § 18 Abs. 2: no more than TWO YEARS may pass between the exam and the handover of the Führerschein, or the ENTIRE exam loses validity. Relevant here because licence issuance needs a separate Fahrerlaubnisbehörde appointment, so do not let that appointment drift.",
     "languages": ["German", "English", "Spanish", "Italian", "French", "Greek", "Polish", "Portuguese", "Romanian", "Russian", "Croatian", "Turkish", "Modern Standard Arabic"],
-    "languages_legal_basis": "FeV Anlage 7 Nr. 1.3 — the theory exam may be taken in these foreign languages. This right applies to conversion candidates too. Audio support over headphones exists in German only, and no interpreter is allowed (except sign-language interpreters for deaf candidates).",
-    "practical_language": "German only. The foreign-language option in Anlage 7 Nr. 1.3 covers the theory exam alone, and your instructor may not translate the examiner's instructions during the drive — doing so can fail you under Anlage 7 Nr. 2.5.3."
+    "languages_legal_basis": "FeV Anlage 7 Nr. 1.3: the theory exam may be taken in these foreign languages. This right applies to conversion candidates too. Audio support over headphones exists in German only, and no interpreter is allowed (except sign-language interpreters for deaf candidates).",
+    "practical_language": "German only. The foreign-language option in Anlage 7 Nr. 1.3 covers the theory exam alone, and your instructor may not translate the examiner's instructions during the drive. Doing so can fail you under Anlage 7 Nr. 2.5.3."
   },
   "fees_eur": {
     "conversion_application_berlin": 45.10,
-    "conversion_application_note": "Berlin fee for 'Umschreibung einer ausländischen Fahrerlaubnis mit Prüfung' (with examination). The €37.50 figure you may see elsewhere is the without-examination rate for EU and Anlage 11 licences — it does not apply to an Argentine licence.",
+    "conversion_application_note": "Berlin fee for 'Umschreibung einer ausländischen Fahrerlaubnis mit Prüfung' (with examination). The €37.50 figure you may see elsewhere is the without-examination rate for EU and Anlage 11 licences, and it does not apply to an Argentine licence.",
     "direct_dispatch": 5.31,
-    "direct_dispatch_note": "Sources conflict: the conversion research gives €5.31 ('FSW Direktversand'), the first-licence research gives €6.32, both citing LABO's fee schedule. Possibly two distinct items. A few euros either way — confirm at the counter.",
+    "direct_dispatch_note": "Sources conflict: the conversion research gives €5.31 ('FSW Direktversand'), the first-licence research gives €6.32, both citing LABO's fee schedule. Possibly two distinct items. A few euros either way, so confirm at the counter.",
     "express_production": 7.70,
     "photo_at_buergeramt3": 6.00,
     "theory_exam": 24.99,
     "practical_exam": 129.83,
-    "exam_fee_basis": "GebOSt — identical fees whichever language you sit the theory exam in",
+    "exam_fee_basis": "GebOSt: identical fees whichever language you sit the theory exam in",
     "first_aid_course_english": 72.99,
-    "first_aid_course_english_note": "Erste Hilfe Station charges €72.99 booked online, €82.99 paying cash on the day. A widely-copied €59.99 figure is a stale homepage banner — do not rely on it. Verified English-course range across Berlin: about €55–83 (ANB Berlin from €55, ASB €75/€70 reduced, DRK €80 but currently paused).",
-    "eye_test_note": "No longer a regulated fee — the old fixed €6.43 item was abolished in 2019. Fielmann does it free of charge; other opticians vary and often publish no price at all. Under FeV § 12 Abs. 4 you can skip the test entirely by submitting an ophthalmologist's report confirming you meet Anlage 6 Nr. 1.1.",
+    "first_aid_course_english_note": "Erste Hilfe Station charges €72.99 booked online, €82.99 paying cash on the day. A widely-copied €59.99 figure is a stale homepage banner, so do not rely on it. Verified English-course range across Berlin: about €55–83 (ANB Berlin from €55, ASB €75/€70 reduced, DRK €80 but currently paused).",
+    "eye_test_note": "No longer a regulated fee, because the old fixed €6.43 item was abolished in 2019. Fielmann does it free of charge; other opticians vary and often publish no price at all. Under FeV § 12 Abs. 4 you can skip the test entirely by submitting an ophthalmologist's report confirming you meet Anlage 6 Nr. 1.1.",
     "photos_note": "dm charges €5.95 for biometric licence photos via the dm-Passbild-App (you take the photo, print at a dm photo station). Free if you do the Erste Hilfe Station course. Booth and photographer prices were not verified.",
-    "translation_classification": "35–70 for a plain certified translation (court-sworn translators), or ADAC at ~€65 for translation + classification. NOTE: 'Klassifizierung' is ADAC's own add-on and appears nowhere on Berlin's checklist — ask what a plain translation costs before buying the bundle.",
+    "translation_classification": "35–70 for a plain certified translation (court-sworn translators), or ADAC at ~€65 for translation + classification. NOTE: 'Klassifizierung' is ADAC's own add-on and appears nowhere on Berlin's checklist, so ask what a plain translation costs before buying the bundle.",
     "register_enquiry": 3.30,
     "register_enquiry_note": "FeV § 22 Abs. 2 makes the Fahreignungsregister and Zentrales Fahrerlaubnisregister enquiries chargeable to the applicant (GebOSt Nr. 145 prices the driving-fitness register check at €3.30). Budget a small unquantified Auslagen margin.",
     "unavoidable_total": "About €276 in fixed official costs: €45.10 conversion + €24.99 theory + €129.83 practical + €72.99 first aid (which bundles the eye test and photos) + ~€3.30 register enquiry. Add a translation (€35–70) for roughly €311–346. Then add the driving school: presentation fees of about €150–300 per exam plus any refresher lessons at €45–90 per 45 minutes. Realistic all-in for an experienced driver taking a handful of lessons: roughly €700–1,400. Every re-sit costs the exam fee again plus another presentation fee."
@@ -63,10 +63,10 @@
     "as_of": "2026-08-04",
     "third_country_conversion_weeks": 8,
     "reached_date": "2026-06-11",
-    "note": "As of the LABO table dated 04.08.2026, third-country conversions had reached applications received on 11.06.2026 — a 54-day (~8 week) backlog, and the SLOWEST item in the entire table. For comparison: Anlage 11 states 31.07.2026 (~5 days), EU licences 06.07.2026 (~4 weeks), first licences 12.06.2026. These figures move weekly; always re-read the live page.",
+    "note": "As of the LABO table dated 04.08.2026, third-country conversions had reached applications received on 11.06.2026, a 54-day (~8 week) backlog and the SLOWEST item in the entire table. For comparison: Anlage 11 states 31.07.2026 (~5 days), EU licences 06.07.2026 (~4 weeks), first licences 12.06.2026. These figures move weekly; always re-read the live page.",
     "source": "https://www.berlin.de/labo/mobilitaet/aktuelles/aktuelle-bearbeitungsstaende-736453.php",
     "card_production_working_days": 10,
     "card_production_note": "The ~10 working days run from your Fahrerlaubnisbehörde appointment after passing the practical exam, not from the exam itself.",
-    "end_to_end": "Realistically 3–5 months from your first appointment to the card in hand, assuming you pass both exams first time — plus a no-driving gap between passing the practical and the provisional-permission appointment."
+    "end_to_end": "Realistically 3–5 months from your first appointment to the card in hand, assuming you pass both exams first time, plus a no-driving gap between passing the practical and the provisional-permission appointment."
   }
 }

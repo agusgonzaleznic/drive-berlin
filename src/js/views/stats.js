@@ -30,7 +30,8 @@ function badgeProgress(id, { mastered, lessonsDone, examsPassed }) {
     case 'flawless': {
       const best = state.exams.length ? Math.min(...state.exams.map(e => e.errorPoints)) : null;
       return best == null ? null
-        : { pct: Math.max(0, 1 - best / 30), label: `best ${best} error points — need 0` };
+        : { pct: Math.max(0, 1 - best / 30), label: `best ${best} error points, need 0` };
+
     }
     default: return null; // earned by completing a real-world task
   }

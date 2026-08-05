@@ -20,7 +20,7 @@ function saveSession(s) {
     localStorage.setItem(SESSION_KEY, JSON.stringify({
       ids: s.questions.map(q => q.id), answers: s.answers, idx: s.idx, startedAt: s.startedAt,
     }));
-  } catch { /* storage full or blocked — the exam still works in memory */ }
+  } catch { /* storage full or blocked, and the exam still works in memory */ }
 }
 function clearSession() {
   try { localStorage.removeItem(SESSION_KEY); } catch { /* ignore */ }
@@ -51,7 +51,7 @@ export function render(el) {
     <div class="card hero">
       <h1>${icon('clipboard-check', { size: 22 })} Mock theory exam</h1>
       <p>Exactly like the real thing: <b>30 questions</b> (20 general + 10 class B),
-      each worth 2–5 error points. You pass with <b>max ${EXAM_RULES.maxErrorPoints} error points</b> —
+      each worth 2–5 error points. You pass with <b>max ${EXAM_RULES.maxErrorPoints} error points</b>,
       but two wrong 5-point questions mean an automatic fail, just like at DEKRA.</p>
       ${resumable ? `
         <button class="btn btn-primary" id="resume-btn" style="font-size:1.05rem;">
@@ -67,7 +67,7 @@ export function render(el) {
 
     ${myLangs.length ? `<div class="callout tip" style="margin-top:14px;">
       <b>Remember: you may sit the real exam in ${myLangs.join(', ')}.</b>
-      That is your legal right under FeV Anlage 7 Nr. 1.3, at no extra cost — tell your
+      That is your legal right under FeV Anlage 7 Nr. 1.3, at no extra cost. Tell your
       driving school which language you want when they book it. Only the practical exam is German-only.
     </div>` : ''}
 
@@ -76,12 +76,12 @@ export function render(el) {
     <div class="callout warning">
       <b>These are practice questions, not the official catalogue.</b> They are written in the official
       style and scored by the official rules, but the real class B catalogue holds around a thousand
-      questions. Passing here means you have the rules down — it is not a guarantee.
+      questions. Passing here means you have the rules down. It is not a guarantee.
     </div>
     <div class="grid grid-3" style="margin-top:14px;">
       <div class="card tile"><div class="t-num">${attempts}</div><div class="t-label">attempts</div></div>
       <div class="card tile"><div class="t-num">${passed}</div><div class="t-label">passed</div></div>
-      <div class="card tile"><div class="t-num">${best ?? '—'}</div><div class="t-label">best (error pts)</div></div>
+      <div class="card tile"><div class="t-num">${best ?? 'n/a'}</div><div class="t-label">best (error pts)</div></div>
     </div>
     ${state.exams.length ? `
     <div class="card" style="margin-top:14px;">
@@ -185,7 +185,13 @@ function renderExamQ(el, s) {
       ${q.type === 'number' ? `
         <div class="num-answer">
           <label class="sr-only" for="num-input">Your answer${q.unit ? ' in ' + esc(q.unit) : ''}</label>
-          <input type="number" inputmode="decimal" step="any" id="num-input" value="${answer ?? ''}" placeholder="?" autocomplete="off">
+          <!-- esc() because this value is a STRING, not a number: commit() below
+               stores numInput.value verbatim and loadSession() reads it back out
+               of localStorage without coercing it. A type=number input cannot
+               produce a quote today, so this is not a live hole, but it is the
+               one attribute in the app interpolating an unvalidated stored
+               string, and an unescaped quote here would break out of value="". -->
+          <input type="number" inputmode="decimal" step="any" id="num-input" value="${esc(answer ?? '')}" placeholder="?" autocomplete="off">
           <b>${esc(q.unit || '')}</b>
         </div>` : `
         <div class="options">
@@ -244,7 +250,7 @@ function renderExamQ(el, s) {
   el.querySelector('#submit-btn').addEventListener('click', () => {
     commit();
     const unanswered = s.questions.length - Object.keys(s.answers).length;
-    if (unanswered > 0 && !confirm(`${unanswered} question(s) unanswered — they count as wrong. Submit anyway?`)) return;
+    if (unanswered > 0 && !confirm(`${unanswered} question(s) unanswered. They count as wrong. Submit anyway?`)) return;
     finish(el, s);
   });
 }
@@ -276,7 +282,7 @@ function finish(el, s) {
   el.innerHTML = `
     <div class="card result-banner ${score.passed ? '' : ''}">
       ${icon(score.passed ? 'trophy' : 'octagon-alert', { size: 44, cls: 'big-ico' })}
-      <h1>${score.passed ? 'BESTANDEN — Passed!' : 'Not this time'}</h1>
+      <h1>${score.passed ? 'BESTANDEN: Passed!' : 'Not this time'}</h1>
       <div class="score" style="color:${score.passed ? 'var(--primary)' : 'var(--red)'};">${score.errorPoints} error points</div>
       <p class="muted">Pass limit: ${EXAM_RULES.maxErrorPoints} error points.
         ${failedByFives ? '<b>You failed on the special rule: two 5-point questions wrong.</b>' : ''}
@@ -289,7 +295,8 @@ function finish(el, s) {
     ${weakest.length ? `
     <div class="card" style="margin-top:14px;">
       <h3>${icon('book-open', { size: 17 })} Where you lost the points</h3>
-      <p class="muted mt0">Practise the topic that cost you most — that is the fastest way to move your score.</p>
+      <p class="muted mt0">Practise the topic that cost you most. That is the fastest way to move your score.</p>
+
       ${weakest.map(([id, m]) => `
         <div class="poi-item">
           <div><b>${esc(m.title)}</b><br><small class="muted">${m.count} wrong · ${m.points} error points</small></div>

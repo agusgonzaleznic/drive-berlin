@@ -1,7 +1,7 @@
 // ============ Security primitives ============
 //
 // Small, pure, heavily tested. Everything here exists because of a specific,
-// verified weakness — each function's doc block states the CONTRACT a test may
+// verified weakness. Each function's doc block states the CONTRACT a test may
 // rely on, so the tests in tests/security.test.mjs read as a specification.
 //
 // Threat model: this app has no backend and no accounts. The realistic hostile
@@ -20,7 +20,7 @@ const SAFE_SCHEMES = ['http:', 'https:', 'mailto:', 'tel:'];
 /**
  * Make a URL safe to place in an href.
  *
- * CONTRACT — a test may rely on all of this:
+ * CONTRACT. A test may rely on all of this:
  * - Returns in-app hash links unchanged ('#/foo' → '#/foo'), because those are
  *   the app's own router targets.
  * - Returns http/https/mailto/tel URLs unchanged.
@@ -52,7 +52,7 @@ export function safeUrl(url) {
     // the protocol off the result, never the resolved href.
     const parsed = new URL(raw, 'https://local.invalid/');
     if (!SAFE_SCHEMES.includes(parsed.protocol)) return '#';
-    // Relative inputs resolve against the dummy base — hand back the original so
+    // Relative inputs resolve against the dummy base. Hand back the original so
     // a relative path keeps working.
     if (/^[a-z][a-z0-9.+-]*:/i.test(raw) || raw.startsWith('//')) return parsed.href;
     return raw;
@@ -172,8 +172,9 @@ const COERCE = {
 /**
  * Turn arbitrary parsed JSON into a state object that is safe to merge.
  *
- * CONTRACT — a test may rely on all of this:
+ * CONTRACT. A test may rely on all of this:
  * - Returns a plain object whose prototype is Object.prototype, ALWAYS.
+
  * - Never copies `__proto__`, `constructor` or `prototype` keys, so importing
  *   `{"__proto__":{"polluted":true}}` cannot change any prototype.
  * - Drops unknown top-level keys entirely (allowlist, not denylist).

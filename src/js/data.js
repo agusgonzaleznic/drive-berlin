@@ -5,8 +5,8 @@ export const data = {
   locations: [],     // [{ name, type, address, lat, lng, price, url, notes }]
   modules: [],       // [{ id, order, title, german, icon, category, lesson, questions }]
   glossary: [],      // [{ de, en, desc }]
-  phrases: [],       // [{ title, emoji, note, items: [{ de, en, tip }] }] — examiner commands
-  rules: null,       // legal periods from verified research — never hardcoded in JS
+  phrases: [],       // [{ title, emoji, note, items: [{ de, en, tip }] }] (examiner commands)
+  rules: null,       // legal periods from verified research, never hardcoded in JS
   loaded: false,
 };
 
@@ -39,7 +39,8 @@ export async function loadData() {
   return data;
 }
 
-// Single source of truth for the default path — journey.js and stats.js used to
+// Single source of truth for the default path, because journey.js and stats.js used to
+
 // disagree ('convert' vs 'new'), so the same user saw different task totals.
 export const DEFAULT_PATH = 'convert';
 

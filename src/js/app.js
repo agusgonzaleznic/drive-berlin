@@ -38,7 +38,8 @@ function renderHeader() {
   // claiming a streak the user has already lost.
   const streak = streakStatus();
   el.innerHTML = `
-    <span class="stat-chip streak" title="${streak.count ? `${streak.count}-day study streak (best ${streak.best})` : `No active streak — best ${streak.best}`}">
+    <span class="stat-chip streak" title="${streak.count ? `${streak.count}-day study streak (best ${streak.best})` : `No active streak (best ${streak.best})`
+}">
       ${icon('flame', { size: 14, cls: 'emoji' })}${streak.count}<span class="sr-only"> day streak</span></span>
     <span class="stat-chip xp" title="${state.xp} XP${lvl.nextXp ? ` · ${lvl.nextXp - state.xp} XP to level ${lvl.n + 1}` : ''}">
       ${icon('star', { size: 14, cls: 'emoji' })}${compactXP(state.xp)}<span class="chip-unit"> XP</span>

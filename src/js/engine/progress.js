@@ -30,7 +30,8 @@ export function poolBreakdown(pool, quizState, now = Date.now()) {
   return { total: pool.length, fresh, due, resting, mastered };
 }
 
-/** Per-module mastery, weakest first — drives "study this next". */
+/** Per-module mastery, weakest first. Drives "study this next". */
+
 export function moduleMastery(modules, quizState) {
   return modules.map(m => {
     const qs = m.questions || [];

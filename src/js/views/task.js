@@ -76,7 +76,7 @@ export function render(el, { params }) {
         const href = safeUrl(l.url);
         const internal = href.startsWith('#');
         const attrs = internal ? '' : ' target="_blank" rel="noopener noreferrer"';
-        return `<p class="mb0" style="margin:.35em 0;"><span aria-hidden="true">${internal ? '→' : '↗'}</span> <a href="${esc(href)}"${attrs}>${esc(l.label)}</a>${l.note ? ` <small class="muted">— ${esc(l.note)}</small>` : ''}${internal ? '' : ' <small class="muted">(opens a new tab)</small>'}</p>`;
+        return `<p class="mb0" style="margin:.35em 0;"><span aria-hidden="true">${internal ? '→' : '↗'}</span> <a href="${esc(href)}"${attrs}>${esc(l.label)}</a>${l.note ? `<small class="muted">, ${esc(l.note)}</small>` : ''}${internal ? '' : ' <small class="muted">(opens a new tab)</small>'}</p>`;
       }).join('')}
     </div>` : ''}
 
@@ -108,7 +108,7 @@ export function render(el, { params }) {
       el.querySelector('#poi-list').innerHTML = poiListHtml(pois, pos);
       toast('Sorted by distance from you', { emoji: '🎯' });
     } catch {
-      toast('Could not get your location — check browser permissions', { emoji: '🙈' });
+      toast('Could not get your location. Check browser permissions', { emoji: '🙈' });
     }
   });
 
@@ -116,7 +116,8 @@ export function render(el, { params }) {
   el.querySelector('#done-btn')?.addEventListener('click', () => {
     setTaskDone(t.id, true);
     addXP(t.xp || 100, 'task');
-    // A task can satisfy several badges at once — the first-aid appointment also
+    // A task can satisfy several badges at once. The first-aid appointment also
+
     // covers the eye test and the photos.
     for (const b of [t.badge, ...(t.badges || [])].filter(Boolean)) award(b);
     confetti(CELEBRATE.medium);

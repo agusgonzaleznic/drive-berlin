@@ -7,7 +7,7 @@ const KEY = 'gds-state-v1';
 
 const DEFAULTS = {
   // path: 'convert' (non-EU licence -> German), 'eu' (EU licence exchange), 'new' (from scratch)
-  // residenceSince: ISO date the Berlin residence began — drives the legal recognition clock
+  // residenceSince: ISO date the Berlin residence began, which drives the legal recognition clock
   profile: { name: '', path: null, startedAt: null, residenceSince: '', licenceCountry: '' },
   tasks: {},      // taskId -> { done, doneAt, steps: {stepIdx: true} }
   lessons: {},    // moduleId -> { done, doneAt }
@@ -36,8 +36,8 @@ export const LEVELS = [
 
 // Every badge here must be reachable: either a journey task awards it (via its
 // `badge`/`badges` field) or code calls award() directly. Two earlier badges
-// described mandatory theory lessons and Sonderfahrten — requirements that FeV
-// § 31 Abs. 2 waives on the conversion route — so they were unwinnable by design
+// described mandatory theory lessons and Sonderfahrten, requirements that FeV
+// § 31 Abs. 2 waives on the conversion route, so they were unwinnable by design
 // and have been removed rather than left grey forever.
 export const BADGES = [
   { id: 'ignition', emoji: '🔑', name: 'Ignition', desc: 'Completed your first lesson' },
@@ -156,7 +156,7 @@ export function streakStatus(now = new Date()) {
   };
 }
 
-/** Days since the last study day — drives the "welcome back" re-entry. */
+/** Days since the last study day. Drives the "welcome back" re-entry. */
 export function daysSinceLastStudy(now = new Date()) {
   if (!state.streak.last) return null;
   const last = new Date(state.streak.last + 'T00:00:00');
@@ -237,14 +237,15 @@ export function exportState() { return JSON.stringify(state, null, 2); }
  *
  * CONTRACT: throws on malformed JSON (the caller shows an error), and for any
  * JSON that parses, only allowlisted keys with coerced types reach `state`.
- * A hostile file can therefore lose the user's progress — it is their own file —
+ * A hostile file can therefore lose the user's progress (it is their own file),
  * but it cannot pollute a prototype, smuggle a type that crashes a render, or
  * inject markup, because everything goes through sanitizeState() first.
  * Previously this was `Object.assign(state, DEFAULTS, JSON.parse(json))`, which
  * DID mutate state's prototype for an input containing a `__proto__` key.
  */
 export function importState(json) {
-  const parsed = JSON.parse(json); // throws on malformed JSON — caller handles it
+  const parsed = JSON.parse(json); // throws on malformed JSON, and the caller handles it
+
   Object.assign(state, structuredClone(DEFAULTS), sanitizeState(parsed));
   save();
 }

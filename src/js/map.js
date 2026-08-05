@@ -53,11 +53,12 @@ function popupHtml(poi) {
 }
 
 // Renders a Leaflet map into el. Returns a handle or null when Leaflet failed to load
-// (offline) — callers always render an accompanying list, so the map is progressive.
+// (offline). Callers always render an accompanying list, so the map is progressive.
 export function renderMap(el, pois, { center = BERLIN_CENTER, zoom = 11 } = {}) {
   if (typeof window.L === 'undefined') {
     el.innerHTML = `<div class="card flat center muted" style="height:100%;display:grid;place-items:center;">
-      Map needs a connection — use the list and Google Maps links below.</div>`;
+      Map needs a connection. Use the list and Google Maps links below.</div>`;
+
     return null;
   }
   const map = L.map(el, { scrollWheelZoom: false }).setView(center, zoom);

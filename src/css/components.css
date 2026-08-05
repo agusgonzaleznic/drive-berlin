@@ -1,5 +1,5 @@
 /* ============================================================================
-   Führerschein Hero — components
+   Führerschein Hero components
    Roadbook plates on a dark ground. Sharp corners, hairline borders, gold used
    only where it means "this is the thing to do next".
    ========================================================================== */
@@ -22,7 +22,7 @@
   box-shadow: var(--shadow-pop);
 }
 /* :hover cannot fire on a touchscreen, so without :active a tap on a phone gave
-   no feedback at all — the only affordance was the one the device can't trigger. */
+   no feedback at all. The only affordance was the one the device can't trigger. */
 .card.clickable:active { transform: scale(.99); box-shadow: var(--shadow-card); }
 
 /* Interactive cards are real <a>/<button> elements so they are keyboard-operable.
@@ -35,7 +35,7 @@ a.card:hover, button.card:hover { text-decoration: none; }
 button.card { appearance: none; }
 
 /* The featured plate: gold border plus a solid gold band naming why it matters.
-   Used for the next task and the weakest topic — never more than once a screen. */
+   Used for the next task and the weakest topic, never more than once a screen. */
 .card.featured { border-color: var(--gold-dark); box-shadow: var(--glow-gold), var(--shadow-card); }
 .plate-band {
   display: block; margin: -21px -21px 14px; padding: 6px 16px;
@@ -50,7 +50,7 @@ button.card { appearance: none; }
   position: relative; overflow: hidden;
   border: 1px solid var(--line-strong);
   background:
-    /* headlight wash low and centre — the road surface just ahead */
+    /* headlight wash low and centre: the road surface just ahead */
     radial-gradient(560px 200px at 50% 112%, rgba(224, 168, 46, .22), transparent 70%),
     /* the asphalt itself, darker toward the horizon */
     linear-gradient(180deg, #1b2030 0%, #151925 58%, #0f121a 100%);
@@ -87,8 +87,8 @@ button.card { appearance: none; }
   transition: transform .07s ease, box-shadow .07s ease, filter .14s ease, border-color .14s ease;
 }
 /* Never dim a button with opacity: it composites label AND fill toward the page
-   and measured 2.78:1 on the gold plaque. An explicit disabled skin holds 4.95:1
-   — which matters most here, because the disabled label is the text that explains
+   and measured 2.78:1 on the gold plaque. An explicit disabled skin holds 4.95:1,
+   which matters most here, because the disabled label is the text that explains
    why tapping does nothing. */
 .btn:disabled {
   cursor: not-allowed;
@@ -101,11 +101,11 @@ button.card { appearance: none; }
 }
 
 /* The signature plaque: a signed board lit from the front. Keeps the 4px
-   underside from the old design, because pressing it felt genuinely good — it
+   underside from the old design, because pressing it felt genuinely good. It
    just reads as struck metal now rather than a soft toy. */
 .btn-amber {
   background: linear-gradient(180deg, var(--gold-bright), var(--gold));
-  color: #17130a;                       /* 8.4:1 on the gold — white would be 2.1:1 */
+  color: #17130a;                       /* 8.4:1 on the gold; white would be 2.1:1 */
   border-color: var(--gold-bright);
   box-shadow: 0 4px 0 var(--gold-deep), 0 0 26px -6px var(--gold-glow);
   font-family: var(--font-display); letter-spacing: .1em; text-transform: uppercase;
@@ -199,7 +199,7 @@ button.card { appearance: none; }
   font-size: .97rem; letter-spacing: 0; line-height: 1.35; }
 .task-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
 /* Metadata pills carry sentences, not one-word labels, so they must be allowed to
-   wrap — unlike the short status pills elsewhere, which stay on one line. */
+   wrap, unlike the short status pills elsewhere, which stay on one line. */
 .task-meta .pill { white-space: normal; }
 
 /* ---------- facts & callouts ---------- */
@@ -254,7 +254,7 @@ button.card { appearance: none; }
 .module-card { display: flex; flex-direction: column; gap: 9px; }
 .module-top { display: flex; align-items: flex-start; gap: 12px; }
 /* Without min-width:0 the title column cannot shrink and every title wraps.
-   :not(.module-icon) matters — the icon is a div too, and flex:1 stretched it. */
+   :not(.module-icon) matters because the icon is a div too, and flex:1 stretched it. */
 .module-top > div:not(.module-icon) { min-width: 0; flex: 1 1 auto; }
 .module-icon {
   width: 44px; height: 44px; flex: 0 0 auto; display: grid; place-items: center;
@@ -466,7 +466,8 @@ button.card { appearance: none; }
 
 
 /* ---------- icons ---------- */
-/* Inline SVG line icons (Lucide, ISC — see src/assets/icons/LICENSE.lucide).
+/* Inline SVG line icons (Lucide, ISC licence: see src/assets/icons/LICENSE.lucide).
+
    They inherit currentColor, so an icon is always the colour of the text it
    accompanies and needs no per-context override. */
 .ico { display: inline-block; vertical-align: -0.16em; flex: 0 0 auto; }

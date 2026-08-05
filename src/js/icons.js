@@ -1,5 +1,6 @@
 // ============ Icon set ============
-// Lucide icons, ISC licence — see src/assets/icons/LICENSE.lucide. The original
+// Lucide icons, ISC licence (see src/assets/icons/LICENSE.lucide). The original
+
 // .svg files are kept next to that licence for provenance; this module holds only
 // their drawing commands, so the whole set costs zero network requests and every
 // icon inherits currentColor from whatever it sits in.

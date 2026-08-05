@@ -15,9 +15,10 @@
     "test:a11y": "node tests/a11y.mjs",
     "test:contrast": "node tests/measure.mjs",
     "test:csp": "node tests/csp.mjs",
-    "test:all": "npm test && node tests/browser.mjs && node tests/a11y.mjs && node tests/csp.mjs && node tests/emojiscan.mjs && node tests/course.browser.mjs"
+    "check:links": "node scripts/check-links.mjs",
+    "test:all": "npm test && npm run check:links && node tests/browser.mjs && node tests/a11y.mjs && node tests/csp.mjs && node tests/emojiscan.mjs && node tests/course.browser.mjs"
   },
   "devDependencies": {
-    "playwright-core": "^1.62.0"
+    "playwright-core": "1.62.1"
   }
 }

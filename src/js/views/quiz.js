@@ -126,7 +126,8 @@ function renderDone(el, s) {
       <div class="score">${s.correct}/${s.questions.length}</div>
       <p class="muted">${pct === 100 ? 'Perfect round!'
         : pct >= 70 ? 'Strong! Keep this pace.'
-        : pct >= 40 ? 'Wrong answers come back sooner — that\'s how you learn.'
+        : pct >= 40 ? 'Wrong answers come back sooner. That\'s how you learn.'
+
         : 'A hard round is the useful kind: every miss is now queued to return until it sticks.'}</p>
       <p>${reward}</p>
       <div class="row" style="justify-content:center;">

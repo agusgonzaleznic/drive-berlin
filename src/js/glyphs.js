@@ -63,5 +63,6 @@ export function glyph(ch, opts = {}) {
   return ch ? `<span aria-hidden="true">${esc(ch)}</span>` : '';
 }
 
-/** The icon name for a glyph, or null — for callers that need the name itself. */
+/** The icon name for a glyph, or null. For callers that need the name itself. */
+
 export const glyphIcon = ch => MAP[ch] || null;

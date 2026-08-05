@@ -1,6 +1,24 @@
 node_modules/
 tests/shots/
 
+# Credentials and machine-local state. Nothing of this kind exists in the project
+# today and none of it is tracked; these patterns are here so that going public
+# cannot be the moment one gets committed by accident. `.npmrc` matters most: it
+# is where an npm auth token lands, and it sits at the repository root.
+.env
+.env.*
+.npmrc
+.netrc
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+.DS_Store
+*.log
+.idea/
+.vscode/
+
 # Raw research-agent output. Kept local on purpose: the curated documents in
 # docs/knowledge-base/ carry the findings, and they cite these filenames as
 # provenance labels rather than as links.

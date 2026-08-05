@@ -1,4 +1,4 @@
-// ============ Pure exam/quiz engine — no DOM, importable from Node tests ============
+// ============ Pure exam/quiz engine: no DOM, importable from Node tests ============
 //
 // Mirrors the real German theory exam rules for a class B first licence:
 //   30 questions (20 Grundstoff + 10 Zusatzstoff), each worth 2-5 error points.
@@ -21,7 +21,7 @@ export const EXAM_RULES = {
  *   matter; a partial selection is wrong; an extra selection is wrong; an empty
  *   or missing answer is wrong.
  * - Number questions compare exactly, accepting a numeric string ('27.5' === 27.5).
- *   An empty string, null or undefined is wrong — never silently correct.
+ *   An empty string, null or undefined is wrong, never silently correct.
  * - Never throws for a malformed question or answer.
  *
  * @param {{type?:string, options?:Array<{correct?:boolean}>, answer_number?:number}} q
@@ -43,12 +43,13 @@ export function isAnswerCorrect(q, answer) {
 /**
  * Score a mock exam exactly as the official German class B exam is scored.
  *
- * CONTRACT — these are legal rules, not preferences (FeV Anlage 7):
+ * CONTRACT. These are legal rules, not preferences (FeV Anlage 7):
  * - Error points accumulate ONLY for wrong answers; an unanswered question
  *   counts as wrong.
  * - Pass requires errorPoints <= 10 AND at most ONE wrong 5-point question.
  *   Exactly 10 points with a single 5-pointer wrong PASSES.
- *   Exactly 10 points with TWO 5-pointers wrong FAILS — the special rule.
+ *   Exactly 10 points with TWO 5-pointers wrong FAILS under the special rule.
+
  * - Returns a per-question result array in the original order.
  *
  * @param {Array<{id?:string, points?:number}>} questions

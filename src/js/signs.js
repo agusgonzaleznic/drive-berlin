@@ -23,7 +23,7 @@ const bike = (x, y, color = '#111', s = 1) =>
   `<g transform="translate(${x} ${y}) scale(${s})" fill="none" stroke="${color}" stroke-width="3"><circle cx="8" cy="20" r="7"/><circle cx="32" cy="20" r="7"/><path d="M8 20 L16 8 L26 8 L32 20 M16 8 L20 20 L8 20 M20 4 L26 8"/></g>`;
 
 export const SIGNS = {
-  stop: { name: 'Stop — give way (Halt! Vorfahrt gewähren)', svg: W(
+  stop: { name: 'Stop, give way (Halt! Vorfahrt gewähren)', svg: W(
     `<path d="M30 3 H70 L97 30 V70 L70 97 H30 L3 70 V30 Z" fill="#d31f26" stroke="#fff" stroke-width="5"/>
      <text x="50" y="61" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="26" fill="#fff">STOP</text>`) },
   yield: { name: 'Give way (Vorfahrt gewähren)', svg: W(
@@ -42,7 +42,7 @@ export const SIGNS = {
   children: { name: 'Watch for children (Kinder)', svg: warnTriangle(
     `${person(34, 40, '#111', 1.5)}${person(52, 44, '#111', 1.2)}`) },
   bicycles_crossing: { name: 'Cyclists crossing (Radverkehr)', svg: warnTriangle(bike(30, 42, '#111', 1)) },
-  railroad: { name: 'Level crossing — St. Andrew\'s cross (Andreaskreuz)', svg: W(
+  railroad: { name: 'Level crossing: St. Andrew\'s cross (Andreaskreuz)', svg: W(
     `<g transform="rotate(0 50 50)"><path d="M8 26 L92 74 M92 26 L8 74" stroke="#fff" stroke-width="22"/><path d="M8 26 L92 74 M92 26 L8 74" stroke="#d31f26" stroke-width="18"/><path d="M14 29 L86 71 M86 29 L14 71" stroke="#fff" stroke-width="10"/></g>`) },
   speed_30: { name: 'Speed limit 30 km/h', svg: forbidCircle(num(30, 36, 63)) },
   speed_50: { name: 'Speed limit 50 km/h', svg: forbidCircle(num(50, 36, 63)) },
@@ -99,7 +99,8 @@ export const SIGNS = {
      <text x="50" y="26" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="15" fill="#111">UMWELT</text>
      <circle cx="50" cy="60" r="28" fill="#d31f26"/><circle cx="50" cy="60" r="21" fill="#fff"/>
      <text x="50" y="66" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="15" fill="#111">ZONE</text>`) },
-  town_entry: { name: 'Town entry — 50 km/h begins (Ortstafel)', svg: W(
+  town_entry: { name: 'Town entry, where 50 km/h begins (Ortstafel)', svg: W(
+
     `<rect x="4" y="22" width="92" height="56" rx="6" fill="#f6c800" stroke="#111" stroke-width="3"/>
      <text x="50" y="57" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="20" fill="#111">Berlin</text>`) },
   town_exit: { name: 'Town exit (Ortstafel Rückseite)', svg: W(

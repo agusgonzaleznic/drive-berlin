@@ -34,7 +34,7 @@ function renderList(el) {
     </div>
     ${weakest ? `
       <div class="card featured" style="margin-bottom:14px;">
-        <span class="plate-band">Weakest ground — start here</span>
+        <span class="plate-band">Weakest ground: start here</span>
         <div class="spread">
           <div style="flex:1;min-width:200px;">
             <h3 class="mb0">${glyph(weakest.icon || '📘', { size: 18 })} ${esc(weakest.title)}</h3>
@@ -50,7 +50,7 @@ function renderList(el) {
       <div class="module-top">
         <div class="module-icon" aria-hidden="true">${icon('message-square-quote', { size: 21 })}</div>
         <div style="flex:1;">
-          <b>Exam German — what the examiner will say</b><br>
+          <b>Exam German: what the examiner will say</b><br>
           <small class="muted">Your practical exam is in German only. Learn the commands, then drill them.</small>
         </div>
         <span class="pill blue">essential</span>
@@ -141,7 +141,8 @@ function renderLesson(el, id) {
         import('../state.js').then(s => s.award('bookworm'));
       }
       confetti(CELEBRATE.medium);
-      toast('Lesson complete — now prove it on the quiz', { emoji: '📚' });
+      toast('Lesson complete. Now prove it on the quiz', { emoji: '📚' });
+
     }
     renderLesson(el, id);
   });

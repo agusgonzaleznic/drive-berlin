@@ -50,7 +50,8 @@ export function render(el) {
       toast('Found you! Sorted by distance.', { emoji: '🎯' });
       paint();
     } catch {
-      toast('Could not get your location — check browser permissions', { emoji: '🙈' });
+      toast('Could not get your location. Check browser permissions', { emoji: '🙈' });
+
     }
   });
 

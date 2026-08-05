@@ -74,3 +74,19 @@ jobs:
       # cover them. Run `npm run test:all` on macOS before any release.
       - name: Run the Node test suite
         run: npm test
+
+      # Checks the Markdown: every heading anchor, every relative file path, and
+      # the no-em-dash rule on the prose files. This is a separate step from
+      # `npm test` so that a broken link reports as its own red step rather than
+      # hiding inside the unit test output.
+      #
+      # It is worth gating in CI because these break silently. A README anchor is
+      # just a string: it renders as a normal link whether or not the heading it
+      # points at exists, so nothing surfaces the rot until a reader clicks it.
+      # Two anchors were already broken when this check was written. Deleting or
+      # renaming a doc breaks inbound links the same quiet way.
+      #
+      # Pure Node, no browser, so unlike the suites described above this one does
+      # run here and its result is real.
+      - name: Check Markdown links and anchors
+        run: npm run check:links

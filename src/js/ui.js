@@ -73,7 +73,7 @@ export const prefersReducedMotion = () =>
 // site previously fired the same full-screen burst, which made reading a lesson
 // feel identical to passing an exam.
 export const CELEBRATE = {
-  small: 0,    // no confetti — a toast is enough (a single correct answer, a step)
+  small: 0,    // no confetti, because a toast is enough (a single correct answer, a step)
   medium: 70,  // lesson finished, task completed
   large: 140,  // badge earned, level up
   huge: 240,   // mock exam passed, licence obtained
@@ -128,12 +128,13 @@ export function ring(pct, {
       stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${off}"
       transform="rotate(-90 ${size / 2} ${size / 2})"/>
     <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle"
-      font-weight="900" font-size="${size / 4.4}" fill="${textColor}">${label || Math.round(pct * 100) + '%'}</text>
+      font-weight="900" font-size="${size / 4.4}" fill="${textColor}">${esc(label || Math.round(pct * 100) + '%')}</text>
   </svg>`;
 }
 
 // ---------- misc ----------
-export function eur(v) { return v == null ? '—' : `€${v}`; }
+export function eur(v) { return v == null ? 'n/a' : `€${v}`; }
+
 export function plural(n, one, many) { return n === 1 ? `${n} ${one}` : `${n} ${many || one + 's'}`; }
 export function gmapsLink(query) {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;

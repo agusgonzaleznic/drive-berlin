@@ -5,7 +5,7 @@
 // is a criminal offence. A second, longer deadline governs how long the simplified
 // conversion (Umschreibung) route stays open.
 //
-// The periods themselves are NOT hardcoded here — they come from data/rules.json,
+// The periods themselves are NOT hardcoded here. They come from data/rules.json,
 // which is filled from verified legal research, so this module never invents law.
 
 export const DAY = 864e5;
@@ -28,7 +28,7 @@ export function daysBetween(a, b) {
   return Math.round((db - da) / DAY);
 }
 
-/** Local YYYY-MM-DD — never use toISOString() for calendar dates, it shifts by timezone. */
+/** Local YYYY-MM-DD. Never use toISOString() for calendar dates: it shifts by timezone. */
 export function isoDay(d) {
   const p = n => String(n).padStart(2, '0');
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
@@ -50,14 +50,14 @@ export function urgencyLevel(daysLeft) {
 /**
  * How long the non-EU licence is still valid to drive on.
  *
- * CONTRACT — the safety-critical one in this app:
+ * CONTRACT (the safety-critical one in this app):
  * - Returns NULL when the residence date or the legal period is missing or
  *   malformed. It NEVER guesses a deadline: a wrong recognition date could lead
  *   the user to commit a criminal offence (StVG § 21), and there is no plausible
  *   default for that. Callers must render an honest "not available" state.
  * - `daysLeft` is negative once expired; `expired` is true from the day after.
  * - Month arithmetic clamps to the end of a shorter month (31 Aug + 6 = 28 Feb).
- * - All dates are LOCAL calendar dates — never toISOString(), which shifts by
+ * - All dates are LOCAL calendar dates, never toISOString(), which shifts by
  *   timezone and would report the wrong day for anyone east of UTC.
  * - The conversion deadline is optional; when the rules omit it, the returned
  *   `conversionEnd` is null and `conversionExpired` is false (there is no such
@@ -66,7 +66,7 @@ export function urgencyLevel(daysLeft) {
  * @param {string} residenceSince ISO date (YYYY-MM-DD) residence was established
  * @param {{recognition_months?:number, conversion_deadline_months?:number|null}} rules
  * @param {Date}   [now]
- * @returns {null|object} null when inputs are insufficient — never a guess
+ * @returns {null|object} null when inputs are insufficient, never a guess
  */
 export function licenceClock(residenceSince, rules, now = new Date()) {
   if (!residenceSince || !rules || !rules.recognition_months) return null;
@@ -113,7 +113,7 @@ export function clockHeadline(clock) {
       tone: 'danger',
       title: 'Your Argentine licence is no longer valid for driving here',
       detail: `The ${clock.recognitionMonths}-month recognition period ended on ${fmtDate(clock.recognitionEnd)}. ` +
-        `Driving now counts as driving without a licence — do not drive until your German licence is issued.`,
+        `Driving now counts as driving without a licence. Do not drive until your German licence is issued.`,
     };
   }
   if (clock.daysLeft === 0) {
@@ -123,7 +123,7 @@ export function clockHeadline(clock) {
     return {
       tone: 'danger',
       title: `Only ${clock.daysLeft} days left to drive on your Argentine licence`,
-      detail: `Recognition ends ${fmtDate(clock.recognitionEnd)}. There is no longer enough time to finish the conversion before then — ` +
+      detail: `Recognition ends ${fmtDate(clock.recognitionEnd)}. There is no longer enough time to finish the conversion before then, so ` +
         `file the application immediately and plan for a gap where you may not drive.`,
     };
   }
@@ -131,7 +131,7 @@ export function clockHeadline(clock) {
     return {
       tone: 'warning',
       title: `${clock.daysLeft} days left to drive on your Argentine licence`,
-      detail: `Recognition ends ${fmtDate(clock.recognitionEnd)}. Get the application in now — the authority alone takes weeks and exam slots are booked out.`,
+      detail: `Recognition ends ${fmtDate(clock.recognitionEnd)}. Get the application in now, because the authority alone takes weeks and exam slots are booked out.`,
     };
   }
   if (clock.level === 'plan') {
@@ -144,6 +144,7 @@ export function clockHeadline(clock) {
   return {
     tone: 'tip',
     title: `${clock.daysLeft} days left on your Argentine licence`,
-    detail: `You may drive on it until ${fmtDate(clock.recognitionEnd)}. Plenty of runway — but the earlier you apply, the calmer this gets.`,
+    detail: `You may drive on it until ${fmtDate(clock.recognitionEnd)}. Plenty of runway, but the earlier you apply, the calmer this gets.`,
+
   };
 }

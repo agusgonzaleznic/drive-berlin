@@ -2,7 +2,7 @@
   {
     "name": "Bürgeramt 3 Friedrichshain (file your application here)",
     "type": "authority",
-    "address": "Frankfurter Allee 35/37, 10247 Berlin — Passage, Aufgang B",
+    "address": "Frankfurter Allee 35/37, 10247 Berlin (Passage, Aufgang B)",
     "lat": 52.5149,
     "lng": 13.4566,
     "price": "€45.10 conversion · €6 photo on site",
@@ -18,7 +18,7 @@
     "lng": 13.3826,
     "price": "€45.10 conversion",
     "url": "https://service.berlin.de/dienstleistung/327537/",
-    "notes": "Second option in your own district — useful when Friedrichshain has no slots. Any Berlin Bürgeramt may take the application.",
+    "notes": "Second option in your own district, useful when Friedrichshain has no slots. Any Berlin Bürgeramt may take the application.",
     "english_friendly": false
   },
   {
@@ -33,25 +33,25 @@
     "english_friendly": false
   },
   {
-    "name": "LABO Fahrerlaubnisbehörde — decides your case AND issues your licence",
+    "name": "LABO Fahrerlaubnisbehörde: decides your case AND issues your licence",
     "type": "authority",
     "address": "Puttkamerstr. 16-18, 10969 Berlin",
     "lat": 52.5062,
     "lng": 13.3894,
-    "price": "—",
+    "price": "n/a",
     "url": "https://www.berlin.de/labo/mobilitaet/fahrerlaubnisse-personen-und-gueterbefoerderung/artikel.911946.php",
-    "notes": "You file the application at a Bürgeramt, but you WILL come here at the end: for a conversion, licence issuance is handled exclusively by the Fahrerlaubnisbehörde. Book on (030) 90269-2300 or 115 and bring the original Prüfbescheinigung plus your original Argentine licence — that is where you get the provisional driving permission and surrender the Argentine licence. Appointment only: Mon–Thu 07:00–14:00, Fri 07:00–12:00.",
+    "notes": "You file the application at a Bürgeramt, but you WILL come here at the end: for a conversion, licence issuance is handled exclusively by the Fahrerlaubnisbehörde. Book on (030) 90269-2300 or 115 and bring the original Prüfbescheinigung plus your original Argentine licence. That is where you get the provisional driving permission and surrender the Argentine licence. Appointment only: Mon–Thu 07:00–14:00, Fri 07:00–12:00.",
     "english_friendly": false
   },
   {
-    "name": "Erste Hilfe Station Friedrichshain — first aid in English + free eye test + free photos",
+    "name": "Erste Hilfe Station Friedrichshain: first aid in English + free eye test + free photos",
     "type": "first-aid",
     "address": "Frankfurter Allee 96, 10247 Berlin",
     "lat": 52.5136,
     "lng": 13.4712,
     "price": "€72.99 online (€82.99 cash) incl. eye test and photos",
     "url": "https://www.erste-hilfe-station.de/",
-    "notes": "The most efficient stop on your whole list: three required documents in one session, in English, at a single Friedrichshain venue. Nine units of 45 min, about 7.5 hours. Book ONLINE — paying cash on the day adds €10. English dates run Thu–Sun. Photograph your certificate before you hand it in: the Bürgeramt keeps the original and a replacement copy costs €29.99.",
+    "notes": "The most efficient stop on your whole list: three required documents in one session, in English, at a single Friedrichshain venue. Nine units of 45 min, about 7.5 hours. Book ONLINE, because paying cash on the day adds €10. English dates run Thu–Sun. Photograph your certificate before you hand it in: the Bürgeramt keeps the original and a replacement copy costs €29.99.",
     "english_friendly": true
   },
   {
@@ -77,9 +77,9 @@
     "english_friendly": true
   },
   {
-    "name": "ANB Berlin — cheapest verified English course",
+    "name": "ANB Berlin: cheapest verified English course",
     "type": "first-aid",
-    "address": "Berlin (multiple venues — check the booking calendar)",
+    "address": "Berlin, multiple venues (check the booking calendar)",
     "lat": 52.52,
     "lng": 13.405,
     "price": "from €55",
@@ -88,31 +88,31 @@
     "english_friendly": true
   },
   {
-    "name": "SoftAid Berlin — first-aid course",
+    "name": "SoftAid Berlin first-aid course",
     "type": "first-aid",
     "address": "Storkower Str. 101B, 10407 Berlin (Weissensee venue)",
     "lat": 52.5285,
     "lng": 13.455,
-    "price": "not published — ask",
+    "price": "not published (ask)",
     "url": "https://soft-aid.de/erste-hilfe/fuehrerschein/berlin",
-    "notes": "Close to Friedrichshain, one of 14 Berlin venues. Note: not every date is a full English-language course — their FAQ says instructors otherwise hand out English translations and support you through the practical parts. Confirm the language when booking.",
+    "notes": "Close to Friedrichshain, one of 14 Berlin venues. Note: not every date is a full English-language course. Their FAQ says instructors otherwise hand out English translations and support you through the practical parts. Confirm the language when booking.",
     "english_friendly": false
   },
   {
-    "name": "ASB Berlin-Südwest — first aid in English",
+    "name": "ASB Berlin-Südwest: first aid in English",
     "type": "first-aid",
     "address": "Lahnstr. 52, 12055 Berlin",
     "lat": 52.471,
     "lng": 13.45,
     "price": "€75 (reduced €70)",
     "url": "https://www.asb-berlin.de/",
-    "notes": "Established provider (Arbeiter-Samariter-Bund). Prices taken from their live booking system — older static pages still show €65/€60.",
+    "notes": "Established provider (Arbeiter-Samariter-Bund). Prices taken from their live booking system. Older static pages still show €65/€60.",
     "english_friendly": true
   },
   {
     "name": "Johanniter Ausbildungszentrum Berlin",
     "type": "first-aid",
-    "address": "Berlin/Brandenburg training centre — street address unverified",
+    "address": "Berlin/Brandenburg training centre (street address unverified)",
     "lat": 52.4218,
     "lng": 13.3705,
     "price": "not verified",
@@ -121,14 +121,14 @@
     "english_friendly": true
   },
   {
-    "name": "Fielmann Friedrichshain — free eye test",
+    "name": "Fielmann Friedrichshain: free eye test",
     "type": "eye-test",
     "address": "Frankfurter Allee 71-77, 10247 Berlin",
     "lat": 52.5147,
     "lng": 13.464,
     "price": "free",
     "url": "https://www.fielmann.de/service/fuehrerschein-sehtest/",
-    "notes": "Officially recognised Sehteststelle and genuinely free of charge. Certificate must be under 2 years old when you apply. Call ahead — whether you can just walk in is not stated anywhere official.",
+    "notes": "Officially recognised Sehteststelle and genuinely free of charge. Certificate must be under 2 years old when you apply. Call ahead, because whether you can just walk in is not stated anywhere official.",
     "english_friendly": true
   },
   {
@@ -158,9 +158,9 @@
     "address": "Grunerstr. 20 (ALEXA mall), 10179 Berlin",
     "lat": 52.5216,
     "lng": 13.415,
-    "price": "not published — ask",
+    "price": "not published (ask)",
     "url": "https://www.apollo.de/",
-    "notes": "Officially recognised Sehteststelle. The old fixed €6.43 fee was abolished in 2019 and Apollo publishes no price, so ask first — or just use Fielmann, which is free.",
+    "notes": "Officially recognised Sehteststelle. The old fixed €6.43 fee was abolished in 2019 and Apollo publishes no price, so ask first. Or just use Fielmann, which is free.",
     "english_friendly": true
   },
   {
@@ -169,34 +169,34 @@
     "address": "Karl-Marx-Str. 151, 12043 Berlin",
     "lat": 52.477,
     "lng": 13.44,
-    "price": "not published — ask",
+    "price": "not published (ask)",
     "url": "https://www.apollo.de/",
     "english_friendly": true
   },
   {
-    "name": "ADAC Berlin-Mitte — licence translation + classification",
+    "name": "ADAC Berlin-Mitte: licence translation + classification",
     "type": "translator",
     "address": "Alexanderstr. 1, 10178 Berlin",
     "lat": 52.5196,
     "lng": 13.4155,
     "price": "€65 translation + classification · €25 classification only",
     "url": "https://www.adac.de/services/uebersetzungen/",
-    "notes": "The route the authority and driving schools point to. Order in person or online (5–7 working days by post). Ask for translation AND classification — you need both.",
+    "notes": "The route the authority and driving schools point to. Order in person or online (5–7 working days by post). Ask for translation AND classification, because you need both.",
     "english_friendly": true
   },
   {
     "name": "Court-sworn Spanish→German translators (online register)",
     "type": "translator",
-    "address": "Nationwide register — filter by Berlin + Spanisch",
+    "address": "Nationwide register: filter by Berlin + Spanisch",
     "lat": 52.52,
     "lng": 13.405,
     "price": "approx. €35–70, often 24–48 h",
     "url": "https://www.justiz-uebersetzer.de/",
-    "notes": "Officially accepted alternative to ADAC and usually faster — but most do NOT provide the class classification, which you also need. Confirm before ordering.",
+    "notes": "Officially accepted alternative to ADAC and usually faster, but most do NOT provide the class classification, which you also need. Confirm before ordering.",
     "english_friendly": true
   },
   {
-    "name": "Argentine Embassy — Consular Section",
+    "name": "Argentine Embassy, Consular Section",
     "type": "consulate",
     "address": "Von-der-Heydt-Str. 2, 10785 Berlin",
     "lat": 52.5072,
@@ -214,7 +214,7 @@
     "lng": 13.3585,
     "price": "n/a",
     "url": "https://consberlino.esteri.it/",
-    "notes": "For passport and citizenship matters. It cannot convert your Argentine licence — German residence means Germany is the only country that may license you.",
+    "notes": "For passport and citizenship matters. It cannot convert your Argentine licence, because German residence means Germany is the only country that may license you.",
     "english_friendly": true
   },
   {
@@ -225,7 +225,7 @@
     "lng": 13.499,
     "price": "Theory €24.99 · Practical €129.83",
     "url": "https://www.dekra.de/",
-    "notes": "Closest DEKRA exam centre to Friedrichshain. Your driving school books the exams here against the Prüfauftrag — you cannot book directly.",
+    "notes": "Closest DEKRA exam centre to Friedrichshain. Your driving school books the exams here against the Prüfauftrag. You cannot book directly.",
     "english_friendly": false
   },
   {
@@ -247,7 +247,7 @@
     "lng": 13.2951,
     "price": "Theory €24.99 · Practical €129.83",
     "url": "https://www.dekra.de/",
-    "notes": "Address conflict between sources — one gave Eichborndamm 111. Confirm with your driving school, which books the slot anyway.",
+    "notes": "Address conflict between sources: one gave Eichborndamm 111. Confirm with your driving school, which books the slot anyway.",
     "english_friendly": false
   },
   {
@@ -277,9 +277,9 @@
     "address": "Am Friedrichshain 23, 10407 Berlin",
     "lat": 52.528,
     "lng": 13.429,
-    "price": "quoted individually — ask for an Umschreibung package",
+    "price": "quoted individually (ask for an Umschreibung package)",
     "url": "https://www.asphalt-profis.com/driving-licences-non-eu",
-    "notes": "The only Berlin school found with a dedicated non-EU conversion page, and it states the law correctly (both exams, no minimum lessons). Theory in German or English. Note: their published authority fees are outdated — trust them for teaching, not for fees.",
+    "notes": "The only Berlin school found with a dedicated non-EU conversion page, and it states the law correctly (both exams, no minimum lessons). Theory in German or English. Note: their published authority fees are outdated, so trust them for teaching, not for fees.",
     "english_friendly": true
   },
   {
@@ -288,7 +288,7 @@
     "address": "Neue Bahnhofstr. 5, 10245 Berlin (Friedrichshain)",
     "lat": 52.5058,
     "lng": 13.4642,
-    "price": "not published — request a quote",
+    "price": "not published (request a quote)",
     "url": "https://www.clickclickdrive.de/fahrschule/en/berlin/friedrichshain",
     "notes": "In Friedrichshain itself. English, German, Russian, Turkish per directory listing. Ask whether they handle third-country conversions.",
     "english_friendly": true
@@ -299,20 +299,20 @@
     "address": "Samariterstr. 40, 10247 Berlin (Friedrichshain)",
     "lat": 52.5175,
     "lng": 13.4645,
-    "price": "not published — request a quote",
+    "price": "not published (request a quote)",
     "url": "https://www.clickclickdrive.de/fahrschule/en/berlin/friedrichshain",
     "notes": "Same U5 stop as Bürgeramt 3, so you can register and apply in one trip. English and German. Confirm they take conversion candidates.",
     "english_friendly": true
   },
   {
-    "name": "Fahrschule Kotti — Spanish-speaking",
+    "name": "Fahrschule Kotti, Spanish-speaking",
     "type": "driving-school",
     "address": "Skalitzer Str. 139, 10999 Berlin (Kreuzberg)",
     "lat": 52.501,
     "lng": 13.4238,
-    "price": "not published — request a quote",
+    "price": "not published (request a quote)",
     "url": "https://www.clickclickdrive.de/fahrschule/en/berlin/friedrichshain",
-    "notes": "Teaches in SPANISH (no English) — possibly your best fit, since you can also sit the theory exam in Spanish. Same district.",
+    "notes": "Teaches in SPANISH (no English), and possibly your best fit, since you can also sit the theory exam in Spanish. Same district.",
     "english_friendly": false
   },
   {
@@ -321,9 +321,9 @@
     "address": "Hasenheide 58, 10967 Berlin (Kreuzberg)",
     "lat": 52.489,
     "lng": 13.4106,
-    "price": "not published — separate Preise page",
+    "price": "not published (see their Preise page)",
     "url": "https://www.fahrschule-suedstern.de/driving-school-berlin.html",
-    "notes": "\"We also speak and teach English\" — theory and practical in English, multilingual study materials. U7 Südstern.",
+    "notes": "\"We also speak and teach English\": theory and practical in English, multilingual study materials. U7 Südstern.",
     "english_friendly": true
   },
   {
@@ -332,13 +332,13 @@
     "address": "Hauptstr. 92, 12159 Berlin (Schöneberg)",
     "lat": 52.474,
     "lng": 13.3475,
-    "price": "not published — ask",
+    "price": "not published (ask)",
     "url": "https://english-driving-school.de/",
     "notes": "Long-established English-language school (since 2006). Further from Friedrichshain, but a strong English option.",
     "english_friendly": true
   },
   {
-    "name": "AS Fahrschule — English theory course",
+    "name": "AS Fahrschule: English theory course",
     "type": "driving-school",
     "address": "Otto-Suhr-Allee 75, 10585 Berlin (Charlottenburg)",
     "lat": 52.5175,
@@ -349,18 +349,18 @@
     "english_friendly": true
   },
   {
-    "name": "dm-drogerie markt — biometric photos",
+    "name": "dm-drogerie markt: biometric photos",
     "type": "photo",
-    "address": "Grunerstr. 20 (ALEXA mall), 10179 Berlin — and branches citywide",
+    "address": "Grunerstr. 20 (ALEXA mall), 10179 Berlin, and branches citywide",
     "lat": 52.5217,
     "lng": 13.4148,
     "price": "€5.95 via the dm-Passbild-App",
     "url": "https://foto.dm.de/app-biometrische-passfotos-selber-machen.html",
-    "notes": "Cheapest verified option: you shoot the photo in the app, print at any dm photo station and pay at the till — you get six biometric photos plus a digital copy. Free at Erste Hilfe Station if you do the first-aid course there.",
+    "notes": "Cheapest verified option: you shoot the photo in the app, print at any dm photo station and pay at the till. You get six biometric photos plus a digital copy. Free at Erste Hilfe Station if you do the first-aid course there.",
     "english_friendly": true
   },
   {
-    "name": "Photo booth (Fotofix) — Ostbahnhof",
+    "name": "Photo booth (Fotofix) at Ostbahnhof",
     "type": "photo",
     "address": "Berlin Ostbahnhof, Koppenstr. 3, 10243 Berlin",
     "lat": 52.5107,
@@ -370,7 +370,8 @@
     "english_friendly": true
   },
   {
-    "name": "Photo booth (Fotofix) — Alexanderplatz",
+    "name": "Photo booth (Fotofix) at Alexanderplatz",
+
     "type": "photo",
     "address": "S+U Alexanderplatz station hall, 10178 Berlin",
     "lat": 52.5215,

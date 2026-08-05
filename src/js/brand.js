@@ -1,5 +1,5 @@
 // ============ Brand marks ============
-// Original artwork, drawn for this project — no third-party logo is used anywhere,
+// Original artwork, drawn for this project. No third-party logo is used anywhere,
 // which keeps the emblem free of any licensing question.
 //
 // The emblem is a German sign plate seen head-on: rounded plate, gold rule, and a
@@ -26,8 +26,9 @@ export function emblem({ size = 30, label = 'Führerschein Hero' } = {}) {
       fill="url(#em-plate)" stroke="url(#em-gold)" stroke-width="2.2"/>
     <!-- The road, in gold: wide at the driver, narrowing toward the horizon. Bold
          enough to survive at 20px, where finer geometry turned into a smudge.
-         A circle above the taper was tried first and read as a head — the mark
-         became a pedestrian sign — so the horizon is a bar instead. -->
+         A circle above the taper was tried first and read as a head, which made
+         the mark look like a pedestrian sign, so the horizon is a bar instead. -->
+
     <path d="M6.8 25.8 L12.9 12.6 h6.2 L25.2 25.8 Z" fill="url(#em-gold)"/>
     <!-- one dark centre dash: the only interior detail that survives small -->
     <path d="M14.85 24.2 h2.3 l-.75 -7.2 h-.8 Z" fill="#141821"/>

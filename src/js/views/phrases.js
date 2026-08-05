@@ -17,7 +17,7 @@ export function render(el, ctx) {
     <a href="#/learn" class="muted" style="font-weight:800;">← All lessons</a>
     <div class="card hero" style="margin-top:10px;">
       <h1>${icon('message-square-quote', { size: 22 })} Exam German</h1>
-      <p class="mt0">Your practical exam is conducted <b>in German only</b> — no interpreter allowed.
+      <p class="mt0">Your practical exam is conducted <b>in German only</b>, with no interpreter allowed.
       The good news: examiners use a small, predictable set of commands. Learn these ${total || ''} phrases
       and you'll understand everything that matters.</p>
       ${total ? `<a class="btn btn-amber" href="#/phrases/drill">${icon('target', { size: 15 })} Drill me on these</a>` : ''}
@@ -70,7 +70,7 @@ function renderDrill(el, groups) {
         <div class="card result-banner">
           ${icon(pct >= 80 ? 'trophy' : pct >= 50 ? 'zap' : 'sunrise', { size: 44, cls: 'big-ico' })}
           <div class="score">${correct}/${session.length}</div>
-          <p class="muted">${pct >= 80 ? 'You would understand your examiner.' : 'Keep drilling — these come up every single exam.'}</p>
+          <p class="muted">${pct >= 80 ? 'You would understand your examiner.' : 'Keep drilling: these come up every single exam.'}</p>
           <p><span class="pill amber">+${correct * 5} XP</span></p>
           <div class="row" style="justify-content:center;">
             <button class="btn btn-primary" id="again">${icon('repeat-2', { size: 15 })} Again</button>
@@ -115,7 +115,8 @@ function renderDrill(el, groups) {
         el.querySelector('#fb').innerHTML = `
           <div class="explain">
             <div class="verdict">${icon(ok ? 'circle-check' : 'circle-alert', { size: 19 })} ${ok ? 'Genau!' : 'Not that one.'}</div>
-            <div class="callout ${ok ? 'tip' : 'rule'}"><b>${esc(item.de)}</b> — ${esc(item.en)}
+            <div class="callout ${ok ? 'tip' : 'rule'}"><b>${esc(item.de)}</b><br>${esc(item.en)}
+
               ${item.tip ? `<br>${icon('lightbulb', { size: 13 })} ${esc(item.tip)}` : ''}</div>
             <div class="center"><button class="btn btn-primary" id="next">Continue →</button></div>
           </div>`;

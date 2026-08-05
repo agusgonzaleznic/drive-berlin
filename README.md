@@ -583,14 +583,14 @@ Three things help, in ascending order of effort:
   this exists.
 - **Open an issue when a number is wrong.** Fees, waiting times and provider prices drift constantly.
   A corrected figure *with its primary source* is the most useful contribution anyone can make here.
-- **Buy me a coffee via GitHub Sponsors**, if this saved you a wasted trip to LABO. Re-verifying legal
-  claims against primary sources is the slow, recurring, genuinely unglamorous part of keeping a
-  project like this honest.
+- **Buy me a coffee**, if this saved you a wasted trip to LABO. Re-verifying legal claims against
+  primary sources is the slow, recurring, genuinely unglamorous part of keeping a project like this
+  honest.
 
 <div align="center">
 <br>
 
-[![buy me a coffee](https://img.shields.io/badge/buy_me_a_coffee-GitHub_Sponsors-e0a82e?style=for-the-badge&labelColor=14161f&logo=githubsponsors&logoColor=e0a82e)](https://github.com/sponsors/agusgonzaleznic)
+[![buy me a coffee](https://img.shields.io/badge/buy_me_a_coffee-support-e0a82e?style=for-the-badge&labelColor=14161f&logo=buymeacoffee&logoColor=e0a82e)](https://buymeacoffee.com/agusgonzaleznic)
 [![website](https://img.shields.io/badge/website-agusgonzaleznic.com-7c5cd6?style=for-the-badge&labelColor=14161f)](https://agusgonzaleznic.com)
 <br>
 [![GitHub](https://img.shields.io/badge/GitHub-agusgonzaleznic-1d2130?style=for-the-badge&labelColor=14161f&logo=github&logoColor=white)](https://github.com/agusgonzaleznic)

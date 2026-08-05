@@ -29,19 +29,19 @@ function todayCard() {
     <div class="card" style="margin-top:14px;">
       <div class="spread">
         <div style="flex:1;min-width:220px;">
-          <h3 class="mb0">${icon(goal.met ? 'circle-check' : 'calendar-clock', { size: 19 })} Today${goal.met ? ' — goal met' : ''}</h3>
+          <h3 class="mb0">${icon(goal.met ? 'circle-check' : 'calendar-clock', { size: 19 })} Today${goal.met ? ': goal met' : ''}</h3>
           ${welcomeBack
-            ? `<p class="mt0" style="margin-bottom:8px;">Welcome back — it has been <b>${gap} days</b>.
+            ? `<p class="mt0" style="margin-bottom:8px;">Welcome back. It has been <b>${gap} days</b>.
                  Don't try to clear the backlog: ${target} questions is a good re-entry session.</p>`
             : `<p class="mt0" style="margin-bottom:8px;">${
                 due === 0
-                  ? 'Nothing due for review — you are ahead. A fresh round still helps.'
+                  ? 'Nothing due for review, so you are ahead. A fresh round still helps.'
                   : `<b>${due}</b> question${due === 1 ? '' : 's'} ready for review.`
               }</p>`}
           <div class="spread" style="gap:8px;">
             <small><b>${goal.done}/${goal.goal}</b> answered today</small>
             <small class="muted">${streak.count > 0
-              ? `${icon('flame', { size: 13 })} ${streak.count}-day streak${streak.activeToday ? '' : ' — keep it alive'}`
+              ? `${icon('flame', { size: 13 })} ${streak.count}-day streak${streak.activeToday ? '' : ': keep it alive'}`
               : (streak.lapsed ? `streak reset · best ${streak.best}` : 'start a streak today')}</small>
           </div>
           <div class="bar amber" style="margin-top:4px;"><i style="width:${Math.round(goal.pct * 100)}%"></i></div>
@@ -55,7 +55,7 @@ function todayCard() {
 
 function clockCard() {
   // Only the 'convert' path has a recognition deadline, and only when we have
-  // both the residence date and a researched legal period — we never guess either.
+  // both the residence date and a researched legal period. We never guess either.
   if (state.profile.path !== 'convert') return '';
   const rules = data.rules?.non_eu;
 
@@ -71,7 +71,7 @@ function clockCard() {
     </div>`;
   }
   if (!rules?.recognition_months) {
-    // Distinguish "we couldn't load the file" from "the law is unverified" —
+    // Distinguish "we couldn't load the file" from "the law is unverified", because
     // blaming the research for a dropped connection is actively misleading.
     const offline = typeof navigator !== 'undefined' && navigator.onLine === false;
     return `<div class="callout warning" style="margin-top:14px;">
@@ -108,7 +108,7 @@ function clockCard() {
         </div>
       </div>
       ${clock.conversionExpired ? `<div class="callout danger" style="margin-bottom:0;">
-        The simplified conversion window has also closed. Check with the authority — you may now need
+        The simplified conversion window has also closed. Check with the authority, because you may now need
         the full first-licence route.</div>` : ''}
       <div class="row" style="margin-top:10px;">
         <button class="btn btn-ghost small" id="res-edit">${icon('calendar-clock', { size: 15 })} Change my Anmeldung date</button>
@@ -172,13 +172,14 @@ export function render(el) {
     ${todayCard()}
     ${path === 'eu' ? `<div class="callout tip" style="margin-top:14px;">
       <b>You can drive in Germany right now.</b> A valid EU/EEA licence stays valid here until the document
-      itself expires — no exams, no exchange required in most cases.</div>` : ''}
+      itself expires, with no exams and no exchange required in most cases.</div>` : ''}
     <div id="phases"></div>
     ${!phases.length ? `<div class="card center" style="margin-top:16px;">
         ${icon('traffic-cone', { size: 42, cls: 'big-ico' })}
         <h3>Journey content is being verified</h3>
-        <p class="muted">The step-by-step guide for this path is generated from official sources —
-        it isn't in place yet. Meanwhile, the <a href="#/learn">theory school</a> is open.</p>
+        <p class="muted">The step-by-step guide for this path is generated from official sources, and
+        it isn't in place yet.
+ Meanwhile, the <a href="#/learn">theory school</a> is open.</p>
       </div>` : ''}`;
 
   wireClock(el, () => render(el));
