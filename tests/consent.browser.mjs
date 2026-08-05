@@ -48,6 +48,35 @@ async function boot({ id = FAKE_ID, stored = null, onboarded = false,
     try { if (GOOGLE.test(new URL(r.url()).hostname)) googleHits.push(r.url()); } catch { /* opaque */ }
   });
 
+  // Every Google host is intercepted and answered locally, for two reasons.
+  //
+  // First, this suite exists to prove the app does not contact Google without
+  // consent, and it would be a poor joke for the proof itself to contact Google on
+  // every developer's machine and in CI. Second, it makes the run hermetic: no
+  // network, no dependence on Google being up, no flake.
+  //
+  // The CSP assertions stay real regardless. A Content-Security-Policy is applied
+  // by the RENDERER before a request is handed to the network stack, so a missing
+  // origin still registers as a violation and the route handler is never reached.
+  // Interception hides nothing that matters here; it only stops the bytes leaving.
+  // googleHits above still records the attempt, which is the property under test:
+  // whether the app TRIED, not whether Google answered.
+  await page.route(
+    url => { try { return GOOGLE.test(new URL(url).hostname); } catch { return false; } },
+    route => {
+      const u = route.request().url();
+      if (/gtag\/js/.test(u)) {
+        // Stand in for gtag.js. Enough for the page to behave as it would with the
+        // real file, and nothing more.
+        return route.fulfill({
+          status: 200,
+          contentType: 'application/javascript',
+          body: 'window.dataLayer = window.dataLayer || [];',
+        });
+      }
+      return route.fulfill({ status: 204, body: '' });
+    });
+
   // Analytics is the first thing here allowed past 'self', so every scenario
   // watches for a refused request. A missing origin in script-src, connect-src or
   // img-src shows up here as a violation rather than as a silent no-op, and the
