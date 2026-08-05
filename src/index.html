@@ -28,10 +28,22 @@
   object-src 'none';
   base-uri 'none';
   form-action 'none'">
-<!-- frame-ancestors cannot be set from a <meta> tag; add this response header at
-     deploy time to stop the app being framed:
+<!-- Clickjacking: NOT mitigated on the current deployment, deliberately and
+     knowingly. frame-ancestors cannot be set from a <meta> tag, and v1 is hosted
+     on GitHub Pages, which cannot send custom response headers at all. So the
+     deployed site IS framable. Severity is low here because the app is
+     read-only, has no accounts, no credentials, no cookies and no state-changing
+     request an attacker could trigger from inside a frame. Do not read the lines
+     below as something already in force. They are the headers to switch on the
+     day this site sits behind something that can actually set them, most likely
+     a CDN or reverse proxy in front of Pages (Cloudflare, Fastly, nginx). That
+     is a hosting change, not an application change: nothing in this repository
+     has to move for these to start working, so re-enable all three as soon as
+     there is a layer that can send them.
        Content-Security-Policy: frame-ancestors 'none'
-       X-Frame-Options: DENY -->
+       X-Frame-Options: DENY
+       X-Content-Type-Options: nosniff
+     Tracked in SECURITY.md under the hosting limitation. -->
 <!-- Do not leak the page we came from to the German authority sites we link out to. -->
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
