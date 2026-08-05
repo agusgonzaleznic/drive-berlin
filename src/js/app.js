@@ -5,6 +5,7 @@ import { state, levelInfo, streakStatus } from './state.js';
 import { toast, confetti, esc, CELEBRATE } from './ui.js';
 import { icon } from './icons.js';
 import { emblem } from './brand.js';
+import { mountConsent } from './consent.js';
 
 import * as journey from './views/journey.js';
 import * as task from './views/task.js';
@@ -16,10 +17,11 @@ import * as glossary from './views/glossary.js';
 import * as mapview from './views/mapview.js';
 import * as onboarding from './views/onboarding.js';
 import * as phrases from './views/phrases.js';
+import * as privacy from './views/privacy.js';
 
 const routes = {
   journey, task, learn, lesson: learn, practice: quiz,
-  exam, stats, glossary, map: mapview, welcome: onboarding, phrases,
+  exam, stats, glossary, map: mapview, welcome: onboarding, phrases, privacy,
 };
 
 function parseHash() {
@@ -57,7 +59,11 @@ const scrollMemory = new Map();
 function render() {
   const { route, params } = parseHash();
   if (lastRoute) scrollMemory.set(lastRoute, window.scrollY);
-  if (!state.profile.path && route !== 'welcome') {
+  // Onboarding is compulsory before the app proper, but privacy is not part of
+  // the app proper. The consent banner can be on screen during onboarding and it
+  // links to #/privacy, so bouncing that route back to #/welcome would make the
+  // one explanation a visitor is entitled to read the one page they cannot open.
+  if (!state.profile.path && route !== 'welcome' && route !== 'privacy') {
     location.hash = '#/welcome';
     return;
   }
@@ -113,4 +119,9 @@ loadData().then(() => {
   mountChrome();
   if (!location.hash) location.hash = state.profile.path ? '#/journey' : '#/welcome';
   render();
+  // Last, and only after the first paint. The consent question is about this
+  // page, so the page should exist before it is asked, and nothing about the
+  // banner is allowed to sit in front of the data load. With no measurement ID
+  // configured this call does nothing at all.
+  mountConsent();
 });

@@ -90,8 +90,9 @@ closed with a pointer back to this section.
 * **Anyone with access to the browser profile can read `localStorage`.** All state lives in the
   visitor's own `localStorage` under a single key, and an exported progress file contains whatever
   the visitor typed, meaning their name, registration date and licence country. There is no
-  backend, no account, no cookie, no session and no analytics, so there is nothing to steal
-  server-side and no credential to escalate with. Reading local state already implies control of
+  backend, no account and no session, so there is nothing to steal server-side and no credential
+  to escalate with. Analytics is the one exception to "no cookies", and only after an explicit
+  opt-in: see the analytics section below. Reading local state already implies control of
   the browser profile. This is inherent to a local-first design and it is a documented non-goal to
   encrypt it, because encryption would need a passphrase to defend against an attacker who by
   definition already holds the profile.
@@ -158,6 +159,37 @@ Please check this list before reporting, so you do not re-report existing postur
   `src/js/security.js` assertion by assertion, and `tests/csp.mjs` drives a real browser to assert
   zero CSP violations while confirming that Leaflet, the map tiles and both fonts still load.
 
+## Analytics, and what it does not do
+
+Google Analytics 4 is wired in, and it is **off until a visitor explicitly allows it**.
+
+* **Nothing is requested from any Google host before opt-in.** Not gtag.js, not a cookieless ping,
+  nothing. Consent Mode with denied defaults was rejected precisely because it still loads the script
+  and still contacts Google, which is the transfer German supervisory authorities have objected to,
+  and TDDDG § 25 requires prior consent for the storage access regardless.
+* **This is enforced by a test, not by a promise.** `tests/consent.browser.mjs` watches real network
+  traffic in a real browser and fails if a single request reaches `googletagmanager.com`,
+  `google-analytics.com` or `analytics.google.com` before a choice is made, after a decline, or on a
+  reload carrying a stored decline.
+* **Declining is a first-class outcome.** A visitor who declines, or who never answers, runs
+  first-party code only. Pressing Escape on the banner declines, because a dismissal must never be
+  read as agreement.
+* **Withdrawal is one click**, from the Progress screen, as GDPR Art. 7(3) requires.
+* **The measurement ID is never committed.** The repository ships the placeholder
+  `__GA_MEASUREMENT_ID__`; the Pages workflow substitutes a repository variable at deploy time, and
+  `tests/security.test.mjs` fails if a real `G-xxxx` value ever appears in the repository. With the
+  variable unset, analytics is fully disabled and no banner appears, which is also what every fork
+  and every local checkout gets.
+* **What it costs, stated plainly.** `script-src` is no longer `'self'` alone: it allows
+  `https://www.googletagmanager.com`. A CDN-hosted script cannot be pinned with Subresource
+  Integrity, because Google reissues gtag.js at will, so after consent the page runs whatever bytes
+  that URL returns. That is a deliberate tradeoff, narrowed by the consent gate and by the app
+  holding no accounts, credentials or cookies of its own for that script to reach. Ad personalisation
+  and Google Signals are switched off in the gtag config.
+* **Out of scope for a report:** that GA sets cookies and sends the visitor's IP address to Google
+  *after consent* is the disclosed, consented behaviour, described in the banner and in the in-app
+  privacy view. A report that consenting to analytics results in analytics is not a vulnerability.
+
 ## Known and accepted: response headers
 
 Three protections can only be delivered by the hosting layer, because a `<meta>` tag cannot set
@@ -172,10 +204,19 @@ X-Content-Type-Options: nosniff
 `frame-ancestors` is not supported in a `<meta>` policy by design, which is why it is absent from
 the document CSP rather than forgotten.
 
-**GitHub Pages cannot set custom response headers.** The v1 deployment uses GitHub Pages, so on
-that host the app ships without clickjacking protection and without `nosniff`. This is a **known
-and accepted limitation of the current hosting choice**, not an oversight, and reporting it as a
-vulnerability will not change the v1 position. Hosts that can set these headers, and the file each
-one uses, are listed in the deployment section of the [README](README.md). Anyone self-hosting this
-app is encouraged to set all three, and to serve over HTTPS so that the CSP cannot be stripped in
-transit.
+**All three are now sent on the primary URL.** The canonical address is
+<https://agusgonzaleznic.com/drive-berlin/>, which is served through a CloudFront distribution whose
+response headers policy sets `frame-ancestors 'none'`, `X-Frame-Options: DENY` and
+`X-Content-Type-Options: nosniff`, along with HSTS. This was verified against the live response
+rather than assumed.
+
+**The bare GitHub Pages URL still lacks them.** <https://agusgonzaleznic.github.io/drive-berlin/>
+remains reachable, and GitHub Pages cannot set custom response headers at all, so on that host the
+app ships framable and without `nosniff`. That is a **known and accepted limitation of that URL**,
+not an oversight, and reporting it will not change the position: use the canonical address. Severity
+is low either way because the app is read-only, holds no accounts, no credentials and no session, and
+exposes no state-changing request an attacker could trigger from inside a frame.
+
+Anyone self-hosting is encouraged to set all three and to serve over HTTPS so that the CSP cannot be
+stripped in transit. Hosts that can set these headers, and the file each one uses, are listed in the
+deployment section of the [README](README.md).

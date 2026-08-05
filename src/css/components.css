@@ -448,6 +448,57 @@ button.card { appearance: none; }
 @keyframes toastIn { from { opacity: 0; transform: translate(-50%, 14px); } }
 .toast.leaving { transition: opacity .3s, transform .3s; opacity: 0; transform: translate(-50%, 10px); }
 
+/* ---------- analytics consent ---------- */
+/* A roadside notice board at the foot of the page rather than a modal: the
+   question is real, but it is not important enough to block the app behind it.
+   Flat --surface-2, not the .card gradient, so the body copy has one measurable
+   background. Measured against it: body --dim 8.12:1, title --gold-bright
+   10.6:1, the "what gets collected" link --gold 6.85:1. */
+.consent-banner {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  /* Above the fixed tab bar (55) and the sticky header (60), below the modal
+     backdrop (100) and the toast (150), which must both stay on top of it. */
+  z-index: 90;
+  background: var(--surface-2);
+  border-top: 1px solid var(--gold-dark);
+  box-shadow: var(--shadow-pop);
+  padding: 14px clamp(14px, 3vw, 28px) calc(14px + env(safe-area-inset-bottom));
+  /* A landscape phone has barely 300px of height. Scroll the notice rather than
+     let it swallow the screen it is asking about. */
+  max-height: 60vh; overflow-y: auto;
+}
+.consent-inner {
+  max-width: 980px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 10px 20px; flex-wrap: wrap;
+}
+/* min-width:0 lets this shrink below its min-content width, which is what keeps
+   a long word in the copy from forcing the bar wider than a 390px viewport. */
+.consent-copy { flex: 1 1 380px; min-width: 0; }
+.consent-copy b {
+  display: block; margin-bottom: 3px;
+  font-family: var(--font-display); font-size: .95rem; letter-spacing: .02em;
+  color: var(--gold-bright);
+}
+.consent-copy p { color: var(--dim); font-size: .88rem; }
+.consent-link { font-weight: 700; white-space: nowrap; }
+.consent-actions { display: flex; align-items: center; gap: 10px; flex: 0 0 auto; flex-wrap: wrap; }
+/* Slides up from the bottom edge. Applied by js/consent.js ONLY when reduced
+   motion is not requested; the global block in base.css neutralises it as well,
+   so the animation is off by both routes rather than by one. */
+.consent-in { animation: consentIn .24s ease; }
+@keyframes consentIn { from { opacity: 0; transform: translateY(100%); } }
+
+@media (max-width: 720px) {
+  /* The tab bar is fixed to the bottom edge on a phone, so the banner has to sit
+     on top of it: 48px of tap target plus the bar's own 6px top and bottom
+     padding, then the home-indicator inset it already reserves. */
+  .consent-banner { bottom: calc(60px + env(safe-area-inset-bottom)); padding-bottom: 13px; }
+  /* Stacked, with the buttons on their own full-width row: side by side at 390px
+     they would each be squeezed under the 44px comfortable target. */
+  .consent-copy, .consent-actions { flex: 1 1 100%; }
+}
+
 /* ---------- onboarding ---------- */
 .onboard { max-width: 620px; margin: 0 auto; }
 .path-choice { display: grid; gap: 12px; margin: 16px 0; }
