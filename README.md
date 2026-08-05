@@ -181,7 +181,7 @@ Eleven modules written in English, each ending in a quiz drawn from the same poo
 | `m11-berlin` | Berlin Survival Pack | 12 |
 
 <div align="center">
-<img src="docs/assets/screenshots/lesson.jpg" width="470" alt="A lesson module"> <img src="docs/assets/screenshots/quiz.jpg" width="470" alt="Spaced-repetition practice">
+<img src="docs/assets/screenshots/lesson.jpg" width="470" alt="A lesson module"> <img src="docs/assets/screenshots/practice.jpg" width="470" alt="Spaced-repetition practice">
 </div>
 
 ### 🔁 Spaced repetition (Leitner)

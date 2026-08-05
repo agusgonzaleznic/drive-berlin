@@ -5,7 +5,8 @@
 // Uses playwright-core against system Chrome (no browser download). State is seeded
 // into localStorage so the shots show a session in progress rather than empty shells.
 import { chromium } from 'playwright-core';
-import { mkdirSync } from 'node:fs';
+import { mkdirSync, readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 
 const BASE = 'http://localhost:4173/';
 const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
@@ -45,12 +46,19 @@ await page.evaluate(s => localStorage.setItem('gds-state-v1', JSON.stringify(s))
 await page.reload({ waitUntil: 'networkidle' });
 await page.waitForTimeout(600);
 
+// Must match the `routes` map in src/js/app.js. app.js falls back to `journey`
+// for anything unknown (`routes[route] || journey`), so a typo here produces a
+// screenshot of the wrong page *silently* — which is exactly how an earlier run
+// shipped a "quiz" shot that was really the journey view. Validated below.
+const KNOWN_ROUTES = ['journey', 'task', 'learn', 'lesson', 'practice', 'exam',
+                      'stats', 'glossary', 'map', 'welcome', 'phrases'];
+
 // name, then the route, then any in-page interaction needed to reach the shot
 const SHOTS = [
   ['journey', '#/journey', null],
   ['learn', '#/learn', null],
-  ['lesson', '#/learn/m01-system', null],
-  ['quiz', '#/quiz', null],
+  ['lesson', '#/lesson/m01-system', null],
+  ['practice', '#/practice', null],
   ['exam', '#/exam', async p => {
     const start = p.locator('button', { hasText: /start|begin/i }).first();
     if (await start.count()) { await start.click(); await p.waitForTimeout(600); }
@@ -60,13 +68,38 @@ const SHOTS = [
   ['phrases', '#/phrases', null],
 ];
 
+// Guard 1: fail before rendering anything if a hash names a route that app.js
+// does not have, rather than quietly screenshotting the journey fallback.
+const unknown = SHOTS.map(([n, h]) => [n, h.replace(/^#\//, '').split('/')[0]])
+  .filter(([, r]) => !KNOWN_ROUTES.includes(r));
+if (unknown.length) {
+  console.error('Unknown route(s), would silently fall back to journey:',
+    unknown.map(([n, r]) => `${n} -> "${r}"`).join(', '));
+  await browser.close();
+  process.exit(1);
+}
+
+const written = [];
 for (const [name, hash, act] of SHOTS) {
   await page.evaluate(h => { location.hash = h; }, hash);
   await page.waitForTimeout(1100);              // let ring/count-up animations settle
   if (act) await act(page);
-  await page.screenshot({ path: `${OUT}${name}.jpg`, type: 'jpeg', quality: 86 });
+  const path = `${OUT}${name}.jpg`;
+  await page.screenshot({ path, type: 'jpeg', quality: 86 });
+  written.push([name, path]);
   console.log('wrote', name + '.jpg');
 }
+
+// Guard 2: two identical files means two hashes rendered the same view — the
+// symptom a wrong route produces even when the route name itself looks valid.
+const seen = new Map();
+let dupes = 0;
+for (const [name, path] of written) {
+  const sum = createHash('md5').update(readFileSync(path)).digest('hex');
+  if (seen.has(sum)) { console.error(`DUPLICATE: ${name}.jpg is identical to ${seen.get(sum)}.jpg`); dupes++; }
+  else seen.set(sum, name);
+}
+if (dupes) { await browser.close(); process.exit(1); }
 
 // One mobile shot for the responsive claim.
 const mctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
