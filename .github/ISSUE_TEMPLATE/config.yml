@@ -1,20 +1,20 @@
 blank_issues_enabled: false
 contact_links:
   - name: Report a security vulnerability privately
-    url: https://github.com/agusgonzaleznic/german-driving-school/security/advisories/new
+    url: https://github.com/agusgonzaleznic/drive-berlin/security/advisories/new
     about: >-
       Never report a security vulnerability in a public issue. Use GitHub Private Vulnerability
       Reporting instead, which keeps the report private until a fix is published. Read SECURITY.md
       first for what is in scope and what is already covered.
 
   - name: Contributing guide, and how to propose a change
-    url: https://github.com/agusgonzaleznic/german-driving-school/blob/main/CONTRIBUTING.md
+    url: https://github.com/agusgonzaleznic/drive-berlin/blob/main/CONTRIBUTING.md
     about: >-
       How to run the app and the tests, the code style, the accessibility bar, the dual licence, and
       the accuracy rule that governs every change to a legal fact, fee, deadline or procedure.
 
   - name: Legal disclaimer, and confirming your own case
-    url: https://github.com/agusgonzaleznic/german-driving-school#-legal-disclaimer
+    url: https://github.com/agusgonzaleznic/drive-berlin#legal-disclaimer
     about: >-
       This app is a study and planning aid, not legal advice, and it cannot answer questions about
       your personal situation. Only LABO Berlin can tell you how your specific document will be

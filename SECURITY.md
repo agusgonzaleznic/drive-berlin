@@ -26,7 +26,7 @@ are running a fork or a pinned copy, please confirm the issue still reproduces a
 
 The primary channel is **GitHub Private Vulnerability Reporting**:
 
-1. Go to the [repository Security tab](https://github.com/agusgonzaleznic/german-driving-school/security).
+1. Go to the [repository Security tab](https://github.com/agusgonzaleznic/drive-berlin/security).
 2. Choose **Report a vulnerability**.
 3. Describe the issue, the impact, and the steps to reproduce it.
 
@@ -97,7 +97,7 @@ closed with a pointer back to this section.
   definition already holds the profile.
 * **The accuracy of the legal content.** A wrong deadline, fee or procedure is a serious bug, but
   it is a *content* bug rather than a security one. Please report it with the
-  [content accuracy issue template](https://github.com/agusgonzaleznic/german-driving-school/issues/new?template=content_accuracy.yml),
+  [content accuracy issue template](https://github.com/agusgonzaleznic/drive-berlin/issues/new?template=content_accuracy.yml),
   publicly, so it can be discussed and sourced in the open.
 * **Third-party services the app links out to.** The app links to authority and provider websites
   such as LABO, service.berlin.de, DEKRA, TÜV and driving schools, and it loads map tiles from

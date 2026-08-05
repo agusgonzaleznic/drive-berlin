@@ -13,8 +13,8 @@ There is **no build step and nothing to compile**. The app is hand-written ES mo
 you serve `src/` with any static file server and open it.
 
 ```bash
-git clone git@github.com:agusgonzaleznic/german-driving-school.git
-cd german-driving-school
+git clone git@github.com:agusgonzaleznic/drive-berlin.git
+cd drive-berlin
 npm run dev            # python3 -m http.server 4173 -d src
 # → open http://localhost:4173
 ```

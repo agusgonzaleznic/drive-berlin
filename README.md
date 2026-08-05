@@ -74,8 +74,8 @@ There is **no build step and nothing to install**. It is hand-written ES modules
 serve `src/` with any static file server and open it.
 
 ```bash
-git clone git@github.com:agusgonzaleznic/german-driving-school.git
-cd german-driving-school
+git clone git@github.com:agusgonzaleznic/drive-berlin.git
+cd drive-berlin
 npm run dev            # python3 -m http.server 4173 -d src
 # → open http://localhost:4173
 ```
@@ -644,7 +644,7 @@ Reusing the content? This satisfies it:
 
 ```
 Content adapted from "Führerschein Hero" by Agustin Gonzalez Nicolini
-(https://github.com/agusgonzaleznic/german-driving-school),
+(https://github.com/agusgonzaleznic/drive-berlin),
 licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
 Changes were made.
 ```

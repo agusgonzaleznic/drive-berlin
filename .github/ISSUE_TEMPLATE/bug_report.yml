@@ -14,7 +14,7 @@ body:
           matters a great deal, but it needs a source. Please use the
           **Content accuracy** template instead.
         * **Security vulnerabilities.** Never report those in a public issue. See
-          [SECURITY.md](https://github.com/agusgonzaleznic/german-driving-school/blob/main/SECURITY.md)
+          [SECURITY.md](https://github.com/agusgonzaleznic/drive-berlin/blob/main/SECURITY.md)
           for the private reporting route.
 
   - type: textarea
