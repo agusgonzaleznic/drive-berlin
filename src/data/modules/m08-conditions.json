@@ -208,7 +208,7 @@
       ],
       "points": 3,
       "pool": "grund",
-      "explanation": "Outside built-up areas a stationary vehicle has to be made visible by its own light source. Inside a built-up area it is enough to mark the side facing the carriageway with parking lights, and where street lighting already lights the car sufficiently, no lighting of your own is required at all, which is why most parked cars in Berlin sit there completely dark and perfectly legally. What you may never do is *drive* on position lights alone: they mark a parked car, they do not illuminate a road.",
+      "explanation": "Outside built-up areas a stationary vehicle has to be made visible by its own light source. Inside a built-up area it is enough to mark the side facing the carriageway with parking lights, and where street lighting already lights the car sufficiently, no lighting of your own is required at all, which is why most parked cars in Berlin sit there completely dark and perfectly legally. What you may never do is *drive* on position lights alone: they mark a parked car, but they do not illuminate a road. ",
       "rule_ref": "StVO §17(2), §17(4)"
     },
     {
