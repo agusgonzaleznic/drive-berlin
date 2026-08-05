@@ -27,7 +27,7 @@ function ratio(el){const fg=parse(getComputedStyle(el).color);if(!fg)return null
 
 const { ctx, p } = await boot(1280, 900);
 console.log('=== CONTRAST (WCAG 1.4.3: 4.5:1 normal, 3:1 large >=24px or >=18.66px bold) ===');
-for (const [hash, label] of [['#/journey','journey'],['#/stats','stats'],['#/learn','learn'],['#/glossary','glossary']]) {
+for (const [hash, label] of [['#/journey','journey'],['#/stats','stats'],['#/learn','learn'],['#/glossary','glossary'],['#/privacy','privacy']]) {
   await p.evaluate(h => { location.hash = h; }, hash);
   await p.waitForTimeout(700);
   const rows = await p.evaluate(`(() => { ${CONTRAST_FN}

@@ -65,7 +65,8 @@ await shot('02-journey');
 
 // ---- 4. every route renders ----
 for (const [route, name] of [['#/learn', '03-learn'], ['#/phrases', '04-phrases'], ['#/exam', '05-exam'],
-                             ['#/map', '06-map'], ['#/stats', '07-stats'], ['#/glossary', '08-glossary']]) {
+                             ['#/map', '06-map'], ['#/stats', '07-stats'], ['#/glossary', '08-glossary'],
+                             ['#/privacy', '12-privacy']]) {
   await page.evaluate(r => { location.hash = r; }, route);
   await page.waitForTimeout(700);
   const len = (await view().textContent()).trim().length;
@@ -150,7 +151,7 @@ await mob.setViewportSize({ width: 390, height: 844 });
 await mob.waitForTimeout(500);
 // Check every route, not just the landing one — the lesson page's German term
 // table overflowed for weeks because this test only ever looked at #/journey.
-const routes = ['#/journey', '#/learn', '#/lesson/m07-autobahn', '#/task/c-firstaid', '#/exam', '#/stats', '#/glossary', '#/phrases'];
+const routes = ['#/journey', '#/learn', '#/lesson/m07-autobahn', '#/task/c-firstaid', '#/exam', '#/stats', '#/glossary', '#/phrases', '#/privacy'];
 for (const r of routes) {
   await mob.evaluate(h => { location.hash = h; }, r);
   await mob.waitForTimeout(650);

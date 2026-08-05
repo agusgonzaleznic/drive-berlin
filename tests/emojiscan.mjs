@@ -16,7 +16,7 @@ await p.reload({ waitUntil: 'networkidle' });
 await p.waitForTimeout(1000);
 
 const EMOJI = /[\u{1F300}-\u{1FAFF}\u{1F000}-\u{1F2FF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}\u{FE0F}]/u;
-const routes = ['#/journey','#/learn','#/lesson/m03-priority','#/task/c-firstaid','#/exam','#/stats','#/glossary','#/phrases','#/map','#/practice'];
+const routes = ['#/journey','#/learn','#/lesson/m03-priority','#/task/c-firstaid','#/exam','#/stats','#/glossary','#/phrases','#/map','#/practice','#/privacy'];
 let total = 0;
 for (const r of routes) {
   await p.evaluate(h => { location.hash = h; }, r);

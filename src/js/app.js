@@ -119,9 +119,13 @@ loadData().then(() => {
   mountChrome();
   if (!location.hash) location.hash = state.profile.path ? '#/journey' : '#/welcome';
   render();
-  // Last, and only after the first paint. The consent question is about this
-  // page, so the page should exist before it is asked, and nothing about the
-  // banner is allowed to sit in front of the data load. With no measurement ID
-  // configured this call does nothing at all.
-  mountConsent();
+  // Last, and one task later rather than inline. The consent question is about
+  // this page, so the page should exist before it is asked, and nothing about the
+  // banner may sit in front of the data load. The timeout is load-bearing, not
+  // decoration: assigning location.hash above queues a hashchange, which
+  // re-renders and moves focus into the view. Mounting inside that window let the
+  // router steal the focus the banner had just put on Decline, which was measured
+  // rather than guessed (tests/consent.browser.mjs asserts where focus lands).
+  // With no measurement ID configured this call does nothing at all.
+  setTimeout(mountConsent, 0);
 });
