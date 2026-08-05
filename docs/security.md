@@ -1,7 +1,7 @@
 # Security audit
 
 **Audited:** 5 August 2026, against the app as it stands.
-**Scope:** the whole static app — no backend, no accounts, no analytics, no cookies.
+**Scope:** the whole static app. No backend, no accounts, no analytics, no cookies.
 All state lives in `localStorage`.
 
 A note on method: I intended to run five adversarial agent lenses over this, but
@@ -17,16 +17,16 @@ What is worth defending against for a personal, offline-capable, backend-less to
 
 | Vector | Realistic? |
 |---|---|
-| A hostile "progress file" someone is sent and imports | **Yes** — the app has an import button and the file is user-chosen |
-| Content reaching `innerHTML` unescaped | **Yes** — every view builds HTML from template literals |
-| A compromised or hijacked CDN serving hostile JS | **Yes** — Leaflet loads from unpkg into our origin |
+| A hostile "progress file" someone is sent and imports | **Yes**, the app has an import button and the file is user-chosen |
+| Content reaching `innerHTML` unescaped | **Yes**, every view builds HTML from template literals |
+| A compromised or hijacked CDN serving hostile JS | **Yes**, Leaflet loads from unpkg into our origin |
 | `javascript:` URLs through data-driven links | Yes, if content is ever edited by someone else |
-| Personal data leaving the device | Yes — the UI *promises* it doesn't, so that promise is a security property |
-| A user attacking their own browser | **No** — not a threat, they own it |
+| Personal data leaving the device | Yes. The UI *promises* it doesn't, so that promise is a security property |
+| A user attacking their own browser | **No**, not a threat, they own it |
 
 ## Findings and fixes
 
-### 1. Prototype pollution through the import path — fixed
+### 1. Prototype pollution through the import path: fixed
 
 `importState()` did `Object.assign(state, DEFAULTS, JSON.parse(json))`.
 
@@ -44,10 +44,10 @@ view reads from.
 **Fixed:** all imported JSON now passes through `sanitizeState()` in
 `src/js/security.js`, which never copies `__proto__`, `constructor` or `prototype`.
 
-### 2. Type confusion through the import path — fixed
+### 2. Type confusion through the import path: fixed
 
 The same path accepted any types at all. `badges: "ignition"` made `.includes()` do
-*substring* matching, and `exams: {}` made `.filter()` throw mid-render — a blank
+*substring* matching, and `exams: {}` made `.filter()` throw mid-render, giving a blank
 screen with no recovery path.
 
 **Fixed:** `sanitizeState()` is an **allowlist** with per-key coercion. Unknown keys
@@ -58,22 +58,22 @@ enormous file cannot hang a render.
 `load()` now sanitises too, so a corrupt or hand-edited `localStorage` payload
 degrades to defaults instead of bricking the app.
 
-### 3. `javascript:` URLs in data-driven links — fixed (hardening)
+### 3. `javascript:` URLs in data-driven links: fixed (hardening)
 
 `esc()` escapes quotes and angle brackets, but it does **not** neutralise a URL
 scheme, so `javascript:alert(1)` survives escaping intact and executes on click.
 Three render paths put data-supplied URLs into an `href`: task links, POI links, and
 the readiness "go there" link.
 
-Not exploitable today — those URLs come from our own verified content files — but it
+Not exploitable today, because those URLs come from our own verified content files, but it
 is the wrong shape for a content-driven app.
 
 **Fixed:** `safeUrl()` with a scheme allowlist (`http`, `https`, `mailto`, `tel`,
 plus in-app `#/` links). It also strips control characters and whitespace before the
-scheme test, so `java\nscript:` and `java script:` — both of which browsers execute —
+scheme test, so `java\nscript:` and `java script:`, both of which browsers execute,
 cannot slip past.
 
-### 4. Partial escaping in rendering primitives — fixed (hardening)
+### 4. Partial escaping in rendering primitives: fixed (hardening)
 
 `icon()`, `emblem()` and `flag()` escaped only `"` in their `aria-label`, and
 `glyph()` interpolated its fallback character completely unescaped. All are rendering
@@ -81,7 +81,7 @@ primitives, so they must be safe regardless of what a future data file contains.
 
 **Fixed:** full `&<>"'` escaping in all four.
 
-### 5. No Content-Security-Policy — fixed
+### 5. No Content-Security-Policy: fixed
 
 **Added**, and it is unusually tight on the directive that matters because this app
 has **no inline `<script>` at all**:
@@ -98,7 +98,7 @@ injection.
 Verified with a dedicated test: **zero CSP violations**, Leaflet still loads and
 initialises, OSM tiles still fetch (HTTP 200), and both web fonts still load.
 
-### 6. No Subresource Integrity on Leaflet — fixed
+### 6. No Subresource Integrity on Leaflet: fixed
 
 Leaflet loaded from unpkg with no integrity check, so a compromised CDN could have
 executed arbitrary JS in the app's origin.
@@ -115,15 +115,15 @@ SRI is **not** possible for the Google Fonts stylesheet: it varies by user agent
 its bytes are not fixed. It is constrained by CSP instead, and every rule has a local
 fallback stack, so a blocked font CDN degrades rather than breaks.
 
-### 7. Referrer leakage — fixed
+### 7. Referrer leakage: fixed
 
 The app links out to German authority sites. `no-referrer` is now set document-wide,
 and every external link carries `rel="noopener noreferrer"`.
 
-### 8. The privacy promise — verified, holds
+### 8. The privacy promise: verified, holds
 
-The UI states *"Everything stays in your browser — nothing is uploaded anywhere"* and
-*"Location stays in your browser — nothing is sent anywhere."* Both hold:
+The UI states *"Everything stays in your browser. Nothing is uploaded anywhere"* and
+*"Location stays in your browser. Nothing is sent anywhere."* Both hold:
 
 - Geolocation is requested only on an explicit click, used to sort a local list, and
   never stored or transmitted.
@@ -140,11 +140,11 @@ promises nothing leaves the device.
 
 ## Not fixed, and why
 
-- **`style-src 'unsafe-inline'`** — removing it means moving every inline `style=""`
+- **`style-src 'unsafe-inline'`**: removing it means moving every inline `style=""`
   into stylesheets or nonces. Real work, low payoff: style injection cannot execute
   script under this CSP.
-- **`frame-ancestors`** — cannot be set from a `<meta>` tag. See deployment below.
-- **localStorage encryption** — would need a passphrase the applicant must re-enter, for a
+- **`frame-ancestors`** cannot be set from a `<meta>` tag. See deployment below.
+- **localStorage encryption** would need a passphrase the applicant must re-enter, for a
   threat (local disk access) that already implies control of the browser profile.
 
 ## Required at deployment
@@ -172,7 +172,7 @@ Serve over HTTPS so the SRI and CSP cannot be stripped in transit.
 | Full course walkthrough | 482 checks passed |
 
 `tests/security.test.mjs` is written as the **specification** for
-`src/js/security.js` — each assertion maps to a line in that module's `CONTRACT` doc
+`src/js/security.js`. Each assertion maps to a line in that module's `CONTRACT` doc
 block, including a fuzz set of scheme-obfuscation payloads and a check that no
 shipped data file contains a `javascript:` URL, a `<script>` tag or an inline event
 handler.

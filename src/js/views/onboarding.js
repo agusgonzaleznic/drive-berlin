@@ -45,7 +45,7 @@ export function render(el) {
 
       <div class="card" style="margin-top:14px;">
         <h3>A couple of details</h3>
-        <p class="muted mt0" style="font-size:.9rem;">Everything stays in your browser — nothing is uploaded anywhere.</p>
+        <p class="muted mt0" style="font-size:.9rem;">Everything stays in your browser. Nothing is uploaded anywhere.</p>
         <label for="name-input" style="font-weight:800;">What should we call you? <small class="muted">(optional)</small></label>
         <input id="name-input" class="glossary-search" style="margin-top:6px;" maxlength="30"
           placeholder="Your name" value="${esc(state.profile.name || '')}">

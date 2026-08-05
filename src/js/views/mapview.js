@@ -21,7 +21,7 @@ export function render(el) {
     </div>
     <div class="row" style="margin-bottom:10px;">
       <button class="btn btn-ghost small" id="locate-btn">${icon('crosshair', { size: 15 })} Use my location</button>
-      <small class="muted">Location stays in your browser — nothing is sent anywhere.</small>
+      <small class="muted">Location stays in your browser. Nothing is sent anywhere.</small>
     </div>
     <div class="map-box" id="big-map"></div>
     <div class="card" style="margin-top:12px;" id="list"></div>`;
