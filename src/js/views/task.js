@@ -62,7 +62,7 @@ export function render(el, { params }) {
     <div class="card" style="margin-top:14px;">
       <div class="spread">
         <h3 class="mb0">${icon('map-pin', { size: 17 })} Places near you</h3>
-        <button class="btn btn-blue small" id="locate-btn">${icon('crosshair', { size: 15 })} Use my location</button>
+        <button class="btn btn-ghost small" id="locate-btn">${icon('crosshair', { size: 15 })} Use my location</button>
       </div>
       <div class="map-box small" id="task-map" style="margin-top:10px;"></div>
       <div id="poi-list" style="margin-top:8px;">${poiListHtml(pois)}</div>

@@ -115,10 +115,6 @@ button.card { appearance: none; }
   background: var(--primary-dark); color: #fff;   /* 5.32:1 */
   border-color: #2b9160; box-shadow: 0 4px 0 var(--primary-deep);
 }
-.btn-blue {
-  background: var(--blue-dark); color: #fff;      /* 4.82:1 */
-  border-color: #3f74d1; box-shadow: 0 4px 0 var(--blue-deep);
-}
 .btn-danger {
   background: var(--red-btn); color: #fff;        /* 5.39:1 */
   border-color: #d1585b; box-shadow: 0 4px 0 var(--red-deep);

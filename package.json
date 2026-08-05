@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "description": "Gamified English-language guide to getting a German class B driving licence in Berlin",
+  "license": "MIT",
   "scripts": {
     "dev": "python3 -m http.server 4173 -d src",
     "dev:node": "npx -y serve -l 4173 src",

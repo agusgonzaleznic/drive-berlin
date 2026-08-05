@@ -20,7 +20,7 @@ export function render(el) {
         return `<button data-f="${f}" class="on">${icon(t.ico, { size: 14 })} ${esc(t.label)}</button>`; }).join('')}
     </div>
     <div class="row" style="margin-bottom:10px;">
-      <button class="btn btn-blue small" id="locate-btn">${icon('crosshair', { size: 15 })} Use my location</button>
+      <button class="btn btn-ghost small" id="locate-btn">${icon('crosshair', { size: 15 })} Use my location</button>
       <small class="muted">Location stays in your browser — nothing is sent anywhere.</small>
     </div>
     <div class="map-box" id="big-map"></div>

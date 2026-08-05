@@ -30,7 +30,7 @@ function renderList(el) {
         <p class="muted mt0 mb0">Everything the official exam asks, in English.
         Read a lesson, then prove it on the quiz.</p>
       </div>
-      <a class="btn btn-blue" href="#/practice" style="flex:0 0 auto;">${icon('target', { size: 15 })} Smart practice${due ? ` · ${due} due` : ''}</a>
+      <a class="btn btn-amber" href="#/practice" style="flex:0 0 auto;">${icon('target', { size: 15 })} Smart practice${due ? ` · ${due} due` : ''}</a>
     </div>
     ${weakest ? `
       <div class="card featured" style="margin-bottom:14px;">
@@ -41,7 +41,7 @@ function renderList(el) {
             <small class="muted">${weakest.mastered}/${weakest.total} mastered${weakest.seen === 0 ? ' · not started' : ''}</small>
           </div>
           <div class="row" style="flex:0 0 auto;gap:6px;">
-            <a class="btn btn-blue small" href="#/practice/${encodeURIComponent(weakest.id)}">Practise</a>
+            <a class="btn btn-amber small" href="#/practice/${encodeURIComponent(weakest.id)}">Practise</a>
             <a class="btn btn-ghost small" href="#/lesson/${encodeURIComponent(weakest.id)}">Read</a>
           </div>
         </div>

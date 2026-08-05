@@ -18,6 +18,9 @@ No build step. No backend. No accounts. No tracking. Every legal claim sourced.
 ![csp](https://img.shields.io/badge/CSP-strict_·_0_violations-3f9142?style=for-the-badge&labelColor=14161f)
 ![a11y](https://img.shields.io/badge/WCAG-AA_measured-7c5cd6?style=for-the-badge&labelColor=14161f)
 ![storage](https://img.shields.io/badge/data-localStorage_only-7cb0ff?style=for-the-badge&labelColor=14161f)
+<br>
+![licence](https://img.shields.io/badge/code-MIT-e0a82e?style=for-the-badge&labelColor=14161f)
+![content licence](https://img.shields.io/badge/content-CC_BY_4.0-e0a82e?style=for-the-badge&labelColor=14161f)
 
 <br>
 
@@ -573,9 +576,36 @@ documented scenario: a non-EU (Argentine) licence holder resident in Berlin.
 
 ## 📄 Licence & attribution
 
-No project-wide licence has been chosen yet — all rights reserved by default. Third-party assets
-carry their own licences and are attributed in
-[`docs/assets-provenance.md`](docs/assets-provenance.md):
+**Open source, and attribution is required.** Because this repo is mostly prose wrapped around some
+code, the two are licensed with the tool that fits each:
+
+| Part | Paths | Licence |
+|---|---|---|
+| **Software** | `src/index.html` · `src/favicon.svg` · `src/css/**` · `src/js/**` · `scripts/**` · `tests/**` | [MIT](LICENSE) |
+| **Content** — research, lessons, questions, glossary, phrases, locations | `docs/**` · `src/data/**` | [CC BY 4.0](LICENSE-CONTENT) |
+
+You can use, modify and sell derivatives of both, commercially included. **You must credit me.**
+MIT requires the copyright notice to travel with the code; CC BY 4.0 §3(a) additionally requires
+that you name the creator, link the licence, and **state whether you changed anything**.
+
+Reusing the content? This satisfies it:
+
+```
+Content adapted from "Führerschein Hero" by Agustin Gonzalez Nicolini
+(https://github.com/agusgonzaleznic/german-driving-school),
+licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+Changes were made.
+```
+
+> [!CAUTION]
+> If you republish the content, **re-verify it against the primary sources first.** Every legal and
+> commercial figure was accurate only on the date stamped in its document, and both licences
+> disclaim all warranties. Shipping a stale deadline to someone who then loses the right to drive is
+> the failure mode this project was built to avoid.
+
+### Third-party material
+
+Not covered by either licence above — it keeps its own terms, and nothing here relicenses it:
 
 | Asset | Licence |
 |---|---|

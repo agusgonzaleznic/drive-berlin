@@ -103,7 +103,7 @@ export function renderQuestion(el, s) {
         ${q.type === 'number' && !ok ? `<p><b>Correct answer: ${q.answer_number} ${esc(q.unit || '')}</b></p>` : ''}
         <div class="callout ${ok ? 'tip' : 'rule'}">${md(q.explanation || '')}
           ${q.rule_ref ? `<br><small class="muted">${icon('scroll-text', { size: 12 })} ${esc(q.rule_ref)}</small>` : ''}</div>
-        <div class="center"><button class="btn btn-blue" id="next-btn">Continue →</button></div>
+        <div class="center"><button class="btn btn-primary" id="next-btn">Continue →</button></div>
       </div>`;
     const nextBtn = el.querySelector('#next-btn');
     nextBtn.focus();

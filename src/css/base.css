@@ -46,7 +46,6 @@
   --primary-soft: #17301f;  /* soft panel fill */
   --blue: #7cb0ff;          /*  7.25:1 as text */
   --blue-dark: #2f5fb8;     /* button fill; white label 4.82:1 */
-  --blue-deep: #1e3f7d;
   --blue-soft: #182338;
   --amber: var(--gold);
   --amber-dark: var(--gold-dark);

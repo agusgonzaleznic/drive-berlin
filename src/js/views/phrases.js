@@ -117,7 +117,7 @@ function renderDrill(el, groups) {
             <div class="verdict">${icon(ok ? 'circle-check' : 'circle-alert', { size: 19 })} ${ok ? 'Genau!' : 'Not that one.'}</div>
             <div class="callout ${ok ? 'tip' : 'rule'}"><b>${esc(item.de)}</b> — ${esc(item.en)}
               ${item.tip ? `<br>${icon('lightbulb', { size: 13 })} ${esc(item.tip)}` : ''}</div>
-            <div class="center"><button class="btn btn-blue" id="next">Continue →</button></div>
+            <div class="center"><button class="btn btn-primary" id="next">Continue →</button></div>
           </div>`;
         const next = el.querySelector('#next');
         next.focus();

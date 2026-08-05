@@ -197,7 +197,7 @@ function renderExamQ(el, s) {
         <button class="btn btn-ghost small" id="prev-btn" ${s.idx === 0 ? 'disabled' : ''}>← Prev</button>
         <span class="muted" id="answered-count"><b>${answeredCount}</b>/${s.questions.length} answered</span>
         ${s.idx < s.questions.length - 1
-          ? '<button class="btn btn-blue small" id="next-btn">Next →</button>'
+          ? '<button class="btn btn-ghost small" id="next-btn">Next →</button>'
           : '<span></span>'}
       </div>
       <div class="center" style="margin-top:14px;">
@@ -294,7 +294,7 @@ function finish(el, s) {
         <div class="poi-item">
           <div><b>${esc(m.title)}</b><br><small class="muted">${m.count} wrong · ${m.points} error points</small></div>
           <div style="flex:0 0 auto;">
-            <a class="btn btn-blue small" href="#/practice/${encodeURIComponent(id)}">Practise</a>
+            <a class="btn btn-amber small" href="#/practice/${encodeURIComponent(id)}">Practise</a>
             <a class="btn btn-ghost small" href="#/lesson/${encodeURIComponent(id)}">Re-read</a>
           </div>
         </div>`).join('')}
