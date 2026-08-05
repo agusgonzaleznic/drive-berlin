@@ -6,6 +6,7 @@ import { esc, toast, openModal } from '../ui.js';
 import { masteredCount } from '../engine/scoring.js';
 import { icon } from '../icons.js';
 import { glyph } from '../glyphs.js';
+import { analyticsConfigured, reopenConsent } from '../consent.js';
 
 /**
  * Progress toward a locked badge, so a grey square says "2 lessons to go"
@@ -96,6 +97,7 @@ export function render(el) {
         <button class="btn btn-ghost small" id="switch-path">${icon('git-fork', { size: 15 })} Change my path &amp; details</button>
         <button class="btn btn-ghost small" id="export-btn">${icon('file-text', { size: 15 })} Export progress</button>
         <button class="btn btn-ghost small" id="import-btn">${icon('arrow-right', { size: 15 })} Import progress</button>
+        ${analyticsConfigured() ? `<button class="btn btn-ghost small" id="consent-btn">${icon('shield-check', { size: 15 })} Change analytics choice</button>` : ''}
         <button class="btn btn-danger small" id="reset-btn">${icon('x', { size: 15 })} Reset everything</button>
       </div>
     </div>`;
@@ -104,6 +106,12 @@ export function render(el) {
     // Send them back through onboarding; progress is keyed by task id, so nothing is lost.
     location.hash = '#/welcome';
   });
+
+  // GDPR Art. 7(3): withdrawing consent must be as easy as giving it, so the
+  // banner comes back from here rather than making anyone hunt through browser
+  // settings. Optional chaining because the button only exists when a measurement
+  // ID is configured, which is never the case in local development.
+  el.querySelector('#consent-btn')?.addEventListener('click', () => reopenConsent());
 
   el.querySelector('#export-btn').addEventListener('click', () => {
     const blob = new Blob([exportState()], { type: 'application/json' });

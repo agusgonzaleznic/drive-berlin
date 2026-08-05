@@ -236,6 +236,14 @@ test('no shipped data file contains a dangerous URL scheme', () => {
 // CI executes: a re-introduced CDN now fails a pull request. tests/csp.mjs
 // proves the same property against a real browser, but it needs system Chrome
 // at a hardcoded macOS path and so does not run in CI (see .github/workflows/ci.yml).
+//
+// THERE IS NOW ONE EXCEPTION, and it is consented rather than silent. Analytics
+// adds googletagmanager.com as a script origin and the GA4 endpoints as connect
+// targets. The fonts stay vendored, so the old leak this section was written
+// about (an IP address handed to Google before a glyph is drawn, with nobody
+// asked) is still fixed: no request reaches any Google host until a visitor opts
+// in. The lists below pin that exception to exactly those origins, and
+// tests/consent.browser.mjs proves the "not before opt-in" half in a browser.
 
 const SRC = new URL('../src/', import.meta.url).pathname;
 const readSrc = p => readFileSync(SRC + p, 'utf8');
@@ -246,14 +254,28 @@ const readSrc = p => readFileSync(SRC + p, 'utf8');
 // link the user chooses to click is not a subresource.
 const LOADING_SURFACE = ['index.html', 'css/base.css', 'css/components.css'];
 
-// The tile hosts are the one genuine third-party dependency left: tiles are
-// raster images generated per viewport, so there is nothing to vendor. The
-// w3.org URI is the SVG namespace inside the inline --grain texture, which is an
-// identifier rather than a request.
+// The origins index.html is allowed to name, each for a stated reason.
+//
+// The tile hosts are a genuine third-party dependency: tiles are raster images
+// generated per viewport, so there is nothing to vendor. The w3.org URI is the
+// SVG namespace inside the inline --grain texture, which is an identifier rather
+// than a request.
+//
+// The Google hosts are analytics, and they are here deliberately rather than by
+// accident. googletagmanager.com serves gtag.js, and it cannot be pinned with
+// Subresource Integrity because Google reissues that file at will. The rest are
+// where GA4 sends its hits. Nothing is requested from any of them until a visitor
+// opts in, which is the property tests/consent.browser.mjs and tests/csp.mjs
+// enforce against a real browser. Do NOT extend this list to make a test pass:
+// an origin arriving here without that reasoning is the failure this guards.
 const ALLOWED_ORIGINS = new Set([
   'https://tile.openstreetmap.org',
   'https://*.tile.openstreetmap.org',
   'http://www.w3.org',
+  'https://www.googletagmanager.com',
+  'https://www.google-analytics.com',
+  'https://analytics.google.com',
+  'https://*.google-analytics.com',
 ]);
 
 test('nothing in the loading surface points at a third-party origin', () => {
@@ -273,31 +295,64 @@ test('every subresource in index.html is a same-origin relative path', () => {
   for (const r of refs) {
     assert.ok(!/^(?:https?:)?\/\//.test(r), `${r} is loaded from another origin`);
   }
-  // SRI pins bytes we do not control. Every subresource is now in this
+  // gtag.js is the one external script this app runs, and it is injected by
+  // js/consent.js after an explicit opt-in. As a static tag it would load for
+  // every visitor before anyone had been asked anything, which is the entire
+  // thing the consent module exists to prevent.
+  assert.ok(!/<script[^>]+googletagmanager/i.test(html),
+    'gtag.js must be injected after consent, never shipped as a static script tag');
+  // SRI pins bytes we do not control. Every STATIC subresource is in this
   // repository, so an integrity attribute would be describing our own files to
-  // ourselves. If one reappears, a CDN has come back with it.
+  // ourselves. If one reappears here, a CDN has come back as a static tag.
+  // (gtag.js cannot be pinned at all: see ALLOWED_ORIGINS above.)
   assert.ok(!/\bintegrity=/.test(html), 'integrity= implies a third-party subresource');
-  assert.ok(!/\brel="preconnect"/.test(html), 'preconnect implies a third-party origin');
+  assert.ok(!/\brel="preconnect"/.test(html),
+    'preconnect implies a third-party origin, and a preconnect to Google would ' +
+    'open a connection before the visitor had consented to anything');
 });
 
-test('the CSP denies every external script, font and connection', () => {
+test('the measurement ID in the repository is still the placeholder', () => {
+  const html = readSrc('index.html');
+  const m = html.match(/<meta name="ga-measurement-id" content="([^"]*)">/);
+  assert.ok(m, 'js/consent.js reads the ID from this meta tag, so the tag must exist');
+  assert.equal(m[1], '__GA_MEASUREMENT_ID__',
+    'a real G-xxxx measurement ID must never be committed. The Pages workflow ' +
+    'substitutes it at deploy time; the placeholder is what keeps development ' +
+    'and every fork from talking to Google.');
+});
+
+// Every directive is pinned with deepEqual rather than a "contains" check, so
+// widening the policy by one origin fails here and has to be argued for in a
+// diff. That is the point: the CSP is the only thing standing between this app
+// and the next well-meaning snippet.
+test('the CSP allows analytics and nothing else beyond this origin', () => {
   const csp = readSrc('index.html').match(/http-equiv="Content-Security-Policy"\s+content="([^"]*)"/i)?.[1];
   assert.ok(csp, 'the CSP meta tag must be present');
   const d = Object.fromEntries(csp.split(';')
     .map(x => x.trim().split(/\s+/)).filter(x => x[0]).map(x => [x[0], x.slice(1)]));
 
   assert.deepEqual(d['default-src'], ["'self'"]);
-  assert.deepEqual(d['script-src'], ["'self'"], 'no external origin may execute script');
+  // gtag.js is the ONE external origin allowed to execute script here, and it
+  // cannot be integrity-pinned. A second entry in this list is a second party
+  // that can run arbitrary code in every visitor's browser.
+  assert.deepEqual(d['script-src'], ["'self'", 'https://www.googletagmanager.com'],
+    'googletagmanager.com is the only external script origin');
   assert.deepEqual(d['font-src'], ["'self'"], 'the font families are vendored, so no font host is needed');
-  assert.deepEqual(d['connect-src'], ["'self'"]);
+  // The GA4 collection endpoints, including the regional variants
+  // (region1.google-analytics.com and so on) that the wildcard covers.
+  assert.deepEqual(d['connect-src'],
+    ["'self'", 'https://www.google-analytics.com', 'https://analytics.google.com', 'https://*.google-analytics.com']);
   assert.deepEqual(d['object-src'], ["'none'"]);
   assert.deepEqual(d['base-uri'], ["'none'"]);
   assert.deepEqual(d['form-action'], ["'none'"]);
   // style-src keeps 'unsafe-inline' because the views set style="" on many
   // elements. What it must never regain is an external origin.
   assert.deepEqual(d['style-src'], ["'self'", "'unsafe-inline'"]);
+  // The last entry is gtag's pixel transport, used only when fetch and
+  // sendBeacon are both unavailable.
   assert.deepEqual(d['img-src'],
-    ["'self'", 'data:', 'https://tile.openstreetmap.org', 'https://*.tile.openstreetmap.org']);
+    ["'self'", 'data:', 'https://tile.openstreetmap.org', 'https://*.tile.openstreetmap.org',
+      'https://www.google-analytics.com']);
 });
 
 test('every vendored file the app asks for is actually in the repository', () => {

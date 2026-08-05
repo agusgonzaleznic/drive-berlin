@@ -1,18 +1,29 @@
-// Prove the CSP does not break the app AND that the app is genuinely first-party.
+// Prove the CSP does not break the app AND that the app is genuinely first-party
+// until a visitor says otherwise.
 //
 // Leaflet and both font families used to come from unpkg and Google Fonts. They
-// are now vendored under src/assets/, so this test asserts two things at once:
+// are now vendored under src/assets/, so this test asserts three things at once:
 //   1. nothing is broken: Leaflet executes, the map initialises, tiles fetch,
 //      both font families load, and there are zero CSP violations;
-//   2. nothing leaks: the ONLY third-party origin the page is allowed to touch
-//      is the OpenStreetMap tile host. Any new CDN, font host or analytics
-//      snippet fails this test rather than shipping quietly.
+//   2. nothing leaks: the ONLY third-party origin the page actually contacts is
+//      the OpenStreetMap tile host. Any new CDN or font host fails this test
+//      rather than shipping quietly;
+//   3. analytics is genuinely off by default. The CSP now ALLOWS the Google
+//      origins, so the policy alone no longer proves anything about them. What
+//      is asserted instead is the behaviour that matters: in the state this
+//      repository ships, with no measurement ID substituted and no choice
+//      stored, ZERO requests reach any Google host. Consented loading is covered
+//      separately by tests/consent.browser.mjs.
 import { chromium } from 'playwright-core';
 
 // The one third-party origin this app is permitted to contact. Tiles are raster
 // images that cannot be vendored (there are millions of them), so this is the
 // documented residual dependency.
 const ALLOWED_THIRD_PARTY = /^https:\/\/([a-z]+\.)?tile\.openstreetmap\.org$/;
+// Any hostname that would mean a byte went to Google. Deliberately broader than
+// the CSP allowlist: the assertion is not "only the permitted Google hosts were
+// contacted", it is "no Google host was contacted at all".
+const GOOGLE_HOST = /(^|\.)(google\.com|google-analytics\.com|googletagmanager\.com|googleapis\.com|gstatic\.com|doubleclick\.net)$/;
 const ORIGIN = 'http://localhost:4173';
 
 const b = await chromium.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true });
@@ -99,6 +110,20 @@ const rogue = thirdParty.filter(o => !ALLOWED_THIRD_PARTY.test(o));
 console.log(`\nthird-party origins contacted: ${thirdParty.length}`);
 thirdParty.forEach(o => console.log(`  ${o} ${ALLOWED_THIRD_PARTY.test(o) ? '(allowed: map tiles)' : '<-- NOT ALLOWED'}`));
 
+// ---------- analytics off by default ----------
+// The single most important assertion in this file. Every route above has been
+// visited, the map has been opened, and no consent has been given or stored.
+const googleRequests = requests.filter(u => GOOGLE_HOST.test(new URL(u).hostname));
+const bannerShown = await p.evaluate(() => !!document.getElementById('consent-banner'));
+const gtagPresent = await p.evaluate(() =>
+  typeof window.gtag !== 'undefined' || !!document.querySelector('script[src*="googletagmanager"]'));
+const consentStored = await p.evaluate(() => localStorage.getItem('gds-consent-v1'));
+console.log(`\nrequests to any Google host without consent: ${googleRequests.length}`);
+googleRequests.slice(0, 5).forEach(u => console.log('  <-- ' + u.slice(0, 110)));
+console.log(`consent banner shown with no measurement ID configured: ${bannerShown ? 'YES <-- should not be' : 'no'}`);
+console.log(`gtag present: ${gtagPresent ? 'YES <-- should not be' : 'no'}`);
+console.log(`consent choice in localStorage: ${consentStored ?? 'none (nothing was asked, nothing was stored)'}`);
+
 // ---------- violations ----------
 const reported = await p.evaluate(() => window.__csp || []);
 const cspViolations = [...violations.filter(v => /Content Security Policy|Refused to/i.test(v)), ...reported];
@@ -121,6 +146,10 @@ const checks = {
   'fonts served from this origin': fontsAreLocal,
   'variable weight axis live': fonts.variableAxisLive,
   'no unexpected third-party origin': rogue.length === 0,
+  'ZERO requests to any Google host without consent': googleRequests.length === 0,
+  'no banner without a configured measurement ID': bannerShown === false,
+  'gtag is absent until an opt-in': gtagPresent === false,
+  'nothing stored when nothing was asked': consentStored === null,
   'zero CSP violations': cspViolations.length === 0,
   'no failed requests beyond cancelled tiles': failed.length === 0,
 };

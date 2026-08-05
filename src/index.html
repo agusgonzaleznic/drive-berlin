@@ -5,26 +5,39 @@
 <!-- viewport-fit=cover is required for env(safe-area-inset-*) to resolve on iOS;
      without it the fixed bottom tab bar sits in the home-indicator gesture strip. -->
 <!-- Content-Security-Policy.
-     script-src is 'self' with NO external origin at all. Every byte of script
-     this page can run is in this repository: js/app.js as a module, plus the
-     Leaflet build vendored under assets/vendor/leaflet/. There is no inline
-     script, so an injected <script> cannot execute even if markup escaping were
-     ever bypassed, and there is no CDN left whose compromise could substitute
-     hostile JS. That is why the old integrity/crossorigin attributes are gone:
-     SRI existed to pin bytes we did not control, and now we control them.
+     script-src IS NO LONGER 'self' ALONE. It now also allows
+     https://www.googletagmanager.com, and this comment says so plainly because
+     it used to boast the opposite. Everything else the page can execute is still
+     in this repository: js/app.js as a module, plus the Leaflet build vendored
+     under assets/vendor/leaflet/. There is still no inline script, so an
+     injected <script> cannot execute even if markup escaping were ever bypassed.
+     What that one external origin costs is worth stating exactly. A script
+     served from someone else's CDN cannot be pinned with Subresource Integrity,
+     because Google reissues gtag.js whenever it likes and any hash we wrote here
+     would break the site on their next change. So we run whatever bytes that URL
+     returns at the moment it is fetched. That is a deliberate tradeoff for
+     analytics, accepted with two things narrowing it: NOTHING is requested from
+     any Google host until a visitor clicks accept in the banner js/consent.js
+     mounts, so a visitor who declines or never answers runs first-party code
+     only, and the app holds no accounts, credentials or cookies of its own for
+     that script to reach.
+     connect-src carries the GA4 collection endpoints, which is where gtag sends
+     its hits, and the wildcard covers the regional variants
+     (region1.google-analytics.com and friends).
+     img-src carries www.google-analytics.com as well, because gtag falls back to
+     a pixel when fetch and sendBeacon are both unavailable.
      style-src still needs 'unsafe-inline' because the views set style="" on 127
      elements; style injection is far lower severity than script injection.
      font-src is 'self': the two families are vendored under assets/fonts/.
      img-src needs data: for the CSS mask-image icons and the inline noise
-     texture, and the two OSM hosts for map tiles, which are the only remaining
-     third-party requests this app makes. -->
+     texture, and the two OSM hosts for map tiles. -->
 <meta http-equiv="Content-Security-Policy" content="
   default-src 'self';
-  script-src 'self';
+  script-src 'self' https://www.googletagmanager.com;
   style-src 'self' 'unsafe-inline';
   font-src 'self';
-  img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org;
-  connect-src 'self';
+  img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org https://www.google-analytics.com;
+  connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com;
   object-src 'none';
   base-uri 'none';
   form-action 'none'">
@@ -52,6 +65,13 @@
 <meta name="apple-mobile-web-app-title" content="Führerschein">
 <title>Führerschein Hero · Berlin</title>
 <meta name="description" content="Gamified English-language guide to getting your German class B driving licence in Berlin.">
+<!-- GA4 measurement ID. The app has no build step, so the Pages workflow
+     substitutes the real value here at deploy time from a repository variable.
+     The placeholder that lives in the repository means analytics is OFF: anything
+     that is not shaped like a G-xxxx id is read as "not configured" by
+     js/consent.js, so local development, a fork and a plain file:// open never
+     talk to Google and never show a banner. -->
+<meta name="ga-measurement-id" content="__GA_MEASUREMENT_ID__">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <!-- Cinzel (inscriptional display face) and DM Sans (the workhorse) are vendored
      under assets/fonts/ and declared in css/base.css. They used to come from

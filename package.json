@@ -16,7 +16,8 @@
     "test:contrast": "node tests/measure.mjs",
     "test:csp": "node tests/csp.mjs",
     "check:links": "node scripts/check-links.mjs",
-    "test:all": "npm test && npm run check:links && node tests/browser.mjs && node tests/a11y.mjs && node tests/csp.mjs && node tests/emojiscan.mjs && node tests/course.browser.mjs"
+    "test:all": "npm test && npm run check:links && node tests/browser.mjs && node tests/a11y.mjs && node tests/csp.mjs && node tests/consent.browser.mjs && node tests/emojiscan.mjs && node tests/course.browser.mjs",
+    "test:consent": "node tests/consent.browser.mjs"
   },
   "devDependencies": {
     "playwright-core": "1.62.1"

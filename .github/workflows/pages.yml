@@ -55,6 +55,33 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
 
+      # The app has no build step, so the GA4 measurement ID is substituted into
+      # the meta tag here rather than at build time. It is a repository VARIABLE,
+      # not a secret: a G-xxxx id is public by design and ships in the client of
+      # every site that uses GA. Leaving the variable unset is the supported way
+      # to keep analytics off: consent.js validates the value against /^G-[A-Z0-9]{4,}$/
+      # and does nothing at all when it is missing or still the placeholder, so no
+      # banner appears and no Google host is contacted.
+      #
+      # The repository itself must always hold the placeholder. tests/security.test.mjs
+      # asserts exactly that, so a real id can never be committed by accident.
+      - name: Inject the GA measurement ID
+        env:
+          GA_ID: ${{ vars.GA_MEASUREMENT_ID }}
+        run: |
+          if [ -z "${GA_ID}" ]; then
+            echo "GA_MEASUREMENT_ID is not set: analytics stays disabled, no banner will show."
+            exit 0
+          fi
+          case "${GA_ID}" in
+            G-*) ;;
+            *) echo "::error::GA_MEASUREMENT_ID must look like G-XXXXXXXXXX, got a value that does not"; exit 1 ;;
+          esac
+          grep -q '__GA_MEASUREMENT_ID__' src/index.html \
+            || { echo "::error::placeholder __GA_MEASUREMENT_ID__ not found in src/index.html"; exit 1; }
+          sed -i "s/__GA_MEASUREMENT_ID__/${GA_ID}/" src/index.html
+          echo "Injected measurement ID (analytics enabled, still gated behind consent)."
+
       # There is no build step. The app is plain HTML, CSS and ES modules, so
       # src/ is uploaded exactly as it sits in the repository.
       - name: Upload src/ as the Pages artifact
