@@ -67,12 +67,17 @@ marked "⚠️ unverified" in the text rather than quietly dropped.
 
 ## Raw research
 
-[`raw/`](raw/) holds the output of the research agents: one
-JSON per research domain, plus a `*-verification.json` carrying the adversarial fact-checker's
-per-claim verdicts wherever that pass completed. This is the audit trail behind every claim in the
-documents above. If you want to know where a number came from, whether a verifier confirmed it, or
-what the researcher's original (possibly wrong) figure was before correction, it is in here. The
-documents cite these filenames directly.
+`raw/` holds the output of the research agents: one JSON per research domain, plus a
+`*-verification.json` carrying the adversarial fact-checker's per-claim verdicts wherever that
+pass completed. It is the audit trail behind every claim in the documents above. If you want to
+know where a number came from, whether a verifier confirmed it, or what the researcher's original
+(possibly wrong) figure was before correction, that is where it lives.
+
+> **`raw/` is deliberately not committed.** It is listed in `.gitignore` and kept only on the
+> author's machine, so a clone of this repository will not contain it. The documents still cite
+> these filenames throughout, because a citation records which research pass a claim came from,
+> and that stays true whether or not the file ships. Read those citations as provenance labels
+> rather than as links you can follow here.
 
 One caveat on fidelity: these files are the agents' findings, but they are **not byte-for-byte
 verbatim**. They were re-serialised (pretty-printed) and passed through a de-personalisation
@@ -143,7 +148,8 @@ since neither of its two source files was ever verified.
 One thing the documents themselves cannot tell you, because it happened after they were written:
 the recovered verifier for `ar-berlin-process` finished late, so the provenance note in
 `costs-and-driving-schools.md` claiming that file has "no verification file" **is now out of date**.
-The verdicts exist, they are in `raw/ar-berlin-process-verification.json`, and they contradict the
+The verdicts exist in `ar-berlin-process-verification.json`, which is kept locally as described
+above, and they contradict the
 research on several procedural points. Anything in that document sourced only from
 `ar-berlin-process.json` should be re-read against them.
 

@@ -2,7 +2,7 @@
 
 *Written 4 August 2026 for a holder of an Argentine licence, resident in Berlin, converting it (*Umschreibung*). Facts are stamped to that date; the items most likely to go stale are flagged.*
 
-*Two notes on provenance before you start.* First, the source research for this document (`raw/theory-exam.json`) was fact-checked by a separate adversarial pass (`raw/theory-exam-verification.json`), and where the two disagree the verification wins — corrections and downgrades are marked in place. Second, that verification pass was written for a slightly different reader (an Italian citizen taking a **first** German licence), so its framing about who needs an exam at all does not apply to you; the conversion-specific law below is drawn from `raw/ar-legal-core.json`, which read *Anlage 11 FeV* and *§ 31 FeV* directly against the official consolidated text.
+*Two notes on provenance before you start.* First, the source research for this document (`theory-exam.json`) was fact-checked by a separate adversarial pass (`theory-exam-verification.json`), and where the two disagree the verification wins — corrections and downgrades are marked in place. Second, that verification pass was written for a slightly different reader (an Italian citizen taking a **first** German licence), so its framing about who needs an exam at all does not apply to you; the conversion-specific law below is drawn from `ar-legal-core.json`, which read *Anlage 11 FeV* and *§ 31 FeV* directly against the official consolidated text.
 
 ## Bottom line
 

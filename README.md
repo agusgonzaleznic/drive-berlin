@@ -321,8 +321,9 @@ That framing is what caught the errors that mattered:
 - `tests/data.test.mjs` asserts data integrity: every question has exactly one correct-answer set,
   every task references a real phase, and every badge is reachable.
 
-Full methodology, per-claim verdicts and the raw agent output are in
-**[`docs/knowledge-base/`](docs/knowledge-base/)**.
+The full methodology, and which claims a verifier confirmed, corrected or could not resolve, are
+recorded in **[`docs/knowledge-base/`](docs/knowledge-base/)**. The agents' raw JSON output is kept
+locally rather than committed, so the documents cite those filenames as provenance labels.
 
 ---
 
@@ -458,7 +459,7 @@ src/
 │         locations.json glossary.json phrases.json
 └── assets/icons/           # 84 local Lucide SVGs plus licence
 docs/
-├── knowledge-base/         # 8 sourced documents (~59.5k words) plus raw/ audit trail
+├── knowledge-base/         # 8 sourced documents (~59.5k words)
 ├── security.md  design-review.md  lessons-learned.md  assets-provenance.md
 └── assets/screenshots/
 tests/                      # 5 unit suites, 6 browser suites
@@ -487,7 +488,7 @@ control borders clear 3:1 (WCAG 1.4.11).
 
 | Document | What it is |
 |---|---|
-| [`docs/knowledge-base/`](docs/knowledge-base/) | The sourced research: 8 documents, ~59.5k words, plus `raw/` with per-claim verifier verdicts |
+| [`docs/knowledge-base/`](docs/knowledge-base/) | The sourced research: 8 documents, ~59.5k words, with the methodology and per-claim verifier coverage recorded inline |
 | [`docs/security.md`](docs/security.md) | Threat model, findings, fixes, what was *not* fixed and why, and the required deploy headers |
 | [`docs/design-review.md`](docs/design-review.md) | UX and UI review with measured before and after |
 | [`docs/lessons-learned.md`](docs/lessons-learned.md) | What worked and what proved expensive across the whole build |

@@ -1,3 +1,23 @@
 node_modules/
 tests/shots/
+
+# Raw research-agent output. Kept local on purpose: the curated documents in
+# docs/knowledge-base/ carry the findings, and they cite these filenames as
+# provenance labels rather than as links.
+docs/knowledge-base/raw/
+
+# AI assistant config, memory and working state. Kept local on purpose: it is
+# machine-specific, changes constantly, and is not part of the project.
+CLAUDE.md
+CLAUDE.local.md
+AGENTS.md
+.claude/
 .claude-flow/
+.cursor/
+.cursorrules
+.windsurfrules
+.aider*
+.roo/
+.mcp.json
+.continue/
+.github/copilot-instructions.md

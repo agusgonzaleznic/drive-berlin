@@ -744,6 +744,6 @@ Take this list to your Bürgeramt appointment, and put the starred ones to LABO 
 
 ---
 
-*Compiled 2026-08-04 from five verified research digests plus their verification passes. Raw evidence, with every fact, quote, source URL and verifier verdict, is in `docs/knowledge-base/raw/ar-legal-core.json`, `ar-deadlines.json`, `ar-berlin-process.json`, `ar-exams-practical.json`, `ar-alternatives.json` and the matching `*-verification.json` files.*
+*Compiled 2026-08-04 from five verified research digests plus their verification passes. Raw evidence, with every fact, quote, source URL and verifier verdict, is recorded in the research files `ar-legal-core.json`, `ar-deadlines.json`, `ar-berlin-process.json`, `ar-exams-practical.json`, `ar-alternatives.json` and the matching `*-verification.json` files. Those files are kept locally and are not committed to this repository; see "Raw research" in [README.md](README.md).*
 
 *The two figures most likely to be stale by the time you read this are the **LABO backlog dates** (they moved within a single week during verification) and the **Anlage 11 country list** (an amending Verordnung awaits promulgation). Both are rendered above as "checked on 2026-08-04, re-check here" with a live link. Treat them that way.*
