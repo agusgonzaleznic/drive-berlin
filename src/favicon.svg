@@ -1,6 +1,6 @@
 <!-- Tab icon. Geometry is kept in step with emblem() in js/brand.js on purpose:
      the favicon and the in-app mark must read as the same object. Built to
-     survive 16px — a circle above the road taper was tried first and read as a
+     survive 16px. A circle above the road taper was tried first and read as a
      head, turning the mark into a pedestrian warning sign, so the horizon is a
      bar instead. -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
