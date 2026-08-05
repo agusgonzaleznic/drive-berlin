@@ -6,6 +6,14 @@ tests/shots/
 # provenance labels rather than as links.
 docs/knowledge-base/raw/
 
+# Process and retrospective documents. These describe how the project was built
+# rather than how to use it, so they are kept local. The security AUDIT lives
+# here too; the repo carries SECURITY.md, which is a disclosure policy instead.
+docs/assets-provenance.md
+docs/design-review.md
+docs/lessons-learned.md
+docs/security.md
+
 # AI assistant config, memory and working state. Kept local on purpose: it is
 # machine-specific, changes constantly, and is not part of the project.
 CLAUDE.md

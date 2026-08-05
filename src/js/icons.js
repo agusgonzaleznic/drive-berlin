@@ -4,7 +4,7 @@
 // their drawing commands, so the whole set costs zero network requests and every
 // icon inherits currentColor from whatever it sits in.
 //
-// Regenerate after adding files: see docs/assets-provenance.md
+// Regenerate after adding files: run scripts/gen-icons.mjs
 
 const PATHS = {
   "arrow-right": "<path d=\"M5 12h14\" /><path d=\"m12 5 7 7-7 7\" />",
@@ -107,7 +107,7 @@ export function icon(name, opts = {}) {
   const stroke = opts.stroke || DEFAULTS.stroke;
   const cls = opts.cls ? ' ' + opts.cls : '';
   const a11y = opts.label
-    ? 'role="img" aria-label="' + String(opts.label).replace(/[&<>"']/g, c =>
+    ? 'role="img" aria-label="' + String(opts.label).replace(/[&<>"\']/g, c =>
         ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])) + '"'
     : 'aria-hidden="true"';
   return '<svg class="ico' + cls + '" width="' + size + '" height="' + size +
