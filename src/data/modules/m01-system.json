@@ -6,11 +6,11 @@
   "icon": "🎓",
   "category": "grund",
   "lesson": {
-    "intro": "Welcome to the machine. Before you ever indicate to pull out of a parking space on Oranienstraße, Germany wants to know three things about you: **what** you are allowed to drive, **whether you are fit** to drive it, and **how much rope** you get before the state quietly takes your licence back. That is what this first module is about — the rules that apply to *you*, the driver, rather than to the road.\n\nGerman driving law is refreshingly unromantic here. It uses numbers: 3,500 kg, two years, 0.0 promille, eight points. Learn these numbers now and the rest of the course becomes far less frightening, because the theory exam (die theoretische Prüfung) loves them, and because the consequences of getting them wrong are expensive in a very German, very well-documented way.",
+    "intro": "Welcome to the machine. Before you ever indicate to pull out of a parking space on Oranienstraße, Germany wants to know three things about you: **what** you are allowed to drive, **whether you are fit** to drive it, and **how much rope** you get before the state quietly takes your licence back. That is what this first module is about: the rules that apply to *you*, the driver, rather than to the road.\n\nGerman driving law is refreshingly unromantic here. It uses numbers: 3,500 kg, two years, 0.0 promille, eight points. Learn these numbers now and the rest of the course becomes far less frightening, because the theory exam (die theoretische Prüfung) loves them, and because the consequences of getting them wrong are expensive in a very German, very well-documented way.",
     "sections": [
       {
         "heading": "What a class B licence actually buys you",
-        "body": "Class B (Klasse B) is the ordinary car licence, and it is defined by mass rather than by how the vehicle looks. You may drive motor vehicles with a maximum authorised mass (zulässige Gesamtmasse) of **no more than 3,500 kg**, designed to carry **no more than eight passengers besides the driver** — so nine seats in total, including yours. A big VW Bus with nine seats: fine. A 4-tonne motorhome: not fine.\n\nTrailers (Anhänger) have their own logic. On plain class B you may pull:\n\n- a trailer with a maximum authorised mass of **up to 750 kg**, full stop; or\n- a heavier trailer, **provided the whole combination stays within 3,500 kg**.\n\nTwo extras exist for people who need more. Key number **B96** (Schlüsselzahl 96) is not a new class — it is a seven-hour training course noted in your licence that lifts the combination limit to **4,250 kg**. Class **BE** is a real class with its own test and allows a trailer of up to **3,500 kg**. And key number **B196** lets you ride 125 cc / 11 kW motorcycles in Germany only, if you are at least **25** and have held class B for at least **five years**.\n\nFinally, class B comes with two freebies included: **AM** (mopeds and small scooters up to 45 km/h) and **L** (agricultural and forestry tractors up to 40 km/h). What it does *not* include is A1 — the 125 cc motorbike your flatmate keeps offering you.",
+        "body": "Class B (Klasse B) is the ordinary car licence, and it is defined by mass rather than by how the vehicle looks. You may drive motor vehicles with a maximum authorised mass (zulässige Gesamtmasse) of **no more than 3,500 kg**, designed to carry **no more than eight passengers besides the driver**, so nine seats in total, including yours. A big VW Bus with nine seats: fine. A 4-tonne motorhome: not fine.\n\nTrailers (Anhänger) have their own logic. On plain class B you may pull:\n\n- a trailer with a maximum authorised mass of **up to 750 kg**, full stop; or\n- a heavier trailer, **provided the whole combination stays within 3,500 kg**.\n\nTwo extras exist for people who need more. Key number **B96** (Schlüsselzahl 96) is not a new class. It is a seven-hour training course noted in your licence that lifts the combination limit to **4,250 kg**. Class **BE** is a real class with its own test and allows a trailer of up to **3,500 kg**. And key number **B196** lets you ride 125 cc / 11 kW motorcycles in Germany only, if you are at least **25** and have held class B for at least **five years**.\n\nFinally, class B comes with two freebies included: **AM** (mopeds and small scooters up to 45 km/h) and **L** (agricultural and forestry tractors up to 40 km/h). What it does *not* include is A1, the 125 cc motorbike your flatmate keeps offering you.",
         "callout": {
           "type": "tip",
           "text": "Exam trap: the 3,500 kg figure is the *maximum authorised mass* (what the vehicle may weigh fully loaded), not what it weighs empty. Check the vehicle registration document (Fahrzeugschein), not your intuition."
@@ -18,7 +18,7 @@
       },
       {
         "heading": "The paperwork marathon before the fun starts",
-        "body": "In Berlin your licence file lands at the LABO, the city's licensing authority (Fahrerlaubnisbehörde). Three things must be in that file before you may sit an exam:\n\n- an **eyesight test** (Sehtest) — you pass with visual acuity of at least **0.7/0.7**, with glasses or contact lenses if you need them; fail it and you need a full ophthalmologist's report;\n- a **first-aid course** (Erste-Hilfe-Kurs) of at least **nine units of 45 minutes**;\n- a **passport photo, ID and application** — plus, for foreign residents, proof of registration (Anmeldung).\n\nThe theory exam for class B is **30 questions**: 20 on the basic material (Grundstoff) and 10 on class-specific material (Zusatzstoff). Wrong answers cost error points (Fehlerpunkte), and you may collect at most **10**. There is one nasty extra rule: get **two 5-point questions wrong** and you fail, even though that is exactly 10 points. Once you pass, you have **12 months** to pass the practical test (praktische Prüfung) before the theory expires.\n\nIf glasses are what got you through the Sehtest, a code is entered in your licence — and driving without them from then on is a violation, not a style choice.",
+        "body": "In Berlin your licence file lands at the LABO, the city's licensing authority (Fahrerlaubnisbehörde). Three things must be in that file before you may sit an exam:\n\n- an **eyesight test** (Sehtest): you pass with visual acuity of at least **0.7/0.7**, with glasses or contact lenses if you need them; fail it and you need a full ophthalmologist's report;\n- a **first-aid course** (Erste-Hilfe-Kurs) of at least **nine units of 45 minutes**;\n- a **passport photo, ID and application**, and for foreign residents proof of registration (Anmeldung).\n\nThe theory exam for class B is **30 questions**: 20 on the basic material (Grundstoff) and 10 on class-specific material (Zusatzstoff). Wrong answers cost error points (Fehlerpunkte), and you may collect at most **10**. There is one nasty extra rule: get **two 5-point questions wrong** and you fail, even though that is exactly 10 points. Once you pass, you have **12 months** to pass the practical test (praktische Prüfung) before the theory expires.\n\nIf glasses are what got you through the Sehtest, a code is entered in your licence, and driving without them from then on is a violation, not a style choice.",
         "callout": {
           "type": "rule",
           "text": "Two wrong 5-point questions = failed exam. Treat every 5-point question in this app as a mini-exam of its own."
@@ -26,31 +26,31 @@
       },
       {
         "heading": "Probezeit: two years on trial",
-        "body": "Your first ever licence is issued **on probation** (auf Probe). The probationary period (Probezeit) lasts **two years** from the day it is issued, and it applies to first-time licence holders only — classes AM, L and T are exempt from it. If you came via accompanied driving at 17, the clock starts then, so your Probezeit typically ends around your 19th birthday.\n\nProbezeit does not mean special leniency and it does not mean a special speed limit. You get points in Flensburg exactly like everyone else. What changes is that violations are additionally sorted into two baskets:\n\n- **A-violations** (schwerwiegende Zuwiderhandlungen) — serious ones: exceeding a speed limit by 21 km/h or more, jumping a red light, mobile phone at the wheel, tailgating, any drink- or drug-driving offence, driving without your BF17 companion.\n- **B-violations** (weniger schwerwiegende Zuwiderhandlungen) — lesser ones: bald tyres, an overdue vehicle inspection (Hauptuntersuchung), children not properly secured.\n\nThe escalation is a staircase, and it is automatic — no official has discretion to be nice:\n\n- **One A-violation, or two B-violations** → you are ordered to attend an **Aufbauseminar** (a paid remedial course at a driving school) **and** your Probezeit is extended by two years, making four in total.\n- **Another A-violation (or two more B-violations) after the seminar** → a written warning (Verwarnung) plus a recommendation to take traffic-psychology counselling (verkehrspsychologische Beratung) within two months.\n- **Another one after that** → the licence is withdrawn (Entziehung der Fahrerlaubnis). You may reapply at the earliest **three months** later.\n\nAnd if you simply ignore the order to attend the Aufbauseminar? The authority *must* withdraw your licence. Ignoring German post is never the winning move.",
+        "body": "Your first ever licence is issued **on probation** (auf Probe). The probationary period (Probezeit) lasts **two years** from the day it is issued, and it applies to first-time licence holders only, since classes AM, L and T are exempt from it. If you came via accompanied driving at 17, the clock starts then, so your Probezeit typically ends around your 19th birthday.\n\nProbezeit does not mean special leniency and it does not mean a special speed limit. You get points in Flensburg exactly like everyone else. What changes is that violations are additionally sorted into two baskets:\n\n- **A-violations** (schwerwiegende Zuwiderhandlungen), the serious ones: exceeding a speed limit by 21 km/h or more, jumping a red light, mobile phone at the wheel, tailgating, any drink- or drug-driving offence, driving without your BF17 companion.\n- **B-violations** (weniger schwerwiegende Zuwiderhandlungen), the lesser ones: bald tyres, an overdue vehicle inspection (Hauptuntersuchung), children not properly secured.\n\nThe escalation is a staircase, and it is automatic. No official has discretion to be nice:\n\n- **One A-violation, or two B-violations** → you are ordered to attend an **Aufbauseminar** (a paid remedial course at a driving school) **and** your Probezeit is extended by two years, making four in total.\n- **Another A-violation (or two more B-violations) after the seminar** → a written warning (Verwarnung) plus a recommendation to take traffic-psychology counselling (verkehrspsychologische Beratung) within two months.\n- **Another one after that** → the licence is withdrawn (Entziehung der Fahrerlaubnis). You may reapply at the earliest **three months** later.\n\nAnd if you simply ignore the order to attend the Aufbauseminar? The authority *must* withdraw your licence. Ignoring German post is never the winning move.",
         "callout": {
           "type": "warning",
-          "text": "One single serious mistake — one red light on Frankfurter Allee — is enough to trigger a seminar and add two years to your Probezeit. There is no free first strike for A-violations."
+          "text": "One single serious mistake, one red light on Frankfurter Allee, is enough to trigger a seminar and add two years to your Probezeit. There is no free first strike for A-violations."
         }
       },
       {
         "heading": "Alcohol, cannabis and the chemistry of losing your licence",
-        "body": "Germany runs several alcohol thresholds at once, and the exam expects you to know which is which.\n\n- **0.5 promille** blood alcohol (0.25 mg/l breath) — the general limit. Reach it and you commit an administrative offence (Ordnungswidrigkeit): for a first offence **500 euros, 2 points and a one-month driving ban** (Fahrverbot).\n- **0.3 promille** — from here you can already be *prosecuted* if alcohol shows in your driving: weaving, an accident, a stupid manoeuvre. Lawyers call it relative unfitness (relative Fahruntüchtigkeit).\n- **1.1 promille** — absolute unfitness (absolute Fahruntüchtigkeit). This is a **criminal offence** (Straftat) even if you drove immaculately: fine or prison, 3 points, licence gone.\n- **1.6 promille** — from here the authority orders a medical-psychological examination (**MPU**, medizinisch-psychologische Untersuchung) before you may ever drive again. The same threshold applies to **cyclists**: 1.6 promille on a bike is a criminal offence, and it can cost you your car licence even though no engine was involved.\n- **0.0 promille** — for everyone **in the Probezeit** and everyone **under 21**, whichever applies. No beer, no Radler, no \"but it was only one\". Penalty: **250 euros and 1 point** — plus it counts as an A-violation, so the Aufbauseminar follows automatically.\n\nCannabis got its own number in 2024: **3.5 nanograms of THC per millilitre of blood serum** is the general limit, punished like alcohol (500 euros, 2 points, one month ban; 1,000 euros if you have also been drinking). For novice drivers in the Probezeit and everyone under 21 the same **zero rule** applies to THC as to alcohol — the only exception being THC from a medicine prescribed for you and taken as directed.\n\nOther drugs — cocaine, amphetamine, methamphetamine, MDMA, heroin, morphine — are pure zero tolerance: **detection in your blood is enough**. And prescription medicines are not automatically harmless. Antihistamines, strong painkillers, sedatives and cough syrups can all make you unfit to drive; read the leaflet, ask the pharmacist, and remember that being medically prescribed something is no defence if you can no longer drive safely.",
+        "body": "Germany runs several alcohol thresholds at once, and the exam expects you to know which is which.\n\n- **0.5 promille** blood alcohol (0.25 mg/l breath): the general limit. Reach it and you commit an administrative offence (Ordnungswidrigkeit): for a first offence **500 euros, 2 points and a one-month driving ban** (Fahrverbot).\n- **0.3 promille**: from here you can already be *prosecuted* if alcohol shows in your driving: weaving, an accident, a stupid manoeuvre. Lawyers call it relative unfitness (relative Fahruntüchtigkeit).\n- **1.1 promille**: absolute unfitness (absolute Fahruntüchtigkeit). This is a **criminal offence** (Straftat) even if you drove immaculately: fine or prison, 3 points, licence gone.\n- **1.6 promille**: from here the authority orders a medical-psychological examination (**MPU**, medizinisch-psychologische Untersuchung) before you may ever drive again. The same threshold applies to **cyclists**: 1.6 promille on a bike is a criminal offence, and it can cost you your car licence even though no engine was involved.\n- **0.0 promille**: for everyone **in the Probezeit** and everyone **under 21**, whichever applies. No beer, no Radler, no \"but it was only one\". Penalty: **250 euros and 1 point**, plus it counts as an A-violation, so the Aufbauseminar follows automatically.\n\nCannabis got its own number in 2024: **3.5 nanograms of THC per millilitre of blood serum** is the general limit, punished like alcohol (500 euros, 2 points, one month ban; 1,000 euros if you have also been drinking). For novice drivers in the Probezeit and everyone under 21 the same **zero rule** applies to THC as to alcohol, the only exception being THC from a medicine prescribed for you and taken as directed.\n\nOther drugs (cocaine, amphetamine, methamphetamine, MDMA, heroin, morphine) are pure zero tolerance: **detection in your blood is enough**. And prescription medicines are not automatically harmless. Antihistamines, strong painkillers, sedatives and cough syrups can all make you unfit to drive; read the leaflet, ask the pharmacist, and remember that being medically prescribed something is no defence if you can no longer drive safely.",
         "callout": {
           "type": "danger",
-          "text": "Alcohol takes roughly one hour per 0.1–0.15 promille to leave your body, and nothing speeds it up — not coffee, not a shower, not a döner. After a heavy Friday night you can still be over the limit on Saturday morning."
+          "text": "Alcohol takes roughly one hour per 0.1–0.15 promille to leave your body, and nothing speeds it up, not coffee, not a shower, not a döner. After a heavy Friday night you can still be over the limit on Saturday morning."
         }
       },
       {
         "heading": "Points in Flensburg, explained without the myths",
-        "body": "Every driver in Germany has a file in the driver fitness register (Fahreignungsregister) in the town of Flensburg. A single violation is worth **one, two or three points**:\n\n- **1 point** — an ordinary offence affecting road safety (e.g. moderate speeding).\n- **2 points** — a particularly serious offence, typically one that also brings a driving ban, or a traffic crime without licence withdrawal.\n- **3 points** — a traffic crime (Straftat) in which the court withdraws the licence or imposes an isolated bar on re-applying (Sperre). A driving ban handed down alongside a conviction is not enough for 3 points; that case stays at 2.\n\nThe consequences arrive on a fixed ladder: at **4–5 points** a written admonition (Ermahnung); at **6–7 points** a written warning (Verwarnung); at **8 points** the authority **must** withdraw your licence. After that you may apply again at the earliest **six months** later, and normally only with a positive **MPU** report in your hand.\n\nTwo useful details. A voluntary driver fitness seminar (Fahreignungsseminar) removes **one point** — but only while you are on 1 to 5 points, and only once every five years. And points expire by themselves: 1-point entries after **two years and six months**, 2-point entries after **five years**, 3-point entries after **ten years**. Each entry ages individually; there is no single \"my points reset\" date.",
+        "body": "Every driver in Germany has a file in the driver fitness register (Fahreignungsregister) in the town of Flensburg. A single violation is worth **one, two or three points**:\n\n- **1 point**: an ordinary offence affecting road safety (e.g. moderate speeding).\n- **2 points**: a particularly serious offence, typically one that also brings a driving ban, or a traffic crime without licence withdrawal.\n- **3 points**: a traffic crime (Straftat) in which the court withdraws the licence or imposes an isolated bar on re-applying (Sperre). A driving ban handed down alongside a conviction is not enough for 3 points; that case stays at 2.\n\nThe consequences arrive on a fixed ladder: at **4–5 points** a written admonition (Ermahnung); at **6–7 points** a written warning (Verwarnung); at **8 points** the authority **must** withdraw your licence. After that you may apply again at the earliest **six months** later, and normally only with a positive **MPU** report in your hand.\n\nTwo useful details. A voluntary driver fitness seminar (Fahreignungsseminar) removes **one point**, but only while you are on 1 to 5 points, and only once every five years. And points expire by themselves: 1-point entries after **two years and six months**, 2-point entries after **five years**, 3-point entries after **ten years**. Each entry ages individually; there is no single \"my points reset\" date.",
         "callout": {
           "type": "rule",
-          "text": "8 points = licence withdrawn. Not \"maybe\", not \"a hearing\" — the law says the authority has to do it."
+          "text": "8 points = licence withdrawn. Not \"maybe\", not \"a hearing\": the law says the authority has to do it."
         }
       },
       {
         "heading": "Fitness to drive: the part no test can measure for you",
-        "body": "The law expects you to be *able* to drive, not merely licensed to. Three everyday killers rarely feel like offences at the time.\n\n**Tiredness.** Microsleep (Sekundenschlaf) arrives unannounced and lasts a few seconds — at 90 km/h you cover 25 metres every second with your eyes effectively shut. Cold air, loud music and coffee buy you minutes, not hours. The only real fix is to stop and take a nap of **15 to 20 minutes**. On a long trip, plan a break roughly every two hours.\n\n**Emotions.** Rage after an argument, grief, exam panic or the euphoria of a promotion all narrow your attention and push you towards risk. If your hands are shaking on the steering wheel, the tram going past is not your real problem. Wait, walk, breathe, then drive.\n\n**Eyes, ears and health.** Wear the glasses noted in your licence. Get your eyes rechecked as the years pass — no one tells you to. And if illness, a new medication or a fresh injury means you cannot control the car safely, you must not drive: continuing anyway and endangering others is a criminal offence, not bad luck.\n\nBerlin adds its own flavour to all of this: trams on the left, cyclists on the right, delivery vans double-parked in front of you and tourists stepping off kerbs without looking. All of that demands a fully awake, sober, unflustered brain — which is exactly what the rules in this module are protecting.",
+        "body": "The law expects you to be *able* to drive, not merely licensed to. Three everyday killers rarely feel like offences at the time.\n\n**Tiredness.** Microsleep (Sekundenschlaf) arrives unannounced and lasts a few seconds. At 90 km/h you cover 25 metres every second with your eyes effectively shut. Cold air, loud music and coffee buy you minutes, not hours. The only real fix is to stop and take a nap of **15 to 20 minutes**. On a long trip, plan a break roughly every two hours.\n\n**Emotions.** Rage after an argument, grief, exam panic or the euphoria of a promotion all narrow your attention and push you towards risk. If your hands are shaking on the steering wheel, the tram going past is not your real problem. Wait, walk, breathe, then drive.\n\n**Eyes, ears and health.** Wear the glasses noted in your licence. Get your eyes rechecked as the years pass, because no one tells you to. And if illness, a new medication or a fresh injury means you cannot control the car safely, you must not drive: continuing anyway and endangering others is a criminal offence, not bad luck.\n\nBerlin adds its own flavour to all of this: trams on the left, cyclists on the right, delivery vans double-parked in front of you and tourists stepping off kerbs without looking. All of that demands a fully awake, sober, unflustered brain, which is exactly what the rules in this module are protecting.",
         "callout": {
           "type": "danger",
           "text": "Driving while too tired to react is not a grey area. If you cause an accident because you fell asleep, courts treat it as your decision to drive, not an accident that happened to you."
@@ -61,11 +61,11 @@
       "Class B: up to 3,500 kg, max 8 passengers plus you, and it includes AM and L for free.",
       "Trailer on plain B: up to 750 kg, or heavier if the whole combination stays under 3,500 kg (B96 lifts it to 4,250 kg, BE to a 3,500 kg trailer).",
       "Probezeit lasts 2 years; one A-violation or two B-violations means Aufbauseminar plus 2 extra years.",
-      "0.5 promille is the general limit; 1.1 promille is a crime; 1.6 promille triggers an MPU — and 1.6 on a bicycle counts too.",
+      "0.5 promille is the general limit; 1.1 promille is a crime; 1.6 promille triggers an MPU, and 1.6 on a bicycle counts too.",
       "In the Probezeit and under 21: 0.0 for alcohol and 0.0 for THC. 250 euros, 1 point, and it's an A-violation.",
       "Drugs are zero tolerance; cannabis has a 3.5 ng/ml THC limit for everyone else; medicines can also make you unfit.",
       "Violations cost 1–3 points; 4–5 Ermahnung, 6–7 Verwarnung, 8 points and the licence is gone for at least 6 months.",
-      "Microsleep is unstoppable by coffee — the only cure is stopping for 15–20 minutes."
+      "Microsleep is unstoppable by coffee: the only cure is stopping for 15–20 minutes."
     ],
     "german_terms": [
       { "de": "die Fahrerlaubnis", "en": "the legal entitlement to drive (the licence as a right)" },
@@ -75,11 +75,11 @@
       { "de": "die Probezeit", "en": "probationary period (2 years for new drivers)" },
       { "de": "das Aufbauseminar", "en": "mandatory remedial driving course" },
       { "de": "schwerwiegende Zuwiderhandlung", "en": "serious violation (an A-violation)" },
-      { "de": "das Promille", "en": "per mille — the unit for blood alcohol concentration" },
+      { "de": "das Promille", "en": "per mille, the unit for blood alcohol concentration" },
       { "de": "die Fahruntüchtigkeit", "en": "unfitness to drive (through alcohol or drugs)" },
       { "de": "das Fahrverbot", "en": "temporary driving ban (you keep the licence, you just may not drive)" },
       { "de": "die Entziehung der Fahrerlaubnis", "en": "withdrawal of the licence itself" },
-      { "de": "das Fahreignungsregister", "en": "driver fitness register — the 'points in Flensburg'" },
+      { "de": "das Fahreignungsregister", "en": "driver fitness register, the 'points in Flensburg'" },
       { "de": "die MPU (medizinisch-psychologische Untersuchung)", "en": "medical-psychological assessment, the 'idiot test'" },
       { "de": "der Sehtest", "en": "eyesight test" },
       { "de": "der Sekundenschlaf", "en": "microsleep" },
@@ -98,7 +98,7 @@
       ],
       "points": 2,
       "pool": "grund",
-      "explanation": "Class B is defined by mass and seats: no more than 3,500 kg maximum authorised mass, and no more than eight passenger seats plus the driver's (nine in total). Anything heavier needs C1 or C. A 125 cc motorcycle needs class A1 — or key number B196, which requires you to be at least 25, to have held class B for five years, and to complete a training course.",
+      "explanation": "Class B is defined by mass and seats: no more than 3,500 kg maximum authorised mass, and no more than eight passenger seats plus the driver's (nine in total). Anything heavier needs C1 or C. A 125 cc motorcycle needs class A1, or key number B196, which requires you to be at least 25, to have held class B for five years, and to complete a training course.",
       "rule_ref": "FeV §6"
     },
     {
@@ -120,9 +120,9 @@
       "type": "choice",
       "text": "Which licence classes are automatically included in class B?",
       "options": [
-        { "text": "Class AM — mopeds and small scooters up to 45 km/h", "correct": true },
-        { "text": "Class L — agricultural and forestry tractors up to 40 km/h", "correct": true },
-        { "text": "Class A1 — motorcycles up to 125 cc, included automatically", "correct": false }
+        { "text": "Class AM: mopeds and small scooters up to 45 km/h", "correct": true },
+        { "text": "Class L: agricultural and forestry tractors up to 40 km/h", "correct": true },
+        { "text": "Class A1: motorcycles up to 125 cc, included automatically", "correct": false }
       ],
       "points": 2,
       "pool": "grund",
@@ -150,7 +150,7 @@
       "options": [
         { "text": "The authority orders you to attend an Aufbauseminar at your own expense", "correct": true },
         { "text": "Your Probezeit is extended by two years, making four years in total", "correct": true },
-        { "text": "Nothing happens yet — action is only taken after a second serious violation", "correct": false }
+        { "text": "Nothing happens yet, since action is only taken after a second serious violation", "correct": false }
       ],
       "points": 4,
       "pool": "grund",
@@ -162,13 +162,13 @@
       "type": "choice",
       "text": "You are 19 years old and in your Probezeit. Which statements about alcohol and cannabis are correct?",
       "options": [
-        { "text": "You must not drive after consuming any alcohol at all — your limit is 0.0", "correct": true },
+        { "text": "You must not drive after consuming any alcohol at all, since your limit is 0.0", "correct": true },
         { "text": "The same zero rule applies to cannabis (THC), unless the THC comes from a medicine prescribed for you and taken as directed", "correct": true },
         { "text": "Because you are over 18, the general 0.5 promille limit applies to you as well", "correct": false }
       ],
       "points": 5,
       "pool": "grund",
-      "explanation": "A strict ban on alcohol and on THC applies to every driver in the Probezeit and to every driver under 21 — so at 19 and on probation you are covered twice over. Breaching it costs 250 euros and 1 point, and because drink- and drug-driving count as a serious A-violation, an Aufbauseminar plus a two-year extension of the Probezeit follows automatically. The only exception is THC from a medicine that was prescribed for you for a specific condition and taken as directed.",
+      "explanation": "A strict ban on alcohol and on THC applies to every driver in the Probezeit and to every driver under 21, so at 19 and on probation you are covered twice over. Breaching it costs 250 euros and 1 point, and because drink- and drug-driving count as a serious A-violation, an Aufbauseminar plus a two-year extension of the Probezeit follows automatically. The only exception is THC from a medicine that was prescribed for you for a specific condition and taken as directed.",
       "rule_ref": "StVG §24c"
     },
     {
@@ -182,7 +182,7 @@
       ],
       "points": 5,
       "pool": "grund",
-      "explanation": "0.5 promille (0.25 mg/l breath) is the general threshold: a first offence typically means 500 euros, 2 points and a one-month driving ban. From 1.1 promille the law assumes absolute unfitness to drive, which is a criminal offence regardless of how well you drove. And the third option is the classic trap: from as little as 0.3 promille you can be prosecuted if alcohol-related driving errors or an accident show that you were unfit — so there is no safe zone below 1.1.",
+      "explanation": "0.5 promille (0.25 mg/l breath) is the general threshold: a first offence typically means 500 euros, 2 points and a one-month driving ban. From 1.1 promille the law assumes absolute unfitness to drive, which is a criminal offence regardless of how well you drove. And the third option is the classic trap: from as little as 0.3 promille you can be prosecuted if alcohol-related driving errors or an accident show that you were unfit, so there is no safe zone below 1.1.",
       "rule_ref": "StVG §24a; StGB §316"
     },
     {
@@ -196,7 +196,7 @@
       ],
       "points": 3,
       "pool": "grund",
-      "explanation": "BF17 lets you drive from 17, but only with a person named in your papers who is at least 30, has held class B for at least five years, and had no more than one point in the register when the application was made. That person must also be sober — at 0.25 mg/l breath alcohol or more, or 3.5 ng/ml THC or more, they may not accompany you. Driving without your named companion is a serious A-violation, so it triggers an Aufbauseminar and extends your Probezeit.",
+      "explanation": "BF17 lets you drive from 17, but only with a person named in your papers who is at least 30, has held class B for at least five years, and had no more than one point in the register when the application was made. That person must also be sober: at 0.25 mg/l breath alcohol or more, or 3.5 ng/ml THC or more, they may not accompany you. Driving without your named companion is a serious A-violation, so it triggers an Aufbauseminar and extends your Probezeit.",
       "rule_ref": "FeV §48a"
     },
     {
@@ -210,7 +210,7 @@
       ],
       "points": 4,
       "pool": "grund",
-      "explanation": "The 0.5 promille administrative offence applies to motor vehicles, so it does not catch cyclists — but the criminal offence of driving while intoxicated covers all vehicles, and for cyclists the courts assume absolute unfitness from 1.6 promille. From that level the licensing authority must order a medical-psychological assessment (MPU) to check your fitness to drive, and a negative result can cost you your car licence, even if you have never driven drunk. Below 1.6 you can also be prosecuted if you weave, fall or cause an accident from about 0.3 promille.",
+      "explanation": "The 0.5 promille administrative offence applies to motor vehicles, so it does not catch cyclists, but the criminal offence of driving while intoxicated covers all vehicles, and for cyclists the courts assume absolute unfitness from 1.6 promille. From that level the licensing authority must order a medical-psychological assessment (MPU) to check your fitness to drive, and a negative result can cost you your car licence, even if you have never driven drunk. Below 1.6 you can also be prosecuted if you weave, fall or cause an accident from about 0.3 promille.",
       "rule_ref": "StGB §316; FeV §13"
     },
     {
@@ -224,7 +224,7 @@
       ],
       "points": 4,
       "pool": "grund",
-      "explanation": "Since August 2024 cannabis has a statutory limit of 3.5 ng/ml THC in blood serum for drivers generally — a first offence costs 500 euros, 2 points and a one-month ban, rising to 1,000 euros if alcohol is involved as well. Novice drivers in the Probezeit and everyone under 21 have no allowance at all. For the other listed drugs, mere detection in your blood is enough; there is no tolerated quantity. Medication is not harmless either: sedatives, strong painkillers, some antihistamines and cough medicines all impair reactions, and driving when you can no longer control the car safely is an offence, prescription or not.",
+      "explanation": "Since August 2024 cannabis has a statutory limit of 3.5 ng/ml THC in blood serum for drivers generally. A first offence costs 500 euros, 2 points and a one-month ban, rising to 1,000 euros if alcohol is involved as well. Novice drivers in the Probezeit and everyone under 21 have no allowance at all. For the other listed drugs, mere detection in your blood is enough; there is no tolerated quantity. Medication is not harmless either: sedatives, strong painkillers, some antihistamines and cough medicines all impair reactions, and driving when you can no longer control the car safely is an offence, prescription or not.",
       "rule_ref": "StVG §24a; FeV Anlage 4"
     },
     {
@@ -238,7 +238,7 @@
       ],
       "points": 3,
       "pool": "grund",
-      "explanation": "One point is given for ordinary road-safety offences, two for particularly serious offences (typically those that also bring a driving ban) and for traffic crimes without licence withdrawal, and three for traffic crimes in which the court withdraws the licence or orders an isolated bar on re-applying (Sperre). The ladder of measures is fixed: admonition at 4–5 points, warning at 6–7, withdrawal at 8. Deletion periods differ by entry: two years and six months for 1-point entries, five years for 2-point entries and ten years for 3-point entries — each entry ages on its own clock, so there is no single reset date.",
+      "explanation": "One point is given for ordinary road-safety offences, two for particularly serious offences (typically those that also bring a driving ban) and for traffic crimes without licence withdrawal, and three for traffic crimes in which the court withdraws the licence or orders an isolated bar on re-applying (Sperre). The ladder of measures is fixed: admonition at 4–5 points, warning at 6–7, withdrawal at 8. Deletion periods differ by entry: two years and six months for 1-point entries, five years for 2-point entries and ten years for 3-point entries. Each entry ages on its own clock, so there is no single reset date.",
       "rule_ref": "StVG §4, §29"
     },
     {
@@ -252,7 +252,7 @@
       ],
       "points": 4,
       "pool": "grund",
-      "explanation": "Microsleep gives no reliable warning, and a few seconds at motorway speed means dozens of metres travelled blind. Caffeine, cold air and music postpone the feeling of tiredness without restoring your reactions — the only real remedy is to leave the road and sleep for 15 to 20 minutes, and to plan a break roughly every two hours on long trips. Emotional states count as fitness problems too: anger, grief or panic narrow your attention exactly when you need it wide.",
+      "explanation": "Microsleep gives no reliable warning, and a few seconds at motorway speed means dozens of metres travelled blind. Caffeine, cold air and music postpone the feeling of tiredness without restoring your reactions. The only real remedy is to leave the road and sleep for 15 to 20 minutes, and to plan a break roughly every two hours on long trips. Emotional states count as fitness problems too: anger, grief or panic narrow your attention exactly when you need it wide.",
       "rule_ref": "StVO §1; StGB §315c"
     },
     {
@@ -263,7 +263,7 @@
       "unit": "kg",
       "points": 2,
       "pool": "grund",
-      "explanation": "Class B stops at 3,500 kg maximum authorised mass — the fully loaded figure printed in the vehicle registration document, not the empty weight. Key number B96 raises the limit for a car-plus-trailer combination to 4,250 kg, but the towing car itself still has to stay within class B.",
+      "explanation": "Class B stops at 3,500 kg maximum authorised mass, the fully loaded figure printed in the vehicle registration document, not the empty weight. Key number B96 raises the limit for a car-plus-trailer combination to 4,250 kg, but the towing car itself still has to stay within class B.",
       "rule_ref": "FeV §6"
     },
     {
@@ -274,7 +274,7 @@
       "unit": "points",
       "points": 3,
       "pool": "grund",
-      "explanation": "At eight points the authority has no choice: the licence is withdrawn. You may apply for a new one at the earliest six months later, and normally only after a positive medical-psychological assessment (MPU). The voluntary driver fitness seminar that removes one point is only available while you are on 1 to 5 points, and only once every five years — so you cannot use it to climb back down from eight.",
+      "explanation": "At eight points the authority has no choice: the licence is withdrawn. You may apply for a new one at the earliest six months later, and normally only after a positive medical-psychological assessment (MPU). The voluntary driver fitness seminar that removes one point is only available while you are on 1 to 5 points, and only once every five years, so you cannot use it to climb back down from eight.",
       "rule_ref": "StVG §4"
     },
     {
@@ -285,7 +285,7 @@
       "unit": "m",
       "points": 4,
       "pool": "grund",
-      "explanation": "Convert speed to metres per second by dividing by 3.6: 90 ÷ 3.6 = 25 m/s. Two seconds therefore means 2 × 25 = 50 metres — about the length of a Berlin tram plus a bus, covered completely blind. That is why tiredness is treated as seriously as alcohol: no braking, no steering, no reaction at all.",
+      "explanation": "Convert speed to metres per second by dividing by 3.6: 90 ÷ 3.6 = 25 m/s. Two seconds therefore means 2 × 25 = 50 metres, about the length of a Berlin tram plus a bus, covered completely blind. That is why tiredness is treated as seriously as alcohol: no braking, no steering, no reaction at all.",
       "rule_ref": "StVO §1; StGB §315c"
     }
   ]

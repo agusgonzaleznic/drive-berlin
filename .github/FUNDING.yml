@@ -1,17 +1,13 @@
 # Funding sources shown in the "Sponsor" button on the repository page.
 #
-# NOTE ON THE github LINE BELOW:
-#   The GitHub Sponsors entry only renders once GitHub Sponsors has actually been
-#   enabled and approved on the account. Until then GitHub silently ignores it, so
-#   the Sponsor button will show only the custom link. Enable Sponsors at
-#   https://github.com/sponsors and the entry starts working with no change here.
-#
 # THESE KEYS TAKE A BARE USERNAME, NOT A FULL URL:
 #     buy_me_a_coffee: <username> → https://buymeacoffee.com/<username>
 #     ko_fi: <username>           → https://ko-fi.com/<username>
 #
 # Docs: https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository
 
+# Sponsors is live on the account and takes monthly or one-time custom amounts.
+# No tiers are defined, which is fine: the custom-amount path works without them.
 github: [agusgonzaleznic]
 
 # Live and verified: https://buymeacoffee.com/agusgonzaleznic. Also listed on

@@ -5,7 +5,28 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 
 const D = new URL('../src/data/', import.meta.url).pathname;
-const J = f => JSON.parse(readFileSync(D + f, 'utf8'));
+
+// Parse errors are reported with the file name and a pointer at the offending
+// text. Without this, one bad byte anywhere in the content threw during module
+// load, which aborts the whole file before a single test runs and prints a bare
+// "Bad control character in string literal" with no filename. That happened for
+// real: a prose edit put a literal newline inside a string, which JSON forbids,
+// and the suite went from 81 passing to 66 with one opaque failure.
+const J = f => {
+  const raw = readFileSync(D + f, 'utf8');
+  try {
+    return JSON.parse(raw);
+  } catch (e) {
+    const at = Number(/position (\d+)/.exec(e.message)?.[1] ?? -1);
+    const near = at >= 0
+      ? `\n  near: ...${JSON.stringify(raw.slice(Math.max(0, at - 70), at + 30))}`
+      : '';
+    throw new Error(
+      `${f} is not valid JSON: ${e.message}${near}\n` +
+      '  A literal newline or tab inside a JSON string is illegal. Use \\n, ' +
+      'or keep the text on one line.');
+  }
+};
 
 const manifest = J('modules/index.json');
 const modules = manifest.map(f => J('modules/' + f));

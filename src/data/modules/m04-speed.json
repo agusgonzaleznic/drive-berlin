@@ -6,11 +6,11 @@
   "icon": "🏎️",
   "category": "grund",
   "lesson": {
-    "intro": "Germany has a reputation for letting drivers off the leash, and on the right stretch of Autobahn that reputation is earned. But the theory exam is far less interested in how fast you *may* go than in how fast you *should* go — and above all in whether you can still stop. Almost every speed question is really a stopping-distance question wearing a disguise.\n\nSo this module gives you two things. First, the numbers that apply when nobody has put up a sign: **50 in town, 100 outside, 80 with a trailer, and the Autobahn's famous nothing-at-all**. Second, the four little formulas that let you calculate a stopping distance (*Anhalteweg*) in your head — because the examiner will ask, and because the day a cyclist swings out of a Berlin bike lane in front of you, those metres are the only thing you actually own.",
+    "intro": "Germany has a reputation for letting drivers off the leash, and on the right stretch of Autobahn that reputation is earned. But the theory exam is far less interested in how fast you *may* go than in how fast you *should* go, and above all in whether you can still stop. Almost every speed question is really a stopping-distance question wearing a disguise.\n\nSo this module gives you two things. First, the numbers that apply when nobody has put up a sign: **50 in town, 100 outside, 80 with a trailer, and the Autobahn's famous nothing-at-all**. Second, the four little formulas that let you calculate a stopping distance (*Anhalteweg*) in your head, because the examiner will ask, and because the day a cyclist swings out of a Berlin bike lane in front of you, those metres are the only thing you actually own.",
     "sections": [
       {
         "heading": "The limits nobody signs for you",
-        "body": "German speed limits come in two flavours: the ones on signs, and the ones that apply silently because of where you are. The silent ones are the exam's favourite, because there is nothing to read — you simply have to know them.\n\nThe moment you pass a yellow town-entry sign (*Ortstafel*), you are inside a built-up area (*innerhalb geschlossener Ortschaften*) and the limit is **50 km/h for every motor vehicle** — car, van, lorry, coach, car with a caravan, no exceptions. Pass the crossed-out version on the way out and you are *außerorts*, where the defaults split by vehicle:\n\n- Cars and other motor vehicles up to 3.5 t: **100 km/h**\n- Cars, vans and motorhomes up to 3.5 t **with a trailer**: **80 km/h**\n- Lorries over 3.5 t up to 7.5 t: **80 km/h**\n- Vehicles over 7.5 t, and most other combinations with trailers: **60 km/h**\n\nOn the Autobahn — and outside town on any other road whose carriageways for one direction are separated by a central reservation or another structural barrier, typically a Kraftfahrstraße — the 100 km/h default falls away. For a car without a trailer there is then **no general maximum speed**, only the advisory speed (*Richtgeschwindigkeit*) of **130 km/h**. (The 100 km/h default also lapses on roads that simply have at least two marked lanes in each direction, even without a barrier.) A car with a trailer stays at 80 km/h even here, unless the combination has been granted the special *Tempo-100* approval, which is valid only on Autobahnen and similar roads.\n\nOne thing both road types share: to use an Autobahn or a Kraftfahrstraße, your vehicle's design top speed must be **more than 60 km/h** — and if you are towing, the trailer must be built for more than 60 km/h too. That is why mopeds, tractors and e-scooters never belong there.",
+        "body": "German speed limits come in two flavours: the ones on signs, and the ones that apply silently because of where you are. The silent ones are the exam's favourite, because there is nothing to read: you simply have to know them.\n\nThe moment you pass a yellow town-entry sign (*Ortstafel*), you are inside a built-up area (*innerhalb geschlossener Ortschaften*) and the limit is **50 km/h for every motor vehicle**: car, van, lorry, coach, car with a caravan, no exceptions. Pass the crossed-out version on the way out and you are *außerorts*, where the defaults split by vehicle:\n\n- Cars and other motor vehicles up to 3.5 t: **100 km/h**\n- Cars, vans and motorhomes up to 3.5 t **with a trailer**: **80 km/h**\n- Lorries over 3.5 t up to 7.5 t: **80 km/h**\n- Vehicles over 7.5 t, and most other combinations with trailers: **60 km/h**\n\nOn the Autobahn, and outside town on any other road whose carriageways for one direction are separated by a central reservation or another structural barrier (typically a Kraftfahrstraße), the 100 km/h default falls away. For a car without a trailer there is then **no general maximum speed**, only the advisory speed (*Richtgeschwindigkeit*) of **130 km/h**. (The 100 km/h default also lapses on roads that simply have at least two marked lanes in each direction, even without a barrier.) A car with a trailer stays at 80 km/h even here, unless the combination has been granted the special *Tempo-100* approval, which is valid only on Autobahnen and similar roads.\n\nOne thing both road types share: to use an Autobahn or a Kraftfahrstraße, your vehicle's design top speed must be **more than 60 km/h**, and if you are towing, the trailer must be built for more than 60 km/h too. That is why mopeds, tractors and e-scooters never belong there.",
         "sign_ids": ["town_entry", "town_exit", "speed_50", "speed_100", "autobahn", "end_autobahn", "kraftfahrstrasse"],
         "callout": {
           "type": "rule",
@@ -19,56 +19,56 @@
       },
       {
         "heading": "Zones, calm streets and Berlin reality",
-        "body": "In Berlin you will spend most of your driving life below 50 anyway. Two zone signs matter enormously.\n\nA **Tempo-30 zone** (*Zone 30*, Zeichen 274.1) is not a single street — it is an area. Thirty stays with you through every side street, every turn, every junction inside the zone until you pass the end-of-zone sign (Zeichen 274.2). Learners lose marks on exactly this: they turn into a quiet side road inside the zone and mentally go back to 50. Don't.\n\nA **traffic-calmed area** (*verkehrsberuhigter Bereich*, Zeichen 325.1 — the blue sign with the house, the car and the playing children) is stricter again. Here you must drive at **walking pace** (*Schrittgeschwindigkeit*), pedestrians may use the entire width of the road, children's games are allowed everywhere, and you may only park on marked parking areas (getting in and out and loading excepted). Pedestrians must not obstruct vehicles unnecessarily either — but if it comes to a conflict, they win, and you wait.\n\nA plain **round white sign with a red border and a number** (Zeichen 274) is an ordinary section limit. It ends at the next end-of-restriction sign, at a town-entry sign, or when a new limit replaces it. The grey sign with the diagonal stripes (Zeichen 282) cancels all *section-related* speed limits and overtaking bans, sending you back to the general rules for the road you are on — not to \"as fast as you like\". It does **not** end a zone: a Tempo-30 zone finishes only at its own end-of-zone sign.",
+        "body": "In Berlin you will spend most of your driving life below 50 anyway. Two zone signs matter enormously.\n\nA **Tempo-30 zone** (*Zone 30*, Zeichen 274.1) is not a single street. It is an area. Thirty stays with you through every side street, every turn, every junction inside the zone until you pass the end-of-zone sign (Zeichen 274.2). Learners lose marks on exactly this: they turn into a quiet side road inside the zone and mentally go back to 50. Don't.\n\nA **traffic-calmed area** (*verkehrsberuhigter Bereich*, Zeichen 325.1, the blue sign with the house, the car and the playing children) is stricter again. Here you must drive at **walking pace** (*Schrittgeschwindigkeit*), pedestrians may use the entire width of the road, children's games are allowed everywhere, and you may only park on marked parking areas (getting in and out and loading excepted). Pedestrians must not obstruct vehicles unnecessarily either, but if it comes to a conflict, they win, and you wait.\n\nA plain **round white sign with a red border and a number** (Zeichen 274) is an ordinary section limit. It ends at the next end-of-restriction sign, at a town-entry sign, or when a new limit replaces it. The grey sign with the diagonal stripes (Zeichen 282) cancels all *section-related* speed limits and overtaking bans, sending you back to the general rules for the road you are on, not to \"as fast as you like\". It does **not** end a zone: a Tempo-30 zone finishes only at its own end-of-zone sign.",
         "sign_ids": ["zone30", "speed_30", "traffic_calmed", "end_limits", "end_no_overtaking"],
         "callout": {
           "type": "tip",
-          "text": "Berlin has many Tempo-30 stretches that apply at night only (typically 22:00–06:00) for noise protection. Always read the small supplementary plate under the 30 — if it shows times, the limit only applies during them."
+          "text": "Berlin has many Tempo-30 stretches that apply at night only (typically 22:00–06:00) for noise protection. Always read the small supplementary plate under the 30. If it shows times, the limit only applies during them."
         }
       },
       {
         "heading": "Fahren auf Sicht: the rule that beats every sign",
-        "body": "Here is the sentence the whole exam is built on: you may only drive so fast that you can **stop within the distance you can see** (*Fahren auf Sicht*). Your speed must be matched to the road, traffic, visibility and weather. A signed limit is a ceiling, never a permission. If the visible road runs out before your stopping distance does, you are driving too fast — legally, not just morally. On carriageways so narrow that oncoming vehicles could be endangered the bar rises: there you must be able to stop within **half** the visible distance, because the oncoming driver needs the other half.\n\nThe law then names one situation with a hard number: if visibility drops below **50 m** because of **fog, snowfall or rain**, you must not drive faster than **50 km/h**. Note two subtleties the examiner loves. First, that 50 km/h is itself only an upper limit — in 30 m of fog you must go slower still. Second, a 50 m visibility threshold also governs your rear fog lamp (*Nebelschlussleuchte*) — but that one may only be used when it is **fog** cutting your view below 50 m, never merely heavy rain or spray.\n\nDarkness works the same way without a number attached. Low beam (*Abblendlicht*) lights roughly 50–60 m of road; at 100 km/h your stopping distance is 130 m. On an unlit country road at night you are therefore routinely able to drive faster than you can see, which is exactly why night-time crashes are so brutal. Use main beam (*Fernlicht*) wherever it dazzles nobody, and accept that \"legal\" and \"safe\" have parted company.\n\nAnd then there are the situations where the law orders you to slow down regardless of any limit: towards children, people who obviously need help and elderly people you must reduce speed and be ready to brake so that endangering them is ruled out. The same applies past stationary trams and buses letting passengers off, and wherever a hazard sign warns you that the road is about to surprise you.",
+        "body": "Here is the sentence the whole exam is built on: you may only drive so fast that you can **stop within the distance you can see** (*Fahren auf Sicht*). Your speed must be matched to the road, traffic, visibility and weather. A signed limit is a ceiling, never a permission. If the visible road runs out before your stopping distance does, you are driving too fast, legally and not just morally. On carriageways so narrow that oncoming vehicles could be endangered the bar rises: there you must be able to stop within **half** the visible distance, because the oncoming driver needs the other half.\n\nThe law then names one situation with a hard number: if visibility drops below **50 m** because of **fog, snowfall or rain**, you must not drive faster than **50 km/h**. Note two subtleties the examiner loves. First, that 50 km/h is itself only an upper limit, so in 30 m of fog you must go slower still. Second, a 50 m visibility threshold also governs your rear fog lamp (*Nebelschlussleuchte*), but that one may only be used when it is **fog** cutting your view below 50 m, never merely heavy rain or spray.\n\nDarkness works the same way without a number attached. Low beam (*Abblendlicht*) lights roughly 50–60 m of road; at 100 km/h your stopping distance is 130 m. On an unlit country road at night you are therefore routinely able to drive faster than you can see, which is exactly why night-time crashes are so brutal. Use main beam (*Fernlicht*) wherever it dazzles nobody, and accept that \"legal\" and \"safe\" have parted company.\n\nAnd then there are the situations where the law orders you to slow down regardless of any limit: towards children, people who obviously need help and elderly people you must reduce speed and be ready to brake so that endangering them is ruled out. The same applies past stationary trams and buses letting passengers off, and wherever a hazard sign warns you that the road is about to surprise you.",
         "sign_ids": ["danger", "children", "pedestrian_crossing"],
         "callout": {
           "type": "danger",
-          "text": "Wet roads, wet leaves and Berlin's tram rails have no legal speed limit of their own — but the physics is unforgiving. Steel rails and painted cycle-lane markings in the rain offer a fraction of the grip of dry asphalt, and the braking formula below assumes dry asphalt and decent tyres."
+          "text": "Wet roads, wet leaves and Berlin's tram rails have no legal speed limit of their own, but the physics is unforgiving. Steel rails and painted cycle-lane markings in the rain offer a fraction of the grip of dry asphalt, and the braking formula below assumes dry asphalt and decent tyres."
         }
       },
       {
         "heading": "Distance: halber Tacho and the two-second check",
-        "body": "The law itself is deliberately vague: your distance to the vehicle in front must normally be large enough that **you can still stop behind it if it brakes suddenly**. Driving schools turn that into two usable tricks.\n\n**Outside built-up areas: halber Tacho** — half your speedometer reading, in metres. At 100 km/h that's 50 m; at 80 km/h, 40 m. This is also roughly what the police measure against: at speeds above 80 km/h, dropping below half of the halber-Tacho value costs €75 and a point, and above 100 km/h a gap under 3/10 of it brings €160, two points and a one-month driving ban.\n\n**In town: keep at least your reaction distance** — about 15 m at 50 km/h, roughly three car lengths. Less than that and a sudden brake in front of you ends in paint and paperwork.\n\n**The two-second check** works at any speed and needs no maths. Pick a fixed object — a lamp post, a bridge shadow, a marker post. When the car in front passes it, start counting: *one thousand and one, one thousand and two*. If you reach the object before you finish, you are too close. Double it to four seconds in rain, and in ice forget all of it and simply hang far back.\n\nOne fixed number worth remembering: a lorry over 3.5 t or a coach **on the Autobahn** must keep at least **50 m** from the vehicle in front whenever it is doing more than 50 km/h.",
+        "body": "The law itself is deliberately vague: your distance to the vehicle in front must normally be large enough that **you can still stop behind it if it brakes suddenly**. Driving schools turn that into two usable tricks.\n\n**Outside built-up areas: halber Tacho** means half your speedometer reading, in metres. At 100 km/h that's 50 m; at 80 km/h, 40 m. This is also roughly what the police measure against: at speeds above 80 km/h, dropping below half of the halber-Tacho value costs €75 and a point, and above 100 km/h a gap under 3/10 of it brings €160, two points and a one-month driving ban.\n\n**In town: keep at least your reaction distance**, about 15 m at 50 km/h, roughly three car lengths. Less than that and a sudden brake in front of you ends in paint and paperwork.\n\n**The two-second check** works at any speed and needs no maths. Pick a fixed object: a lamp post, a bridge shadow, a marker post. When the car in front passes it, start counting: *one thousand and one, one thousand and two*. If you reach the object before you finish, you are too close. Double it to four seconds in rain, and in ice forget all of it and simply hang far back.\n\nOne fixed number worth remembering: a lorry over 3.5 t or a coach **on the Autobahn** must keep at least **50 m** from the vehicle in front whenever it is doing more than 50 km/h.",
         "callout": {
           "type": "warning",
-          "text": "Tailgating (Drängeln) is not a grey area in Germany. Riding close with headlights flashing to push someone out of the left lane is prosecuted as coercion (Nötigung) — a criminal offence, not a parking ticket."
+          "text": "Tailgating (Drängeln) is not a grey area in Germany. Riding close with headlights flashing to push someone out of the left lane is prosecuted as coercion (Nötigung), a criminal offence and not a parking ticket."
         }
       },
       {
         "heading": "The four formulas (learn these cold)",
-        "body": "These four lines will earn you more exam marks than anything else in the module. Take your speed in km/h, divide it by 10, and go:\n\n- **Reaction distance** (*Reaktionsweg*) = (speed ÷ 10) × 3 — the metres you cover in the roughly 1 second before your foot reaches the brake\n- **Braking distance, normal** (*Bremsweg*) = (speed ÷ 10) × (speed ÷ 10)\n- **Braking distance, emergency stop** (*Gefahrbremsung*) = normal braking distance ÷ 2\n- **Stopping distance** (*Anhalteweg*) = reaction distance + braking distance\n\nWorked at 50 km/h: reaction 5 × 3 = 15 m; braking 5 × 5 = 25 m; **stopping 40 m**. Stamp on the brakes instead and the braking part halves to 12.5 m, giving an emergency stopping distance of **27.5 m**.\n\nWorked at 100 km/h: reaction 10 × 3 = 30 m; braking 10 × 10 = 100 m; **stopping 130 m**. Emergency: 30 + 50 = **80 m**.\n\nStare at those two results for a moment. Doubling your speed from 50 to 100 doubles the reaction distance but **quadruples** the braking distance, because braking distance grows with the square of speed. That asymmetry is the single most important fact in road safety. It is also why 30 km/h zones outside schools exist: from 30 km/h you stop in 18 m, from 50 km/h you need 40 m — more than twice as far, on the same road, with the same brakes.",
+        "body": "These four lines will earn you more exam marks than anything else in the module. Take your speed in km/h, divide it by 10, and go:\n\n- **Reaction distance** (*Reaktionsweg*) = (speed ÷ 10) × 3, the metres you cover in the roughly 1 second before your foot reaches the brake\n- **Braking distance, normal** (*Bremsweg*) = (speed ÷ 10) × (speed ÷ 10)\n- **Braking distance, emergency stop** (*Gefahrbremsung*) = normal braking distance ÷ 2\n- **Stopping distance** (*Anhalteweg*) = reaction distance + braking distance\n\nWorked at 50 km/h: reaction 5 × 3 = 15 m; braking 5 × 5 = 25 m; **stopping 40 m**. Stamp on the brakes instead and the braking part halves to 12.5 m, giving an emergency stopping distance of **27.5 m**.\n\nWorked at 100 km/h: reaction 10 × 3 = 30 m; braking 10 × 10 = 100 m; **stopping 130 m**. Emergency: 30 + 50 = **80 m**.\n\nStare at those two results for a moment. Doubling your speed from 50 to 100 doubles the reaction distance but **quadruples** the braking distance, because braking distance grows with the square of speed. That asymmetry is the single most important fact in road safety. It is also why 30 km/h zones outside schools exist: from 30 km/h you stop in 18 m, from 50 km/h you need 40 m, more than twice as far, on the same road, with the same brakes.",
         "callout": {
           "type": "tip",
-          "text": "In the exam, read whether the question says normal braking or an emergency stop (Gefahrbremsung). Halving the braking distance — not the whole stopping distance — is the step candidates get wrong most often. The reaction distance never halves; your reflexes don't improve under pressure."
+          "text": "In the exam, read whether the question says normal braking or an emergency stop (Gefahrbremsung). Halving the braking distance, not the whole stopping distance, is the step candidates get wrong most often. The reaction distance never halves; your reflexes don't improve under pressure."
         }
       },
       {
         "heading": "Grip: winter tyres and the Alpine symbol",
-        "body": "Every formula above assumes your tyres can actually bite. German law handles this with a **situational** winter tyre rule (*situative Winterreifenpflicht*): there is no calendar season. What matters is the road. In black ice, packed snow, slush, ice or hoar frost you may only drive if all wheels are fitted with tyres suitable for winter.\n\nSince **1 October 2024** \"suitable\" has one meaning only: the tyre must carry the **Alpine symbol** — a three-peaked mountain with a snowflake inside it. The old **M+S** marking on its own is no longer enough; the transitional period for M+S tyres made before 2018 expired on 30 September 2024. Driving on wintry roads with the wrong tyres costs **€60 and a point in Flensburg**, rising to €80 if you obstruct others and €100 if you endanger them — and your insurer may cut a payout on top.\n\nMinimum legal tread depth is **1.6 mm** for all tyres, but safety organisations put the practical winter minimum at about **4 mm**: below that, a winter tyre has largely stopped behaving like one. One neighbouring number worth memorising: with snow chains fitted, the maximum permitted speed is **50 km/h**, whatever any sign says.\n\nThe German rule of thumb for changeover is *von O bis O* — from October (Oktober) to Easter (Ostern). It is not law, but it maps neatly onto Berlin's habit of producing one shocking frosty morning in mid-October and another in April.",
+        "body": "Every formula above assumes your tyres can actually bite. German law handles this with a **situational** winter tyre rule (*situative Winterreifenpflicht*): there is no calendar season. What matters is the road. In black ice, packed snow, slush, ice or hoar frost you may only drive if all wheels are fitted with tyres suitable for winter.\n\nSince **1 October 2024** \"suitable\" has one meaning only: the tyre must carry the **Alpine symbol**, a three-peaked mountain with a snowflake inside it. The old **M+S** marking on its own is no longer enough; the transitional period for M+S tyres made before 2018 expired on 30 September 2024. Driving on wintry roads with the wrong tyres costs **€60 and a point in Flensburg**, rising to €80 if you obstruct others and €100 if you endanger them, and your insurer may cut a payout on top.\n\nMinimum legal tread depth is **1.6 mm** for all tyres, but safety organisations put the practical winter minimum at about **4 mm**: below that, a winter tyre has largely stopped behaving like one. One neighbouring number worth memorising: with snow chains fitted, the maximum permitted speed is **50 km/h**, whatever any sign says.\n\nThe German rule of thumb for changeover is *von O bis O*, from October (Oktober) to Easter (Ostern). It is not law, but it maps neatly onto Berlin's habit of producing one shocking frosty morning in mid-October and another in April.",
         "callout": {
           "type": "warning",
-          "text": "All-season tyres are fine in winter — but only if they carry the Alpine symbol. Check the sidewall rather than trusting the label in the shop."
+          "text": "All-season tyres are fine in winter, but only if they carry the Alpine symbol. Check the sidewall rather than trusting the label in the shop."
         }
       }
     ],
     "key_takeaways": [
       "50 in town for every motor vehicle; 100 outside town for cars up to 3.5 t; 80 the moment a trailer is attached.",
-      "Autobahn: no general limit for cars without trailers, but 130 km/h is the advisory speed — and exceeding it can cost you in a civil claim.",
+      "Autobahn: no general limit for cars without trailers, but 130 km/h is the advisory speed, and exceeding it can cost you in a civil claim.",
       "A Tempo-30 zone applies to every street inside it until the end-of-zone sign, not just the street with the sign.",
       "Fahren auf Sicht outranks every sign: if you can't stop within the visible distance, you are too fast.",
-      "Visibility under 50 m from fog, snow or rain means a hard maximum of 50 km/h — and often less.",
+      "Visibility under 50 m from fog, snow or rain means a hard maximum of 50 km/h, and often less.",
       "Halber Tacho outside town, your reaction distance (about 3 car lengths at 50) in town, two seconds as the universal check.",
       "Reaction = (v÷10)×3; braking = (v÷10)²; emergency braking halves the braking part only; stopping = reaction + braking.",
-      "Since October 2024 only tyres with the Alpine symbol count as winter tyres — plain M+S no longer does."
+      "Since October 2024 only tyres with the Alpine symbol count as winter tyres, and plain M+S no longer does."
     ],
     "german_terms": [
       { "de": "Geschwindigkeit", "en": "speed" },
@@ -102,7 +102,7 @@
       ],
       "points": 2,
       "pool": "grund",
-      "explanation": "The Ortstafel is itself the speed limit. Passing it puts you 'innerhalb geschlossener Ortschaften', where the default maximum is 50 km/h for every motor vehicle — cars, vans, lorries, coaches and any combination with a trailer alike. No round sign is needed, and towing a trailer gives you no extra allowance in town: the 80 km/h trailer figure is an outside-town number.",
+      "explanation": "The Ortstafel is itself the speed limit. Passing it puts you 'innerhalb geschlossener Ortschaften', where the default maximum is 50 km/h for every motor vehicle: cars, vans, lorries, coaches and any combination with a trailer alike. No round sign is needed, and towing a trailer gives you no extra allowance in town: the 80 km/h trailer figure is an outside-town number.",
       "rule_ref": "StVO §3 Abs. 3 Nr. 1; Zeichen 310"
     },
     {
@@ -116,7 +116,7 @@
       ],
       "points": 3,
       "pool": "grund",
-      "explanation": "Outside built-up areas the default limits are set by vehicle type, not by signs. Cars and other motor vehicles up to 3.5 t may do 100 km/h — but the moment a trailer is coupled on, the combination drops to 80 km/h. The weight of the towing car is irrelevant; what matters is that you are now driving a combination (Gespann). Heavier vehicles fall further: over 7.5 t and most other trailer combinations are capped at 60 km/h.",
+      "explanation": "Outside built-up areas the default limits are set by vehicle type, not by signs. Cars and other motor vehicles up to 3.5 t may do 100 km/h, but the moment a trailer is coupled on, the combination drops to 80 km/h. The weight of the towing car is irrelevant; what matters is that you are now driving a combination (Gespann). Heavier vehicles fall further: over 7.5 t and most other trailer combinations are capped at 60 km/h.",
       "rule_ref": "StVO §3 Abs. 3 Nr. 2"
     },
     {
@@ -161,7 +161,7 @@
       ],
       "points": 4,
       "pool": "grund",
-      "explanation": "This is a traffic-calmed area (verkehrsberuhigter Bereich), where pedestrians and vehicles share the same surface. Drivers must move at walking pace, must neither endanger nor obstruct pedestrians and must wait if necessary, and may park only on marked parking areas. Children's games are expressly allowed everywhere, so an empty-looking street is no licence to speed up — a child can appear from between parked cars in a fraction of a second.",
+      "explanation": "This is a traffic-calmed area (verkehrsberuhigter Bereich), where pedestrians and vehicles share the same surface. Drivers must move at walking pace, must neither endanger nor obstruct pedestrians and must wait if necessary, and may park only on marked parking areas. Children's games are expressly allowed everywhere, so an empty-looking street is no licence to speed up, because a child can appear from between parked cars in a fraction of a second.",
       "rule_ref": "StVO §42 Zeichen 325.1"
     },
     {
@@ -175,7 +175,7 @@
       ],
       "points": 4,
       "pool": "grund",
-      "explanation": "Once visibility falls below 50 m because of fog, snowfall or rain, the law caps you at 50 km/h. But that cap sits on top of the more basic requirement to stop within the visible distance: at 50 km/h your stopping distance is 40 m, so in 40 m of fog you are already at the very edge, and in 25 m of fog you must go slower. Lights make you visible — they do not extend how far you can see. (Fog cutting visibility below 50 m is, however, exactly the condition that permits the rear fog lamp.)",
+      "explanation": "Once visibility falls below 50 m because of fog, snowfall or rain, the law caps you at 50 km/h. But that cap sits on top of the more basic requirement to stop within the visible distance: at 50 km/h your stopping distance is 40 m, so in 40 m of fog you are already at the very edge, and in 25 m of fog you must go slower. Lights make you visible. They do not extend how far you can see. (Fog cutting visibility below 50 m is, however, exactly the condition that permits the rear fog lamp.)",
       "rule_ref": "StVO §3 Abs. 1; StVO §17 Abs. 3"
     },
     {
@@ -189,7 +189,7 @@
       ],
       "points": 5,
       "pool": "grund",
-      "explanation": "This is 'Fahren auf Sicht' and it is the most misunderstood rule in the book. A signed or default limit is a ceiling you may never exceed — it is not a promise that the ceiling is safe. At 100 km/h your stopping distance is 130 m, so with only 50–60 m of illuminated road you literally cannot stop in front of an obstacle you have just spotted. Main beam roughly doubles that view, which is why it should be your default on unlit roads whenever no oncoming or preceding driver would be dazzled.",
+      "explanation": "This is 'Fahren auf Sicht' and it is the most misunderstood rule in the book. A signed or default limit is a ceiling you may never exceed. It is not a promise that the ceiling is safe. At 100 km/h your stopping distance is 130 m, so with only 50–60 m of illuminated road you literally cannot stop in front of an obstacle you have just spotted. Main beam roughly doubles that view, which is why it should be your default on unlit roads whenever no oncoming or preceding driver would be dazzled.",
       "rule_ref": "StVO §3 Abs. 1"
     },
     {
@@ -204,7 +204,7 @@
       ],
       "points": 5,
       "pool": "grund",
-      "explanation": "The law requires drivers to behave towards children, people needing assistance and elderly people so that endangering them is ruled out — and it names reducing speed and readiness to brake as the means. Children cannot reliably judge speed or distance and act on impulse, so 50 km/h next to a school gate can be legal and grossly negligent at the same time. The warning sign does not itself set a number; it obliges you to choose a safe one. A lower legal limit would need its own round sign or zone sign.",
+      "explanation": "The law requires drivers to behave towards children, people needing assistance and elderly people so that endangering them is ruled out, and it names reducing speed and readiness to brake as the means. Children cannot reliably judge speed or distance and act on impulse, so 50 km/h next to a school gate can be legal and grossly negligent at the same time. The warning sign does not itself set a number; it obliges you to choose a safe one. A lower legal limit would need its own round sign or zone sign.",
       "rule_ref": "StVO §3 Abs. 2a; Zeichen 136"
     },
     {
@@ -212,7 +212,7 @@
       "type": "choice",
       "text": "You are following another car at 100 km/h on a dry Autobahn. Which statements about the distance you should keep are correct?",
       "options": [
-        { "text": "Around 50 m — half the speedometer reading, expressed in metres.", "correct": true },
+        { "text": "Around 50 m, half the speedometer reading, expressed in metres.", "correct": true },
         { "text": "The two-second check gives a comparable result: after the car in front passes a fixed object, you should not reach that object in under two seconds.", "correct": true },
         { "text": "25 m is sufficient at this speed as long as your car has modern brakes and ABS.", "correct": false }
       ],
@@ -226,7 +226,7 @@
       "type": "choice",
       "text": "You are driving at 50 km/h in city traffic. What distance to the vehicle in front should you keep as a minimum?",
       "options": [
-        { "text": "About 15 m — roughly three car lengths, which corresponds to your reaction distance.", "correct": true },
+        { "text": "About 15 m, roughly three car lengths, which corresponds to your reaction distance.", "correct": true },
         { "text": "At least 25 m, because that is the legally prescribed minimum distance in built-up areas.", "correct": false },
         { "text": "No minimum distance is needed in town, because speeds there are low enough to stop at any time.", "correct": false }
       ],
@@ -243,8 +243,8 @@
       "unit": "m",
       "points": 3,
       "pool": "grund",
-      "explanation": "Reaction distance = (speed ÷ 10) × 3. At 60 km/h: (60 ÷ 10) × 3 = 6 × 3 = 18 m. This is the ground you cover during the roughly one second between spotting the hazard and your foot reaching the brake pedal — before the brakes have done anything at all. Note that it grows in a straight line with speed: double the speed, double the reaction distance.",
-      "rule_ref": "Standard theory formula (StVO §3 Abs. 1 — Fahren auf Sicht)"
+      "explanation": "Reaction distance = (speed ÷ 10) × 3. At 60 km/h: (60 ÷ 10) × 3 = 6 × 3 = 18 m. This is the ground you cover during the roughly one second between spotting the hazard and your foot reaching the brake pedal, before the brakes have done anything at all. Note that it grows in a straight line with speed: double the speed, double the reaction distance.",
+      "rule_ref": "Standard theory formula (StVO §3 Abs. 1, Fahren auf Sicht)"
     },
     {
       "id": "m04-speed-q12",
@@ -254,7 +254,7 @@
       "unit": "m",
       "points": 4,
       "pool": "grund",
-      "explanation": "Work the two parts separately. Reaction distance = (100 ÷ 10) × 3 = 30 m. Normal braking distance = (100 ÷ 10) × (100 ÷ 10) = 10 × 10 = 100 m. Stopping distance = 30 + 100 = 130 m. That is well over the length of a football pitch, and roughly twice as far as your low beam reaches at night — which is why the Fahren-auf-Sicht rule bites so hard in the dark.",
+      "explanation": "Work the two parts separately. Reaction distance = (100 ÷ 10) × 3 = 30 m. Normal braking distance = (100 ÷ 10) × (100 ÷ 10) = 10 × 10 = 100 m. Stopping distance = 30 + 100 = 130 m. That is well over the length of a football pitch, and roughly twice as far as your low beam reaches at night, which is why the Fahren-auf-Sicht rule bites so hard in the dark.",
       "rule_ref": "Standard theory formula (StVO §3 Abs. 1)"
     },
     {
@@ -265,7 +265,7 @@
       "unit": "m",
       "points": 4,
       "pool": "grund",
-      "explanation": "Reaction distance = (50 ÷ 10) × 3 = 15 m. Normal braking distance = 5 × 5 = 25 m, and an emergency stop halves the braking part: 25 ÷ 2 = 12.5 m. Total = 15 + 12.5 = 27.5 m. The classic mistake is to halve the whole stopping distance of 40 m and answer 20 m. Only the braking phase improves when you stamp on the pedal — your reaction time does not get shorter under pressure.",
+      "explanation": "Reaction distance = (50 ÷ 10) × 3 = 15 m. Normal braking distance = 5 × 5 = 25 m, and an emergency stop halves the braking part: 25 ÷ 2 = 12.5 m. Total = 15 + 12.5 = 27.5 m. The classic mistake is to halve the whole stopping distance of 40 m and answer 20 m. Only the braking phase improves when you stamp on the pedal, and your reaction time does not get shorter under pressure.",
       "rule_ref": "Standard theory formula (StVO §3 Abs. 1)"
     },
     {
@@ -279,7 +279,7 @@
       ],
       "points": 4,
       "pool": "grund",
-      "explanation": "Run the formula: at 50 km/h the braking distance is 5 × 5 = 25 m, at 100 km/h it is 10 × 10 = 100 m — four times as much for twice the speed, because the kinetic energy the brakes must dissipate rises with the square of speed. The reaction distance meanwhile goes from 15 m to 30 m, a simple doubling. This asymmetry is why a small reduction in speed produces a disproportionately large safety gain, and why 30 km/h zones outside schools save lives.",
+      "explanation": "Run the formula: at 50 km/h the braking distance is 5 × 5 = 25 m, at 100 km/h it is 10 × 10 = 100 m, four times as much for twice the speed, because the kinetic energy the brakes must dissipate rises with the square of speed. The reaction distance meanwhile goes from 15 m to 30 m, a simple doubling. This asymmetry is why a small reduction in speed produces a disproportionately large safety gain, and why 30 km/h zones outside schools save lives.",
       "rule_ref": "StVO §3 Abs. 1 (driving physics)"
     },
     {
@@ -293,7 +293,7 @@
       ],
       "points": 4,
       "pool": "grund",
-      "explanation": "Germany's winter tyre requirement is situational, not calendar-based: it is triggered by the actual conditions — black ice, packed snow, slush, ice or hoar frost — and not by a date. Since 1 October 2024 only tyres bearing the Alpine symbol satisfy it; the transitional period for M+S tyres made before 2018 expired on 30 September 2024. Driving on wintry roads with unsuitable tyres costs €60 and a point in Flensburg, and more if you obstruct or endanger others.",
+      "explanation": "Germany's winter tyre requirement is situational, not calendar-based: it is triggered by the actual conditions (black ice, packed snow, slush, ice or hoar frost) and not by a date. Since 1 October 2024 only tyres bearing the Alpine symbol satisfy it; the transitional period for M+S tyres made before 2018 expired on 30 September 2024. Driving on wintry roads with unsuitable tyres costs €60 and a point in Flensburg, and more if you obstruct or endanger others.",
       "rule_ref": "StVO §2 Abs. 3a; StVZO §36 Abs. 4"
     },
     {
@@ -302,13 +302,13 @@
       "text": "On a single-carriageway country road you have been following a signed 70 km/h limit. Now you pass this sign. What applies?",
       "sign": "end_limits",
       "options": [
-        { "text": "The section-related speed limits and overtaking bans signed earlier end here, so the general rules for this road apply again — 100 km/h for your car without a trailer.", "correct": true },
+        { "text": "The section-related speed limits and overtaking bans signed earlier end here, so the general rules for this road apply again: 100 km/h for your car without a trailer.", "correct": true },
         { "text": "This sign would not end a Tempo-30 zone; a zone only ends at its own end-of-zone sign.", "correct": true },
         { "text": "From here no speed rules apply at all, so you may drive as fast as you like.", "correct": false }
       ],
       "points": 3,
       "pool": "grund",
-      "explanation": "Zeichen 282 cancels all section-related speed limits and overtaking bans previously signed on that stretch. Cancelling a restriction does not abolish the law: you fall back on the general limits, which outside built-up areas means 100 km/h for a car up to 3.5 t (80 km/h with a trailer), and 'Fahren auf Sicht' still overrides everything. Note the wording 'section-related' — an area restriction such as a Tempo-30 zone is ended only by its matching end-of-zone sign.",
+      "explanation": "Zeichen 282 cancels all section-related speed limits and overtaking bans previously signed on that stretch. Cancelling a restriction does not abolish the law: you fall back on the general limits, which outside built-up areas means 100 km/h for a car up to 3.5 t (80 km/h with a trailer), and 'Fahren auf Sicht' still overrides everything. Note the wording 'section-related': an area restriction such as a Tempo-30 zone  is ended only by its matching end-of-zone sign.",
       "rule_ref": "StVO §41 Zeichen 282; StVO §3 Abs. 3"
     }
   ]

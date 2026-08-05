@@ -6,11 +6,11 @@
   "icon": "🪧",
   "category": "grund",
   "lesson": {
-    "intro": "Berlin talks to you in pictures. Around a thousand different traffic signs (**Verkehrszeichen**) are legal in Germany, and nobody sane memorises all of them. You don't have to: the system is built like a language. Shape and colour tell you what *kind* of message you are getting, and the picture inside fills in the detail. Learn the grammar once, and even a sign you have never seen before becomes readable.\n\nThe paint on the tarmac counts too. German law says explicitly that markings (**Markierungen**) *are* traffic signs, so a white line can be every bit as binding as a metal disc on a pole. And when instructions collide — an officer waving, a light glowing, a sign standing, a rule in the book — there is a strict pecking order. Get that ladder into your head and a surprising number of exam questions answer themselves.",
+    "intro": "Berlin talks to you in pictures. Around a thousand different traffic signs (**Verkehrszeichen**) are legal in Germany, and nobody sane memorises all of them. You don't have to: the system is built like a language. Shape and colour tell you what *kind* of message you are getting, and the picture inside fills in the detail. Learn the grammar once, and even a sign you have never seen before becomes readable.\n\nThe paint on the tarmac counts too. German law says explicitly that markings (**Markierungen**) *are* traffic signs, so a white line can be every bit as binding as a metal disc on a pole. And when instructions collide (an officer waving, a light glowing, a sign standing, a rule in the book), there is a strict pecking order. Get that ladder into your head and a surprising number of exam questions answer themselves.",
     "sections": [
       {
         "heading": "Shape and colour: the grammar of German signs",
-        "body": "Three families cover almost everything (StVO §§ 40–42):\n\n- **Danger signs (Gefahrzeichen)** — a white triangle with a red border. They order nothing specific; they demand extra attention and, if the situation calls for it, a lower speed. Outside built-up areas they normally stand 150–250 m ahead of the hazard; inside town, just before it.\n- **Regulatory signs (Vorschriftzeichen)** — usually round. A **red ring** forbids or limits: speed limit, no entry, no overtaking, no stopping. A **blue disc** commands positively: use this cycle path, follow this direction, go round the roundabout this way.\n- **Information signs (Richtzeichen)** — rectangles and squares, mostly blue or white. They inform, guide, reassure. But careful: the law allows them to carry orders as well. The blue \"traffic-calmed area\" sign orders walking pace, and the yellow priority-road diamond bans parking on the carriageway outside built-up areas.\n\nTwo famous shape-breakers: the **upside-down** triangle means \"give way\" (*Vorfahrt gewähren*), and the red octagon means \"stop\" — both are orders, not warnings. And the upright triangle showing a fat vertical road crossing a thin one actually *grants* you priority (Zeichen 301) — but only at the very next junction.\n\nAdditional plates (**Zusatzzeichen**) — the little white rectangles bolted under a sign — are full traffic signs too. They limit, extend or explain the sign above: \"7,5 t\", \"Mo–Fr 7–19 h\", a bicycle, a tram. Always read the small print.",
+        "body": "Three families cover almost everything (StVO §§ 40–42):\n\n- **Danger signs (Gefahrzeichen)**: a white triangle with a red border. They order nothing specific; they demand extra attention and, if the situation calls for it, a lower speed. Outside built-up areas they normally stand 150–250 m ahead of the hazard; inside town, just before it.\n- **Regulatory signs (Vorschriftzeichen)**: usually round. A **red ring** forbids or limits: speed limit, no entry, no overtaking, no stopping. A **blue disc** commands positively: use this cycle path, follow this direction, go round the roundabout this way.\n- **Information signs (Richtzeichen)**: rectangles and squares, mostly blue or white. They inform, guide, reassure. But careful: the law allows them to carry orders as well. The blue \"traffic-calmed area\" sign orders walking pace, and the yellow priority-road diamond bans parking on the carriageway outside built-up areas.\n\nTwo famous shape-breakers: the **upside-down** triangle means \"give way\" (*Vorfahrt gewähren*), and the red octagon means \"stop\". Both are orders, not warnings. And the upright triangle showing a fat vertical road crossing a thin one actually *grants* you priority (Zeichen 301), but only at the very next junction.\n\nAdditional plates (**Zusatzzeichen**), the little white rectangles bolted under a sign, are full traffic signs too. They limit, extend or explain the sign above: \"7,5 t\", \"Mo–Fr 7–19 h\", a bicycle, a tram. Always read the small print.",
         "sign_ids": ["danger", "children", "no_entry", "bike_path", "autobahn"],
         "callout": {
           "type": "tip",
@@ -19,16 +19,16 @@
       },
       {
         "heading": "Zones, and the signs that switch things off",
-        "body": "A **zone sign** applies to a whole area, not to a single street, and it stops only when you meet the matching end-of-zone sign.\n\n- **Tempo-30 zone (Zeichen 274.1)**: 30 km/h everywhere inside, until the crossed-out end sign (274.2). Inside built-up areas you are legally expected to reckon with these zones on any street that is not a priority road. A Tempo-30 zone may not be laid over priority roads, which is why the default priority at junctions inside the zone is *right before left* (§ 45 (1c)).\n- **Umweltzone (Zeichen 270.1)**: Berlin's low-emission zone covers the inner city inside the S-Bahn ring. You need a valid green sticker (**grüne Feinstaubplakette**) on the windscreen, or an exemption; driving in without one costs 100 euros.\n- Since 2020 there are also **bicycle zones (Fahrradzone, Zeichen 244.3)** — the area-wide version of the bicycle street.\n\n**End signs** are white-and-grey with diagonal stripes. Restrictions can be cancelled one at a time (end of speed limit, end of no-overtaking), or all together by **Zeichen 282**, whose full legal name is \"end of all *section-related* speed limits and overtaking bans\". Read that name carefully, because the exam does: 282 cancels speed limits and overtaking bans along a stretch of road. It does **not** cancel a zone limit (that needs the end-of-zone sign), and it does **not** cancel stopping or parking bans.\n\nNo-stopping signs end quietly all by themselves: they apply only on the side of the road they stand on, and they run until the next junction on that side — or until another sign for parked traffic says something different.",
+        "body": "A **zone sign** applies to a whole area, not to a single street, and it stops only when you meet the matching end-of-zone sign.\n\n- **Tempo-30 zone (Zeichen 274.1)**: 30 km/h everywhere inside, until the crossed-out end sign (274.2). Inside built-up areas you are legally expected to reckon with these zones on any street that is not a priority road. A Tempo-30 zone may not be laid over priority roads, which is why the default priority at junctions inside the zone is *right before left* (§ 45 (1c)).\n- **Umweltzone (Zeichen 270.1)**: Berlin's low-emission zone covers the inner city inside the S-Bahn ring. You need a valid green sticker (**grüne Feinstaubplakette**) on the windscreen, or an exemption; driving in without one costs 100 euros.\n- Since 2020 there are also **bicycle zones (Fahrradzone, Zeichen 244.3)**, the area-wide version of the bicycle street.\n\n**End signs** are white-and-grey with diagonal stripes. Restrictions can be cancelled one at a time (end of speed limit, end of no-overtaking), or all together by **Zeichen 282**, whose full legal name is \"end of all *section-related* speed limits and overtaking bans\". Read that name carefully, because the exam does: 282 cancels speed limits and overtaking bans along a stretch of road. It does **not** cancel a zone limit (that needs the end-of-zone sign), and it does **not** cancel stopping or parking bans.\n\nNo-stopping signs end quietly all by themselves: they apply only on the side of the road they stand on, and they run until the next junction on that side, or until another sign for parked traffic says something different.",
         "sign_ids": ["zone30", "umweltzone", "end_limits", "end_no_overtaking", "speed_30"],
         "callout": {
           "type": "rule",
-          "text": "Zeichen 282 means \"speed limits and overtaking bans: over\". A Tempo-30 zone needs Zeichen 274.2, and a Haltverbot needs a junction — 282 does neither."
+          "text": "Zeichen 282 means \"speed limits and overtaking bans: over\". A Tempo-30 zone needs Zeichen 274.2 and a Haltverbot needs a junction, so 282 does neither."
         }
       },
       {
         "heading": "Who wins when instructions collide",
-        "body": "Learn this ladder by heart:\n\n1. **Police officer (Polizeibeamter)** — hand signals and instructions come first and beat everything else (§ 36). They do *not*, however, release you from your own duty of care.\n2. **Traffic lights (Lichtzeichen)** — they take precedence over priority rules and over priority-regulating signs (§ 37). Red on a priority road still means stop.\n3. **Traffic signs (Verkehrszeichen)** — they take precedence over the general rules of the road (§ 39). A yield sign switches off right-before-left.\n4. **General rules** — right before left, the general speed limits, and so on. They are the fallback whenever nothing else is signed.\n\nTwo extras worth points. Markings count as traffic signs and are normally white — except **yellow markings**, which are temporary and *cancel* the white ones underneath. In a Berlin roadworks zone you follow the yellow lines, even when they steer you across what used to be the centre line. And a sign mounted on a *vehicle* (a works lorry with an arrow board, for instance) overrides the fixed signs at the roadside, including while the vehicle is moving.",
+        "body": "Learn this ladder by heart:\n\n1. **Police officer (Polizeibeamter)**: hand signals and instructions come first and beat everything else (§ 36). They do *not*, however, release you from your own duty of care.\n2. **Traffic lights (Lichtzeichen)**: they take precedence over priority rules and over priority-regulating signs (§ 37). Red on a priority road still means stop.\n3. **Traffic signs (Verkehrszeichen)**: they take precedence over the general rules of the road (§ 39). A yield sign switches off right-before-left.\n4. **General rules**: right before left, the general speed limits, and so on. They are the fallback whenever nothing else is signed.\n\nTwo extras worth points. Markings count as traffic signs and are normally white, except **yellow markings**, which are temporary and *cancel* the white ones underneath. In a Berlin roadworks zone you follow the yellow lines, even when they steer you across what used to be the centre line. And a sign mounted on a *vehicle* (a works lorry with an arrow board, for instance) overrides the fixed signs at the roadside, including while the vehicle is moving.",
         "callout": {
           "type": "warning",
           "text": "Roadworks: yellow beats white. If yellow paint sends you somewhere that looks wrong, the yellow paint is still the valid instruction."
@@ -36,30 +36,30 @@
       },
       {
         "heading": "Lines that give orders",
-        "body": "- **Solid line (Fahrstreifenbegrenzung, Zeichen 295)**: must not be driven over — not even partly. Where it separates you from oncoming traffic, stay to the right of it. That includes the slow cyclist ahead: the minimum passing distance (1.5 m inside built-up areas, 2 m outside) does not buy you permission to cross a solid line, so you wait until the line breaks. You also may not park if less than 3 m of lane would remain between your car and the line.\n- **Broken lane line (Leitlinie, Zeichen 340)**: may be crossed, but only when doing so endangers nobody. If the dashes are *longer* than the gaps, it is a warning line (**Warnlinie**) — a hazard or a solid line is coming up.\n- **One side solid, one side broken (Zeichen 296)**: only traffic on the broken-line side may cross it.\n- **Arrows (Pfeilmarkierungen, Zeichen 297)**: where lane lines run between the arrows, you must take the direction shown at the next junction — and you may not stop on an arrow-marked stretch.\n- **Hatched area (Sperrfläche, Zeichen 298)**: not to be used at all.\n- **Stop line (Haltlinie, Zeichen 294)**: where a stop sign, a light, a barrier or an officer tells you to stop, this is the exact spot. If you still cannot see the other road from there, creep forward and stop a second time at the sight line.\n- **Waiting line (Wartelinie, Zeichen 341)**: a broad broken line that *recommends* where to wait when you have to give way. It is advice, not a stop order — but the give-way duty behind it is entirely real. Shark's teeth (**Haifischzähne**, Zeichen 342) do a similar job: they make an existing give-way duty visible, typically a right-before-left junction away from main roads, or a cycle superhighway that has priority.\n- **Zigzag line (Grenzmarkierung, Zeichen 299)**: no stopping and no parking inside it. It marks, lengthens or shortens a ban ordered elsewhere — taxi ranks are the classic case.\n- **Marked bays**: parking is allowed, in the position drawn. On pavements, only vehicles up to 2.8 t.\n\nWords and symbols painted on the road (\"BUS\", a speed figure, a sign copied in white paint) are only a reminder pointing at the real sign on its pole.",
+        "body": "- **Solid line (Fahrstreifenbegrenzung, Zeichen 295)**: must not be driven over, not even partly. Where it separates you from oncoming traffic, stay to the right of it. That includes the slow cyclist ahead: the minimum passing distance (1.5 m inside built-up areas, 2 m outside) does not buy you permission to cross a solid line, so you wait until the line breaks. You also may not park if less than 3 m of lane would remain between your car and the line.\n- **Broken lane line (Leitlinie, Zeichen 340)**: may be crossed, but only when doing so endangers nobody. If the dashes are *longer* than the gaps, it is a warning line (**Warnlinie**), which means a hazard or a solid line is coming up.\n- **One side solid, one side broken (Zeichen 296)**: only traffic on the broken-line side may cross it.\n- **Arrows (Pfeilmarkierungen, Zeichen 297)**: where lane lines run between the arrows, you must take the direction shown at the next junction, and you may not stop on an arrow-marked stretch.\n- **Hatched area (Sperrfläche, Zeichen 298)**: not to be used at all.\n- **Stop line (Haltlinie, Zeichen 294)**: where a stop sign, a light, a barrier or an officer tells you to stop, this is the exact spot. If you still cannot see the other road from there, creep forward and stop a second time at the sight line.\n- **Waiting line (Wartelinie, Zeichen 341)**: a broad broken line that *recommends* where to wait when you have to give way. It is advice, not a stop order, but the give-way duty behind it is entirely real. Shark's teeth (**Haifischzähne**, Zeichen 342) do a similar job: they make an existing give-way duty visible, typically a right-before-left junction away from main roads, or a cycle superhighway that has priority.\n- **Zigzag line (Grenzmarkierung, Zeichen 299)**: no stopping and no parking inside it. It marks, lengthens or shortens a ban ordered elsewhere, and taxi ranks are the classic case.\n- **Marked bays**: parking is allowed, in the position drawn. On pavements, only vehicles up to 2.8 t.\n\nWords and symbols painted on the road (\"BUS\", a speed figure, a sign copied in white paint) are only a reminder pointing at the real sign on its pole.",
         "sign_ids": ["no_stopping", "no_parking", "parking", "pedestrian_crossing", "bus_lane"],
         "callout": {
           "type": "tip",
-          "text": "Zebra crossing (Fußgängerüberweg): approach slowly, let waiting pedestrians cross, never overtake there — and no stopping on the crossing or within 5 m in front of it."
+          "text": "Zebra crossing (Fußgängerüberweg): approach slowly, let waiting pedestrians cross, never overtake there, and no stopping on the crossing or within 5 m in front of it."
         }
       },
       {
         "heading": "Berlin extras: bikes, buses and trams",
-        "body": "- **Cycle protection lane (Schutzstreifen)**: a broken line plus bicycle pictograms painted on the carriageway. Cars may drive on it only when needed — for example to make room for oncoming traffic — and never at a cyclist's expense. Stopping on it is forbidden, however quick the delivery.\n- **Cycle lane (Radfahrstreifen)**: a solid line plus the blue cycle sign. That is a separate lane you must not drive or stop on, and the solid line must not be driven over — not even partly. Where drivers have to reach a property entrance or a parking bay behind it, the marking itself is interrupted at that point; an unbroken line stays off limits.\n- **Bicycle street (Fahrradstraße, Zeichen 244.1)**: a white square with a blue bicycle roundel. Maximum 30 km/h for *all* driving traffic, cyclists may ride two abreast, and other vehicles may only use it if an additional plate allows it — although crossing at a junction to reach the road beyond is always permitted. Priority follows the normal rules: a bicycle street is not automatically a priority road.\n- **Bus lane (Bussonderfahrstreifen, Zeichen 245)**: line-service buses and marked school buses only. Taxis, cycles, ambulances or electric cars may join only where an additional plate says so.\n- **Trams**: a give-way sign with a tram plate underneath means the **Straßenbahn** goes first. Berlin rails cut across plenty of junctions — treat that little plate as the boss.\n- **Dead end (Sackgasse, Zeichen 357)**: pure information. Pictograms in the upper part often show that it is a dead end for cars only, while cyclists and pedestrians can slip through — a very Berlin arrangement.\n- **Traffic-calmed area (verkehrsberuhigter Bereich, Zeichen 325.1)**: walking pace, children may play anywhere, park only in marked spaces, and pedestrians must not obstruct you unnecessarily. When you drive out of one, you must give way to the traffic on the road you join.",
+        "body": "- **Cycle protection lane (Schutzstreifen)**: a broken line plus bicycle pictograms painted on the carriageway. Cars may drive on it only when needed, for example to make room for oncoming traffic, and never at a cyclist's expense. Stopping on it is forbidden, however quick the delivery.\n- **Cycle lane (Radfahrstreifen)**: a solid line plus the blue cycle sign. That is a separate lane you must not drive or stop on, and the solid line must not be driven over, not even partly. Where drivers have to reach a property entrance or a parking bay behind it, the marking itself is interrupted at that point; an unbroken line stays off limits.\n- **Bicycle street (Fahrradstraße, Zeichen 244.1)**: a white square with a blue bicycle roundel. Maximum 30 km/h for *all* driving traffic, cyclists may ride two abreast, and other vehicles may only use it if an additional plate allows it, although crossing at a junction to reach the road beyond is always permitted. Priority follows the normal rules: a bicycle street is not automatically a priority road.\n- **Bus lane (Bussonderfahrstreifen, Zeichen 245)**: line-service buses and marked school buses only. Taxis, cycles, ambulances or electric cars may join only where an additional plate says so.\n- **Trams**: a give-way sign with a tram plate underneath means the **Straßenbahn** goes first. Berlin rails cut across plenty of junctions, so treat that little plate as the boss.\n- **Dead end (Sackgasse, Zeichen 357)**: pure information. Pictograms in the upper part often show that it is a dead end for cars only, while cyclists and pedestrians can slip through, a very Berlin arrangement.\n- **Traffic-calmed area (verkehrsberuhigter Bereich, Zeichen 325.1)**: walking pace, children may play anywhere, park only in marked spaces, and pedestrians must not obstruct you unnecessarily. When you drive out of one, you must give way to the traffic on the road you join.",
         "sign_ids": ["bike_path", "fahrradstrasse", "bus_lane", "dead_end", "traffic_calmed"],
         "callout": {
           "type": "danger",
-          "text": "Never stop on a Schutzstreifen or in a cycle lane — not even \"just a minute\" with the hazard lights on. It pushes cyclists straight into moving traffic."
+          "text": "Never stop on a Schutzstreifen or in a cycle lane, not even \"just a minute\" with the hazard lights on. It pushes cyclists straight into moving traffic."
         }
       }
     ],
     "key_takeaways": [
-      "Red-rimmed triangle warns, red ring forbids, blue disc commands, rectangle informs — and rectangles can still contain orders.",
+      "Red-rimmed triangle warns, red ring forbids, blue disc commands, rectangle informs, and rectangles can still contain orders.",
       "Outside town, danger signs stand 150–250 m before the hazard; inside town, just before it.",
       "Officer beats lights, lights beat signs, signs beat the general rules.",
-      "Markings are traffic signs too — and temporary yellow lines cancel the white ones.",
+      "Markings are traffic signs too, and temporary yellow lines cancel the white ones.",
       "Zone signs run until their own end-of-zone sign; inside a Tempo-30 zone, priority is right before left.",
-      "Zeichen 282 ends section speed limits and overtaking bans only — never a zone limit or a stopping ban.",
+      "Zeichen 282 ends section speed limits and overtaking bans only, never a zone limit or a stopping ban.",
       "Solid line: never cross, not even to pass a cyclist. Broken line: only when nobody is endangered.",
       "Haltlinie = you must stop; Wartelinie = recommended waiting spot; zigzag = no stopping and no parking."
     ],
@@ -95,7 +95,7 @@
       ],
       "points": 2,
       "pool": "grund",
-      "explanation": "Shape and colour are your first clue. Triangles with a red rim are Gefahrzeichen — they warn and ask for care rather than prescribing a number. Round signs are Vorschriftzeichen: a red ring means \"don't\" or \"not more than\", while a blue disc gives a positive order you must follow, such as using a marked cycle path or taking the prescribed direction. So blue circles are anything but decorative.",
+      "explanation": "Shape and colour are your first clue. Triangles with a red rim are Gefahrzeichen: they warn and ask for care rather than prescribing a number. Round signs are Vorschriftzeichen: a red ring means \"don't\" or \"not more than\", while a blue disc gives a positive order you must follow, such as using a marked cycle path or taking the prescribed direction. So blue circles are anything but decorative.",
       "rule_ref": "StVO §§ 40-42"
     },
     {
@@ -104,12 +104,12 @@
       "text": "A police officer is directing traffic at a busy Berlin junction. Your light shows green, but the officer's raised arm clearly tells you to stop. What applies?",
       "options": [
         { "text": "You must obey the officer: police signals take precedence over lights, signs and the general rules.", "correct": true },
-        { "text": "Green is green — a light signal ranks above an officer's instruction.", "correct": false },
+        { "text": "Green is green, so a light signal ranks above an officer's instruction.", "correct": false },
         { "text": "Once you follow the officer's signal, you no longer carry any duty of care yourself.", "correct": false }
       ],
       "points": 5,
       "pool": "grund",
-      "explanation": "The signals and instructions of police officers sit at the very top of the ladder: they must be followed and they override everything else, including a green light. The same sentence of the law adds a sting the exam likes to test — obeying an officer does not release you from your general duty of care, so you still watch out for the cyclist the officer cannot see.",
+      "explanation": "The signals and instructions of police officers sit at the very top of the ladder: they must be followed and they override everything else, including a green light. The same sentence of the law adds a sting the exam likes to test: obeying an officer does not release you from your general duty of care, so you still watch out for the cyclist the officer cannot see.",
       "rule_ref": "StVO §36 (1)"
     },
     {
@@ -124,7 +124,7 @@
       ],
       "points": 5,
       "pool": "grund",
-      "explanation": "Lights outrank priority signs. Your yellow diamond tells other roads to give way to you, but a red light tells you to halt, and red wins. The same paragraph adds a stopping rule that catches people out: you must not halt within 10 m before a set of lights if your vehicle would obscure them — the identical 10 m no-halting rule applies to the yield sign (205), the stop sign (206) and the level-crossing St Andrew's cross (201).",
+      "explanation": "Lights outrank priority signs. Your yellow diamond tells other roads to give way to you, but a red light tells you to halt, and red wins. The same paragraph adds a stopping rule that catches people out: you must not halt within 10 m before a set of lights if your vehicle would obscure them. The identical 10 m no-halting rule applies to the yield sign (205), the stop sign (206) and the level-crossing St Andrew's cross (201).",
       "rule_ref": "StVO §37 (1)"
     },
     {
@@ -139,7 +139,7 @@
       ],
       "points": 3,
       "pool": "grund",
-      "explanation": "A zone sign covers an area, not a single street: the 30 km/h stays with you through every turn until the crossed-out end-of-zone sign appears. Because the authorities may not include priority roads or light-controlled junctions in a Tempo-30 zone, the ordinary right-before-left rule is the default inside it — which is exactly why those unmarked crossroads in Prenzlauer Berg deserve your foot near the brake.",
+      "explanation": "A zone sign covers an area, not a single street: the 30 km/h stays with you through every turn until the crossed-out end-of-zone sign appears. Because the authorities may not include priority roads or light-controlled junctions in a Tempo-30 zone, the ordinary right-before-left rule is the default inside it, which is exactly why those unmarked crossroads in Prenzlauer Berg deserve your foot near the brake.",
       "rule_ref": "StVO Anlage 2 (Zeichen 274.1); StVO §45 (1c)"
     },
     {
@@ -154,7 +154,7 @@
       ],
       "points": 3,
       "pool": "grund",
-      "explanation": "This sign is generous but narrow: it lifts all section-related speed limits and overtaking bans in one go, which is handy after a long stretch of roadworks signs. Its name says nothing about halting or parking, so a no-stopping or no-parking restriction survives — those end at the next junction or when another sign for stationary traffic says otherwise. A zone limit also survives; it needs its own end-of-zone sign.",
+      "explanation": "This sign is generous but narrow: it lifts all section-related speed limits and overtaking bans in one go, which is handy after a long stretch of roadworks signs. Its name says nothing about halting or parking, so a no-stopping or no-parking restriction survives. Those end at the next junction or when another sign for stationary traffic says otherwise. A zone limit also survives; it needs its own end-of-zone sign.",
       "rule_ref": "StVO Anlage 2 (Zeichen 282)"
     },
     {
@@ -162,13 +162,13 @@
       "type": "choice",
       "text": "Which statements about lines painted along the carriageway are correct?",
       "options": [
-        { "text": "A solid line (Fahrstreifenbegrenzung) must not be driven over — not even partly.", "correct": true },
+        { "text": "A solid line (Fahrstreifenbegrenzung) must not be driven over, not even partly.", "correct": true },
         { "text": "A broken lane line (Leitlinie) may be crossed, but only if this endangers no one.", "correct": true },
         { "text": "You may briefly cross a solid centre line to overtake a cyclist, as long as you leave 1.5 m of clearance.", "correct": false }
       ],
       "points": 4,
       "pool": "grund",
-      "explanation": "The solid line is absolute: the law forbids driving over it even partially, so no wheel, no mirror, no \"just a nudge\". The 1.5 m minimum passing distance for cyclists in town is a requirement you must satisfy *in addition* — it never authorises crossing a solid line. If you cannot pass with 1.5 m inside your own lane, you stay behind until the line breaks. A broken Leitlinie may be crossed when it is safe to do so.",
+      "explanation": "The solid line is absolute: the law forbids driving over it even partially, so no wheel, no mirror, no \"just a nudge\". The 1.5 m minimum passing distance for cyclists in town is a requirement you must satisfy *in addition*, and it never authorises crossing a solid line. If you cannot pass with 1.5 m inside your own lane, you stay behind until the line breaks. A broken Leitlinie may be crossed when it is safe to do so.",
       "rule_ref": "StVO Anlage 2 (Zeichen 295), Anlage 3 (Zeichen 340), StVO §5 (4)"
     },
     {
@@ -182,7 +182,7 @@
       ],
       "points": 4,
       "pool": "grund",
-      "explanation": "A Schutzstreifen stays part of the carriageway, so it is marked with a broken line rather than a solid one — but the concession is small: you may use it only when the situation requires it, such as squeezing past oncoming traffic, and never at a cyclist's expense. Stopping on it has been explicitly banned since the 2020 amendment, which means no quick delivery halt and no \"only two minutes\" either.",
+      "explanation": "A Schutzstreifen stays part of the carriageway, so it is marked with a broken line rather than a solid one, but the concession is small: you may use it only when the situation requires it, such as squeezing past oncoming traffic, and never at a cyclist's expense. Stopping on it has been explicitly banned since the 2020 amendment, which means no quick delivery halt and no \"only two minutes\" either.",
       "rule_ref": "StVO Anlage 3 (Zeichen 340), Nr. 2 and 3"
     },
     {
@@ -197,7 +197,7 @@
       ],
       "points": 4,
       "pool": "grund",
-      "explanation": "The stop line (Haltlinie) fixes the spot where a stop or wait order must be carried out — for a stop sign, lights, a barrier or an officer. Since a line set back from the corner often gives you no view at all, the law expects a second stop at the sight line. The Wartelinie is different: that broad broken line only *recommends* where a driver who must give way should wait. The waiting duty behind it is real, but the line itself does not order a halt.",
+      "explanation": "The stop line (Haltlinie) fixes the spot where a stop or wait order must be carried out, whether for a stop sign, lights, a barrier or an officer. Since a line set back from the corner often gives you no view at all, the law expects a second stop at the sight line. The Wartelinie is different: that broad broken line only *recommends* where a driver who must give way should wait. The waiting duty behind it is real, but the line itself does not order a halt.",
       "rule_ref": "StVO Anlage 2 (Zeichen 206, 294); Anlage 3 (Zeichen 341)"
     },
     {
@@ -207,12 +207,12 @@
       "sign": "no_stopping",
       "options": [
         { "text": "Within the marked stretch you must neither stop nor park.", "correct": true },
-        { "text": "It can mark, lengthen or shorten a stopping or parking ban that is ordered elsewhere — a taxi rank is a typical case.", "correct": true },
+        { "text": "It can mark, lengthen or shorten a stopping or parking ban that is ordered elsewhere, and a taxi rank is a typical case.", "correct": true },
         { "text": "It bans parking only; a short halt to drop off a passenger is allowed.", "correct": false }
       ],
       "points": 3,
       "pool": "grund",
-      "explanation": "The zigzag is the paint version of a no-stopping sign: inside it you may neither halt nor park, so dropping someone off there is already an offence. Its legal job is to make an existing ban visible on the ground, and it can also stretch or shrink that ban — which is why the length of a taxi rank is often shown by exactly this marking.",
+      "explanation": "The zigzag is the paint version of a no-stopping sign: inside it you may neither halt nor park, so dropping someone off there is already an offence. Its legal job is to make an existing ban visible on the ground, and it can also stretch or shrink that ban, which is why the length of a taxi rank is often shown by exactly this marking.",
       "rule_ref": "StVO Anlage 2 (Zeichen 299)"
     },
     {
@@ -224,7 +224,7 @@
       "unit": "minutes",
       "points": 3,
       "pool": "grund",
-      "explanation": "The restricted stopping ban is the friendlier of the two blue discs: a halt of up to three minutes is tolerated, and getting in, getting out, loading and unloading are exempt from the clock altogether — provided the loading happens without delay. Its stricter cousin with the red cross (absolutes Haltverbot) allows no halt at all on the carriageway.",
+      "explanation": "The restricted stopping ban is the friendlier of the two blue discs: a halt of up to three minutes is tolerated, and getting in, getting out, loading and unloading are exempt from the clock altogether, provided the loading happens without delay. Its stricter cousin with the red cross (absolutes Haltverbot) allows no halt at all on the carriageway.",
       "rule_ref": "StVO Anlage 2 (Zeichen 286)"
     },
     {
@@ -236,7 +236,7 @@
       "unit": "m",
       "points": 3,
       "pool": "grund",
-      "explanation": "Out of town you are travelling fast, so warnings arrive early: as a rule the sign stands 150 to 250 m before the danger point, which gives you time to slow down. If the real distance is considerably shorter, an additional plate states it. Inside built-up areas the sign usually stands only shortly before the hazard, because speeds — and stopping distances — are much lower.",
+      "explanation": "Out of town you are travelling fast, so warnings arrive early: as a rule the sign stands 150 to 250 m before the danger point, which gives you time to slow down. If the real distance is considerably shorter, an additional plate states it. Inside built-up areas the sign usually stands only shortly before the hazard, because speeds, and therefore stopping distances, are much lower.",
       "rule_ref": "StVO §40 (2), (3)"
     },
     {
@@ -246,12 +246,12 @@
       "sign": "bus_lane",
       "options": [
         { "text": "Only line-service buses and vehicles that must carry the school-bus plate may use it; taxis or cyclists only where an additional plate permits it.", "correct": true },
-        { "text": "Lettering painted on the road, such as \"BUS\", serves as a pointer to the sign that has been put up — it does not create the rule on its own.", "correct": true },
+        { "text": "Lettering painted on the road, such as \"BUS\", serves as a pointer to the sign that has been put up, and it does not create the rule on its own.", "correct": true },
         { "text": "Outside peak hours any car may use the bus lane.", "correct": false }
       ],
       "points": 3,
       "pool": "grund",
-      "explanation": "The bus lane is genuinely reserved: everyone else stays out unless an additional plate lets them in, and there is no unwritten off-peak exception. Painted words and copies of signs on the road surface are explicitly described in law as a reference to the sign on its post, so they reinforce the rule rather than replace it — useful to know when the tarmac is worn and the plate on the pole is the authority.",
+      "explanation": "The bus lane is genuinely reserved: everyone else stays out unless an additional plate lets them in, and there is no unwritten off-peak exception. Painted words and copies of signs on the road surface are explicitly described in law as a reference to the sign on its post, so they reinforce the rule rather than replace it, which is useful to know when the tarmac is worn and the plate on the pole is the authority.",
       "rule_ref": "StVO Anlage 2 (Zeichen 245); StVO §39 (5)"
     },
     {
@@ -266,7 +266,7 @@
       ],
       "points": 4,
       "pool": "grund",
-      "explanation": "In a Fahrradstraße the bicycle sets the tone: riding two abreast is expressly allowed, and 30 km/h is the ceiling for everyone — motorists must slow down further if that is what safety requires. Other vehicles may only use the street if an additional plate lets them in, although crossing it at a junction to reach the road beyond is always permitted. One trap: priority still follows the normal rules, so a bicycle street is not automatically a priority road.",
+      "explanation": "In a Fahrradstraße the bicycle sets the tone: riding two abreast is expressly allowed, and 30 km/h is the ceiling for everyone, and motorists must slow down further if that is what safety requires. Other vehicles may only use the street if an additional plate lets them in, although crossing it at a junction to reach the road beyond is always permitted. One trap: priority still follows the normal rules, so a bicycle street is not automatically a priority road.",
       "rule_ref": "StVO Anlage 2 (Zeichen 244.1)"
     },
     {
@@ -281,7 +281,7 @@
       ],
       "points": 3,
       "pool": "grund",
-      "explanation": "Berlin's environmental zone requires the green particulate sticker (Schadstoffgruppe 4); without it — or without an official exemption — driving inside the zone is prohibited and costs 100 euros, though no points in Flensburg, since it is an emissions rather than a safety offence. Like every zone sign, it keeps applying across junctions until the matching end-of-zone sign appears.",
+      "explanation": "Berlin's environmental zone requires the green particulate sticker (Schadstoffgruppe 4); without it, or without an official exemption, driving inside the zone is prohibited and costs 100 euros, though no points in Flensburg, since it is an emissions rather than a safety offence. Like every zone sign, it keeps applying across junctions until the matching end-of-zone sign appears.",
       "rule_ref": "StVO Anlage 2 (Zeichen 270.1); Bußgeldkatalog (Umweltzone)"
     },
     {
@@ -296,7 +296,7 @@
       ],
       "points": 2,
       "pool": "grund",
-      "explanation": "The Sackgasse sign is an information sign, not a prohibition — you are welcome to drive in, you just cannot drive out the other end. The law expressly allows pictograms on the sign showing that the street is permeable for cyclists and pedestrians, which is common in Berlin's residential grids where a bollard stops cars but a bike path continues.",
+      "explanation": "The Sackgasse sign is an information sign, not a prohibition. You are welcome to drive in,  you just cannot drive out the other end. The law expressly allows pictograms on the sign showing that the street is permeable for cyclists and pedestrians, which is common in Berlin's residential grids where a bollard stops cars but a bike path continues.",
       "rule_ref": "StVO Anlage 3 (Zeichen 357)"
     }
   ]
