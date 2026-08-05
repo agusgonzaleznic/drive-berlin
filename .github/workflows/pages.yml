@@ -107,3 +107,55 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0
+
+  # The canonical address is https://agusgonzaleznic.com/drive-berlin/, which is
+  # this Pages site behind a CloudFront distribution defined in the
+  # agusgonzaleznic.github.io repository. CloudFront caches the HTML with
+  # max-age=600, so without this job a deploy takes up to ten minutes to become
+  # visible on the canonical URL while the github.io URL updates at once. That gap
+  # is genuinely confusing: it once looked exactly like a failed deploy.
+  #
+  # This job is deliberately allowed to fail without failing the workflow. Pages
+  # has already published by the time it runs, so a CDN that refuses an
+  # invalidation should leave a warning and a stale cache for ten minutes, not a red
+  # deploy that suggests the site is broken when it is not.
+  invalidate:
+    name: Invalidate the CloudFront cache
+    needs: deploy
+    runs-on: ubuntu-latest
+    # Nothing to invalidate when the variables are absent, which is the case for
+    # every fork. Skipping keeps a fork's deploy green instead of failing on a role
+    # it can neither see nor assume.
+    if: vars.AWS_CDN_ROLE_ARN != '' && vars.CLOUDFRONT_DISTRIBUTION_ID != ''
+    continue-on-error: true
+    permissions:
+      contents: read
+      # Mint the OIDC token exchanged for the AWS role. No long-lived AWS key
+      # exists in this repository, and none should.
+      id-token: write
+    steps:
+      # The role trusts only this repository on refs/heads/main, and its policy
+      # grants CreateInvalidation and GetInvalidation on that one distribution and
+      # nothing else. Worst case if it were ever abused: somebody clears a cache.
+      - name: Assume the CDN invalidation role
+        uses: aws-actions/configure-aws-credentials@e6de054238d6b7531b4efff3b6587d9aade6a06c # v6.2.3
+        with:
+          role-to-assume: ${{ vars.AWS_CDN_ROLE_ARN }}
+          aws-region: us-east-1
+          role-duration-seconds: 900
+
+      # Only the app's own subtree is invalidated. A wildcard on /* would clear the
+      # personal site's cache too, which this deploy has no business touching.
+      - name: Invalidate /drive-berlin
+        env:
+          DIST: ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }}
+        run: |
+          id=$(aws cloudfront create-invalidation \
+                 --distribution-id "$DIST" \
+                 --paths '/drive-berlin' '/drive-berlin/*' \
+                 --query 'Invalidation.Id' --output text)
+          echo "Invalidation $id created."
+          aws cloudfront wait invalidation-completed --distribution-id "$DIST" --id "$id" \
+            && echo "Invalidation $id completed." \
+            || echo "::warning::Invalidation $id did not complete in time. Pages is already published; the CDN catches up within its 600s TTL."
+
