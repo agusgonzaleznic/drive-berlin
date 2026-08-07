@@ -61,6 +61,14 @@
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#14161f">
+<!-- Both spellings are required, and neither is redundant. Chrome deprecated the
+     apple-prefixed one and warns about it in the console, but iOS Safari still
+     reads ONLY that one to decide whether an installed shortcut opens without
+     browser chrome. Dropping it to silence the warning would quietly break
+     standalone mode on iPhone, which is the platform the safe-area handling in
+     this file exists for. So: the standard name for Chrome, the vendor name for
+     Safari, and the warning goes away. -->
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Führerschein">
 <title>Führerschein Hero · Berlin</title>
