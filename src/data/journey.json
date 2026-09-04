@@ -103,7 +103,7 @@
               "An International Driving Permit replaces the translation only when carried **together with** your national Argentine licence, never on its own."
             ],
             "links": [
-              { "url": "https://www.adac.de/services/uebersetzungen/", "label": "ADAC licence translation service" }
+              { "url": "https://www.adac.de/verkehr/rund-um-den-fuehrerschein/auslaendische-fuehrerscheine/fuehrerscheinuebersetzung/", "label": "ADAC licence translation service" }
             ]
           },
           {
@@ -130,17 +130,26 @@
             ],
             "tips": [
               "The first-aid certificate genuinely never needs renewing for licence purposes, because **FeV § 19 Abs. 2 Satz 2** says no new proof is needed for a later extension or re-issue. (Workplace first-aider certificates are a different regime and do expire; don't confuse the two.)",
-              "Shop around if you like: verified English courses in Berlin run about €55–83, with ANB Berlin the cheapest at €55. But it won't bundle the eye test and photos, so compare totals.",
+              "Shop around if you like, but the cheap headline prices are hard to actually book. ANB Berlin quotes from €55 and is properly recognised under **FeV § 68**, yet its own booking page showed no public English dates at all when checked, and it bundles neither the eye test nor the photos. Compare totals, not headlines.",
               "Already have a recent eye-doctor report? **FeV § 12 Abs. 4** lets you skip the Sehtest entirely by submitting an ophthalmologist's certificate confirming you meet Anlage 6 Nr. 1.1.",
-              "For a standalone eye test, Fielmann does it free of charge, including the branch on Frankfurter Allee."
+              "For a standalone eye test, Fielmann does it free of charge, including the branch on Frankfurter Allee.",
+              "**You do not have to sit this course in English.** The same nine-unit course, same operator, same €72.99, also runs in **Spanish** (Fahrschule Oscar, Hauptstr. 92 in Schöneberg) and in **Russian** (MediPoint, Bismarckstr. 42). Spanish dates are sparse, roughly one a month, so book well ahead.",
+              "**You may not need this course at all.** **FeV § 19 Abs. 3** exempts anyone who presents a medical or dental qualification, a recognised health-profession qualification, nursing-helper, medical-orderly or rescue-service training, or the German lifesaving badge in silver or gold. The statute says \"bedarf **insbesondere** nicht\", so those are examples rather than a closed list: if you hold a related medical qualification, ask before you pay €72.99.",
+              "Before you pay any provider, check it against Berlin's published **FeV § 68** list of recognised first-aid bodies, because a certificate from an unrecognised body is worth nothing at the counter. Erste Hilfe Station is on it until 31 March 2028, and on the separate **§ 67** list of recognised eye-test bodies, which is what makes its bundled Sehtest count.",
+              "Fielmann and Apollo are not on that § 67 list, and that is fine: **FeV § 67 Abs. 4** says \"Betriebe von Augenoptikern gelten als amtlich anerkannt\", so an optician is a recognised eye-test body by operation of law. Only non-opticians have to appear on the list."
             ],
             "pitfalls": [
-              "A short *Sofortmaßnahmen am Unfallort* briefing is **not** accepted. It must be the full nine-unit course.",
-              "A €59.99 price for this course circulates widely online. It is a stale banner figure; the real online price is €72.99."
+              "A short *Sofortmaßnahmen am Unfallort* briefing is **not** accepted, and Berlin's own service page says so outright: \"Unterweisungen über die „Sofortmaßnahmen am Unfallort“ finden keine Anerkennung. In jedem Fall ist eine Teilnahmebescheinigung der „Erste-Hilfe-Schulung“ vorzulegen.\" It must be the full nine-unit course.",
+              "A €59.99 price for this course circulates widely online. It is a stale banner figure; the real online price is €72.99.",
+              "**The cheap evening course is a different course.** The same provider sells a three-hour evening *Quick Course for Parents* at €69.90, which is baby and child first aid and does **not** satisfy FeV § 19. Saving €3.09 buys you a certificate the Bürgeramt will not accept. The one you need says **driving licence** and runs 9 x 45 minutes across a full day.",
+              "Their nannies' *extra hour* upgrade does not turn a paediatric course into a licence-valid one either. § 19 wants the general nine-unit Erste-Hilfe-Schulung."
             ],
             "links": [
-              { "url": "https://www.erste-hilfe-station.de/", "label": "Erste Hilfe Station: English courses in Berlin" },
-              { "url": "https://www.gesetze-im-internet.de/fev_2010/__19.html", "label": "FeV § 19: first-aid requirement" }
+              { "url": "https://www.first-aid-course-english-berlin.com/dates-places", "label": "Erste Hilfe Station: English course dates and venues" },
+              { "url": "https://first-aid-courses-berlin.myshopify.com/collections/cursos-de-primeros-auxilios-en-espanol", "label": "El mismo curso, en español: fechas y reserva" },
+              { "url": "https://www.gesetze-im-internet.de/fev_2010/__19.html", "label": "FeV § 19: first-aid requirement" },
+              { "url": "https://www.berlin.de/sen/uvk/mobilitaet-und-verkehr/dienste-und-genehmigungen/erste-hilfe-und-sehtest-stellen/", "label": "Berlin's official lists of recognised first-aid and eye-test bodies (FeV §§ 67, 68)" },
+              { "url": "https://service.berlin.de/dienstleistung/121627/", "label": "Berlin's own requirements for a first licence application" }
             ]
           },
           {
@@ -448,7 +457,6 @@
             ],
             "tips": [
               "Everything in this app's theory school applies to you unchanged, because the exam is identical.",
-
               "A reform expected around early 2027 may cut the Sonderfahrten sharply and allow online theory. Worth asking your school about timing."
             ],
             "links": [

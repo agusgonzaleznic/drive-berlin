@@ -46,57 +46,68 @@
   {
     "name": "Erste Hilfe Station Friedrichshain: first aid in English + free eye test + free photos",
     "type": "first-aid",
-    "address": "Frankfurter Allee 96, 10247 Berlin",
+    "address": "Berliner Stadtmission, Frankfurter Allee 96, 10247 Berlin",
     "lat": 52.5136,
     "lng": 13.4712,
-    "price": "€72.99 online (€82.99 cash) incl. eye test and photos",
-    "url": "https://www.erste-hilfe-station.de/",
-    "notes": "The most efficient stop on your whole list: three required documents in one session, in English, at a single Friedrichshain venue. Nine units of 45 min, about 7.5 hours. Book ONLINE, because paying cash on the day adds €10. English dates run Thu–Sun. Photograph your certificate before you hand it in: the Bürgeramt keeps the original and a replacement copy costs €29.99.",
+    "price": "€72.99 online (€82.99 cash) incl. eye test and 6 photos",
+    "url": "https://www.first-aid-course-english-berlin.com/dates-places",
+    "notes": "The most efficient stop on your whole list: the nine units of first aid that §19 FeV requires, plus the official eye test and the biometric photos, in one English-language session at one Friedrichshain venue. Nine units of 45 min, about 7.5 hours including the statutory breaks. Book ONLINE, because paying cash on the day adds €10. Photograph your certificate before you hand it in: the Bürgeramt keeps the original and a replacement copy costs €29.99. The operator is on Berlin's published list of recognised first-aid bodies under §68 FeV (Erste Hilfe Station, Andreas Borucki), recognised until 31 March 2028.",
     "english_friendly": true
   },
   {
     "name": "Erste Hilfe Station Prenzlauer Berg",
     "type": "first-aid",
-    "address": "Esmarchstr. 4, 10407 Berlin",
+    "address": "Fahrschule Frenzel, Esmarchstr. 4, 10407 Berlin",
     "lat": 52.5344,
     "lng": 13.4382,
     "price": "€72.99 online (€82.99 cash)",
-    "url": "https://www.erste-hilfe-station.de/",
-    "notes": "Same all-in package, English courses. Six Berlin venues run the driving-licence course.",
+    "url": "https://www.first-aid-course-english-berlin.com/dates-places",
+    "notes": "Same all-in package as Friedrichshain, English courses, 10:00 to 17:30. Tram M10 to Danziger Straße/Greifswalder Straße. Useful if the Friedrichshain dates are full.",
     "english_friendly": true
   },
   {
     "name": "Erste Hilfe Station Charlottenburg (MediPoint)",
     "type": "first-aid",
-    "address": "Bismarckstr. 42/43, 10627 Berlin",
+    "address": "MediPoint, Bismarckstr. 42, 10627 Berlin",
     "lat": 52.5117,
     "lng": 13.3063,
     "price": "€72.99 online (€82.99 cash)",
-    "url": "https://www.erste-hilfe-station.de/",
-    "notes": "English courses; useful if Friedrichshain dates are full.",
+    "url": "https://www.first-aid-course-english-berlin.com/dates-places",
+    "notes": "Same all-in package, English courses, 09:00 to 16:30. A few minutes on foot from U Bismarckstr. or U Deutsche Oper. Also the venue for the Russian-language course.",
     "english_friendly": true
   },
   {
-    "name": "ANB Berlin: cheapest verified English course",
+    "name": "Erste Hilfe Station Schöneberg (Fahrschule Oscar): first aid in Spanish or English",
+    "type": "first-aid",
+    "address": "Fahrschule Oscar, Hauptstr. 92, 12159 Berlin",
+    "lat": 52.4763237,
+    "lng": 13.3418436,
+    "price": "€72.99 online (€82.99 cash) incl. eye test and 6 photos",
+    "url": "https://first-aid-courses-berlin.myshopify.com/collections/cursos-de-primeros-auxilios-en-espanol",
+    "notes": "The same nine-unit driving-licence course, run in SPANISH as \"Curso de primeros auxilios\" with a free official eye test and 6 free biometric photos included, and in English on other dates. Two minutes on foot from S Innsbrucker Platz. Spanish dates are sparse, roughly one a month, so book early. The linked shop collection lists the Spanish dates; the English dates for this venue are in the same shop under the driving-licence listings.",
+    "english_friendly": true
+  },
+  {
+    "name": "ANB Berlin: English course, but on request only",
     "type": "first-aid",
     "address": "Berlin, multiple venues (check the booking calendar)",
     "lat": 52.52,
     "lng": 13.405,
-    "price": "from €55",
-    "url": "https://www.first-aid-course-english-berlin.com/prices-faq",
-    "notes": "The lowest verified price for an English-language driving-licence first-aid course in Berlin. Does not bundle the eye test or photos, so compare the total against Erste Hilfe Station.",
+    "price": "from €55, plus a surcharge for running it in English",
+    "url": "https://www.anb-berlin.de/erste-hilfe-kurse/first-aid-course-english-first-aid-training-for-everyone_ehe",
+    "notes": "Cheaper than Erste Hilfe Station on paper and genuinely recognised: ANB has been on Berlin's §68 FeV list since 2009 with no expiry. The catch is bookability. Its English course page showed zero public dates when checked on 4 September 2026 (\"Zur Zeit stehen zu dieser Kursart keine öffentlichen Termine zur Verfügung\"), so English runs only as an individual or in-house date you arrange by contacting them. It also does not bundle the eye test or the photos, so compare the total, not the headline.",
     "english_friendly": true
   },
   {
-    "name": "SoftAid Berlin first-aid course",
+    "name": "SoftAid Berlin: English first-aid course (2 venues only)",
     "type": "first-aid",
-    "address": "Storkower Str. 101B, 10407 Berlin (Weissensee venue)",
-    "lat": 52.5285,
-    "lng": 13.455,
-    "price": "not published (ask)",
+    "address": "Freienwalder Str. 7, 13359 Berlin (Gesundbrunnen)",
+    "lat": 52.5564519,
+    "lng": 13.3910336,
+    "price": "€60 on the English dates",
     "url": "https://soft-aid.de/erste-hilfe/fuehrerschein/berlin",
-    "notes": "Close to Friedrichshain, one of 14 Berlin venues. Note: not every date is a full English-language course. Their FAQ says instructors otherwise hand out English translations and support you through the practical parts. Confirm the language when booking.",
-    "english_friendly": false
+    "notes": "English runs at only 2 of their 13 Berlin venues, Gesundbrunnen (Freienwalder Str. 7) and Steglitz (Bundesallee 139), so pick the date by language rather than by the venue nearest you. Their booking system serves driving-licence bookings from the same pool as company first-aider dates, which is correct in German law because the single nine-unit course satisfies both. No eye test or photos included.",
+    "english_friendly": true
   },
   {
     "name": "ASB Berlin-Südwest: first aid in English",
@@ -105,7 +116,7 @@
     "lat": 52.471,
     "lng": 13.45,
     "price": "€75 (reduced €70)",
-    "url": "https://www.asb-berlin.de/",
+    "url": "https://www.hiorg-server.de/kurse_extern.php?ov=rvs&id=2950&kt=21630",
     "notes": "Established provider (Arbeiter-Samariter-Bund). Prices taken from their live booking system. Older static pages still show €65/€60.",
     "english_friendly": true
   },
@@ -115,8 +126,8 @@
     "address": "Berlin/Brandenburg training centre (street address unverified)",
     "lat": 52.4218,
     "lng": 13.3705,
-    "price": "not verified",
-    "url": "https://www.johanniter.de/",
+    "price": "€80.00",
+    "url": "https://kursbuchung.johanniter.de/kurse/filter/BA-A-EH-B-EN/geo/10115/25/",
     "notes": "Large recognised provider and their Berlin/Brandenburg page does list English-language events, but the specific address, phone and price could not be verified. Check before travelling.",
     "english_friendly": true
   },
@@ -127,9 +138,9 @@
     "lat": 52.5147,
     "lng": 13.464,
     "price": "free",
-    "url": "https://www.fielmann.de/service/fuehrerschein-sehtest/",
-    "notes": "Officially recognised Sehteststelle and genuinely free of charge. Certificate must be under 2 years old when you apply. Call ahead, because whether you can just walk in is not stated anywhere official.",
-    "english_friendly": true
+    "url": "https://www.fielmann.de/niederlassungen/berlin/10247-frankfurter-allee-71-77/",
+    "notes": "Officially recognised Sehteststelle and genuinely free of charge. Certificate must be under 2 years old when you apply. Call ahead, because whether you can just walk in is not stated anywhere official. The eye test is a letter-chart check against a fixed legal standard, so it works without a shared language, but this chain states nothing about serving you in English. Do not count on an English-speaking optician here; count on the test being non-verbal.",
+    "english_friendly": false
   },
   {
     "name": "Fielmann Alexanderplatz (ALEXA)",
@@ -139,8 +150,8 @@
     "lng": 13.4146,
     "price": "free",
     "url": "https://www.fielmann.de/",
-    "notes": "Free eye test; photo booth and dm store in the same mall if you want photos too.",
-    "english_friendly": true
+    "notes": "Free eye test; photo booth and dm store in the same mall if you want photos too. The eye test is a letter-chart check against a fixed legal standard, so it works without a shared language, but this chain states nothing about serving you in English. Do not count on an English-speaking optician here; count on the test being non-verbal.",
+    "english_friendly": false
   },
   {
     "name": "Fielmann Prenzlauer Berg",
@@ -150,7 +161,8 @@
     "lng": 13.4132,
     "price": "free",
     "url": "https://www.fielmann.de/",
-    "english_friendly": true
+    "english_friendly": false,
+    "notes": "The eye test is a letter-chart check against a fixed legal standard, so it works without a shared language, but this chain states nothing about serving you in English. Do not count on an English-speaking optician here; count on the test being non-verbal."
   },
   {
     "name": "Apollo Optik Alexanderplatz (ALEXA)",
@@ -160,8 +172,8 @@
     "lng": 13.415,
     "price": "not published (ask)",
     "url": "https://www.apollo.de/",
-    "notes": "Officially recognised Sehteststelle. The old fixed €6.43 fee was abolished in 2019 and Apollo publishes no price, so ask first. Or just use Fielmann, which is free.",
-    "english_friendly": true
+    "notes": "Officially recognised Sehteststelle. The old fixed €6.43 fee was abolished in 2019 and Apollo publishes no price, so ask first. Or just use Fielmann, which is free. The eye test is a letter-chart check against a fixed legal standard, so it works without a shared language, but this chain states nothing about serving you in English. Do not count on an English-speaking optician here; count on the test being non-verbal.",
+    "english_friendly": false
   },
   {
     "name": "Apollo Optik Neukölln",
@@ -171,7 +183,8 @@
     "lng": 13.44,
     "price": "not published (ask)",
     "url": "https://www.apollo.de/",
-    "english_friendly": true
+    "english_friendly": false,
+    "notes": "The eye test is a letter-chart check against a fixed legal standard, so it works without a shared language, but this chain states nothing about serving you in English. Do not count on an English-speaking optician here; count on the test being non-verbal."
   },
   {
     "name": "ADAC Berlin-Mitte: licence translation + classification",
@@ -180,7 +193,7 @@
     "lat": 52.5196,
     "lng": 13.4155,
     "price": "€65 translation + classification · €25 classification only",
-    "url": "https://www.adac.de/services/uebersetzungen/",
+    "url": "https://www.adac.de/verkehr/rund-um-den-fuehrerschein/auslaendische-fuehrerscheine/fuehrerscheinuebersetzung/",
     "notes": "The route the authority and driving schools point to. Order in person or online (5–7 working days by post). Ask for translation AND classification, because you need both.",
     "english_friendly": true
   },
@@ -203,18 +216,18 @@
     "lng": 13.3544,
     "price": "varies by service",
     "url": "https://ealem.cancilleria.gob.ar/",
-    "notes": "Consular district covers Berlin, Brandenburg, Saxony, Saxony-Anhalt and Thuringia. An official body of the issuing state is on the accepted-translator list. Tel +49 30 2266 89 0. The free ANSV Certificado de Legalidad Internacional is obtained online, not here.",
-    "english_friendly": true
+    "notes": "Consular district covers Berlin, Brandenburg, Saxony, Saxony-Anhalt and Thuringia. An official body of the issuing state is on the accepted-translator list. Tel +49 30 2266 89 0. The free ANSV Certificado de Legalidad Internacional is obtained online, not here. The consular section publishes in Spanish and its /en URLs redirect to Spanish, so expect to be served in Spanish rather than English.",
+    "english_friendly": false
   },
   {
-    "name": "Italian Consulate General Berlin",
+    "name": "Italian Embassy Berlin, consular section",
     "type": "consulate",
     "address": "Hiroshimastr. 1, 10785 Berlin",
     "lat": 52.5075,
     "lng": 13.3585,
     "price": "n/a",
-    "url": "https://consberlino.esteri.it/",
-    "notes": "For passport and citizenship matters. It cannot convert your Argentine licence, because German residence means Germany is the only country that may license you.",
+    "url": "https://ambberlino.esteri.it/it/servizi-consolari-e-visti/",
+    "notes": "For passport and citizenship matters. It cannot convert your Argentine licence, because German residence means Germany is the only country that may license you. There is no Italian Consulate General in Berlin: Italy's Consulates General in Germany are in Frankfurt, Cologne, Munich, Stuttgart and Hanover, and Berlin is served by the Embassy's Cancelleria Consolare. Service is in Italian; the Fast It self-service portal has an English interface.",
     "english_friendly": true
   },
   {
@@ -278,7 +291,7 @@
     "lat": 52.528,
     "lng": 13.429,
     "price": "quoted individually (ask for an Umschreibung package)",
-    "url": "https://www.asphalt-profis.com/driving-licences-non-eu",
+    "url": "https://www.asphalt-profis.com/new-driving-license",
     "notes": "The only Berlin school found with a dedicated non-EU conversion page, and it states the law correctly (both exams, no minimum lessons). Theory in German or English. Note: their published authority fees are outdated, so trust them for teaching, not for fees.",
     "english_friendly": true
   },
@@ -289,7 +302,7 @@
     "lat": 52.5058,
     "lng": 13.4642,
     "price": "not published (request a quote)",
-    "url": "https://www.clickclickdrive.de/fahrschule/en/berlin/friedrichshain",
+    "url": "https://www.fahrschule-2drive.de/en/",
     "notes": "In Friedrichshain itself. English, German, Russian, Turkish per directory listing. Ask whether they handle third-country conversions.",
     "english_friendly": true
   },
@@ -300,20 +313,9 @@
     "lat": 52.5175,
     "lng": 13.4645,
     "price": "not published (request a quote)",
-    "url": "https://www.clickclickdrive.de/fahrschule/en/berlin/friedrichshain",
+    "url": "https://nice-fahrschule.de/",
     "notes": "Same U5 stop as Bürgeramt 3, so you can register and apply in one trip. English and German. Confirm they take conversion candidates.",
     "english_friendly": true
-  },
-  {
-    "name": "Fahrschule Kotti, Spanish-speaking",
-    "type": "driving-school",
-    "address": "Skalitzer Str. 139, 10999 Berlin (Kreuzberg)",
-    "lat": 52.501,
-    "lng": 13.4238,
-    "price": "not published (request a quote)",
-    "url": "https://www.clickclickdrive.de/fahrschule/en/berlin/friedrichshain",
-    "notes": "Teaches in SPANISH (no English), and possibly your best fit, since you can also sit the theory exam in Spanish. Same district.",
-    "english_friendly": false
   },
   {
     "name": "Fahrschule Südstern",
@@ -333,7 +335,7 @@
     "lat": 52.474,
     "lng": 13.3475,
     "price": "not published (ask)",
-    "url": "https://english-driving-school.de/",
+    "url": "https://english-driving-school.de/theory",
     "notes": "Long-established English-language school (since 2006). Further from Friedrichshain, but a strong English option.",
     "english_friendly": true
   },
@@ -355,9 +357,9 @@
     "lat": 52.5217,
     "lng": 13.4148,
     "price": "€5.95 via the dm-Passbild-App",
-    "url": "https://foto.dm.de/app-biometrische-passfotos-selber-machen.html",
-    "notes": "Cheapest verified option: you shoot the photo in the app, print at any dm photo station and pay at the till. You get six biometric photos plus a digital copy. Free at Erste Hilfe Station if you do the first-aid course there.",
-    "english_friendly": true
+    "url": "https://www.dm.de/services/services-im-markt/fotoservice/passbild-service-51462",
+    "notes": "Cheapest verified option: you shoot the photo in the app, print at any dm photo station and pay at the till. You get six biometric photos plus a digital copy. Free at Erste Hilfe Station if you do the first-aid course there. Only the dm app itself is available in English; the print step runs on a CEWE kiosk in the store whose language is not stated, and dm publishes no English site. Since May 2025 passport photos must come from an authorised provider, which this is.",
+    "english_friendly": false
   },
   {
     "name": "Photo booth (Fotofix) at Ostbahnhof",
@@ -371,7 +373,6 @@
   },
   {
     "name": "Photo booth (Fotofix) at Alexanderplatz",
-
     "type": "photo",
     "address": "S+U Alexanderplatz station hall, 10178 Berlin",
     "lat": 52.5215,

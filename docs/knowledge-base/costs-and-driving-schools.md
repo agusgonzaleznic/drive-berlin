@@ -260,7 +260,7 @@ Finally, the six-month clock in § 29 Abs. 1 FeV is already running from the dat
 | Berlin Senate SenMVKU — press release on exam backlog measures (2024) | https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2024/pressemitteilung.1411114.php | Yes |
 | ADAC — *Führerschein Klasse B: Kosten* (data 8 Apr 2025) | https://www.adac.de/verkehr/rund-um-den-fuehrerschein/erwerb/fuehrerschein-kosten/ | No |
 | ADAC — B197 *Automatikführerschein* | https://www.adac.de/verkehr/rund-um-den-fuehrerschein/erwerb/b197-fuehrerschein/ | No |
-| ADAC — theory exam, permitted languages | https://www.adac.de/verkehr/rund-um-den-fuehrerschein/erwerb/theoretische-fuehrerschein-pruefung/ | No |
+| ADAC — theory exam, permitted languages | https://www.adac.de/verkehr/rund-um-den-fuehrerschein/erwerb/theoretische-fuehrerscheinpruefung/ | No |
 | ADAC — *Digitaler Führerschein* (i-Kfz app) | https://www.adac.de/verkehr/rund-um-den-fuehrerschein/aktuelles/digitaler-fuehrerschein/ | No |
 | TÜV-Verband — *Mehr als 2 Millionen Fahrprüfungen* (official pass/fail statistics) | https://www.tuev-verband.de/pressemitteilungen/mehr-als-2-millionen-fahrpruefungen | No (industry body reporting official *arge tp 21* data) |
 | TÜV-Verband — new theory questions from April (catalogue 1,197 → 1,040) | https://www.tuev-verband.de/pressemitteilungen/neue-theoriefragen-fuer-den-fuehrerschein-aenderungen-ab-april | No |
