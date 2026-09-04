@@ -731,7 +731,7 @@ Take this list to your Bürgeramt appointment, and put the starred ones to LABO 
 | Erste Hilfe Station — first aid in English/Spanish, 59,99 € incl. eye test + photos (Frankfurter Allee 96, 10247 Berlin) | mailto:info@erstehilfestation.de | ⚠️ vendor |
 | ⚠️ Fahrschule N2K — Umschreibung guide (**contains errors**: claims first-licence training is required) and practical-exam guide (**45-min figure outdated**) | https://www.fahrschule-n2k.de/ratgeber/auslaendischer-fuehrerschein-2026-umschreibung-neuerungen | ⚠️ |
 | ⚠️ FahrBlitz — "5–10 Fahrstunden" (the only source naming a number; page returned HTTP 403) | https://fahrblitz.de/ratgeber/fuehrerschein-umschreibung | ⚠️ |
-| ExpatsLicense — practical exam language; theory in English; Berlin conversion | https://expatslicense.com/guide/practical-exam-language | — |
+| ADAC: theory exam languages and the practical-exam language rule (replaces the former ExpatsLicense citation, whose domain no longer resolves) | https://www.adac.de/verkehr/rund-um-den-fuehrerschein/erwerb/theoretische-fuehrerscheinpruefung/ | No |
 | All About Berlin — converting a foreign driving licence | https://allaboutberlin.com/guides/convert-to-german-driving-licence | — |
 | Deutsch im Alltag — Fahranweisungen in der Fahrprüfung (examiner phrases) | https://www.deutsch-im-alltag.com/fahranweisungen-in-der-fahrpruefung | — |
 | StudyGerman.io — driving-exam vocabulary | https://studygerman.io/vocabulary/topics/driving-exam | — |

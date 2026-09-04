@@ -1,0 +1,75 @@
+# Checks that the external links cited in the prose and the app data still
+# resolve. Scheduled, never a pull-request gate.
+#
+# WHY THIS IS NOT PART OF CI: third-party availability is not a property of a
+# contributor's diff. A rate limit, a scraper-hostile CDN or a two-minute outage
+# would fail an unrelated pull request for a reason its author cannot fix, and
+# the only way to merge would be to ignore a red check, which trains everyone to
+# ignore red checks. On a schedule the same red run is a maintenance signal
+# addressed to the maintainer, which is what it actually is.
+#
+# WHY IT EXISTS AT ALL: ci.yml checks links that point inside this repository, so
+# it could not see the failure that shipped. Three first-aid provider entries and
+# one journey step pointed at erste-hilfe-station.de for weeks after that domain
+# was suspended, and every check stayed green, because to all of them an external
+# URL is just a string. scripts/check-external-links.mjs is self-tested against
+# that exact URL.
+#
+# Actions are pinned to full 40-character commit SHAs, as in ci.yml and pages.yml:
+# a tag is a mutable ref that can be repointed at different code after review,
+# whereas a commit SHA is immutable. The trailing comment records the release the
+# SHA was resolved from. Re-resolve from the API when bumping, and update the
+# comment with it.
+
+name: External links
+
+on:
+  schedule:
+    # Mondays at 06:17 UTC. Weekly is the right cadence for link rot: it is slow,
+    # and a daily run would mostly re-report the same third-party outages. The
+    # odd minute is deliberate, because GitHub queues scheduled jobs and runs on
+    # the hour compete with everybody else's cron.
+    - cron: '17 6 * * 1'
+  # So a maintainer can check on demand after editing links, without waiting a
+  # week or pushing a commit.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    name: External link check
+    runs-on: ubuntu-latest
+    # A scheduled run is not competing with anything, and the whole point is to
+    # finish and report, so give it room to sit through slow public-sector sites.
+    timeout-minutes: 20
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # Nothing here pushes, so do not leave the token in .git/config where a
+          # later step could reach it.
+          persist-credentials: false
+
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '24'
+
+      # No `npm ci` on purpose. The checker uses only Node built-ins (node:https,
+      # node:fs, node:child_process), so installing dependencies would add
+      # third-party code to a job whose entire job is to make outbound requests.
+      # It also needs the git history, which checkout already provides, because it
+      # scans `git ls-files` rather than the filesystem: several AI working notes
+      # under docs/ are gitignored and their placeholder URLs are not links.
+      - name: Check external links
+        run: npm run check:external-links
+
+      # The script writes a table to the run summary, so a failure is readable
+      # without opening the log. GitHub emails the repository owner when a
+      # scheduled run fails, which is the notification path here.
+      #
+      # NOTE: GitHub disables scheduled workflows after 60 days without repository
+      # activity. If this stops firing, that is why, and a push or a manual
+      # dispatch re-enables it.
