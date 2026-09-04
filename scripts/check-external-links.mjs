@@ -157,7 +157,25 @@ function extractUrls(text) {
 // WHY no HTTP/2 concern: Node's fetch speaks HTTP/1.1, which sidesteps the other
 // audit false positive, where curl's HTTP/2 gave INTERNAL_ERROR on six
 // gesetze-im-internet.de pages that all return 200 over HTTP/1.1.
-async function probe(url) {
+// One request at a time per host, spaced out. Different hosts still run in
+// parallel, so the whole check stays fast.
+//
+// WHY: gesetze-im-internet.de is cited 44 times, and firing those 8-at-a-time at
+// one government server is both rude and a good way to get throttled. This also
+// removes rate limiting as a variable when reading a failure.
+const hostQueue = new Map();
+const PER_HOST_GAP_MS = 400;
+function politely(host, task) {
+  const prev = hostQueue.get(host) ?? Promise.resolve();
+  const next = prev
+    .catch(() => {})
+    .then(() => new Promise(r => setTimeout(r, PER_HOST_GAP_MS)))
+    .then(task);
+  hostQueue.set(host, next.catch(() => {}));
+  return next;
+}
+
+async function probe(url, { readBody = false } = {}) {
   const jar = new Map();
   let current = url;
 
@@ -165,8 +183,8 @@ async function probe(url) {
     const cookies = [...jar.entries()].map(([k, v]) => `${k}=${v}`).join('; ');
     let res;
     try {
-      res = await new Promise((resolve, reject) => {
-        const target = new URL(current);
+      const target = new URL(current);
+      res = await politely(target.host, () => new Promise((resolve, reject) => {
         const send = target.protocol === 'http:' ? httpRequest : httpsRequest;
         const req = send(
           target,
@@ -180,21 +198,30 @@ async function probe(url) {
             },
           },
           (r) => {
-            // Headers are all we need. Dropping the socket here keeps a 1.5 MB
-            // page from being pulled down just to learn it returned 200.
+            // Headers are all we need to judge a link, and dropping the socket
+            // here keeps a 1.5 MB page from being pulled down just to learn it
+            // returned 200. The one exception is the suspension check below,
+            // which has to look at the page.
             const out = {
               status: r.statusCode,
               location: r.headers.location,
               setCookie: r.headers['set-cookie'] ?? [],
             };
-            r.destroy();
-            resolve(out);
+            if (!readBody) { r.destroy(); resolve(out); return; }
+            let body = '';
+            r.setEncoding('utf8');
+            r.on('data', (chunk) => {
+              body += chunk;
+              if (body.length > 4096) { r.destroy(); }
+            });
+            r.on('close', () => resolve({ ...out, body }));
+            r.on('end', () => resolve({ ...out, body }));
           },
         );
         req.setTimeout(TIMEOUT_MS, () => req.destroy(Object.assign(new Error('timed out'), { code: 'ETIMEDOUT' })));
         req.on('error', reject);
         req.end();
-      });
+      }));
     } catch (err) {
       return { status: 0, error: String(err.code || err.message).slice(0, 120), final: current };
     }
@@ -209,7 +236,7 @@ async function probe(url) {
       current = new URL(res.location, current).toString();
       continue;
     }
-    return { status: res.status, final: current };
+    return { status: res.status, final: current, body: res.body };
   }
   return { status: -1, error: `more than ${MAX_REDIRECTS} redirects`, final: current };
 }
@@ -247,6 +274,11 @@ function classify(url, result) {
 
   if (result.status === -1) return { level: 'broken', note: result.error };
   if (result.status >= 500) return { level: 'broken', note: `HTTP ${result.status}, server-side or a WAF` };
+  // A name that does not resolve is conclusive from any vantage point, so it
+  // skips the host check below and fails outright.
+  if (result.status === 0 && /ENOTFOUND|EAI_NONAME/i.test(result.error)) {
+    return { level: 'broken', note: `does not resolve: ${result.error}`, conclusive: true };
+  }
   if (result.status === 0) return { level: 'broken', note: `no response: ${result.error}` };
   return { level: 'broken', note: `HTTP ${result.status}` };
 }
@@ -281,21 +313,52 @@ for (const file of files) {
 const urls = [...sources.keys()].sort();
 console.log(`checking ${urls.length} external URLs from ${files.length} files\n`);
 
-// When a URL fails, ask whether the host itself is answering. This is the one
-// diagnostic that reliably separates "their site is down, wait" from "our link
-// is wrong, fix it", and unlike reading the network error it actually works: a
-// host-wide failure and a single dead path look nothing alike at the origin.
+// When a URL fails, work out whether the HOST is the problem, because that is
+// what decides whether there is anything in this repository to fix.
 //
-// It is a note, not a verdict. Both still count as unreachable, because a reader
-// cannot open either one. The difference is what the maintainer should do next.
-const originCache = new Map();
-async function hostAlive(url) {
-  let origin;
-  try { origin = new URL(url).origin + '/'; } catch { return null; }
-  if (!originCache.has(origin)) {
-    originCache.set(origin, probe(origin).then(r => r.status >= 200 && r.status < 400));
+//   'healthy'  the host serves its own root with a 2xx/3xx, so a failing path
+//              here is our link being wrong. Actionable, fails the run.
+//   'suspended' https is broken, and plain http serves a hoster's "this domain
+//              has been suspended" notice. That is the exact shape of the bug
+//              that motivated this script. Actionable, fails the run.
+//   'httpOnly' https is broken but plain http serves the real site. Reported,
+//              does NOT fail. WHY: boletinoficial.gob.ar behaves this way from
+//              here, and its https URL is presumably fine for the readers it
+//              serves. Failing on this would call a working link broken, so the
+//              suspension signature above is what has to carry the verdict, and
+//              missing a suspension is the safer way to be wrong.
+//   'down'     neither scheme answers, or the root itself errors. Their outage,
+//              their block, or our runner being unable to reach them. Reported
+//              loudly, does NOT fail, because nothing in this repository can fix
+//              it and a red run here would be red forever.
+//
+// WHY 'down' cannot be treated as rot: the first CI run of this script failed on
+// 42 gesetze-im-internet.de URLs with ETIMEDOUT, including that host's own root,
+// while every one of them returned 200 from a laptop minutes earlier. A German
+// government site silently dropping a cloud provider's addresses is
+// indistinguishable, from inside the runner, from a domain that has gone away.
+// The http fallback above is what rescues the case we actually care about.
+// Hoster suspension and parking notices. Deliberately narrow: a miss here just
+// means the URL is reported without failing the run, which is the safe direction.
+const SUSPENDED_PAGE =
+  /domain\s+gesperrt|diese\s+domain\s+wurde\s+gesperrt|domain\s+(is\s+)?(suspended|parked|expired)|website\s+(is\s+)?suspended|account\s+suspended|this\s+domain\s+has\s+expired|kein\s+webspace|no\s+such\s+(domain|website)/i;
+
+const hostStateCache = new Map();
+async function hostState(url) {
+  let host;
+  try { host = new URL(url).host; } catch { return 'down'; }
+  if (!hostStateCache.has(host)) {
+    hostStateCache.set(host, (async () => {
+      const https = await probe(`https://${host}/`);
+      if (https.status >= 200 && https.status < 400) return 'healthy';
+      const http = await probe(`http://${host}/`, { readBody: true });
+      if (http.status >= 200 && http.status < 400) {
+        return SUSPENDED_PAGE.test(http.body ?? '') ? 'suspended' : 'httpOnly';
+      }
+      return 'down';
+    })());
   }
-  return originCache.get(origin);
+  return hostStateCache.get(host);
 }
 
 const results = await mapLimit(urls, CONCURRENCY, async (url) => {
@@ -306,39 +369,52 @@ const results = await mapLimit(urls, CONCURRENCY, async (url) => {
     await new Promise(r => setTimeout(r, 1500));
     verdict = classify(url, await probe(url));
   }
-  if (verdict.level === 'broken') {
-    const alive = await hostAlive(url);
-    verdict.note += alive === false
-      ? '. The host is not serving its own root either, so this is a site-wide outage rather than a wrong path'
-      : alive === true
-        ? '. The host is up, so this path is the problem'
-        : '';
+  if (verdict.level === 'broken' && !verdict.conclusive) {
+    const state = await hostState(url);
+    if (state === 'healthy') {
+      verdict.note += '. The host serves its own root, so this path is the problem';
+    } else if (state === 'suspended') {
+      verdict.note += '. Plain http on this host serves a domain-suspension notice, so the domain is gone and this link must be replaced';
+    } else if (state === 'httpOnly') {
+      verdict.level = 'degraded';
+      verdict.note += '. Plain http serves the real site, so https is failing for us specifically rather than the link being wrong';
+    } else {
+      // Not our bug and not fixable here, so report it without failing.
+      verdict.level = 'degraded';
+      verdict.note += '. The host answers on neither scheme, so it is unreachable from this runner rather than a wrong path';
+    }
   }
   return { url, ...verdict };
 });
 
 const broken = results.filter(r => r.level === 'broken');
 const blocked = results.filter(r => r.level === 'blocked');
+const degraded = results.filter(r => r.level === 'degraded');
+const ok = results.length - broken.length - blocked.length - degraded.length;
 
 for (const r of broken) {
-  console.log(`UNREACHABLE  ${r.url}\n         ${r.note}\n         cited in: ${[...sources.get(r.url)].join(', ')}`);
+  console.log(`BROKEN   ${r.url}\n         ${r.note}\n         cited in: ${[...sources.get(r.url)].join(', ')}`);
+}
+for (const r of degraded) {
+  console.log(`offline  ${r.url}\n         ${r.note}`);
 }
 for (const r of blocked) {
-  console.log(`blocked  ${r.url}  (${r.note})`);
+  console.log(`refused  ${r.url}  (${r.note})`);
 }
 console.log(
-  `\n${results.length - broken.length - blocked.length} ok, ` +
-  `${blocked.length} refused to robots, ${broken.length} unreachable`,
+  `\n${ok} ok, ${blocked.length} refused to robots, ` +
+  `${degraded.length} host offline or unreachable from here, ${broken.length} broken`,
 );
 
-// A job summary so the schedule is readable without opening the log.
+// A job summary so a scheduled run is readable without opening the log.
 if (process.env.GITHUB_STEP_SUMMARY) {
   const lines = [
     '## External link check',
     '',
-    `- ${results.length - broken.length - blocked.length} reachable`,
-    `- ${blocked.length} refused to automated clients (reader unaffected, not a failure)`,
-    `- **${broken.length} unreachable**`,
+    `- ${ok} reachable`,
+    `- ${blocked.length} refused to automated clients (the page opens in a browser, so not a failure)`,
+    `- ${degraded.length} whose host is offline or unreachable from this runner (not a failure)`,
+    `- **${broken.length} broken** (something to fix in this repository)`,
     '',
   ];
   if (broken.length) {
@@ -349,14 +425,22 @@ if (process.env.GITHUB_STEP_SUMMARY) {
   } else {
     lines.push('Nothing to fix.');
   }
-  if (blocked.length) {
-    lines.push('', '<details><summary>Refused to automated clients</summary>', '');
-    for (const r of blocked) lines.push(`- ${r.url} (${r.note})`);
+  for (const [label, group] of [
+    ['Host offline or unreachable from this runner', degraded],
+    ['Refused to automated clients', blocked],
+  ]) {
+    if (!group.length) continue;
+    lines.push('', `<details><summary>${label} (${group.length})</summary>`, '');
+    for (const r of group) lines.push(`- ${r.url}  <br>${r.note}`);
     lines.push('', '</details>');
   }
   appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\n') + '\n');
 }
 
-// Non-zero only for links that are genuinely gone, so a red run always means
-// there is something to fix in this repository.
+// Non-zero ONLY for links this repository can fix: a path that fails while its
+// host is healthy, a name that does not resolve, or a host that is alive over
+// http while our https link is broken. A third-party outage, a bot block, or a
+// host our runner cannot reach are all reported and all exit zero, because a
+// check that goes red for reasons nobody here can act on gets ignored, and an
+// ignored check is worse than no check.
 process.exit(broken.length ? 1 : 0);
