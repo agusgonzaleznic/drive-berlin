@@ -115,10 +115,21 @@ jobs:
   # visible on the canonical URL while the github.io URL updates at once. That gap
   # is genuinely confusing: it once looked exactly like a failed deploy.
   #
-  # This job is deliberately allowed to fail without failing the workflow. Pages
-  # has already published by the time it runs, so a CDN that refuses an
-  # invalidation should leave a warning and a stale cache for ten minutes, not a red
-  # deploy that suggests the site is broken when it is not.
+  # This job USED to carry continue-on-error, on the reasoning that Pages has already
+  # published by the time it runs, so a refused invalidation should not produce a red
+  # deploy suggesting the site is broken when it is not.
+  #
+  # The reasoning was sound and the result was not. The job then failed on every run
+  # from 5 August to 14 September, twelve retries each time, because the role's trust
+  # policy did not match this repository's OIDC subject. Every one of those runs
+  # reported success, nothing was notified, and the canonical URL served stale HTML
+  # for the full 600s TTL after each deploy. A job that had never once succeeded was
+  # indistinguishable from one that always works.
+  #
+  # So the tolerance is gone and the signal is explicit instead. A failure here now
+  # turns the run red, which is the only thing anyone actually notices, and the
+  # summary step states in plain words that the site IS published and only the cache
+  # is stale. That answers the original worry directly rather than by hiding it.
   invalidate:
     name: Invalidate the CloudFront cache
     needs: deploy
@@ -127,7 +138,6 @@ jobs:
     # every fork. Skipping keeps a fork's deploy green instead of failing on a role
     # it can neither see nor assume.
     if: vars.AWS_CDN_ROLE_ARN != '' && vars.CLOUDFRONT_DISTRIBUTION_ID != ''
-    continue-on-error: true
     permissions:
       contents: read
       # Mint the OIDC token exchanged for the AWS role. No long-lived AWS key
@@ -138,6 +148,7 @@ jobs:
       # grants CreateInvalidation and GetInvalidation on that one distribution and
       # nothing else. Worst case if it were ever abused: somebody clears a cache.
       - name: Assume the CDN invalidation role
+        id: creds
         uses: aws-actions/configure-aws-credentials@cbe3b392738ccf3f987d68400dafcf4b0624a56c # v6.2.4
         with:
           role-to-assume: ${{ vars.AWS_CDN_ROLE_ARN }}
@@ -147,6 +158,7 @@ jobs:
       # Only the app's own subtree is invalidated. A wildcard on /* would clear the
       # personal site's cache too, which this deploy has no business touching.
       - name: Invalidate /drive-berlin
+        id: invalidate
         env:
           DIST: ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }}
         run: |
@@ -159,3 +171,29 @@ jobs:
             && echo "Invalidation $id completed." \
             || echo "::warning::Invalidation $id did not complete in time. Pages is already published; the CDN catches up within its 600s TTL."
 
+      # Runs whatever happened above, so the outcome is stated rather than inferred
+      # from a job's colour. It draws the distinction that matters to somebody
+      # looking at a red run: the deploy is already done, and a failure here costs
+      # ten minutes of stale cache and nothing else.
+      - name: Report the outcome
+        if: always()
+        run: |
+          if [ "${{ steps.invalidate.outcome }}" = "success" ]; then
+            {
+              echo "### CloudFront cache cleared"
+              echo "\`/drive-berlin\` and \`/drive-berlin/*\` were invalidated, so the canonical URL already serves this deploy."
+            } >> "$GITHUB_STEP_SUMMARY"
+          else
+            {
+              echo "### CloudFront cache NOT cleared"
+              echo
+              echo "**The site deployed successfully.** Pages published before this job ran, so <https://agusgonzaleznic.github.io/drive-berlin/> is already up to date."
+              echo
+              echo "Only the cache invalidation failed, so <https://agusgonzaleznic.com/drive-berlin/> serves the previous HTML for up to 600 seconds and then catches up by itself. Nothing is broken and no redeploy is needed."
+              echo
+              echo "Assume role: \`${{ steps.creds.outcome }}\` · Invalidate: \`${{ steps.invalidate.outcome }}\`"
+              echo
+              echo "If the assume step failed, check the role's trust policy still matches this repository's OIDC subject:"
+              echo "\`gh api repos/agusgonzaleznic/drive-berlin/actions/oidc/customization/sub\`"
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
