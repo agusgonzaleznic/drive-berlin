@@ -726,7 +726,7 @@ Take this list to your Bürgeramt appointment, and put the starred ones to LABO 
 | Fahrschule Kreuzkölln Berlin — Preise | https://fahrschule-kreuzkoelln.de/preise/ | ⚠️ vendor |
 | City Fahrschule Berlin — no obligation to attend a driving school | https://www.cityfahrschule.de/fuehrerscheine-kurse/pkw/umschreibung/ | ⚠️ vendor |
 | Fahrschule Kotti (Kreuzberg) — **Spanish-language instruction** | https://www.fahrschulekotti.de/leistungen/fuehrerschein-umschreibung | ⚠️ vendor |
-| Fahrschule Igor Radtke Berlin — Umschreibung | https://www.fahrschule-radtke.de/umschreibung-auslaendischer-fuehrerschein/ | ⚠️ vendor |
+| Fahrschule Igor Radtke Berlin — Umschreibung | https://www.fahrschule-radtke.de/umschreibung-fuehrerschein/ | ⚠️ vendor |
 | clickclickdrive.de — Friedrichshain driving-school directory (language data for 2Drive Perfect, Nice Fahrschule, Nuray) | https://www.clickclickdrive.de/fahrschule/en/berlin/friedrichshain | ⚠️ directory |
 | Erste Hilfe Station — first aid in English/Spanish, 59,99 € incl. eye test + photos (Frankfurter Allee 96, 10247 Berlin) | mailto:info@erstehilfestation.de | ⚠️ vendor |
 | ⚠️ Fahrschule N2K — Umschreibung guide (**contains errors**: claims first-licence training is required) and practical-exam guide (**45-min figure outdated**) | https://www.fahrschule-n2k.de/ratgeber/auslaendischer-fuehrerschein-2026-umschreibung-neuerungen | ⚠️ |
