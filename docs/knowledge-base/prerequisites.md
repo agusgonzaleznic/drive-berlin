@@ -264,7 +264,7 @@ These belong to the application and exam stages, and some apply to a different p
 | Erste Hilfe Station — live shop listings (per-date prices) | https://first-aid-courses-berlin.myshopify.com/collections/all | No |
 | ASB Berlin-Südwest — English course (static page, €65/€60, last updated 06.03.2025) | https://www.asb-berlin-suedwest.de/aus-und-fortbildung/courses-englisch/first-aid-course | No |
 | ASB — live booking system (€75/€70, Lahnstr. 52, licence validity) | https://www.hiorg-server.de/kurse_extern.php?ov=rvs&id=1541&kt=21630 | No |
-| DRK Berlin-Zentrum — English first aid (€80, currently paused) | https://www.drk-berlin-zentrum.de/angebote/kurse-in-erster-hilfe/first-aid-in-english.html | No |
+| DRK Berlin-Zentrum — English first aid (€80, currently paused; the page was gone by 28 October 2026, so this links the archived copy of 12 May 2026) | https://web.archive.org/web/20260512214412/https://www.drk-berlin-zentrum.de/angebote/kurse-in-erster-hilfe/first-aid-in-english.html | No |
 | SoftAid Berlin — *Führerschein* first aid, 14 venues | https://soft-aid.de/erste-hilfe/fuehrerschein/berlin | No |
 | SoftAid — English *Führerschein* page | https://soft-aid.de/erste-hilfe/fuehrerschein-englisch/berlin | No |
 | Johanniter — *Erste-Hilfe Führerschein* | https://www.johanniter.de/dienste-leistungen/medizinische-hilfe/erste-hilfe/erste-hilfe-kurse-fuer-privatpersonen/erste-hilfe-fuehrerschein/ | No |
