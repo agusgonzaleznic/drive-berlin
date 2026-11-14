@@ -9,7 +9,7 @@
 **A gamified, offline-capable study and logistics companion for converting a foreign driving licence
 in Germany.** It walks the full *Umschreibung* step by step and teaches the German class B theory
 exam (*Klasse B*) in English, grounded in Berlin where the appointments actually happen.
-No build step. No backend. No accounts. No tracking. Every legal claim sourced.
+No build step. No backend. No accounts. No tracking unless you opt in. Every legal claim sourced.
 
 <br>
 
@@ -333,9 +333,10 @@ locally rather than committed, so the documents cite those filenames as provenan
 
 ## 🔒 Security & privacy
 
-There is no backend, no account, no analytics, no cookies and no error reporting. All state lives in
-`localStorage`. That removes most of the usual attack surface, though not all of it, because the app
-has an import button and builds every view from template literals.
+There is no backend, no account and no error reporting. Google Analytics loads only if you allow it
+on the banner: until then nothing is sent to Google and no cookie is set. All of the app's state lives
+in `localStorage`. That removes most of the usual attack surface, though not all of it, because the
+app has an import button and builds every view from template literals.
 
 Every finding below was reproduced before it was fixed, and each fix is pinned by an assertion in
 `tests/security.test.mjs`. To report something new, follow the
@@ -349,29 +350,33 @@ first: it sets out what is in scope, what is not, and what the app already cover
 | **Type confusion** via import. `badges: "ignition"` made `.includes()` do substring matching, and `exams: {}` threw mid-render, blanking the screen with no recovery | High | Per-key coercion, clamped counts, capped collection and string sizes |
 | **`javascript:` URLs** in data-driven `href`s. `esc()` escapes quotes but does not neutralise a URL scheme | Medium | `safeUrl()` scheme allowlist, which strips control characters first so `java\nscript:` cannot slip past |
 | **Partial escaping** in `icon()`, `emblem()`, `flag()` and `glyph()` | Medium | Full `&<>"'` escaping in all four rendering primitives |
-| **No CSP** | Medium | Strict policy. The app has *zero* inline `<script>`, so `script-src` is genuinely tight |
-| **Third-party code from a CDN.** Leaflet came from `unpkg.com`, so a compromise there was arbitrary script in every visitor's browser. SRI pinned the bytes, but it could not remove the dependency | Medium | Leaflet 1.9.4 vendored into `src/assets/vendor/leaflet/`, byte-verified against the `sha384` hashes that used to pin it. `script-src` no longer names any external origin |
+| **No CSP** | Medium | Strict policy. The app has *zero* inline `<script>`, and the only external origin in `script-src` is Google's tag host, which the app loads from only after you opt in to analytics |
+| **Third-party code from a CDN.** Leaflet came from `unpkg.com`, so a compromise there was arbitrary script in every visitor's browser. SRI pinned the bytes, but it could not remove the dependency | Medium | Leaflet 1.9.4 vendored into `src/assets/vendor/leaflet/`, byte-verified against the `sha384` hashes that used to pin it. `script-src` no longer names a CDN |
 | **Google Fonts disclosed every visitor's IP address** to Google before a glyph was drawn, which LG München I held unlawful without consent (3 O 17493/20, January 2022), and which contradicted this app's own promise that nothing is uploaded anywhere | Medium | Cinzel and DM Sans vendored into `src/assets/fonts/` as woff2 subsets, so `font-src` is `'self'` |
 | **Referrer leakage** to authority sites | Low | `no-referrer` document-wide, plus `rel="noopener noreferrer"` on every external link |
 
 ```
 Content-Security-Policy:
-  default-src 'self'; script-src 'self';
+  default-src 'self';
+  script-src 'self' https://www.googletagmanager.com;
   style-src 'self' 'unsafe-inline';
   font-src 'self';
-  img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org;
-  connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'
+  img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org https://www.google-analytics.com;
+  connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com;
+  object-src 'none'; base-uri 'none'; form-action 'none'
 ```
 
 `style-src` keeps `'unsafe-inline'` because the views set `style=""` on 127 elements; style injection
-is far lower severity than script injection. Everything else is `'self'` or `'none'`, and the only
-external origin left in the whole policy is the map tile host.
+is far lower severity than script injection. The only external origins in the policy are the map
+tile hosts and Google's analytics hosts, and the app contacts Google's only after you allow analytics
+on the banner.
 
-Two layers of test verify this. `tests/csp.mjs` drives real Chrome: **0 CSP violations**, Leaflet
-initialises, tiles fetch, both font families load from this origin, and the only third-party origin
-contacted is `tile.openstreetmap.org`. Because that suite needs system Chrome and therefore cannot
-run in CI, `tests/security.test.mjs` re-asserts the same property by reading the files, so a
-re-introduced CDN fails a pull request.
+Two layers of test verify this. `tests/csp.mjs` drives real Chrome with no opt-in: **0 CSP
+violations**, Leaflet initialises, tiles fetch, both font families load from this origin, and the
+only third-party origin contacted is `tile.openstreetmap.org`. `tests/consent.browser.mjs` proves in
+Chrome that nothing is requested from Google before a choice, after a decline or after Escape.
+Because those suites need system Chrome and therefore cannot run in CI, `tests/security.test.mjs`
+re-asserts the policy by reading the files, so a re-introduced CDN fails a pull request.
 
 <details>
 <summary><b>Three caveats worth reading</b></summary>
@@ -594,8 +599,9 @@ issues through the [issue chooser](https://github.com/agusgonzaleznic/drive-berl
 
 ## 💛 Support this project
 
-It is free, it stays free, and there is nothing to upsell: no ads, no accounts, no tracking. I built
-it because I needed it, and the research underneath took considerably longer than the code did.
+It is free, it stays free, and there is nothing to upsell: no ads, no accounts, and no tracking
+unless you opt in. I built it because I needed it, and the research underneath took considerably
+longer than the code did.
 
 Three things help, in ascending order of effort:
 
