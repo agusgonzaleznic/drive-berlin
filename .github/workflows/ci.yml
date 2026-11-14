@@ -6,7 +6,15 @@
 # records the release the SHA was resolved from. Re-resolve the SHA from the API
 # when bumping, and update the comment alongside it.
 #
-# Read-only token. Nothing in this workflow writes to the repository.
+# The merge is the release. On a pull request, "Release / Check the version"
+# says which version the merge releases. On main, once the test suite passes,
+# the Release job tags the next version when src/ (or release.yml) changed since
+# the newest tag, and starts release.yml on the tag, which publishes the GitHub
+# release. Nobody pushes a tag by hand. Both jobs run the shared
+# version-tag.yml from agusgonzaleznic/github-reusable-workflows.
+#
+# Read-only token, except for the Release job on main, which tags the commit and
+# starts the release.
 
 name: CI
 
@@ -18,12 +26,12 @@ on:
 permissions:
   contents: read
 
-# Superseded runs on the same ref are wasted work, so cancel them. This is safe
-# here precisely because CI publishes nothing: unlike the Pages deploy, an
-# interrupted test run leaves no partial state behind.
+# A pull request cancels its older runs: an interrupted test run leaves no
+# partial state behind. Runs on main never cancel a running one, because it may
+# be tagging a version and waiting for its release.
 concurrency:
   group: ci-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   test:
@@ -71,7 +79,8 @@ jobs:
       # require either installing a browser and threading its path through, or
       # reworking the suites to resolve an executable from the environment.
       # Until then these are a LOCAL macOS gate, and a green CI run does not
-      # cover them. Run `npm run test:all` on macOS before any release.
+      # cover them. Run `npm run test:all` on macOS before merging a change to
+      # src/, since the merge is the release.
       - name: Run the Node test suite
         run: npm test
 
@@ -90,3 +99,36 @@ jobs:
       # run here and its result is real.
       - name: Check Markdown links and anchors
         run: npm run check:links
+
+  # The version comes from the tags: the next minor version, or the next major
+  # one when a merged pull request has the label "breaking". Only src/, the site
+  # Pages serves, ships. release.yml is listed too, so a fix to it can ship.
+  check-version:
+    name: Release
+    if: github.event_name == 'pull_request'
+    uses: agusgonzaleznic/github-reusable-workflows/.github/workflows/version-tag.yml@1832ea3171529c36e663d34965917c9f14694ce5 # v1.9.0
+    permissions:
+      contents: read
+    with:
+      version-from-tags: true
+      release-paths: |
+        src/
+        .github/workflows/release.yml
+
+  # Tags the next version on the merge when what ships changed, then runs
+  # release.yml on the tag and waits for it. A release that fails turns this run
+  # red.
+  release:
+    name: Release
+    if: github.event_name == 'push'
+    needs: test
+    uses: agusgonzaleznic/github-reusable-workflows/.github/workflows/version-tag.yml@1832ea3171529c36e663d34965917c9f14694ce5 # v1.9.0
+    permissions:
+      contents: write
+      actions: write
+      pull-requests: read
+    with:
+      version-from-tags: true
+      release-paths: |
+        src/
+        .github/workflows/release.yml
