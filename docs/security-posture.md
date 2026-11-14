@@ -1,69 +1,23 @@
-# Security policy
+# Security posture
 
-Thank you for taking the time to look at this project's security. This document explains what is
-in scope, how to report something privately, and what the current posture already covers so that
-you do not spend time re-reporting a known and accepted position.
+How to report a vulnerability is set out in the shared
+[security policy](https://github.com/agusgonzaleznic/.github/blob/main/SECURITY.md). This page covers
+what is specific to this app: what is in scope, what is out of scope, and what the current posture
+already covers, so that you do not spend time re-reporting a known and accepted position.
 
 This is a static, offline-capable web app with no backend, no accounts and no server-side state.
 That shape determines most of what follows.
 
-## Supported versions
+## What helps in a report about this app
 
-There is a single release line and no long-lived maintenance branches.
-
-| Version | Supported |
-|---|:--:|
-| Latest commit on `main` | ✅ |
-| Any earlier commit, tag, fork or mirror | ❌ |
-
-Fixes land on `main` and are deployed from `main`. Older commits are never back-patched, so if you
-are running a fork or a pinned copy, please confirm the issue still reproduces against current
-`main` before reporting it.
-
-## Reporting a vulnerability
-
-**Please do not open a public issue for a security problem.**
-
-The primary channel is **GitHub Private Vulnerability Reporting**:
-
-1. Go to the [repository Security tab](https://github.com/agusgonzaleznic/drive-berlin/security).
-2. Choose **Report a vulnerability**.
-3. Describe the issue, the impact, and the steps to reproduce it.
-
-This keeps the report private between you and the maintainer until a fix is published, and it gives
-us a private fork to work in.
-
-If Private Vulnerability Reporting is unavailable to you for any reason, contact the maintainer
-through the contact details on their GitHub profile: **https://github.com/agusgonzaleznic**. No
-dedicated security mailbox exists for this project, so please do not send reports to any address
-you find guessed or scraped elsewhere.
-
-### What helps
-
+* Confirmation that it still reproduces on current `main`. The site is deployed from `main`, and
+  no earlier commit, tag, fork or mirror is ever patched.
 * The affected file or screen, and the route (for example `#/map`).
 * Browser and operating system.
 * A minimal reproduction. For anything involving saved state, a redacted progress export or a
   minimal crafted import file is ideal.
 * What an attacker gains. Impact is what decides severity here, because the app holds no
   credentials and talks to no server.
-
-### Response expectations
-
-This is a personal project maintained by one person in their own time, so what follows is a
-best-effort commitment and explicitly **not** a service level agreement:
-
-| Stage | Best-effort target |
-|---|---|
-| Acknowledgement that the report was received | within 7 days |
-| Initial assessment and a severity view | within 30 days |
-| Fix for a confirmed high-severity issue | as soon as practical, prioritised over other work |
-
-If you have not heard anything after 30 days, a polite nudge on the same private thread is welcome.
-There is no bug bounty and no payment available. Credit in the release notes and the commit message
-is offered gladly if you want it.
-
-Please give a reasonable window for a fix before publishing. There is no fixed embargo period, and
-we will agree disclosure timing with you on the report thread.
 
 ## In scope
 
@@ -97,9 +51,11 @@ closed with a pointer back to this section.
   encrypt it, because encryption would need a passphrase to defend against an attacker who by
   definition already holds the profile.
 * **The accuracy of the legal content.** A wrong deadline, fee or procedure is a serious bug, but
-  it is a *content* bug rather than a security one. Please report it with the
-  [content accuracy issue template](https://github.com/agusgonzaleznic/drive-berlin/issues/new?template=content_accuracy.yml),
-  publicly, so it can be discussed and sourced in the open.
+  it is a *content* bug rather than a security one. Please report it with the **Incorrect
+  information** form, which you reach through
+  [the issue chooser](https://github.com/agusgonzaleznic/drive-berlin/issues/new/choose),
+  publicly, so it can be discussed and sourced in the open. The
+  [accuracy rule](development.md#the-accuracy-rule) says what a good report contains.
 * **Third-party services the app links out to.** The app links to authority and provider websites
   such as LABO, service.berlin.de, DEKRA, TÜV and driving schools, and it loads map tiles from
   OpenStreetMap. Their security posture is theirs. Report issues in those services to their
@@ -116,19 +72,24 @@ closed with a pointer back to this section.
 
 ## What the app already does
 
-Please check this list before reporting, so you do not re-report existing posture.
+Please check this list before reporting, so you do not re-report existing posture. The one
+exception to the points below about external origins is consent-gated analytics, described in the
+next section.
 
-* **A strict Content-Security-Policy**, set in the document `<meta>` tag, with **no external origin
-  permitted for script, style or fonts**:
+* **A strict Content-Security-Policy**, set in the document `<meta>` tag. It permits **no external
+  origin for style or fonts**, and for script only Google's tag host, which the app loads only after
+  a visitor opts in to analytics. The policy as it stands in `src/index.html`:
 
   ```
-  default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';
-  font-src 'self'; img-src 'self' data: https://tile.openstreetmap.org
-  https://*.tile.openstreetmap.org; connect-src 'self'; object-src 'none';
-  base-uri 'none'; form-action 'none'
+  default-src 'self'; script-src 'self' https://www.googletagmanager.com;
+  style-src 'self' 'unsafe-inline'; font-src 'self';
+  img-src 'self' data: https://tile.openstreetmap.org
+  https://*.tile.openstreetmap.org https://www.google-analytics.com;
+  connect-src 'self' https://www.google-analytics.com https://analytics.google.com
+  https://*.google-analytics.com; object-src 'none'; base-uri 'none'; form-action 'none'
   ```
 
-  The app contains **zero** inline `<script>`, so `script-src 'self'` is genuinely tight rather
+  The app contains **zero** inline `<script>`, so `script-src` is genuinely tight rather
   than nominally tight. An injected `<script>` cannot execute even if markup escaping were
   bypassed.
 * **No CDN, and therefore no third-party code to compromise.** Every byte of script the page can
@@ -219,4 +180,4 @@ exposes no state-changing request an attacker could trigger from inside a frame.
 
 Anyone self-hosting is encouraged to set all three and to serve over HTTPS so that the CSP cannot be
 stripped in transit. Hosts that can set these headers, and the file each one uses, are listed in the
-deployment section of the [README](README.md).
+deployment section of the [README](../README.md#-deployment).

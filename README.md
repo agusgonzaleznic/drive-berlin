@@ -25,7 +25,7 @@ No build step. No backend. No accounts. No tracking. Every legal claim sourced.
 
 <br>
 
-**[Quick start](#-quick-start) · [Features](#-whats-inside) · [Accuracy](#-accuracy-the-part-that-actually-matters) · [Security](#-security--privacy) · [Testing](#-testing) · [Architecture](#architecture) · [Deployment](#-deployment) · [Support](#-support-this-project)**
+**[Quick start](#-quick-start) · [Features](#-whats-inside) · [Accuracy](#-accuracy-the-part-that-actually-matters) · [Security](#-security--privacy) · [Testing](#-testing) · [Architecture](#architecture) · [Deployment](#-deployment) · [Contributing](#-contributing) · [Support](#-support-this-project)**
 
 <br>
 
@@ -338,8 +338,10 @@ There is no backend, no account, no analytics, no cookies and no error reporting
 has an import button and builds every view from template literals.
 
 Every finding below was reproduced before it was fixed, and each fix is pinned by an assertion in
-`tests/security.test.mjs`. To report something new, read **[`SECURITY.md`](SECURITY.md)** first: it
-sets out what is in scope, what is not, and what response to expect.
+`tests/security.test.mjs`. To report something new, follow the
+**[shared security policy](https://github.com/agusgonzaleznic/.github/blob/main/SECURITY.md)** (a
+private report in the Security tab), and read **[`docs/security-posture.md`](docs/security-posture.md)**
+first: it sets out what is in scope, what is not, and what the app already covers.
 
 | Finding | Severity | Fix |
 |---|---|---|
@@ -504,7 +506,8 @@ control borders clear 3:1 (WCAG 1.4.11).
 | Document | What it is |
 |---|---|
 | [`docs/knowledge-base/`](docs/knowledge-base/) | The sourced research: 8 documents, ~59.5k words, with the methodology and per-claim verifier coverage recorded inline |
-| [`SECURITY.md`](SECURITY.md) | Security policy: what is in scope, how to report a vulnerability, and what response to expect |
+| [`docs/development.md`](docs/development.md) | Developing and contributing: tests, the accuracy rule, code style, and the checklist before a pull request |
+| [`docs/security-posture.md`](docs/security-posture.md) | What is in scope, what is out of scope, and what the app already does. How to report is in the [shared security policy](https://github.com/agusgonzaleznic/.github/blob/main/SECURITY.md) |
 
 <details>
 <summary><b>Knowledge-base contents</b></summary>
@@ -572,6 +575,23 @@ The publish root is **`src/`**. `npm run build` exists only to say there is noth
 
 ---
 
+## 🤝 Contributing
+
+Contributions are welcome, and the bar for factual changes is deliberately high: every legal fact,
+fee or deadline needs a primary source. Start with **[`docs/development.md`](docs/development.md)**
+(tests, the accuracy rule, code style, the checklist before a pull request). The general rules are
+in the shared [contributing guide](https://github.com/agusgonzaleznic/.github/blob/main/CONTRIBUTING.md),
+and participation is governed by the shared
+[Code of Conduct](https://github.com/agusgonzaleznic/.github/blob/main/CODE_OF_CONDUCT.md). Open
+issues through the [issue chooser](https://github.com/agusgonzaleznic/drive-berlin/issues/new/choose).
+
+- **Hard non-goals:** no backend, no accounts and no build step. A proposal that needs any of the
+  three is declined regardless of merit.
+- **Reporting a bug?** Include your browser and operating system, whether it still happens after
+  clearing `localStorage`, and any console errors.
+
+---
+
 ## 💛 Support this project
 
 It is free, it stays free, and there is nothing to upsell: no ads, no accounts, no tracking. I built
@@ -583,6 +603,8 @@ Three things help, in ascending order of effort:
   this exists.
 - **Open an issue when a number is wrong.** Fees, waiting times and provider prices drift constantly.
   A corrected figure *with its primary source* is the most useful contribution anyone can make here.
+  Use the **Incorrect information** form, which you reach through the
+  [issue chooser](https://github.com/agusgonzaleznic/drive-berlin/issues/new/choose).
 - **Drop a coffee on Ko-fi, or sponsor on GitHub**, if this saved you a wasted trip to LABO. Ko-fi
   is a one-off, GitHub Sponsors can be monthly, and both accept a custom amount. Re-verifying legal claims
   against primary sources is the slow, recurring, genuinely unglamorous part of keeping a project like
@@ -656,6 +678,18 @@ Changes were made.
 > the failure mode this project was built to avoid.
 
 See [`NOTICE`](NOTICE) for the authoritative per-path breakdown.
+
+### Contributing under these licences
+
+Which licence applies to your contribution depends entirely on **which paths you touch**, as the
+table above shows.
+
+**By opening a pull request you agree that your contribution is licensed under the licence that
+covers the paths you changed**, on the same terms as the rest of the repository, and that you have
+the right to contribute it. A pull request that touches both areas is licensed accordingly in each.
+
+If you are copying text in from somewhere else, say so and name its licence. Quoting German
+statutory text verbatim is safe (see below), but commercial driving-school prose is not.
 
 ### Third-party material
 
