@@ -1,7 +1,7 @@
 // Prove the consent gate actually gates.
 //
 // This suite exists for ONE load-bearing claim, made in the README, in
-// SECURITY.md, in the privacy view and in the banner copy itself: nothing is
+// docs/security-posture.md, in the privacy view and in the banner copy itself: nothing is
 // requested from any Google host until a visitor explicitly opts in. Every other
 // assertion here is secondary to that.
 //

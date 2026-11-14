@@ -24,10 +24,8 @@ const SKIP_DIRS = new Set(['node_modules', '.git', '.claude-flow']);
 // never go green.
 const NO_EM_DASH = [
   'README.md',
-  'SECURITY.md',
-  'CONTRIBUTING.md',
-  'CODE_OF_CONDUCT.md',
-  '.github/PULL_REQUEST_TEMPLATE.md',
+  'docs/development.md',
+  'docs/security-posture.md',
 ];
 
 function findMarkdown(dir) {
