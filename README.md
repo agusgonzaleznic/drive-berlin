@@ -13,15 +13,15 @@ No build step. No backend. No accounts. No tracking unless you opt in. Every leg
 
 <br>
 
-![no build](https://img.shields.io/badge/build-none_required-1d2130?style=for-the-badge&labelColor=14161f)
-![runtime deps](https://img.shields.io/badge/runtime_deps-0-e0a82e?style=for-the-badge&labelColor=14161f)
-![tests](https://img.shields.io/badge/checks-~590_all_passing-3f9142?style=for-the-badge&labelColor=14161f)
-![csp](https://img.shields.io/badge/CSP-strict_·_0_violations-3f9142?style=for-the-badge&labelColor=14161f)
-![a11y](https://img.shields.io/badge/WCAG-AA_measured-7c5cd6?style=for-the-badge&labelColor=14161f)
-![storage](https://img.shields.io/badge/data-localStorage_only-7cb0ff?style=for-the-badge&labelColor=14161f)
+![no build](https://img.shields.io/badge/build-none_required-555D6D?style=for-the-badge&labelColor=1A1D23)
+![runtime deps](https://img.shields.io/badge/runtime_deps-0-555D6D?style=for-the-badge&labelColor=1A1D23)
+![tests](https://img.shields.io/badge/checks-~685_all_passing-555D6D?style=for-the-badge&labelColor=1A1D23)
+![csp](https://img.shields.io/badge/CSP-strict_·_0_violations-555D6D?style=for-the-badge&labelColor=1A1D23)
+![a11y](https://img.shields.io/badge/WCAG-AA_measured-555D6D?style=for-the-badge&labelColor=1A1D23)
+![storage](https://img.shields.io/badge/data-localStorage_only-555D6D?style=for-the-badge&labelColor=1A1D23)
 <br>
-![licence](https://img.shields.io/badge/code-MIT-e0a82e?style=for-the-badge&labelColor=14161f)
-![content licence](https://img.shields.io/badge/content-CC_BY_4.0-e0a82e?style=for-the-badge&labelColor=14161f)
+![licence](https://img.shields.io/badge/code-MIT-555D6D?style=for-the-badge&labelColor=1A1D23)
+![content licence](https://img.shields.io/badge/content-CC_BY_4.0-555D6D?style=for-the-badge&labelColor=1A1D23)
 
 <br>
 
@@ -150,6 +150,10 @@ flowchart LR
   C -.- C1["Bürgeramt · €45.10<br/>· ~8 week queue"]
   D -.- D1["theory (EN/ES/IT)<br/>· practical (DE only)"]
   E -.- E1["provisional proof<br/>· card collection"]
+  classDef default fill:#FFFFFF,stroke:#89909F,color:#1A1D23
+  classDef decide fill:#E9EAED,stroke:#555D6D,color:#1A1D23
+  classDef outcome fill:#FFFFFF,stroke:#DE3412,stroke-width:2px,color:#1A1D23
+  class E outcome
 ```
 
 **The deadline clock is the feature that justifies the app.** Given an *Anmeldung* date it computes
@@ -202,6 +206,10 @@ flowchart LR
   B2 -->|wrong| B0
   B3 -->|wrong| B0
   B4 -->|wrong| B0
+  classDef default fill:#FFFFFF,stroke:#89909F,color:#1A1D23
+  classDef decide fill:#E9EAED,stroke:#555D6D,color:#1A1D23
+  classDef outcome fill:#FFFFFF,stroke:#DE3412,stroke-width:2px,color:#1A1D23
+  class B4 outcome
 ```
 
 A practice session reserves **30 %** of its slots (`FRESH_RATIO`) for never-seen questions, so a
@@ -295,6 +303,10 @@ flowchart TD
   L2["② Official Berlin: service.berlin.de · LABO trackers"] --> L3
   L3["③ Examiners and ADAC: DEKRA · TÜV"] --> L4
   L4["④ Commercial or journalistic<br/>treated as weak evidence, flagged inline"]
+  classDef default fill:#FFFFFF,stroke:#89909F,color:#1A1D23
+  classDef decide fill:#E9EAED,stroke:#555D6D,color:#1A1D23
+  classDef outcome fill:#FFFFFF,stroke:#DE3412,stroke-width:2px,color:#1A1D23
+  class L1 outcome
 ```
 
 ### Adversarial verification
@@ -405,12 +417,13 @@ by assertion to the contract in `src/js/security.js`.
 
 | Suite | What it covers | Result |
 |---|---|:--:|
-| `npm test` | Exam scoring, deadline maths, progress engine, data integrity, security primitives, first-party loading surface | **81 passed** |
-| `test:browser` | All routes in real Chrome, a full mock exam, failing on any console error | **32 checks, 0 errors** |
+| `npm test` | Exam scoring, deadline maths, progress engine, data integrity, security primitives, first-party loading surface | **82 passed** |
+| `test:browser` | All routes in real Chrome, a full mock exam, failing on any console error | **34 checks, 0 errors** |
 | `test:course` | End-to-end walkthrough of the entire course | **~480 checks** |
 | `test:a11y` | Keyboard navigation and `prefers-reduced-motion` | **8 passed** |
 | `test:contrast` | Measured WCAG 1.4.3 ratios and touch-target sizes on every screen | all text passes |
 | `test:csp` | CSP violations, vendored Leaflet and fonts, tile loading, third-party origins | **0 violations** |
+| `test:consent` | The analytics banner: nothing requested from Google before a choice, after a decline or after Escape, plus focus, contrast and motion | **69 checks** |
 | `emojiscan` | Asserts no emoji leaked back into the rendered UI | clean |
 
 ```bash
@@ -451,18 +464,22 @@ Each of these shipped once and is now pinned by an assertion:
 
 ## 🏗️ Architecture
 
-Deliberately boring: no framework, no build, no state library. The whole app is **3,131 lines of JS
-across 23 modules**, **810 lines of CSS** and a **74-line** HTML shell.
+Deliberately boring: no framework, no build, no state library. The whole app is **3,426 lines of JS
+across 25 modules**, **949 lines of CSS** and a **119-line** HTML shell.
 
 ```mermaid
 flowchart TD
   H["index.html<br/>CSP · shell"] --> APP["app.js<br/>hash router"]
-  APP --> V["views/ ×10<br/>journey · learn · quiz · exam<br/>task · stats · map · glossary<br/>phrases · onboarding"]
+  APP --> V["views/ ×11<br/>journey · learn · quiz · exam<br/>task · stats · map · glossary<br/>phrases · onboarding · privacy"]
   V --> E["engine/<br/>scoring · deadline · progress"]
   V --> ST["state.js<br/>XP · levels · badges · streak"]
   ST --> SEC["security.js<br/>sanitizeState · safeUrl"]
   V --> UI["ui.js · icons.js · brand.js<br/>signs.js · map.js"]
   E --> D["data.js → src/data/*.json"]
+  classDef default fill:#FFFFFF,stroke:#89909F,color:#1A1D23
+  classDef decide fill:#E9EAED,stroke:#555D6D,color:#1A1D23
+  classDef outcome fill:#FFFFFF,stroke:#DE3412,stroke-width:2px,color:#1A1D23
+  class D outcome
 ```
 
 ```
@@ -474,8 +491,8 @@ src/
 │         state.js          # persistence, XP, levels, badges, streaks
 │         security.js       # sanitizeState(), safeUrl(), both CONTRACT-documented
 │         engine/           # pure logic, no DOM: scoring · deadline · progress
-│         views/            # 10 route renderers
-│         ui.js icons.js brand.js glyphs.js signs.js map.js
+│         views/            # 11 route renderers
+│         ui.js icons.js brand.js glyphs.js signs.js map.js data.js consent.js
 ├── data/ journey.json      # 3 paths, phases, tasks
 │         modules/          # 11 lesson modules and 169 questions
 │         rules.json        # legal periods, the single source for deadlines
@@ -484,13 +501,13 @@ src/
 docs/
 ├── knowledge-base/         # 8 sourced documents (~59.5k words)
 └── assets/screenshots/
-tests/                      # 5 unit suites, 6 browser suites
+tests/                      # 5 unit suites, 7 browser suites
 scripts/                    # gen-icons.mjs, gen-screenshots.mjs
 ```
 
 | Layer | Choice | Why |
 |---|---|---|
-| Markup | Hand-written HTML | One 74-line shell, with views rendering into `#view` |
+| Markup | Hand-written HTML | One 119-line shell, with views rendering into `#view` |
 | Styling | Plain CSS and custom properties | Token-driven dark theme, no preprocessor |
 | Logic | Vanilla ES modules | Runs unbuilt in every modern browser |
 | State | `localStorage`, one key | No account, no server, no sync |
@@ -612,19 +629,19 @@ Three things help, in ascending order of effort:
   Use the **Incorrect information** form, which you reach through the
   [issue chooser](https://github.com/agusgonzaleznic/drive-berlin/issues/new/choose).
 - **Drop a coffee on Ko-fi, or sponsor on GitHub**, if this saved you a wasted trip to LABO. Ko-fi
-  is a one-off, GitHub Sponsors can be monthly, and both accept a custom amount. Re-verifying legal claims
+  is a one-off, and GitHub Sponsors can be monthly or one-time, with a custom amount. Re-verifying legal claims
   against primary sources is the slow, recurring, genuinely unglamorous part of keeping a project like
   this honest.
 
 <div align="center">
 <br>
 
-[![Ko-fi](https://img.shields.io/badge/Ko--fi-one--off-e0a82e?style=for-the-badge&labelColor=14161f&logo=kofi&logoColor=e0a82e)](https://ko-fi.com/agusgonzaleznic)
-[![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-monthly-e0a82e?style=for-the-badge&labelColor=14161f&logo=githubsponsors&logoColor=e0a82e)](https://github.com/sponsors/agusgonzaleznic)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-one--off-555D6D?style=for-the-badge&labelColor=1A1D23&logo=kofi&logoColor=FAFAFA)](https://ko-fi.com/agusgonzaleznic)
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-monthly-555D6D?style=for-the-badge&labelColor=1A1D23&logo=githubsponsors&logoColor=FAFAFA)](https://github.com/sponsors/agusgonzaleznic)
 <br>
-[![website](https://img.shields.io/badge/website-agusgonzaleznic.com-7c5cd6?style=for-the-badge&labelColor=14161f)](https://agusgonzaleznic.com)
-[![GitHub](https://img.shields.io/badge/GitHub-agusgonzaleznic-1d2130?style=for-the-badge&labelColor=14161f&logo=github&logoColor=white)](https://github.com/agusgonzaleznic)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-agusgonzaleznic-7cb0ff?style=for-the-badge&labelColor=14161f&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/agusgonzaleznic)
+[![website](https://img.shields.io/badge/website-agusgonzaleznic.com-555D6D?style=for-the-badge&labelColor=1A1D23)](https://agusgonzaleznic.com)
+[![GitHub](https://img.shields.io/badge/GitHub-agusgonzaleznic-555D6D?style=for-the-badge&labelColor=1A1D23&logo=github&logoColor=FAFAFA)](https://github.com/agusgonzaleznic)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-agusgonzaleznic-555D6D?style=for-the-badge&labelColor=1A1D23)](https://www.linkedin.com/in/agusgonzaleznic)
 
 <br>
 

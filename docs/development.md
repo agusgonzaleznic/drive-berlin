@@ -60,7 +60,7 @@ npm run test:contrast # run this separately, see the note underneath
 | Command | Covers | Expected |
 |---|---|---|
 | `npm test` | Exam scoring, deadline maths, the progress engine, data integrity, security primitives | **82 tests**, all passing |
-| `npm run test:browser` | Every route in real Chrome plus a full mock exam, failing on any console error | 32 checks, 0 errors |
+| `npm run test:browser` | Every route in real Chrome plus a full mock exam, failing on any console error | 34 checks, 0 errors |
 | `npm run test:course` | End-to-end walkthrough of the entire theory course | roughly 480 checks |
 | `npm run test:a11y` | Keyboard navigation and `prefers-reduced-motion` | 8 assertions |
 | `npm run test:contrast` | Measured WCAG 1.4.3 contrast ratios and touch-target sizes on every screen | all text passes |
@@ -342,7 +342,7 @@ more useful than a ticked box that is not quite true.** Copy it into the pull re
 
   ```
   npm test          → 82 passed, 0 failed
-  test:browser      → 32 checks, 0 console errors
+  test:browser      → 34 checks, 0 console errors
   test:course       → 481 checks, 0 failed
   test:a11y         → 8 passed
   test:csp          → 0 violations
