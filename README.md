@@ -293,7 +293,7 @@ reads as the previous UTC day west of Greenwich, so a streak could break at 01:0
 with a local `isoDay()`); the exam navigator applied `current` XOR `answered`; a long `nowrap` pill
 caused 18 px of horizontal overflow at 390 px; opacity-based `:disabled` styling measured 2.78:1,
 below AA. Three times the *test* was wrong rather than the code, so verify which side is wrong before
-"fixing". More in [`docs/lessons-learned.md`](docs/lessons-learned.md).
+"fixing".
 
 <a id="architecture"></a>
 
