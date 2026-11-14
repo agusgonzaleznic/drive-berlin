@@ -1,0 +1,32 @@
+# Publishes the GitHub release of a version tag vX.Y.Z on main. ci.yml's Release
+# job makes the tag when a merge changes src/, and starts this workflow on it
+# with workflow_dispatch, because GitHub starts no workflow for a tag its own
+# token creates. The release carries no files: pages.yml deploys src/ on every
+# push to main, and the release marks the version. Its notes list the pull
+# requests merged since the previous tag.
+#
+# The job runs the shared github-release.yml from
+# agusgonzaleznic/github-reusable-workflows, pinned to a full commit SHA with the
+# release in a comment. It refuses a tag that is not on main.
+
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+  workflow_dispatch:
+
+permissions: {}
+
+# One release at a time, never cancelled halfway.
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Release
+    uses: agusgonzaleznic/github-reusable-workflows/.github/workflows/github-release.yml@1832ea3171529c36e663d34965917c9f14694ce5 # v1.9.0
+    permissions:
+      contents: write
